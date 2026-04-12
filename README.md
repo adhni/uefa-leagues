@@ -2,6 +2,11 @@
 
 Static narrative website about parity across seven major European top-flight football leagues, built from the existing analysis bundle in this repo.
 
+Live site:
+
+- `https://adhni.github.io/uefa-leagues/`
+- `https://github.com/adhni/uefa-leagues`
+
 ## What this repo contains
 
 - `index.html` - main one-page site for GitHub Pages

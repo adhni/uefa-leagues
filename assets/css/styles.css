@@ -49,6 +49,28 @@ input {
   padding: 1.5rem 0 4rem;
 }
 
+.github-corner {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.94);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  z-index: 20;
+}
+
+.github-corner svg {
+  width: 1.45rem;
+  height: 1.45rem;
+  fill: currentColor;
+}
+
 .hero,
 .panel {
   border: 1px solid var(--line);
