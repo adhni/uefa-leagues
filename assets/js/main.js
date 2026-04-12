@@ -1,13 +1,3 @@
-const LEAGUE_COLORS = {
-  "Premier League": "#8c2f39",
-  "La Liga": "#1d5c63",
-  "Serie A": "#355070",
-  Bundesliga: "#d97706",
-  "Ligue 1": "#6b705c",
-  Eredivisie: "#7c3aed",
-  "Primeira Liga": "#1f7a4c"
-};
-
 const BIG_FIVE = ["Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1"];
 
 const MODE_META = {
@@ -44,6 +34,10 @@ const state = {
     main: null,
     topGap: null,
     bottomGap: null
+  },
+  cache: {
+    key: "",
+    derived: null
   }
 };
 
@@ -64,7 +58,6 @@ async function init() {
       ...row,
       season: normalizeSeason(row.season)
     }));
-
     state.allLeagues = uniqueValues(state.masterRows, "league");
     state.allSeasons = uniqueValues(state.masterRows, "season");
     state.selectedLeagues = [...state.allLeagues];
@@ -75,7 +68,7 @@ async function init() {
     refreshView();
   } catch (error) {
     console.error(error);
-    document.getElementById("selection-summary").textContent = "The data files could not be loaded. Use GitHub Pages or a local web server rather than opening the HTML file directly.";
+    showDataError();
   }
 }
 
@@ -108,6 +101,7 @@ function cleanValue(value) {
 
 function renderStaticControls() {
   renderLeagueButtons();
+  renderSeasonSelects();
   renderSeasonScale();
   renderHighlightOptions();
 }
@@ -125,10 +119,9 @@ function bindControls() {
 
   document.querySelectorAll("[data-league-preset]").forEach((button) => {
     button.addEventListener("click", () => {
-      const preset = button.dataset.leaguePreset;
-      if (preset === "all") {
+      if (button.dataset.leaguePreset === "all") {
         state.selectedLeagues = [...state.allLeagues];
-      } else if (preset === "big5") {
+      } else if (button.dataset.leaguePreset === "big5") {
         state.selectedLeagues = state.allLeagues.filter((league) => BIG_FIVE.includes(league));
       } else {
         state.selectedLeagues = state.allLeagues.filter((league) => !BIG_FIVE.includes(league));
@@ -139,11 +132,9 @@ function bindControls() {
 
   document.querySelectorAll("[data-season-preset]").forEach((button) => {
     button.addEventListener("click", () => {
-      const preset = button.dataset.seasonPreset;
-      state.selectedSeasons = preset === "recent"
+      state.selectedSeasons = button.dataset.seasonPreset === "recent"
         ? state.allSeasons.slice(-4)
         : [...state.allSeasons];
-      syncSeasonSliderToSelection();
       refreshView();
     });
   });
@@ -160,7 +151,6 @@ function bindControls() {
 
   document.getElementById("seasons-select-all").addEventListener("click", () => {
     state.selectedSeasons = [...state.allSeasons];
-    syncSeasonSliderToSelection();
     refreshView();
   });
 
@@ -174,7 +164,7 @@ function bindControls() {
     refreshView();
   });
 
-  bindSeasonSlider();
+  bindSeasonSelects();
 }
 
 function renderLeagueButtons() {
@@ -186,14 +176,42 @@ function renderLeagueButtons() {
   container.querySelectorAll(".league-pill").forEach((button) => {
     button.addEventListener("click", () => {
       const league = button.dataset.league;
-      if (state.selectedLeagues.includes(league)) {
-        state.selectedLeagues = state.selectedLeagues.filter((item) => item !== league);
-      } else {
-        state.selectedLeagues = [...state.selectedLeagues, league].sort();
-      }
+      state.selectedLeagues = state.selectedLeagues.includes(league)
+        ? state.selectedLeagues.filter((item) => item !== league)
+        : [...state.selectedLeagues, league].sort();
       refreshView();
     });
   });
+}
+
+function renderSeasonSelects() {
+  const options = state.allSeasons
+    .map((season) => `<option value="${season}">${season}</option>`)
+    .join("");
+  document.getElementById("season-start-select").innerHTML = options;
+  document.getElementById("season-end-select").innerHTML = options;
+}
+
+function bindSeasonSelects() {
+  const startSelect = document.getElementById("season-start-select");
+  const endSelect = document.getElementById("season-end-select");
+
+  const updateFromSelects = () => {
+    let startIndex = state.allSeasons.indexOf(startSelect.value);
+    let endIndex = state.allSeasons.indexOf(endSelect.value);
+
+    if (startIndex > endIndex) {
+      [startIndex, endIndex] = [endIndex, startIndex];
+      startSelect.value = state.allSeasons[startIndex];
+      endSelect.value = state.allSeasons[endIndex];
+    }
+
+    state.selectedSeasons = state.allSeasons.slice(startIndex, endIndex + 1);
+    refreshView();
+  };
+
+  startSelect.addEventListener("change", updateFromSelects);
+  endSelect.addEventListener("change", updateFromSelects);
 }
 
 function renderSeasonScale() {
@@ -210,39 +228,11 @@ function renderHighlightOptions() {
   ].join("");
 }
 
-function bindSeasonSlider() {
-  const startInput = document.getElementById("season-start");
-  const endInput = document.getElementById("season-end");
-  const maxIndex = state.allSeasons.length - 1;
-
-  startInput.max = String(maxIndex);
-  endInput.max = String(maxIndex);
-
-  const updateFromSlider = () => {
-    let start = Number(startInput.value);
-    let end = Number(endInput.value);
-
-    if (start > end) {
-      [start, end] = [end, start];
-      startInput.value = String(start);
-      endInput.value = String(end);
-    }
-
-    state.selectedSeasons = state.allSeasons.slice(start, end + 1);
-    refreshView();
-  };
-
-  startInput.addEventListener("input", updateFromSlider);
-  endInput.addEventListener("input", updateFromSlider);
-
-  syncSeasonSliderToSelection();
-}
-
 function refreshView() {
-  const derived = deriveSelection();
+  const derived = getDerivedSelection();
 
   syncLeagueButtons();
-  syncSeasonSliderToSelection();
+  syncSeasonControls();
   syncHighlightSelect();
   updateSelectionSummary(derived);
   updateChartCopy(derived);
@@ -254,26 +244,28 @@ function refreshView() {
   renderHeadlineCards(derived.metrics);
 }
 
-// Build one deterministic selection snapshot so every panel on the page
-// reads from the same filtered data rather than each widget inventing its own logic.
-function deriveSelection() {
+// The derived selection is the expensive part of the page. Cache it against the
+// active league and season filters so mode/highlight changes can reuse the same data.
+function getDerivedSelection() {
+  const key = `${[...state.selectedLeagues].sort().join("|")}::${[...state.selectedSeasons].join("|")}`;
+  if (state.cache.key === key && state.cache.derived) {
+    return state.cache.derived;
+  }
+
   const filteredMasterRows = state.masterRows.filter((row) =>
     state.selectedLeagues.includes(row.league) && state.selectedSeasons.includes(row.season)
   );
-
   const filteredGapRows = state.seasonGapRows.filter((row) =>
     state.selectedLeagues.includes(row.league) && state.selectedSeasons.includes(row.season)
   );
 
   const rankCurves = buildRankCurves(filteredMasterRows);
   const metrics = buildLeagueMetrics(filteredMasterRows, filteredGapRows, rankCurves);
+  const derived = { filteredMasterRows, filteredGapRows, rankCurves, metrics };
 
-  return {
-    filteredMasterRows,
-    filteredGapRows,
-    rankCurves,
-    metrics
-  };
+  state.cache.key = key;
+  state.cache.derived = derived;
+  return derived;
 }
 
 function buildRankCurves(rows) {
@@ -282,11 +274,7 @@ function buildRankCurves(rows) {
   rows.forEach((row) => {
     const key = `${row.league}::${row.rank}`;
     if (!grouped[key]) {
-      grouped[key] = {
-        league: row.league,
-        rank: Number(row.rank),
-        values: []
-      };
+      grouped[key] = { league: row.league, rank: Number(row.rank), values: [] };
     }
     grouped[key].values.push(Number(row.ppg));
   });
@@ -306,7 +294,7 @@ function buildRankCurves(rows) {
 
 function buildLeagueMetrics(masterRows, gapRows, rankCurves) {
   const visibleLeagues = [...new Set(masterRows.map((row) => row.league))];
-  const groupedGaps = gapRows.reduce((acc, row) => {
+  const groupedGapRows = gapRows.reduce((acc, row) => {
     if (!acc[row.league]) {
       acc[row.league] = [];
     }
@@ -315,27 +303,25 @@ function buildLeagueMetrics(masterRows, gapRows, rankCurves) {
   }, {});
 
   const rows = visibleLeagues.map((league) => {
-    const leagueGapRows = groupedGaps[league] || [];
+    const leagueGapRows = groupedGapRows[league] || [];
     const leagueSeasonRows = masterRows.filter((row) => row.league === league);
-    const groupedBySeason = leagueSeasonRows.reduce((acc, row) => {
+    const perSeasonPpg = leagueSeasonRows.reduce((acc, row) => {
       if (!acc[row.season]) {
         acc[row.season] = [];
       }
       acc[row.season].push(Number(row.ppg));
       return acc;
     }, {});
-
-    const avgPpgSd = average(Object.values(groupedBySeason).map(sampleStandardDeviation));
     const curveRows = rankCurves[league] || [];
-    const curveDrop = curveRows.length ? curveRows[0].avg_ppg - curveRows[curveRows.length - 1].avg_ppg : 0;
+
     const metrics = {
       league,
       avg_gap_1_2: average(leagueGapRows.map((row) => row.gap_1_2)),
       avg_gap_1_4: average(leagueGapRows.map((row) => row.gap_1_4)),
       avg_gap_4_10: average(leagueGapRows.map((row) => row.gap_4_10)),
       avg_gap_10_last: average(leagueGapRows.map((row) => row.gap_10_last)),
-      curve_drop: curveDrop,
-      avg_ppg_sd: avgPpgSd
+      avg_ppg_sd: average(Object.values(perSeasonPpg).map(sampleStandardDeviation)),
+      curve_drop: curveRows.length ? curveRows[0].avg_ppg - curveRows[curveRows.length - 1].avg_ppg : 0
     };
 
     return {
@@ -421,13 +407,7 @@ function renderQuickFindings(metrics) {
 }
 
 function quickFindingCard(label, title, detail) {
-  return `
-    <article class="quick-finding">
-      <span class="quick-finding-label">${label}</span>
-      <strong>${title}</strong>
-      <span>${detail}</span>
-    </article>
-  `;
+  return `<article class="quick-finding"><span class="quick-finding-label">${label}</span><strong>${title}</strong><span>${detail}</span></article>`;
 }
 
 function renderMainChart(derived) {
@@ -436,11 +416,14 @@ function renderMainChart(derived) {
     state.charts.main.destroy();
   }
 
+  const data = buildMainChartData(derived);
   state.charts.main = new Chart(canvas, {
     type: state.mode === "avg_ppg" ? "line" : "bar",
-    data: buildMainChartData(derived),
+    data,
     options: buildMainChartOptions()
   });
+
+  renderChartDataTable(data);
 }
 
 function buildMainChartData(derived) {
@@ -452,13 +435,13 @@ function buildMainChartData(derived) {
         return a.localeCompare(b);
       })
       .map(([league, rows]) => {
-        const isHighlighted = !!state.highlightLeague && league === state.highlightLeague;
+        const isHighlighted = state.highlightLeague === league;
         const useMuted = !!state.highlightLeague && !isHighlighted;
         return {
           label: league,
           data: rows.map((row) => ({ x: row.rank, y: row.avg_ppg })),
-          borderColor: useMuted ? "rgba(102, 93, 82, 0.35)" : LEAGUE_COLORS[league],
-          backgroundColor: useMuted ? "rgba(102, 93, 82, 0.35)" : LEAGUE_COLORS[league],
+          borderColor: useMuted ? "rgba(102, 93, 82, 0.35)" : colorForLeague(league, false),
+          backgroundColor: useMuted ? "rgba(102, 93, 82, 0.35)" : colorForLeague(league, false),
           borderWidth: isHighlighted ? 4 : 3,
           pointRadius: 0,
           pointHoverRadius: isHighlighted ? 5 : 3,
@@ -474,7 +457,7 @@ function buildMainChartData(derived) {
     datasets: [{
       label: MODE_META[state.mode].label,
       data: derived.metrics.map((row) => row[metricKey]),
-      backgroundColor: derived.metrics.map((row) => colorForLeague(row.league)),
+      backgroundColor: derived.metrics.map((row) => colorForLeague(row.league, true)),
       borderRadius: 10,
       borderSkipped: false
     }]
@@ -486,20 +469,12 @@ function buildMainChartOptions() {
   return {
     responsive: true,
     maintainAspectRatio: false,
-    interaction: {
-      mode: "nearest",
-      intersect: false
-    },
+    interaction: { mode: "nearest", intersect: false },
     plugins: {
       legend: {
         display: state.mode === "avg_ppg",
         position: "bottom",
-        labels: {
-          usePointStyle: true,
-          color: "#1d1915",
-          boxWidth: 10,
-          padding: 18
-        }
+        labels: { usePointStyle: true, color: "#1d1915", boxWidth: 10, padding: 18 }
       },
       tooltip: {
         backgroundColor: "rgba(29, 25, 21, 0.93)",
@@ -513,50 +488,67 @@ function buildMainChartOptions() {
           },
           label(context) {
             const value = Number(context.raw.y ?? context.raw).toFixed(3);
-            return state.mode === "avg_ppg"
-              ? `${context.dataset.label}: ${value} PPG`
-              : `${value} PPG gap`;
+            return state.mode === "avg_ppg" ? `${context.dataset.label}: ${value} PPG` : `${value} PPG gap`;
           }
         }
       }
     },
-    scales: state.mode === "avg_ppg"
-      ? {
-          x: {
-            type: "linear",
-            title: { display: true, text: "League rank", color: "#665d52" },
-            ticks: { stepSize: 1, color: "#665d52" },
-            grid: { color: "rgba(29, 25, 21, 0.08)" }
-          },
-          y: {
-            title: { display: true, text: meta.yTitle, color: "#665d52" },
-            ticks: {
-              color: "#665d52",
-              callback(value) {
-                return value.toFixed(1);
-              }
-            },
-            grid: { color: "rgba(29, 25, 21, 0.08)" }
+    scales: state.mode === "avg_ppg" ? {
+      x: {
+        type: "linear",
+        title: { display: true, text: "League rank", color: "#665d52" },
+        ticks: { stepSize: 1, color: "#665d52" },
+        grid: { color: "rgba(29, 25, 21, 0.08)" }
+      },
+      y: {
+        title: { display: true, text: meta.yTitle, color: "#665d52" },
+        ticks: {
+          color: "#665d52",
+          callback(value) {
+            return value.toFixed(1);
           }
-        }
-      : {
-          x: {
-            ticks: { color: "#665d52" },
-            grid: { display: false }
-          },
-          y: {
-            beginAtZero: true,
-            title: { display: true, text: meta.yTitle, color: "#665d52" },
-            ticks: {
-              color: "#665d52",
-              callback(value) {
-                return value.toFixed(2);
-              }
-            },
-            grid: { color: "rgba(29, 25, 21, 0.08)" }
+        },
+        grid: { color: "rgba(29, 25, 21, 0.08)" }
+      }
+    } : {
+      x: { ticks: { color: "#665d52" }, grid: { display: false } },
+      y: {
+        beginAtZero: true,
+        title: { display: true, text: meta.yTitle, color: "#665d52" },
+        ticks: {
+          color: "#665d52",
+          callback(value) {
+            return value.toFixed(2);
           }
-        }
+        },
+        grid: { color: "rgba(29, 25, 21, 0.08)" }
+      }
+    }
   };
+}
+
+function renderChartDataTable(data) {
+  const table = document.getElementById("chart-data-table");
+  if (state.mode === "avg_ppg") {
+    table.innerHTML = `
+      <caption>Main chart data table: average PPG by rank</caption>
+      <thead><tr><th scope="col">League</th><th scope="col">Rank</th><th scope="col">Average PPG</th></tr></thead>
+      <tbody>
+        ${data.datasets.flatMap((dataset) =>
+          dataset.data.map((point) => `<tr><td>${dataset.label}</td><td>${point.x}</td><td>${point.y.toFixed(3)}</td></tr>`)
+        ).join("")}
+      </tbody>
+    `;
+    return;
+  }
+
+  table.innerHTML = `
+    <caption>Main chart data table: ${MODE_META[state.mode].label.toLowerCase()}</caption>
+    <thead><tr><th scope="col">League</th><th scope="col">${MODE_META[state.mode].label}</th></tr></thead>
+    <tbody>
+      ${data.labels.map((label, index) => `<tr><td>${label}</td><td>${Number(data.datasets[0].data[index]).toFixed(3)}</td></tr>`).join("")}
+    </tbody>
+  `;
 }
 
 function renderSupportCharts(metrics) {
@@ -576,7 +568,7 @@ function renderSupportChart(chartKey, canvasId, metrics, metricKey) {
       labels: metrics.map((row) => row.league),
       datasets: [{
         data: metrics.map((row) => row[metricKey]),
-        backgroundColor: metrics.map((row) => colorForLeague(row.league)),
+        backgroundColor: metrics.map((row) => colorForLeague(row.league, true)),
         borderRadius: 8,
         borderSkipped: false
       }]
@@ -599,10 +591,7 @@ function renderSupportChart(chartKey, canvasId, metrics, metricKey) {
         }
       },
       scales: {
-        x: {
-          ticks: { color: "#665d52" },
-          grid: { display: false }
-        },
+        x: { ticks: { color: "#665d52" }, grid: { display: false } },
         y: {
           beginAtZero: true,
           ticks: {
@@ -618,8 +607,6 @@ function renderSupportChart(chartKey, canvasId, metrics, metricKey) {
   });
 }
 
-// The insight box is intentionally deterministic: it only states claims that can be
-// read directly from the current filtered metrics, not a generated narrative guess.
 function renderInsightBox(derived) {
   const container = document.getElementById("insight-box");
   if (!derived.metrics.length) {
@@ -629,13 +616,11 @@ function renderInsightBox(derived) {
 
   if (derived.metrics.length === 1) {
     const league = derived.metrics[0];
-    container.innerHTML = `
-      <ul>
-        <li>${league.league} is the only active league, so the current view reads as a profile rather than a comparison.</li>
-        <li>Its full-table curve drops by ${league.curve_drop.toFixed(3)} PPG from first to last, which is the clearest single summary of how steep this selection looks.</li>
-        <li>The strongest separation sits ${dominantGapLabel(league)}, so that is where this league currently looks least even.</li>
-      </ul>
-    `;
+    container.innerHTML = `<ul>
+      <li>${league.league} is the only active league, so the current view reads as a profile rather than a comparison.</li>
+      <li>Its full-table curve drops by ${league.curve_drop.toFixed(3)} PPG from first to last, which is the clearest single summary of how steep this selection looks.</li>
+      <li>The strongest separation sits ${dominantGapLabel(league)}, so that is where this league currently looks least even.</li>
+    </ul>`;
     return;
   }
 
@@ -645,14 +630,12 @@ function renderInsightBox(derived) {
   const lowestTableSplit = [...derived.metrics].sort((a, b) => b.avg_gap_10_last - a.avg_gap_10_last)[0];
   const averageMidGap = average(derived.metrics.map((row) => row.avg_gap_4_10));
 
-  container.innerHTML = `
-    <ul>
-      <li>${mostEven.league} comes out as the most even selection here, while ${leastEven.league} sits at the other end of the current ranking.</li>
-      <li>${flattest.league} has the flattest first-to-last curve at ${flattest.curve_drop.toFixed(3)} PPG, which is a cleaner parity signal than a single composite score by itself.</li>
-      <li>${lowestTableSplit.league} shows the strongest lower-table separation, with an average 10th-to-last gap of ${lowestTableSplit.avg_gap_10_last.toFixed(3)} PPG.</li>
-      <li>Across the active selection, the average 4th-to-10th gap is ${averageMidGap.toFixed(3)} PPG, so the middle of the table is ${averageMidGap < 0.55 ? "relatively compressed" : "meaningfully stratified"} rather than flat.</li>
-    </ul>
-  `;
+  container.innerHTML = `<ul>
+    <li>${mostEven.league} comes out as the most even selection here, while ${leastEven.league} sits at the other end of the current ranking.</li>
+    <li>${flattest.league} has the flattest first-to-last curve at ${flattest.curve_drop.toFixed(3)} PPG, which is a cleaner parity signal than a single composite score by itself.</li>
+    <li>${lowestTableSplit.league} shows the strongest lower-table separation, with an average 10th-to-last gap of ${lowestTableSplit.avg_gap_10_last.toFixed(3)} PPG.</li>
+    <li>Across the active selection, the average 4th-to-10th gap is ${averageMidGap.toFixed(3)} PPG, so the middle of the table is ${averageMidGap < 0.55 ? "relatively compressed" : "meaningfully stratified"} rather than flat.</li>
+  </ul>`;
 }
 
 function renderRankingPanel(metrics) {
@@ -662,8 +645,7 @@ function renderRankingPanel(metrics) {
     return;
   }
 
-  container.innerHTML = `
-    <h3>Selected ranking</h3>
+  container.innerHTML = `<h3>Selected ranking</h3>
     <p>A compact summary score built from the active curve and gap measures. Higher means the current selection looks more even.</p>
     <div class="ranking-list">
       ${metrics.map((row, index) => `
@@ -675,8 +657,7 @@ function renderRankingPanel(metrics) {
           <div class="ranking-bar"><span style="width: ${row.parity_score_0_100.toFixed(1)}%"></span></div>
         </div>
       `).join("")}
-    </div>
-  `;
+    </div>`;
 }
 
 function renderHeadlineCards(metrics) {
@@ -716,9 +697,9 @@ function syncLeagueButtons() {
   });
 }
 
-function syncSeasonSliderToSelection() {
-  const startInput = document.getElementById("season-start");
-  const endInput = document.getElementById("season-end");
+function syncSeasonControls() {
+  const startSelect = document.getElementById("season-start-select");
+  const endSelect = document.getElementById("season-end-select");
   const label = document.getElementById("season-range-label");
   const count = document.getElementById("season-range-count");
 
@@ -728,12 +709,11 @@ function syncSeasonSliderToSelection() {
     return;
   }
 
-  const start = state.allSeasons.indexOf(state.selectedSeasons[0]);
-  const end = state.allSeasons.indexOf(state.selectedSeasons[state.selectedSeasons.length - 1]);
-
-  startInput.value = String(start);
-  endInput.value = String(end);
-  label.textContent = start === end ? state.selectedSeasons[0] : `${state.selectedSeasons[0]} to ${state.selectedSeasons[state.selectedSeasons.length - 1]}`;
+  startSelect.value = state.selectedSeasons[0];
+  endSelect.value = state.selectedSeasons[state.selectedSeasons.length - 1];
+  label.textContent = state.selectedSeasons.length === 1
+    ? state.selectedSeasons[0]
+    : `${state.selectedSeasons[0]} to ${state.selectedSeasons[state.selectedSeasons.length - 1]}`;
   count.textContent = `${state.selectedSeasons.length} season${state.selectedSeasons.length === 1 ? "" : "s"} selected`;
 }
 
@@ -745,20 +725,24 @@ function syncHighlightSelect() {
   select.value = state.highlightLeague;
 }
 
-function colorForLeague(league) {
-  if (state.highlightLeague) {
-    return league === state.highlightLeague ? LEAGUE_COLORS[league] : "rgba(102, 93, 82, 0.35)";
+function colorForLeague(league, allowMuted) {
+  const rootStyles = getComputedStyle(document.documentElement);
+  const slug = league.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  const cssColor = rootStyles.getPropertyValue(`--league-${slug}`).trim();
+  const baseColor = cssColor || "#665d52";
+
+  if (allowMuted && state.highlightLeague && league !== state.highlightLeague) {
+    return "rgba(102, 93, 82, 0.35)";
   }
-  return LEAGUE_COLORS[league];
+  return baseColor;
 }
 
 function dominantGapLabel(row) {
-  const entries = [
+  return [
     ["near the top of the table", row.avg_gap_1_4],
     ["through the middle of the table", row.avg_gap_4_10],
     ["lower down the table", row.avg_gap_10_last]
-  ];
-  return entries.sort((a, b) => b[1] - a[1])[0][0];
+  ].sort((a, b) => b[1] - a[1])[0][0];
 }
 
 function buildHeadlineSummary(row) {
@@ -784,8 +768,8 @@ function sampleStandardDeviation(values) {
     return 0;
   }
   const mean = average(values);
-  const variance = values.reduce((sum, value) => sum + ((value - mean) ** 2), 0) / values.length;
-  return Math.sqrt(variance);
+  const squaredDistanceSum = values.reduce((sum, value) => sum + ((value - mean) ** 2), 0);
+  return Math.sqrt(squaredDistanceSum / (values.length - 1));
 }
 
 function uniqueValues(rows, key) {
@@ -798,4 +782,11 @@ function normalizeSeason(season) {
 
 function compareSeasons(a, b) {
   return Number(a.slice(0, 4)) - Number(b.slice(0, 4));
+}
+
+function showDataError() {
+  document.getElementById("data-error").classList.remove("is-hidden");
+  document.querySelectorAll("[data-interactive]").forEach((element) => {
+    element.classList.add("is-hidden");
+  });
 }

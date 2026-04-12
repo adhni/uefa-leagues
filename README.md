@@ -11,7 +11,7 @@ Live site:
 
 - `index.html` - main one-page site for GitHub Pages
 - `assets/css/styles.css` - site styling
-- `assets/js/main.js` - lightweight CSV loading, presets, live support views, and deterministic insight logic
+- `assets/js/main.js` - lightweight CSV loading, cached derived-state logic, presets, live support views, accessibility helpers, and deterministic insight logic
 - `data/` - processed CSVs and source bundle files
 - `images/` - legacy exported chart PNGs kept in the repo bundle
 
@@ -29,9 +29,12 @@ This repo keeps the original analysis scope intact:
 The page stays fully static but includes several lightweight interactive pieces:
 
 - main Chart.js view with league filters, season range, and mode switching
+- stable season start/end selectors instead of a dual-range slider
 - presets for `All leagues`, `Big 5`, `Non-Big-5`, `Full 10 seasons`, and `Recent seasons`
 - optional focus-league highlighting against muted baselines
 - live quick findings, support charts, ranking panel, and deterministic insight box
+- a screen-reader-only data table that mirrors the main chart values
+- a clean fallback error state if the CSV files cannot be fetched
 
 The page reads directly from the processed CSV files in `data/`:
 
@@ -64,6 +67,7 @@ No build step is required.
 - Update copy directly in `index.html`.
 - Adjust colors, spacing, or layout in `assets/css/styles.css`.
 - Tweak presets, chart behavior, or text logic in `assets/js/main.js`.
+- Update league colors through CSS custom properties in `assets/css/styles.css`.
 - Replace or extend processed data in `data/` without changing the site structure.
 
 ## Notes

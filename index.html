@@ -45,7 +45,12 @@
     </header>
 
     <main>
-      <section class="section">
+      <div id="data-error" class="panel error-panel is-hidden" role="status" aria-live="polite">
+        <h2>Interactive data unavailable</h2>
+        <p>The CSV files could not be loaded, so the live charts and filter controls are hidden for now. Open the site through GitHub Pages or a local web server to restore the interactive views.</p>
+      </div>
+
+      <section class="section" data-interactive>
         <div class="section-heading compact-heading">
           <p class="eyebrow">Quick Read</p>
           <h2>What jumps out fastest</h2>
@@ -74,7 +79,7 @@
         </div>
       </section>
 
-      <section class="section" id="main-view">
+      <section class="section" id="main-view" data-interactive>
         <div class="section-heading">
           <p class="eyebrow">Main View</p>
           <h2>The shape of league parity</h2>
@@ -132,14 +137,20 @@
                   <button class="mini-action" id="seasons-clear-all" type="button">Clear all</button>
                 </div>
               </div>
-              <div class="season-slider-panel" aria-label="Season range">
+              <div class="season-select-panel" aria-label="Season range">
                 <div class="season-slider-readout">
                   <strong id="season-range-label">2015/16 to 2024/25</strong>
                   <span id="season-range-count">10 seasons selected</span>
                 </div>
-                <div class="season-slider">
-                  <input id="season-start" type="range" min="0" max="9" step="1" value="0" aria-label="Season range start">
-                  <input id="season-end" type="range" min="0" max="9" step="1" value="9" aria-label="Season range end">
+                <div class="season-select-row">
+                  <label class="season-select-field">
+                    <span>From</span>
+                    <select id="season-start-select" aria-label="Season range start"></select>
+                  </label>
+                  <label class="season-select-field">
+                    <span>To</span>
+                    <select id="season-end-select" aria-label="Season range end"></select>
+                  </label>
                 </div>
                 <div class="season-scale" id="season-scale"></div>
               </div>
@@ -156,10 +167,15 @@
           <div class="chart-wrap">
             <canvas id="parity-chart" aria-label="League parity chart"></canvas>
           </div>
+          <div class="sr-only" aria-live="polite">
+            <table id="chart-data-table">
+              <caption>Main chart data table</caption>
+            </table>
+          </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" data-interactive>
         <div class="section-heading">
           <p class="eyebrow">Interpretation</p>
           <h2>What the current filter is actually saying</h2>
@@ -192,7 +208,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" data-interactive>
         <div class="section-heading">
           <p class="eyebrow">League Headlines</p>
           <h2>Selected ranking and league notes</h2>

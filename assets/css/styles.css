@@ -13,6 +13,13 @@
   --radius-md: 18px;
   --radius-sm: 999px;
   --max-width: 1200px;
+  --league-premier-league: #8c2f39;
+  --league-la-liga: #1d5c63;
+  --league-serie-a: #355070;
+  --league-bundesliga: #d97706;
+  --league-ligue-1: #6b705c;
+  --league-eredivisie: #7c3aed;
+  --league-primeira-liga: #1f7a4c;
 }
 
 * {
@@ -232,6 +239,26 @@ h3 {
   padding: 1.3rem;
 }
 
+.is-hidden {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.error-panel {
+  margin-top: 2rem;
+}
+
 .quick-findings-grid,
 .insight-layout {
   display: grid;
@@ -364,7 +391,7 @@ h3 {
   cursor: pointer;
 }
 
-.season-slider-panel {
+.season-select-panel {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--surface-strong);
@@ -383,52 +410,27 @@ h3 {
   color: var(--muted);
 }
 
-.season-slider {
-  position: relative;
-  height: 2.1rem;
+.season-select-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
 }
 
-.season-slider input[type="range"] {
-  position: absolute;
-  inset: 0 0 auto 0;
-  top: 0.35rem;
-  width: 100%;
-  margin: 0;
-  background: transparent;
-  pointer-events: none;
-  -webkit-appearance: none;
-  appearance: none;
+.season-select-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
-.season-slider input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--ink);
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 1px rgba(29, 25, 21, 0.14);
-  cursor: pointer;
-  pointer-events: auto;
-}
-
-.season-slider input[type="range"]::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--ink);
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 1px rgba(29, 25, 21, 0.14);
-  cursor: pointer;
-  pointer-events: auto;
-}
-
-.season-slider input[type="range"]::-webkit-slider-runnable-track,
-.season-slider input[type="range"]::-moz-range-track {
-  height: 6px;
-  border-radius: 999px;
-  background: var(--line);
+.season-select-field select {
+  min-height: 2.8rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--ink);
 }
 
 .season-scale {
@@ -646,6 +648,10 @@ h3 {
 
   .season-scale {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .season-select-row {
+    grid-template-columns: 1fr;
   }
 
   .mode-button,
