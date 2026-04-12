@@ -1,0 +1,489 @@
+:root {
+  --bg: #f3efe7;
+  --surface: #fffdf8;
+  --surface-strong: #fffaf1;
+  --ink: #1b1a17;
+  --muted: #60584d;
+  --line: rgba(27, 26, 23, 0.12);
+  --line-strong: rgba(27, 26, 23, 0.2);
+  --accent: #8c2f39;
+  --accent-soft: rgba(140, 47, 57, 0.08);
+  --shadow: 0 16px 40px rgba(41, 29, 11, 0.08);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 999px;
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(140, 47, 57, 0.08), transparent 30%),
+    linear-gradient(180deg, #f8f4ec 0%, var(--bg) 100%);
+  color: var(--ink);
+  font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.site-shell {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
+  padding: 1.5rem 0 4rem;
+}
+
+.hero,
+.panel {
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 248, 0.92);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.hero {
+  padding: clamp(1.8rem, 4vw, 3.5rem);
+  border-radius: calc(var(--radius-lg) + 8px);
+}
+
+.eyebrow {
+  margin: 0 0 0.6rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.1;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-weight: 700;
+}
+
+h1 {
+  max-width: 14ch;
+  font-size: clamp(2.6rem, 7vw, 5.3rem);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+.hero-thesis,
+.hero-copy,
+.section-intro,
+.chart-explainer,
+.measure-card p,
+.support-card p,
+.method-panel p,
+.headline-card p,
+.chart-kicker {
+  max-width: 72ch;
+}
+
+.hero-thesis {
+  margin: 1.1rem 0 0;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+.hero-copy {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.hero-meta div,
+.measure-card,
+.headline-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-strong);
+}
+
+.hero-meta div {
+  padding: 1rem 1.1rem;
+}
+
+.meta-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+.section-intro {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+}
+
+.panel {
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+}
+
+.measure-grid,
+.support-grid,
+.headline-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.measure-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.measure-card {
+  padding: 1.15rem;
+}
+
+.measure-card p,
+.support-card p,
+.headline-card p,
+.method-panel p {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+}
+
+.chart-panel {
+  padding: 1.2rem;
+}
+
+.control-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-width: min(100%, 320px);
+  flex: 1 1 320px;
+}
+
+.filter-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.mini-action {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+}
+
+.mode-toggle,
+.league-filters,
+.season-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.mode-button,
+.league-pill,
+.season-pill {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.mode-button.is-active,
+.league-pill.is-active,
+.season-pill.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fffaf3;
+}
+
+.chart-copy {
+  margin-bottom: 0.75rem;
+}
+
+.selection-summary {
+  margin: 0 0 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-strong);
+  color: var(--muted);
+}
+
+.chart-kicker {
+  margin: 0;
+  font-weight: 700;
+}
+
+.chart-explainer {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+}
+
+.chart-wrap {
+  position: relative;
+  min-height: 620px;
+}
+
+.season-slider-panel {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface-strong);
+  padding: 0.9rem 1rem 1rem;
+}
+
+.season-slider-readout {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 0.8rem;
+}
+
+.season-slider-readout span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.season-slider {
+  position: relative;
+  height: 2.2rem;
+}
+
+.season-slider input[type="range"] {
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 100%;
+  margin: 0;
+  background: transparent;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.season-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(27, 26, 23, 0.15);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.season-slider input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(27, 26, 23, 0.15);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.season-slider input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: var(--line);
+  border-radius: 999px;
+}
+
+.season-slider input[type="range"]::-moz-range-track {
+  height: 6px;
+  background: var(--line);
+  border-radius: 999px;
+}
+
+.season-scale {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.season-scale span {
+  text-align: center;
+}
+
+.support-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.support-card {
+  padding: 1rem;
+}
+
+.support-card img {
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.support-card h3 {
+  margin-top: 1rem;
+}
+
+.headline-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.headline-card {
+  padding: 1.1rem;
+}
+
+.headline-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.headline-rank {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.headline-score {
+  margin-top: 0.55rem;
+  font-size: 2rem;
+  line-height: 1;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.headline-metric {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.7rem;
+  margin-top: 0.8rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+.headline-metric span:first-child {
+  color: var(--muted);
+}
+
+.method-panel p:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 980px) {
+  .measure-grid,
+  .support-grid,
+  .headline-grid,
+  .hero-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-shell {
+    width: min(calc(100% - 1rem), var(--max-width));
+    padding-top: 0.5rem;
+  }
+
+  .measure-grid,
+  .support-grid,
+  .headline-grid,
+  .hero-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-wrap {
+    min-height: 460px;
+  }
+
+  .mode-button,
+  .league-pill,
+  .season-pill {
+    width: 100%;
+    text-align: center;
+  }
+
+  .filter-head,
+  .season-slider-readout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .season-scale {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}

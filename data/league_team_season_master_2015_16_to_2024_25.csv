@@ -1,0 +1,1337 @@
+league,country,season,team,rank,points,matches_played,ppg
+Bundesliga,Germany,2015-16,Bayern Munich,1,88,34,2.5882
+Bundesliga,Germany,2015-16,Dortmund,2,78,34,2.2941
+Bundesliga,Germany,2015-16,Leverkusen,3,60,34,1.7647
+Bundesliga,Germany,2015-16,M'gladbach,4,55,34,1.6176
+Bundesliga,Germany,2015-16,Schalke 04,5,52,34,1.5294
+Bundesliga,Germany,2015-16,Mainz,6,50,34,1.4706
+Bundesliga,Germany,2015-16,Hertha,7,50,34,1.4706
+Bundesliga,Germany,2015-16,Wolfsburg,8,45,34,1.3235
+Bundesliga,Germany,2015-16,FC Koln,9,43,34,1.2647
+Bundesliga,Germany,2015-16,Hamburg,10,41,34,1.2059
+Bundesliga,Germany,2015-16,Ingolstadt,11,40,34,1.1765
+Bundesliga,Germany,2015-16,Augsburg,12,38,34,1.1176
+Bundesliga,Germany,2015-16,Werder Bremen,13,38,34,1.1176
+Bundesliga,Germany,2015-16,Darmstadt,14,38,34,1.1176
+Bundesliga,Germany,2015-16,Hoffenheim,15,37,34,1.0882
+Bundesliga,Germany,2015-16,Ein Frankfurt,16,36,34,1.0588
+Bundesliga,Germany,2015-16,Stuttgart,17,33,34,0.9706
+Bundesliga,Germany,2015-16,Hannover,18,25,34,0.7353
+Bundesliga,Germany,2016-17,Bayern Munich,1,82,34,2.4118
+Bundesliga,Germany,2016-17,RB Leipzig,2,67,34,1.9706
+Bundesliga,Germany,2016-17,Dortmund,3,64,34,1.8824
+Bundesliga,Germany,2016-17,Hoffenheim,4,62,34,1.8235
+Bundesliga,Germany,2016-17,FC Koln,5,49,34,1.4412
+Bundesliga,Germany,2016-17,Hertha,6,49,34,1.4412
+Bundesliga,Germany,2016-17,Freiburg,7,48,34,1.4118
+Bundesliga,Germany,2016-17,Werder Bremen,8,45,34,1.3235
+Bundesliga,Germany,2016-17,M'gladbach,9,45,34,1.3235
+Bundesliga,Germany,2016-17,Schalke 04,10,43,34,1.2647
+Bundesliga,Germany,2016-17,Ein Frankfurt,11,42,34,1.2353
+Bundesliga,Germany,2016-17,Leverkusen,12,41,34,1.2059
+Bundesliga,Germany,2016-17,Augsburg,13,38,34,1.1176
+Bundesliga,Germany,2016-17,Hamburg,14,38,34,1.1176
+Bundesliga,Germany,2016-17,Mainz,15,37,34,1.0882
+Bundesliga,Germany,2016-17,Wolfsburg,16,37,34,1.0882
+Bundesliga,Germany,2016-17,Ingolstadt,17,32,34,0.9412
+Bundesliga,Germany,2016-17,Darmstadt,18,25,34,0.7353
+Bundesliga,Germany,2017-18,Bayern Munich,1,84,34,2.4706
+Bundesliga,Germany,2017-18,Schalke 04,2,63,34,1.8529
+Bundesliga,Germany,2017-18,Hoffenheim,3,55,34,1.6176
+Bundesliga,Germany,2017-18,Dortmund,4,55,34,1.6176
+Bundesliga,Germany,2017-18,Leverkusen,5,55,34,1.6176
+Bundesliga,Germany,2017-18,RB Leipzig,6,53,34,1.5588
+Bundesliga,Germany,2017-18,Stuttgart,7,51,34,1.5
+Bundesliga,Germany,2017-18,Ein Frankfurt,8,49,34,1.4412
+Bundesliga,Germany,2017-18,M'gladbach,9,47,34,1.3824
+Bundesliga,Germany,2017-18,Hertha,10,43,34,1.2647
+Bundesliga,Germany,2017-18,Werder Bremen,11,42,34,1.2353
+Bundesliga,Germany,2017-18,Augsburg,12,41,34,1.2059
+Bundesliga,Germany,2017-18,Hannover,13,39,34,1.1471
+Bundesliga,Germany,2017-18,Mainz,14,36,34,1.0588
+Bundesliga,Germany,2017-18,Freiburg,15,36,34,1.0588
+Bundesliga,Germany,2017-18,Wolfsburg,16,33,34,0.9706
+Bundesliga,Germany,2017-18,Hamburg,17,31,34,0.9118
+Bundesliga,Germany,2017-18,FC Koln,18,22,34,0.6471
+Bundesliga,Germany,2018-19,Bayern Munich,1,78,34,2.2941
+Bundesliga,Germany,2018-19,Dortmund,2,76,34,2.2353
+Bundesliga,Germany,2018-19,RB Leipzig,3,66,34,1.9412
+Bundesliga,Germany,2018-19,Leverkusen,4,58,34,1.7059
+Bundesliga,Germany,2018-19,M'gladbach,5,55,34,1.6176
+Bundesliga,Germany,2018-19,Wolfsburg,6,55,34,1.6176
+Bundesliga,Germany,2018-19,Ein Frankfurt,7,54,34,1.5882
+Bundesliga,Germany,2018-19,Werder Bremen,8,53,34,1.5588
+Bundesliga,Germany,2018-19,Hoffenheim,9,51,34,1.5
+Bundesliga,Germany,2018-19,Fortuna Dusseldorf,10,44,34,1.2941
+Bundesliga,Germany,2018-19,Hertha,11,43,34,1.2647
+Bundesliga,Germany,2018-19,Mainz,12,43,34,1.2647
+Bundesliga,Germany,2018-19,Freiburg,13,36,34,1.0588
+Bundesliga,Germany,2018-19,Schalke 04,14,33,34,0.9706
+Bundesliga,Germany,2018-19,Augsburg,15,32,34,0.9412
+Bundesliga,Germany,2018-19,Stuttgart,16,28,34,0.8235
+Bundesliga,Germany,2018-19,Hannover,17,21,34,0.6176
+Bundesliga,Germany,2018-19,Nurnberg,18,19,34,0.5588
+Bundesliga,Germany,2019-20,Bayern Munich,1,82,34,2.4118
+Bundesliga,Germany,2019-20,Dortmund,2,69,34,2.0294
+Bundesliga,Germany,2019-20,RB Leipzig,3,66,34,1.9412
+Bundesliga,Germany,2019-20,M'gladbach,4,65,34,1.9118
+Bundesliga,Germany,2019-20,Leverkusen,5,63,34,1.8529
+Bundesliga,Germany,2019-20,Hoffenheim,6,52,34,1.5294
+Bundesliga,Germany,2019-20,Wolfsburg,7,49,34,1.4412
+Bundesliga,Germany,2019-20,Freiburg,8,48,34,1.4118
+Bundesliga,Germany,2019-20,Ein Frankfurt,9,45,34,1.3235
+Bundesliga,Germany,2019-20,Hertha,10,41,34,1.2059
+Bundesliga,Germany,2019-20,Union Berlin,11,41,34,1.2059
+Bundesliga,Germany,2019-20,Schalke 04,12,39,34,1.1471
+Bundesliga,Germany,2019-20,Mainz,13,37,34,1.0882
+Bundesliga,Germany,2019-20,FC Koln,14,36,34,1.0588
+Bundesliga,Germany,2019-20,Augsburg,15,36,34,1.0588
+Bundesliga,Germany,2019-20,Werder Bremen,16,31,34,0.9118
+Bundesliga,Germany,2019-20,Fortuna Dusseldorf,17,30,34,0.8824
+Bundesliga,Germany,2019-20,Paderborn,18,20,34,0.5882
+Bundesliga,Germany,2020-21,Bayern Munich,1,78,34,2.2941
+Bundesliga,Germany,2020-21,RB Leipzig,2,65,34,1.9118
+Bundesliga,Germany,2020-21,Dortmund,3,64,34,1.8824
+Bundesliga,Germany,2020-21,Wolfsburg,4,61,34,1.7941
+Bundesliga,Germany,2020-21,Ein Frankfurt,5,60,34,1.7647
+Bundesliga,Germany,2020-21,Leverkusen,6,52,34,1.5294
+Bundesliga,Germany,2020-21,Union Berlin,7,50,34,1.4706
+Bundesliga,Germany,2020-21,M'gladbach,8,49,34,1.4412
+Bundesliga,Germany,2020-21,Stuttgart,9,45,34,1.3235
+Bundesliga,Germany,2020-21,Freiburg,10,45,34,1.3235
+Bundesliga,Germany,2020-21,Hoffenheim,11,43,34,1.2647
+Bundesliga,Germany,2020-21,Mainz,12,39,34,1.1471
+Bundesliga,Germany,2020-21,Augsburg,13,36,34,1.0588
+Bundesliga,Germany,2020-21,Hertha,14,35,34,1.0294
+Bundesliga,Germany,2020-21,Bielefeld,15,35,34,1.0294
+Bundesliga,Germany,2020-21,FC Koln,16,33,34,0.9706
+Bundesliga,Germany,2020-21,Werder Bremen,17,31,34,0.9118
+Bundesliga,Germany,2020-21,Schalke 04,18,16,34,0.4706
+Bundesliga,Germany,2021-22,Bayern Munich,1,77,34,2.2647
+Bundesliga,Germany,2021-22,Dortmund,2,69,34,2.0294
+Bundesliga,Germany,2021-22,Leverkusen,3,64,34,1.8824
+Bundesliga,Germany,2021-22,RB Leipzig,4,58,34,1.7059
+Bundesliga,Germany,2021-22,Union Berlin,5,57,34,1.6765
+Bundesliga,Germany,2021-22,Freiburg,6,55,34,1.6176
+Bundesliga,Germany,2021-22,FC Koln,7,52,34,1.5294
+Bundesliga,Germany,2021-22,Mainz,8,46,34,1.3529
+Bundesliga,Germany,2021-22,Hoffenheim,9,46,34,1.3529
+Bundesliga,Germany,2021-22,M'gladbach,10,45,34,1.3235
+Bundesliga,Germany,2021-22,Ein Frankfurt,11,42,34,1.2353
+Bundesliga,Germany,2021-22,Wolfsburg,12,42,34,1.2353
+Bundesliga,Germany,2021-22,Bochum,13,42,34,1.2353
+Bundesliga,Germany,2021-22,Augsburg,14,38,34,1.1176
+Bundesliga,Germany,2021-22,Stuttgart,15,33,34,0.9706
+Bundesliga,Germany,2021-22,Hertha,16,33,34,0.9706
+Bundesliga,Germany,2021-22,Bielefeld,17,28,34,0.8235
+Bundesliga,Germany,2021-22,Greuther Furth,18,18,34,0.5294
+Bundesliga,Germany,2022-23,Bayern Munich,1,71,34,2.0882
+Bundesliga,Germany,2022-23,Dortmund,2,71,34,2.0882
+Bundesliga,Germany,2022-23,RB Leipzig,3,66,34,1.9412
+Bundesliga,Germany,2022-23,Union Berlin,4,62,34,1.8235
+Bundesliga,Germany,2022-23,Freiburg,5,59,34,1.7353
+Bundesliga,Germany,2022-23,Leverkusen,6,50,34,1.4706
+Bundesliga,Germany,2022-23,Ein Frankfurt,7,50,34,1.4706
+Bundesliga,Germany,2022-23,Wolfsburg,8,49,34,1.4412
+Bundesliga,Germany,2022-23,Mainz,9,46,34,1.3529
+Bundesliga,Germany,2022-23,M'gladbach,10,43,34,1.2647
+Bundesliga,Germany,2022-23,FC Koln,11,42,34,1.2353
+Bundesliga,Germany,2022-23,Hoffenheim,12,36,34,1.0588
+Bundesliga,Germany,2022-23,Werder Bremen,13,36,34,1.0588
+Bundesliga,Germany,2022-23,Bochum,14,35,34,1.0294
+Bundesliga,Germany,2022-23,Augsburg,15,34,34,1.0
+Bundesliga,Germany,2022-23,Stuttgart,16,33,34,0.9706
+Bundesliga,Germany,2022-23,Schalke 04,17,31,34,0.9118
+Bundesliga,Germany,2022-23,Hertha,18,29,34,0.8529
+Bundesliga,Germany,2023-24,Leverkusen,1,90,34,2.6471
+Bundesliga,Germany,2023-24,Stuttgart,2,73,34,2.1471
+Bundesliga,Germany,2023-24,Bayern Munich,3,72,34,2.1176
+Bundesliga,Germany,2023-24,RB Leipzig,4,65,34,1.9118
+Bundesliga,Germany,2023-24,Dortmund,5,63,34,1.8529
+Bundesliga,Germany,2023-24,Ein Frankfurt,6,47,34,1.3824
+Bundesliga,Germany,2023-24,Hoffenheim,7,46,34,1.3529
+Bundesliga,Germany,2023-24,Heidenheim,8,42,34,1.2353
+Bundesliga,Germany,2023-24,Werder Bremen,9,42,34,1.2353
+Bundesliga,Germany,2023-24,Freiburg,10,42,34,1.2353
+Bundesliga,Germany,2023-24,Augsburg,11,39,34,1.1471
+Bundesliga,Germany,2023-24,Wolfsburg,12,37,34,1.0882
+Bundesliga,Germany,2023-24,Mainz,13,35,34,1.0294
+Bundesliga,Germany,2023-24,M'gladbach,14,34,34,1.0
+Bundesliga,Germany,2023-24,Union Berlin,15,33,34,0.9706
+Bundesliga,Germany,2023-24,Bochum,16,33,34,0.9706
+Bundesliga,Germany,2023-24,FC Koln,17,27,34,0.7941
+Bundesliga,Germany,2023-24,Darmstadt,18,17,34,0.5
+Bundesliga,Germany,2024-25,Bayern Munich,1,82,34,2.4118
+Bundesliga,Germany,2024-25,Leverkusen,2,69,34,2.0294
+Bundesliga,Germany,2024-25,Ein Frankfurt,3,60,34,1.7647
+Bundesliga,Germany,2024-25,Dortmund,4,57,34,1.6765
+Bundesliga,Germany,2024-25,Freiburg,5,55,34,1.6176
+Bundesliga,Germany,2024-25,Mainz,6,52,34,1.5294
+Bundesliga,Germany,2024-25,RB Leipzig,7,51,34,1.5
+Bundesliga,Germany,2024-25,Werder Bremen,8,51,34,1.5
+Bundesliga,Germany,2024-25,Stuttgart,9,50,34,1.4706
+Bundesliga,Germany,2024-25,M'gladbach,10,45,34,1.3235
+Bundesliga,Germany,2024-25,Wolfsburg,11,43,34,1.2647
+Bundesliga,Germany,2024-25,Augsburg,12,43,34,1.2647
+Bundesliga,Germany,2024-25,Union Berlin,13,40,34,1.1765
+Bundesliga,Germany,2024-25,St Pauli,14,32,34,0.9412
+Bundesliga,Germany,2024-25,Hoffenheim,15,32,34,0.9412
+Bundesliga,Germany,2024-25,Heidenheim,16,29,34,0.8529
+Bundesliga,Germany,2024-25,Holstein Kiel,17,25,34,0.7353
+Bundesliga,Germany,2024-25,Bochum,18,25,34,0.7353
+Eredivisie,Netherlands,2015-16,PSV Eindhoven,1,84,34,2.4706
+Eredivisie,Netherlands,2015-16,Ajax,2,82,34,2.4118
+Eredivisie,Netherlands,2015-16,Feyenoord,3,63,34,1.8529
+Eredivisie,Netherlands,2015-16,AZ Alkmaar,4,59,34,1.7353
+Eredivisie,Netherlands,2015-16,Utrecht,5,53,34,1.5588
+Eredivisie,Netherlands,2015-16,Heracles,6,51,34,1.5
+Eredivisie,Netherlands,2015-16,Groningen,7,50,34,1.4706
+Eredivisie,Netherlands,2015-16,Zwolle,8,48,34,1.4118
+Eredivisie,Netherlands,2015-16,Vitesse,9,46,34,1.3529
+Eredivisie,Netherlands,2015-16,Nijmegen,10,46,34,1.3529
+Eredivisie,Netherlands,2015-16,Den Haag,11,43,34,1.2647
+Eredivisie,Netherlands,2015-16,Twente,12,43,34,1.2647
+Eredivisie,Netherlands,2015-16,Heerenveen,13,42,34,1.2353
+Eredivisie,Netherlands,2015-16,Roda,14,34,34,1.0
+Eredivisie,Netherlands,2015-16,Excelsior,15,30,34,0.8824
+Eredivisie,Netherlands,2015-16,Willem II,16,29,34,0.8529
+Eredivisie,Netherlands,2015-16,Graafschap,17,23,34,0.6765
+Eredivisie,Netherlands,2015-16,Cambuur,18,18,34,0.5294
+Eredivisie,Netherlands,2016-17,Feyenoord,1,82,34,2.4118
+Eredivisie,Netherlands,2016-17,Ajax,2,81,34,2.3824
+Eredivisie,Netherlands,2016-17,PSV Eindhoven,3,76,34,2.2353
+Eredivisie,Netherlands,2016-17,Utrecht,4,62,34,1.8235
+Eredivisie,Netherlands,2016-17,Vitesse,5,51,34,1.5
+Eredivisie,Netherlands,2016-17,AZ Alkmaar,6,49,34,1.4412
+Eredivisie,Netherlands,2016-17,Twente,7,45,34,1.3235
+Eredivisie,Netherlands,2016-17,Groningen,8,43,34,1.2647
+Eredivisie,Netherlands,2016-17,Heerenveen,9,43,34,1.2647
+Eredivisie,Netherlands,2016-17,Heracles,10,43,34,1.2647
+Eredivisie,Netherlands,2016-17,Den Haag,11,38,34,1.1176
+Eredivisie,Netherlands,2016-17,Excelsior,12,37,34,1.0882
+Eredivisie,Netherlands,2016-17,Willem II,13,36,34,1.0588
+Eredivisie,Netherlands,2016-17,Zwolle,14,35,34,1.0294
+Eredivisie,Netherlands,2016-17,Sparta Rotterdam,15,34,34,1.0
+Eredivisie,Netherlands,2016-17,Nijmegen,16,34,34,1.0
+Eredivisie,Netherlands,2016-17,Roda,17,33,34,0.9706
+Eredivisie,Netherlands,2016-17,Go Ahead Eagles,18,23,34,0.6765
+Eredivisie,Netherlands,2017-18,PSV Eindhoven,1,83,34,2.4412
+Eredivisie,Netherlands,2017-18,Ajax,2,79,34,2.3235
+Eredivisie,Netherlands,2017-18,AZ Alkmaar,3,71,34,2.0882
+Eredivisie,Netherlands,2017-18,Feyenoord,4,66,34,1.9412
+Eredivisie,Netherlands,2017-18,Utrecht,5,54,34,1.5882
+Eredivisie,Netherlands,2017-18,Vitesse,6,49,34,1.4412
+Eredivisie,Netherlands,2017-18,Den Haag,7,47,34,1.3824
+Eredivisie,Netherlands,2017-18,Heerenveen,8,46,34,1.3529
+Eredivisie,Netherlands,2017-18,Zwolle,9,44,34,1.2941
+Eredivisie,Netherlands,2017-18,Heracles,10,42,34,1.2353
+Eredivisie,Netherlands,2017-18,Excelsior,11,40,34,1.1765
+Eredivisie,Netherlands,2017-18,Groningen,12,38,34,1.1176
+Eredivisie,Netherlands,2017-18,Willem II,13,37,34,1.0882
+Eredivisie,Netherlands,2017-18,NAC Breda,14,34,34,1.0
+Eredivisie,Netherlands,2017-18,VVV Venlo,15,34,34,1.0
+Eredivisie,Netherlands,2017-18,Roda,16,30,34,0.8824
+Eredivisie,Netherlands,2017-18,Sparta Rotterdam,17,27,34,0.7941
+Eredivisie,Netherlands,2017-18,Twente,18,24,34,0.7059
+Eredivisie,Netherlands,2018-19,Ajax,1,86,34,2.5294
+Eredivisie,Netherlands,2018-19,PSV Eindhoven,2,83,34,2.4412
+Eredivisie,Netherlands,2018-19,Feyenoord,3,65,34,1.9118
+Eredivisie,Netherlands,2018-19,AZ Alkmaar,4,58,34,1.7059
+Eredivisie,Netherlands,2018-19,Vitesse,5,53,34,1.5588
+Eredivisie,Netherlands,2018-19,Utrecht,6,53,34,1.5588
+Eredivisie,Netherlands,2018-19,Heracles,7,48,34,1.4118
+Eredivisie,Netherlands,2018-19,Groningen,8,45,34,1.3235
+Eredivisie,Netherlands,2018-19,Den Haag,9,45,34,1.3235
+Eredivisie,Netherlands,2018-19,Willem II,10,44,34,1.2941
+Eredivisie,Netherlands,2018-19,Heerenveen,11,41,34,1.2059
+Eredivisie,Netherlands,2018-19,VVV Venlo,12,41,34,1.2059
+Eredivisie,Netherlands,2018-19,Zwolle,13,39,34,1.1471
+Eredivisie,Netherlands,2018-19,FC Emmen,14,38,34,1.1176
+Eredivisie,Netherlands,2018-19,For Sittard,15,34,34,1.0
+Eredivisie,Netherlands,2018-19,Excelsior,16,33,34,0.9706
+Eredivisie,Netherlands,2018-19,Graafschap,17,29,34,0.8529
+Eredivisie,Netherlands,2018-19,NAC Breda,18,23,34,0.6765
+Eredivisie,Netherlands,2019-20,Ajax,1,56,25,2.24
+Eredivisie,Netherlands,2019-20,AZ Alkmaar,2,56,25,2.24
+Eredivisie,Netherlands,2019-20,Feyenoord,3,50,25,2.0
+Eredivisie,Netherlands,2019-20,PSV Eindhoven,4,49,26,1.8846
+Eredivisie,Netherlands,2019-20,Willem II,5,44,26,1.6923
+Eredivisie,Netherlands,2019-20,Utrecht,6,41,25,1.64
+Eredivisie,Netherlands,2019-20,Vitesse,7,41,26,1.5769
+Eredivisie,Netherlands,2019-20,Heracles,8,36,26,1.3846
+Eredivisie,Netherlands,2019-20,Groningen,9,35,26,1.3462
+Eredivisie,Netherlands,2019-20,Heerenveen,10,33,26,1.2692
+Eredivisie,Netherlands,2019-20,Sparta Rotterdam,11,33,26,1.2692
+Eredivisie,Netherlands,2019-20,FC Emmen,12,32,26,1.2308
+Eredivisie,Netherlands,2019-20,VVV Venlo,13,28,26,1.0769
+Eredivisie,Netherlands,2019-20,Twente,14,27,26,1.0385
+Eredivisie,Netherlands,2019-20,Zwolle,15,26,26,1.0
+Eredivisie,Netherlands,2019-20,For Sittard,16,26,26,1.0
+Eredivisie,Netherlands,2019-20,Den Haag,17,19,26,0.7308
+Eredivisie,Netherlands,2019-20,Waalwijk,18,15,26,0.5769
+Eredivisie,Netherlands,2020-21,Ajax,1,88,34,2.5882
+Eredivisie,Netherlands,2020-21,PSV Eindhoven,2,72,34,2.1176
+Eredivisie,Netherlands,2020-21,AZ Alkmaar,3,71,34,2.0882
+Eredivisie,Netherlands,2020-21,Vitesse,4,61,34,1.7941
+Eredivisie,Netherlands,2020-21,Feyenoord,5,59,34,1.7353
+Eredivisie,Netherlands,2020-21,Utrecht,6,53,34,1.5588
+Eredivisie,Netherlands,2020-21,Groningen,7,50,34,1.4706
+Eredivisie,Netherlands,2020-21,Sparta Rotterdam,8,47,34,1.3824
+Eredivisie,Netherlands,2020-21,Heracles,9,44,34,1.2941
+Eredivisie,Netherlands,2020-21,Twente,10,41,34,1.2059
+Eredivisie,Netherlands,2020-21,For Sittard,11,41,34,1.2059
+Eredivisie,Netherlands,2020-21,Heerenveen,12,39,34,1.1471
+Eredivisie,Netherlands,2020-21,Zwolle,13,38,34,1.1176
+Eredivisie,Netherlands,2020-21,Willem II,14,31,34,0.9118
+Eredivisie,Netherlands,2020-21,Waalwijk,15,30,34,0.8824
+Eredivisie,Netherlands,2020-21,FC Emmen,16,30,34,0.8824
+Eredivisie,Netherlands,2020-21,VVV Venlo,17,23,34,0.6765
+Eredivisie,Netherlands,2020-21,Den Haag,18,22,34,0.6471
+Eredivisie,Netherlands,2021-22,Ajax,1,83,34,2.4412
+Eredivisie,Netherlands,2021-22,PSV Eindhoven,2,81,34,2.3824
+Eredivisie,Netherlands,2021-22,Feyenoord,3,71,34,2.0882
+Eredivisie,Netherlands,2021-22,Twente,4,68,34,2.0
+Eredivisie,Netherlands,2021-22,AZ Alkmaar,5,61,34,1.7941
+Eredivisie,Netherlands,2021-22,Vitesse,6,51,34,1.5
+Eredivisie,Netherlands,2021-22,Utrecht,7,47,34,1.3824
+Eredivisie,Netherlands,2021-22,Heerenveen,8,41,34,1.2059
+Eredivisie,Netherlands,2021-22,Cambuur,9,39,34,1.1471
+Eredivisie,Netherlands,2021-22,Waalwijk,10,38,34,1.1176
+Eredivisie,Netherlands,2021-22,Nijmegen,11,38,34,1.1176
+Eredivisie,Netherlands,2021-22,Groningen,12,36,34,1.0588
+Eredivisie,Netherlands,2021-22,Go Ahead Eagles,13,36,34,1.0588
+Eredivisie,Netherlands,2021-22,Sparta Rotterdam,14,35,34,1.0294
+Eredivisie,Netherlands,2021-22,For Sittard,15,35,34,1.0294
+Eredivisie,Netherlands,2021-22,Heracles,16,34,34,1.0
+Eredivisie,Netherlands,2021-22,Willem II,17,33,34,0.9706
+Eredivisie,Netherlands,2021-22,Zwolle,18,27,34,0.7941
+Eredivisie,Netherlands,2022-23,Feyenoord,1,82,34,2.4118
+Eredivisie,Netherlands,2022-23,PSV Eindhoven,2,75,34,2.2059
+Eredivisie,Netherlands,2022-23,Ajax,3,69,34,2.0294
+Eredivisie,Netherlands,2022-23,AZ Alkmaar,4,67,34,1.9706
+Eredivisie,Netherlands,2022-23,Twente,5,64,34,1.8824
+Eredivisie,Netherlands,2022-23,Sparta Rotterdam,6,59,34,1.7353
+Eredivisie,Netherlands,2022-23,Utrecht,7,54,34,1.5882
+Eredivisie,Netherlands,2022-23,Heerenveen,8,46,34,1.3529
+Eredivisie,Netherlands,2022-23,Waalwijk,9,41,34,1.2059
+Eredivisie,Netherlands,2022-23,Vitesse,10,40,34,1.1765
+Eredivisie,Netherlands,2022-23,Go Ahead Eagles,11,40,34,1.1765
+Eredivisie,Netherlands,2022-23,Nijmegen,12,39,34,1.1471
+Eredivisie,Netherlands,2022-23,For Sittard,13,36,34,1.0588
+Eredivisie,Netherlands,2022-23,Volendam,14,36,34,1.0588
+Eredivisie,Netherlands,2022-23,Excelsior,15,32,34,0.9412
+Eredivisie,Netherlands,2022-23,FC Emmen,16,28,34,0.8235
+Eredivisie,Netherlands,2022-23,Cambuur,17,19,34,0.5588
+Eredivisie,Netherlands,2022-23,Groningen,18,18,34,0.5294
+Eredivisie,Netherlands,2023-24,PSV Eindhoven,1,91,34,2.6765
+Eredivisie,Netherlands,2023-24,Feyenoord,2,84,34,2.4706
+Eredivisie,Netherlands,2023-24,Twente,3,69,34,2.0294
+Eredivisie,Netherlands,2023-24,AZ Alkmaar,4,65,34,1.9118
+Eredivisie,Netherlands,2023-24,Ajax,5,56,34,1.6471
+Eredivisie,Netherlands,2023-24,Nijmegen,6,53,34,1.5588
+Eredivisie,Netherlands,2023-24,Utrecht,7,50,34,1.4706
+Eredivisie,Netherlands,2023-24,Sparta Rotterdam,8,49,34,1.4412
+Eredivisie,Netherlands,2023-24,Go Ahead Eagles,9,46,34,1.3529
+Eredivisie,Netherlands,2023-24,For Sittard,10,38,34,1.1176
+Eredivisie,Netherlands,2023-24,Heerenveen,11,37,34,1.0882
+Eredivisie,Netherlands,2023-24,Zwolle,12,36,34,1.0588
+Eredivisie,Netherlands,2023-24,Almere City,13,34,34,1.0
+Eredivisie,Netherlands,2023-24,Heracles,14,33,34,0.9706
+Eredivisie,Netherlands,2023-24,Waalwijk,15,29,34,0.8529
+Eredivisie,Netherlands,2023-24,Excelsior,16,29,34,0.8529
+Eredivisie,Netherlands,2023-24,Vitesse,17,24,34,0.7059
+Eredivisie,Netherlands,2023-24,Volendam,18,19,34,0.5588
+Eredivisie,Netherlands,2024-25,PSV Eindhoven,1,79,34,2.3235
+Eredivisie,Netherlands,2024-25,Ajax,2,78,34,2.2941
+Eredivisie,Netherlands,2024-25,Feyenoord,3,68,34,2.0
+Eredivisie,Netherlands,2024-25,Utrecht,4,64,34,1.8824
+Eredivisie,Netherlands,2024-25,AZ Alkmaar,5,57,34,1.6765
+Eredivisie,Netherlands,2024-25,Twente,6,54,34,1.5882
+Eredivisie,Netherlands,2024-25,Go Ahead Eagles,7,51,34,1.5
+Eredivisie,Netherlands,2024-25,Nijmegen,8,43,34,1.2647
+Eredivisie,Netherlands,2024-25,Heerenveen,9,43,34,1.2647
+Eredivisie,Netherlands,2024-25,Zwolle,10,41,34,1.2059
+Eredivisie,Netherlands,2024-25,For Sittard,11,41,34,1.2059
+Eredivisie,Netherlands,2024-25,Sparta Rotterdam,12,39,34,1.1471
+Eredivisie,Netherlands,2024-25,Groningen,13,39,34,1.1471
+Eredivisie,Netherlands,2024-25,Heracles,14,38,34,1.1176
+Eredivisie,Netherlands,2024-25,NAC Breda,15,33,34,0.9706
+Eredivisie,Netherlands,2024-25,Willem II,16,26,34,0.7647
+Eredivisie,Netherlands,2024-25,Waalwijk,17,25,34,0.7353
+Eredivisie,Netherlands,2024-25,Almere City,18,22,34,0.6471
+La Liga,Spain,2015-16,Barcelona,1,91,38,2.3947
+La Liga,Spain,2015-16,Real Madrid,2,90,38,2.3684
+La Liga,Spain,2015-16,Ath Madrid,3,88,38,2.3158
+La Liga,Spain,2015-16,Villarreal,4,64,38,1.6842
+La Liga,Spain,2015-16,Ath Bilbao,5,62,38,1.6316
+La Liga,Spain,2015-16,Celta,6,60,38,1.5789
+La Liga,Spain,2015-16,Sevilla,7,52,38,1.3684
+La Liga,Spain,2015-16,Malaga,8,48,38,1.2632
+La Liga,Spain,2015-16,Sociedad,9,48,38,1.2632
+La Liga,Spain,2015-16,Betis,10,45,38,1.1842
+La Liga,Spain,2015-16,Valencia,11,44,38,1.1579
+La Liga,Spain,2015-16,Las Palmas,12,44,38,1.1579
+La Liga,Spain,2015-16,Eibar,13,43,38,1.1316
+La Liga,Spain,2015-16,Espanol,14,43,38,1.1316
+La Liga,Spain,2015-16,La Coruna,15,42,38,1.1053
+La Liga,Spain,2015-16,Sp Gijon,16,39,38,1.0263
+La Liga,Spain,2015-16,Granada,17,39,38,1.0263
+La Liga,Spain,2015-16,Vallecano,18,38,38,1.0
+La Liga,Spain,2015-16,Getafe,19,36,38,0.9474
+La Liga,Spain,2015-16,Levante,20,32,38,0.8421
+La Liga,Spain,2016-17,Real Madrid,1,93,38,2.4474
+La Liga,Spain,2016-17,Barcelona,2,90,38,2.3684
+La Liga,Spain,2016-17,Ath Madrid,3,78,38,2.0526
+La Liga,Spain,2016-17,Sevilla,4,72,38,1.8947
+La Liga,Spain,2016-17,Villarreal,5,67,38,1.7632
+La Liga,Spain,2016-17,Sociedad,6,64,38,1.6842
+La Liga,Spain,2016-17,Ath Bilbao,7,63,38,1.6579
+La Liga,Spain,2016-17,Espanol,8,56,38,1.4737
+La Liga,Spain,2016-17,Alaves,9,55,38,1.4474
+La Liga,Spain,2016-17,Eibar,10,54,38,1.4211
+La Liga,Spain,2016-17,Malaga,11,46,38,1.2105
+La Liga,Spain,2016-17,Valencia,12,46,38,1.2105
+La Liga,Spain,2016-17,Celta,13,45,38,1.1842
+La Liga,Spain,2016-17,Las Palmas,14,39,38,1.0263
+La Liga,Spain,2016-17,Betis,15,39,38,1.0263
+La Liga,Spain,2016-17,La Coruna,16,36,38,0.9474
+La Liga,Spain,2016-17,Leganes,17,35,38,0.9211
+La Liga,Spain,2016-17,Sp Gijon,18,31,38,0.8158
+La Liga,Spain,2016-17,Osasuna,19,22,38,0.5789
+La Liga,Spain,2016-17,Granada,20,20,38,0.5263
+La Liga,Spain,2017-18,Barcelona,1,93,38,2.4474
+La Liga,Spain,2017-18,Ath Madrid,2,79,38,2.0789
+La Liga,Spain,2017-18,Real Madrid,3,76,38,2.0
+La Liga,Spain,2017-18,Valencia,4,73,38,1.9211
+La Liga,Spain,2017-18,Villarreal,5,61,38,1.6053
+La Liga,Spain,2017-18,Betis,6,60,38,1.5789
+La Liga,Spain,2017-18,Sevilla,7,58,38,1.5263
+La Liga,Spain,2017-18,Getafe,8,55,38,1.4474
+La Liga,Spain,2017-18,Eibar,9,51,38,1.3421
+La Liga,Spain,2017-18,Girona,10,51,38,1.3421
+La Liga,Spain,2017-18,Sociedad,11,49,38,1.2895
+La Liga,Spain,2017-18,Celta,12,49,38,1.2895
+La Liga,Spain,2017-18,Espanol,13,49,38,1.2895
+La Liga,Spain,2017-18,Alaves,14,47,38,1.2368
+La Liga,Spain,2017-18,Levante,15,46,38,1.2105
+La Liga,Spain,2017-18,Ath Bilbao,16,43,38,1.1316
+La Liga,Spain,2017-18,Leganes,17,43,38,1.1316
+La Liga,Spain,2017-18,La Coruna,18,29,38,0.7632
+La Liga,Spain,2017-18,Las Palmas,19,22,38,0.5789
+La Liga,Spain,2017-18,Malaga,20,20,38,0.5263
+La Liga,Spain,2018-19,Barcelona,1,87,38,2.2895
+La Liga,Spain,2018-19,Ath Madrid,2,76,38,2.0
+La Liga,Spain,2018-19,Real Madrid,3,68,38,1.7895
+La Liga,Spain,2018-19,Valencia,4,61,38,1.6053
+La Liga,Spain,2018-19,Sevilla,5,59,38,1.5526
+La Liga,Spain,2018-19,Getafe,6,59,38,1.5526
+La Liga,Spain,2018-19,Espanol,7,53,38,1.3947
+La Liga,Spain,2018-19,Ath Bilbao,8,53,38,1.3947
+La Liga,Spain,2018-19,Sociedad,9,50,38,1.3158
+La Liga,Spain,2018-19,Betis,10,50,38,1.3158
+La Liga,Spain,2018-19,Alaves,11,50,38,1.3158
+La Liga,Spain,2018-19,Eibar,12,47,38,1.2368
+La Liga,Spain,2018-19,Leganes,13,45,38,1.1842
+La Liga,Spain,2018-19,Villarreal,14,44,38,1.1579
+La Liga,Spain,2018-19,Levante,15,44,38,1.1579
+La Liga,Spain,2018-19,Celta,16,41,38,1.0789
+La Liga,Spain,2018-19,Valladolid,17,41,38,1.0789
+La Liga,Spain,2018-19,Girona,18,37,38,0.9737
+La Liga,Spain,2018-19,Huesca,19,33,38,0.8684
+La Liga,Spain,2018-19,Vallecano,20,32,38,0.8421
+La Liga,Spain,2019-20,Real Madrid,1,87,38,2.2895
+La Liga,Spain,2019-20,Barcelona,2,82,38,2.1579
+La Liga,Spain,2019-20,Ath Madrid,3,70,38,1.8421
+La Liga,Spain,2019-20,Sevilla,4,70,38,1.8421
+La Liga,Spain,2019-20,Villarreal,5,60,38,1.5789
+La Liga,Spain,2019-20,Sociedad,6,56,38,1.4737
+La Liga,Spain,2019-20,Granada,7,56,38,1.4737
+La Liga,Spain,2019-20,Getafe,8,54,38,1.4211
+La Liga,Spain,2019-20,Valencia,9,53,38,1.3947
+La Liga,Spain,2019-20,Osasuna,10,52,38,1.3684
+La Liga,Spain,2019-20,Ath Bilbao,11,51,38,1.3421
+La Liga,Spain,2019-20,Levante,12,49,38,1.2895
+La Liga,Spain,2019-20,Valladolid,13,42,38,1.1053
+La Liga,Spain,2019-20,Eibar,14,42,38,1.1053
+La Liga,Spain,2019-20,Betis,15,41,38,1.0789
+La Liga,Spain,2019-20,Alaves,16,39,38,1.0263
+La Liga,Spain,2019-20,Celta,17,37,38,0.9737
+La Liga,Spain,2019-20,Leganes,18,36,38,0.9474
+La Liga,Spain,2019-20,Mallorca,19,33,38,0.8684
+La Liga,Spain,2019-20,Espanol,20,25,38,0.6579
+La Liga,Spain,2020-21,Ath Madrid,1,86,38,2.2632
+La Liga,Spain,2020-21,Real Madrid,2,84,38,2.2105
+La Liga,Spain,2020-21,Barcelona,3,79,38,2.0789
+La Liga,Spain,2020-21,Sevilla,4,77,38,2.0263
+La Liga,Spain,2020-21,Sociedad,5,62,38,1.6316
+La Liga,Spain,2020-21,Betis,6,61,38,1.6053
+La Liga,Spain,2020-21,Villarreal,7,58,38,1.5263
+La Liga,Spain,2020-21,Celta,8,53,38,1.3947
+La Liga,Spain,2020-21,Ath Bilbao,9,46,38,1.2105
+La Liga,Spain,2020-21,Granada,10,46,38,1.2105
+La Liga,Spain,2020-21,Osasuna,11,44,38,1.1579
+La Liga,Spain,2020-21,Cadiz,12,44,38,1.1579
+La Liga,Spain,2020-21,Valencia,13,43,38,1.1316
+La Liga,Spain,2020-21,Levante,14,41,38,1.0789
+La Liga,Spain,2020-21,Getafe,15,38,38,1.0
+La Liga,Spain,2020-21,Alaves,16,38,38,1.0
+La Liga,Spain,2020-21,Elche,17,36,38,0.9474
+La Liga,Spain,2020-21,Huesca,18,34,38,0.8947
+La Liga,Spain,2020-21,Valladolid,19,31,38,0.8158
+La Liga,Spain,2020-21,Eibar,20,30,38,0.7895
+La Liga,Spain,2021-22,Real Madrid,1,86,38,2.2632
+La Liga,Spain,2021-22,Barcelona,2,73,38,1.9211
+La Liga,Spain,2021-22,Ath Madrid,3,71,38,1.8684
+La Liga,Spain,2021-22,Sevilla,4,70,38,1.8421
+La Liga,Spain,2021-22,Betis,5,65,38,1.7105
+La Liga,Spain,2021-22,Sociedad,6,62,38,1.6316
+La Liga,Spain,2021-22,Villarreal,7,59,38,1.5526
+La Liga,Spain,2021-22,Ath Bilbao,8,55,38,1.4474
+La Liga,Spain,2021-22,Valencia,9,48,38,1.2632
+La Liga,Spain,2021-22,Osasuna,10,47,38,1.2368
+La Liga,Spain,2021-22,Celta,11,46,38,1.2105
+La Liga,Spain,2021-22,Vallecano,12,42,38,1.1053
+La Liga,Spain,2021-22,Elche,13,42,38,1.1053
+La Liga,Spain,2021-22,Espanol,14,42,38,1.1053
+La Liga,Spain,2021-22,Getafe,15,39,38,1.0263
+La Liga,Spain,2021-22,Cadiz,16,39,38,1.0263
+La Liga,Spain,2021-22,Mallorca,17,39,38,1.0263
+La Liga,Spain,2021-22,Granada,18,38,38,1.0
+La Liga,Spain,2021-22,Levante,19,35,38,0.9211
+La Liga,Spain,2021-22,Alaves,20,31,38,0.8158
+La Liga,Spain,2022-23,Barcelona,1,88,38,2.3158
+La Liga,Spain,2022-23,Real Madrid,2,78,38,2.0526
+La Liga,Spain,2022-23,Ath Madrid,3,77,38,2.0263
+La Liga,Spain,2022-23,Sociedad,4,71,38,1.8684
+La Liga,Spain,2022-23,Villarreal,5,64,38,1.6842
+La Liga,Spain,2022-23,Betis,6,60,38,1.5789
+La Liga,Spain,2022-23,Osasuna,7,53,38,1.3947
+La Liga,Spain,2022-23,Ath Bilbao,8,51,38,1.3421
+La Liga,Spain,2022-23,Mallorca,9,50,38,1.3158
+La Liga,Spain,2022-23,Girona,10,49,38,1.2895
+La Liga,Spain,2022-23,Sevilla,11,49,38,1.2895
+La Liga,Spain,2022-23,Vallecano,12,49,38,1.2895
+La Liga,Spain,2022-23,Celta,13,43,38,1.1316
+La Liga,Spain,2022-23,Valencia,14,42,38,1.1053
+La Liga,Spain,2022-23,Getafe,15,42,38,1.1053
+La Liga,Spain,2022-23,Cadiz,16,42,38,1.1053
+La Liga,Spain,2022-23,Almeria,17,41,38,1.0789
+La Liga,Spain,2022-23,Valladolid,18,40,38,1.0526
+La Liga,Spain,2022-23,Espanol,19,37,38,0.9737
+La Liga,Spain,2022-23,Elche,20,25,38,0.6579
+La Liga,Spain,2023-24,Real Madrid,1,95,38,2.5
+La Liga,Spain,2023-24,Barcelona,2,85,38,2.2368
+La Liga,Spain,2023-24,Girona,3,81,38,2.1316
+La Liga,Spain,2023-24,Ath Madrid,4,76,38,2.0
+La Liga,Spain,2023-24,Ath Bilbao,5,68,38,1.7895
+La Liga,Spain,2023-24,Sociedad,6,60,38,1.5789
+La Liga,Spain,2023-24,Betis,7,57,38,1.5
+La Liga,Spain,2023-24,Villarreal,8,53,38,1.3947
+La Liga,Spain,2023-24,Valencia,9,49,38,1.2895
+La Liga,Spain,2023-24,Alaves,10,46,38,1.2105
+La Liga,Spain,2023-24,Osasuna,11,45,38,1.1842
+La Liga,Spain,2023-24,Getafe,12,43,38,1.1316
+La Liga,Spain,2023-24,Sevilla,13,41,38,1.0789
+La Liga,Spain,2023-24,Celta,14,41,38,1.0789
+La Liga,Spain,2023-24,Mallorca,15,40,38,1.0526
+La Liga,Spain,2023-24,Las Palmas,16,40,38,1.0526
+La Liga,Spain,2023-24,Vallecano,17,38,38,1.0
+La Liga,Spain,2023-24,Cadiz,18,33,38,0.8684
+La Liga,Spain,2023-24,Almeria,19,21,38,0.5526
+La Liga,Spain,2023-24,Granada,20,21,38,0.5526
+La Liga,Spain,2024-25,Barcelona,1,88,38,2.3158
+La Liga,Spain,2024-25,Real Madrid,2,84,38,2.2105
+La Liga,Spain,2024-25,Ath Madrid,3,76,38,2.0
+La Liga,Spain,2024-25,Ath Bilbao,4,70,38,1.8421
+La Liga,Spain,2024-25,Villarreal,5,70,38,1.8421
+La Liga,Spain,2024-25,Betis,6,60,38,1.5789
+La Liga,Spain,2024-25,Celta,7,55,38,1.4474
+La Liga,Spain,2024-25,Osasuna,8,52,38,1.3684
+La Liga,Spain,2024-25,Vallecano,9,52,38,1.3684
+La Liga,Spain,2024-25,Mallorca,10,48,38,1.2632
+La Liga,Spain,2024-25,Valencia,11,46,38,1.2105
+La Liga,Spain,2024-25,Sociedad,12,46,38,1.2105
+La Liga,Spain,2024-25,Getafe,13,42,38,1.1053
+La Liga,Spain,2024-25,Alaves,14,42,38,1.1053
+La Liga,Spain,2024-25,Espanol,15,42,38,1.1053
+La Liga,Spain,2024-25,Sevilla,16,41,38,1.0789
+La Liga,Spain,2024-25,Girona,17,41,38,1.0789
+La Liga,Spain,2024-25,Leganes,18,40,38,1.0526
+La Liga,Spain,2024-25,Las Palmas,19,32,38,0.8421
+La Liga,Spain,2024-25,Valladolid,20,16,38,0.4211
+Ligue 1,France,2015-16,Paris SG,1,96,38,2.5263
+Ligue 1,France,2015-16,Lyon,2,65,38,1.7105
+Ligue 1,France,2015-16,Monaco,3,65,38,1.7105
+Ligue 1,France,2015-16,Nice,4,63,38,1.6579
+Ligue 1,France,2015-16,Lille,5,60,38,1.5789
+Ligue 1,France,2015-16,St Etienne,6,58,38,1.5263
+Ligue 1,France,2015-16,Caen,7,54,38,1.4211
+Ligue 1,France,2015-16,Rennes,8,52,38,1.3684
+Ligue 1,France,2015-16,Angers,9,50,38,1.3158
+Ligue 1,France,2015-16,Bastia,10,50,38,1.3158
+Ligue 1,France,2015-16,Bordeaux,11,50,38,1.3158
+Ligue 1,France,2015-16,Montpellier,12,49,38,1.2895
+Ligue 1,France,2015-16,Marseille,13,48,38,1.2632
+Ligue 1,France,2015-16,Nantes,14,48,38,1.2632
+Ligue 1,France,2015-16,Lorient,15,46,38,1.2105
+Ligue 1,France,2015-16,Guingamp,16,44,38,1.1579
+Ligue 1,France,2015-16,Toulouse,17,40,38,1.0526
+Ligue 1,France,2015-16,Reims,18,39,38,1.0263
+Ligue 1,France,2015-16,Ajaccio GFCO,19,37,38,0.9737
+Ligue 1,France,2015-16,Troyes,20,18,38,0.4737
+Ligue 1,France,2016-17,Monaco,1,95,38,2.5
+Ligue 1,France,2016-17,Paris SG,2,87,38,2.2895
+Ligue 1,France,2016-17,Nice,3,78,38,2.0526
+Ligue 1,France,2016-17,Lyon,4,67,38,1.7632
+Ligue 1,France,2016-17,Marseille,5,62,38,1.6316
+Ligue 1,France,2016-17,Bordeaux,6,59,38,1.5526
+Ligue 1,France,2016-17,Nantes,7,51,38,1.3421
+Ligue 1,France,2016-17,St Etienne,8,50,38,1.3158
+Ligue 1,France,2016-17,Rennes,9,50,38,1.3158
+Ligue 1,France,2016-17,Guingamp,10,50,38,1.3158
+Ligue 1,France,2016-17,Lille,11,46,38,1.2105
+Ligue 1,France,2016-17,Angers,12,46,38,1.2105
+Ligue 1,France,2016-17,Toulouse,13,44,38,1.1579
+Ligue 1,France,2016-17,Metz,14,43,38,1.1316
+Ligue 1,France,2016-17,Montpellier,15,39,38,1.0263
+Ligue 1,France,2016-17,Dijon,16,37,38,0.9737
+Ligue 1,France,2016-17,Caen,17,37,38,0.9737
+Ligue 1,France,2016-17,Lorient,18,36,38,0.9474
+Ligue 1,France,2016-17,Nancy,19,35,38,0.9211
+Ligue 1,France,2016-17,Bastia,20,34,38,0.8947
+Ligue 1,France,2017-18,Paris SG,1,93,38,2.4474
+Ligue 1,France,2017-18,Monaco,2,80,38,2.1053
+Ligue 1,France,2017-18,Lyon,3,78,38,2.0526
+Ligue 1,France,2017-18,Marseille,4,77,38,2.0263
+Ligue 1,France,2017-18,Rennes,5,58,38,1.5263
+Ligue 1,France,2017-18,Bordeaux,6,55,38,1.4474
+Ligue 1,France,2017-18,St Etienne,7,55,38,1.4474
+Ligue 1,France,2017-18,Nice,8,54,38,1.4211
+Ligue 1,France,2017-18,Nantes,9,52,38,1.3684
+Ligue 1,France,2017-18,Montpellier,10,51,38,1.3421
+Ligue 1,France,2017-18,Dijon,11,48,38,1.2632
+Ligue 1,France,2017-18,Guingamp,12,47,38,1.2368
+Ligue 1,France,2017-18,Amiens,13,45,38,1.1842
+Ligue 1,France,2017-18,Angers,14,41,38,1.0789
+Ligue 1,France,2017-18,Strasbourg,15,38,38,1.0
+Ligue 1,France,2017-18,Caen,16,38,38,1.0
+Ligue 1,France,2017-18,Lille,17,38,38,1.0
+Ligue 1,France,2017-18,Toulouse,18,37,38,0.9737
+Ligue 1,France,2017-18,Troyes,19,33,38,0.8684
+Ligue 1,France,2017-18,Metz,20,26,38,0.6842
+Ligue 1,France,2018-19,Paris SG,1,91,38,2.3947
+Ligue 1,France,2018-19,Lille,2,75,38,1.9737
+Ligue 1,France,2018-19,Lyon,3,72,38,1.8947
+Ligue 1,France,2018-19,St Etienne,4,66,38,1.7368
+Ligue 1,France,2018-19,Marseille,5,61,38,1.6053
+Ligue 1,France,2018-19,Montpellier,6,59,38,1.5526
+Ligue 1,France,2018-19,Nice,7,56,38,1.4737
+Ligue 1,France,2018-19,Reims,8,55,38,1.4474
+Ligue 1,France,2018-19,Nimes,9,53,38,1.3947
+Ligue 1,France,2018-19,Rennes,10,52,38,1.3684
+Ligue 1,France,2018-19,Strasbourg,11,49,38,1.2895
+Ligue 1,France,2018-19,Nantes,12,48,38,1.2632
+Ligue 1,France,2018-19,Angers,13,46,38,1.2105
+Ligue 1,France,2018-19,Bordeaux,14,41,38,1.0789
+Ligue 1,France,2018-19,Amiens,15,38,38,1.0
+Ligue 1,France,2018-19,Toulouse,16,38,38,1.0
+Ligue 1,France,2018-19,Monaco,17,36,38,0.9474
+Ligue 1,France,2018-19,Dijon,18,34,38,0.8947
+Ligue 1,France,2018-19,Caen,19,33,38,0.8684
+Ligue 1,France,2018-19,Guingamp,20,27,38,0.7105
+Ligue 1,France,2019-20,Paris SG,1,68,27,2.5185
+Ligue 1,France,2019-20,Marseille,2,56,28,2.0
+Ligue 1,France,2019-20,Rennes,3,50,28,1.7857
+Ligue 1,France,2019-20,Lille,4,49,28,1.75
+Ligue 1,France,2019-20,Reims,5,41,28,1.4643
+Ligue 1,France,2019-20,Nice,6,41,28,1.4643
+Ligue 1,France,2019-20,Lyon,7,40,28,1.4286
+Ligue 1,France,2019-20,Montpellier,8,40,28,1.4286
+Ligue 1,France,2019-20,Monaco,9,40,28,1.4286
+Ligue 1,France,2019-20,Angers,10,39,28,1.3929
+Ligue 1,France,2019-20,Strasbourg,11,38,27,1.4074
+Ligue 1,France,2019-20,Bordeaux,12,37,28,1.3214
+Ligue 1,France,2019-20,Nantes,13,37,28,1.3214
+Ligue 1,France,2019-20,Brest,14,34,28,1.2143
+Ligue 1,France,2019-20,Metz,15,34,28,1.2143
+Ligue 1,France,2019-20,Dijon,16,30,28,1.0714
+Ligue 1,France,2019-20,St Etienne,17,30,28,1.0714
+Ligue 1,France,2019-20,Nimes,18,27,28,0.9643
+Ligue 1,France,2019-20,Amiens,19,23,28,0.8214
+Ligue 1,France,2019-20,Toulouse,20,13,28,0.4643
+Ligue 1,France,2020-21,Lille,1,83,38,2.1842
+Ligue 1,France,2020-21,Paris SG,2,82,38,2.1579
+Ligue 1,France,2020-21,Monaco,3,78,38,2.0526
+Ligue 1,France,2020-21,Lyon,4,76,38,2.0
+Ligue 1,France,2020-21,Marseille,5,60,38,1.5789
+Ligue 1,France,2020-21,Rennes,6,58,38,1.5263
+Ligue 1,France,2020-21,Lens,7,57,38,1.5
+Ligue 1,France,2020-21,Montpellier,8,54,38,1.4211
+Ligue 1,France,2020-21,Nice,9,52,38,1.3684
+Ligue 1,France,2020-21,Metz,10,47,38,1.2368
+Ligue 1,France,2020-21,St Etienne,11,46,38,1.2105
+Ligue 1,France,2020-21,Bordeaux,12,45,38,1.1842
+Ligue 1,France,2020-21,Angers,13,44,38,1.1579
+Ligue 1,France,2020-21,Reims,14,42,38,1.1053
+Ligue 1,France,2020-21,Strasbourg,15,42,38,1.1053
+Ligue 1,France,2020-21,Lorient,16,42,38,1.1053
+Ligue 1,France,2020-21,Brest,17,41,38,1.0789
+Ligue 1,France,2020-21,Nantes,18,40,38,1.0526
+Ligue 1,France,2020-21,Nimes,19,35,38,0.9211
+Ligue 1,France,2020-21,Dijon,20,21,38,0.5526
+Ligue 1,France,2021-22,Paris SG,1,86,38,2.2632
+Ligue 1,France,2021-22,Marseille,2,71,38,1.8684
+Ligue 1,France,2021-22,Monaco,3,69,38,1.8158
+Ligue 1,France,2021-22,Nice,4,67,38,1.7632
+Ligue 1,France,2021-22,Rennes,5,66,38,1.7368
+Ligue 1,France,2021-22,Strasbourg,6,63,38,1.6579
+Ligue 1,France,2021-22,Lyon,7,62,38,1.6316
+Ligue 1,France,2021-22,Lens,8,62,38,1.6316
+Ligue 1,France,2021-22,Nantes,9,55,38,1.4474
+Ligue 1,France,2021-22,Lille,10,55,38,1.4474
+Ligue 1,France,2021-22,Brest,11,48,38,1.2632
+Ligue 1,France,2021-22,Reims,12,46,38,1.2105
+Ligue 1,France,2021-22,Montpellier,13,43,38,1.1316
+Ligue 1,France,2021-22,Angers,14,41,38,1.0789
+Ligue 1,France,2021-22,Troyes,15,38,38,1.0
+Ligue 1,France,2021-22,Lorient,16,36,38,0.9474
+Ligue 1,France,2021-22,Clermont,17,36,38,0.9474
+Ligue 1,France,2021-22,St Etienne,18,32,38,0.8421
+Ligue 1,France,2021-22,Metz,19,31,38,0.8158
+Ligue 1,France,2021-22,Bordeaux,20,31,38,0.8158
+Ligue 1,France,2022-23,Paris SG,1,85,38,2.2368
+Ligue 1,France,2022-23,Lens,2,84,38,2.2105
+Ligue 1,France,2022-23,Marseille,3,73,38,1.9211
+Ligue 1,France,2022-23,Rennes,4,68,38,1.7895
+Ligue 1,France,2022-23,Lille,5,67,38,1.7632
+Ligue 1,France,2022-23,Monaco,6,65,38,1.7105
+Ligue 1,France,2022-23,Lyon,7,62,38,1.6316
+Ligue 1,France,2022-23,Clermont,8,59,38,1.5526
+Ligue 1,France,2022-23,Nice,9,58,38,1.5263
+Ligue 1,France,2022-23,Lorient,10,55,38,1.4474
+Ligue 1,France,2022-23,Reims,11,51,38,1.3421
+Ligue 1,France,2022-23,Montpellier,12,50,38,1.3158
+Ligue 1,France,2022-23,Toulouse,13,48,38,1.2632
+Ligue 1,France,2022-23,Brest,14,44,38,1.1579
+Ligue 1,France,2022-23,Strasbourg,15,40,38,1.0526
+Ligue 1,France,2022-23,Nantes,16,36,38,0.9474
+Ligue 1,France,2022-23,Auxerre,17,35,38,0.9211
+Ligue 1,France,2022-23,Ajaccio,18,26,38,0.6842
+Ligue 1,France,2022-23,Troyes,19,24,38,0.6316
+Ligue 1,France,2022-23,Angers,20,18,38,0.4737
+Ligue 1,France,2023-24,Paris SG,1,76,34,2.2353
+Ligue 1,France,2023-24,Monaco,2,67,34,1.9706
+Ligue 1,France,2023-24,Brest,3,61,34,1.7941
+Ligue 1,France,2023-24,Lille,4,59,34,1.7353
+Ligue 1,France,2023-24,Nice,5,55,34,1.6176
+Ligue 1,France,2023-24,Lyon,6,53,34,1.5588
+Ligue 1,France,2023-24,Lens,7,51,34,1.5
+Ligue 1,France,2023-24,Marseille,8,50,34,1.4706
+Ligue 1,France,2023-24,Reims,9,47,34,1.3824
+Ligue 1,France,2023-24,Rennes,10,46,34,1.3529
+Ligue 1,France,2023-24,Toulouse,11,43,34,1.2647
+Ligue 1,France,2023-24,Montpellier,12,42,34,1.2353
+Ligue 1,France,2023-24,Strasbourg,13,39,34,1.1471
+Ligue 1,France,2023-24,Nantes,14,33,34,0.9706
+Ligue 1,France,2023-24,Le Havre,15,32,34,0.9412
+Ligue 1,France,2023-24,Lorient,16,29,34,0.8529
+Ligue 1,France,2023-24,Metz,17,29,34,0.8529
+Ligue 1,France,2023-24,Clermont,18,25,34,0.7353
+Ligue 1,France,2024-25,Paris SG,1,84,34,2.4706
+Ligue 1,France,2024-25,Marseille,2,65,34,1.9118
+Ligue 1,France,2024-25,Monaco,3,61,34,1.7941
+Ligue 1,France,2024-25,Nice,4,60,34,1.7647
+Ligue 1,France,2024-25,Lille,5,60,34,1.7647
+Ligue 1,France,2024-25,Lyon,6,57,34,1.6765
+Ligue 1,France,2024-25,Strasbourg,7,57,34,1.6765
+Ligue 1,France,2024-25,Lens,8,52,34,1.5294
+Ligue 1,France,2024-25,Brest,9,50,34,1.4706
+Ligue 1,France,2024-25,Toulouse,10,42,34,1.2353
+Ligue 1,France,2024-25,Auxerre,11,42,34,1.2353
+Ligue 1,France,2024-25,Rennes,12,41,34,1.2059
+Ligue 1,France,2024-25,Nantes,13,36,34,1.0588
+Ligue 1,France,2024-25,Angers,14,36,34,1.0588
+Ligue 1,France,2024-25,Le Havre,15,34,34,1.0
+Ligue 1,France,2024-25,Reims,16,33,34,0.9706
+Ligue 1,France,2024-25,St Etienne,17,30,34,0.8824
+Ligue 1,France,2024-25,Montpellier,18,16,34,0.4706
+Premier League,England,2015-16,Leicester,1,81,38,2.1316
+Premier League,England,2015-16,Arsenal,2,71,38,1.8684
+Premier League,England,2015-16,Tottenham,3,70,38,1.8421
+Premier League,England,2015-16,Man City,4,66,38,1.7368
+Premier League,England,2015-16,Man United,5,66,38,1.7368
+Premier League,England,2015-16,Southampton,6,63,38,1.6579
+Premier League,England,2015-16,West Ham,7,62,38,1.6316
+Premier League,England,2015-16,Liverpool,8,60,38,1.5789
+Premier League,England,2015-16,Stoke,9,51,38,1.3421
+Premier League,England,2015-16,Chelsea,10,50,38,1.3158
+Premier League,England,2015-16,Everton,11,47,38,1.2368
+Premier League,England,2015-16,Swansea,12,47,38,1.2368
+Premier League,England,2015-16,Watford,13,45,38,1.1842
+Premier League,England,2015-16,West Brom,14,43,38,1.1316
+Premier League,England,2015-16,Crystal Palace,15,42,38,1.1053
+Premier League,England,2015-16,Bournemouth,16,42,38,1.1053
+Premier League,England,2015-16,Sunderland,17,39,38,1.0263
+Premier League,England,2015-16,Newcastle,18,37,38,0.9737
+Premier League,England,2015-16,Norwich,19,34,38,0.8947
+Premier League,England,2015-16,Aston Villa,20,17,38,0.4474
+Premier League,England,2016-17,Chelsea,1,93,38,2.4474
+Premier League,England,2016-17,Tottenham,2,86,38,2.2632
+Premier League,England,2016-17,Man City,3,78,38,2.0526
+Premier League,England,2016-17,Liverpool,4,76,38,2.0
+Premier League,England,2016-17,Arsenal,5,75,38,1.9737
+Premier League,England,2016-17,Man United,6,69,38,1.8158
+Premier League,England,2016-17,Everton,7,61,38,1.6053
+Premier League,England,2016-17,Southampton,8,46,38,1.2105
+Premier League,England,2016-17,Bournemouth,9,46,38,1.2105
+Premier League,England,2016-17,West Brom,10,45,38,1.1842
+Premier League,England,2016-17,West Ham,11,45,38,1.1842
+Premier League,England,2016-17,Leicester,12,44,38,1.1579
+Premier League,England,2016-17,Stoke,13,44,38,1.1579
+Premier League,England,2016-17,Crystal Palace,14,41,38,1.0789
+Premier League,England,2016-17,Swansea,15,41,38,1.0789
+Premier League,England,2016-17,Burnley,16,40,38,1.0526
+Premier League,England,2016-17,Watford,17,40,38,1.0526
+Premier League,England,2016-17,Hull,18,34,38,0.8947
+Premier League,England,2016-17,Middlesbrough,19,28,38,0.7368
+Premier League,England,2016-17,Sunderland,20,24,38,0.6316
+Premier League,England,2017-18,Man City,1,100,38,2.6316
+Premier League,England,2017-18,Man United,2,81,38,2.1316
+Premier League,England,2017-18,Tottenham,3,77,38,2.0263
+Premier League,England,2017-18,Liverpool,4,75,38,1.9737
+Premier League,England,2017-18,Chelsea,5,70,38,1.8421
+Premier League,England,2017-18,Arsenal,6,63,38,1.6579
+Premier League,England,2017-18,Burnley,7,54,38,1.4211
+Premier League,England,2017-18,Everton,8,49,38,1.2895
+Premier League,England,2017-18,Leicester,9,47,38,1.2368
+Premier League,England,2017-18,Newcastle,10,44,38,1.1579
+Premier League,England,2017-18,Crystal Palace,11,44,38,1.1579
+Premier League,England,2017-18,Bournemouth,12,44,38,1.1579
+Premier League,England,2017-18,West Ham,13,42,38,1.1053
+Premier League,England,2017-18,Watford,14,41,38,1.0789
+Premier League,England,2017-18,Brighton,15,40,38,1.0526
+Premier League,England,2017-18,Huddersfield,16,37,38,0.9737
+Premier League,England,2017-18,Southampton,17,36,38,0.9474
+Premier League,England,2017-18,Swansea,18,33,38,0.8684
+Premier League,England,2017-18,Stoke,19,33,38,0.8684
+Premier League,England,2017-18,West Brom,20,31,38,0.8158
+Premier League,England,2018-19,Man City,1,98,38,2.5789
+Premier League,England,2018-19,Liverpool,2,97,38,2.5526
+Premier League,England,2018-19,Chelsea,3,72,38,1.8947
+Premier League,England,2018-19,Tottenham,4,71,38,1.8684
+Premier League,England,2018-19,Arsenal,5,70,38,1.8421
+Premier League,England,2018-19,Man United,6,66,38,1.7368
+Premier League,England,2018-19,Wolves,7,57,38,1.5
+Premier League,England,2018-19,Everton,8,54,38,1.4211
+Premier League,England,2018-19,Leicester,9,52,38,1.3684
+Premier League,England,2018-19,West Ham,10,52,38,1.3684
+Premier League,England,2018-19,Watford,11,50,38,1.3158
+Premier League,England,2018-19,Crystal Palace,12,49,38,1.2895
+Premier League,England,2018-19,Newcastle,13,45,38,1.1842
+Premier League,England,2018-19,Bournemouth,14,45,38,1.1842
+Premier League,England,2018-19,Burnley,15,40,38,1.0526
+Premier League,England,2018-19,Southampton,16,39,38,1.0263
+Premier League,England,2018-19,Brighton,17,36,38,0.9474
+Premier League,England,2018-19,Cardiff,18,34,38,0.8947
+Premier League,England,2018-19,Fulham,19,26,38,0.6842
+Premier League,England,2018-19,Huddersfield,20,16,38,0.4211
+Premier League,England,2019-20,Liverpool,1,99,38,2.6053
+Premier League,England,2019-20,Man City,2,81,38,2.1316
+Premier League,England,2019-20,Man United,3,66,38,1.7368
+Premier League,England,2019-20,Chelsea,4,66,38,1.7368
+Premier League,England,2019-20,Leicester,5,62,38,1.6316
+Premier League,England,2019-20,Tottenham,6,59,38,1.5526
+Premier League,England,2019-20,Wolves,7,59,38,1.5526
+Premier League,England,2019-20,Arsenal,8,56,38,1.4737
+Premier League,England,2019-20,Sheffield United,9,54,38,1.4211
+Premier League,England,2019-20,Burnley,10,54,38,1.4211
+Premier League,England,2019-20,Southampton,11,52,38,1.3684
+Premier League,England,2019-20,Everton,12,49,38,1.2895
+Premier League,England,2019-20,Newcastle,13,44,38,1.1579
+Premier League,England,2019-20,Crystal Palace,14,43,38,1.1316
+Premier League,England,2019-20,Brighton,15,41,38,1.0789
+Premier League,England,2019-20,West Ham,16,39,38,1.0263
+Premier League,England,2019-20,Aston Villa,17,35,38,0.9211
+Premier League,England,2019-20,Bournemouth,18,34,38,0.8947
+Premier League,England,2019-20,Watford,19,34,38,0.8947
+Premier League,England,2019-20,Norwich,20,21,38,0.5526
+Premier League,England,2020-21,Man City,1,86,38,2.2632
+Premier League,England,2020-21,Man United,2,74,38,1.9474
+Premier League,England,2020-21,Liverpool,3,69,38,1.8158
+Premier League,England,2020-21,Chelsea,4,67,38,1.7632
+Premier League,England,2020-21,Leicester,5,66,38,1.7368
+Premier League,England,2020-21,West Ham,6,65,38,1.7105
+Premier League,England,2020-21,Tottenham,7,62,38,1.6316
+Premier League,England,2020-21,Arsenal,8,61,38,1.6053
+Premier League,England,2020-21,Leeds,9,59,38,1.5526
+Premier League,England,2020-21,Everton,10,59,38,1.5526
+Premier League,England,2020-21,Aston Villa,11,55,38,1.4474
+Premier League,England,2020-21,Newcastle,12,45,38,1.1842
+Premier League,England,2020-21,Wolves,13,45,38,1.1842
+Premier League,England,2020-21,Crystal Palace,14,44,38,1.1579
+Premier League,England,2020-21,Southampton,15,43,38,1.1316
+Premier League,England,2020-21,Brighton,16,41,38,1.0789
+Premier League,England,2020-21,Burnley,17,39,38,1.0263
+Premier League,England,2020-21,Fulham,18,28,38,0.7368
+Premier League,England,2020-21,West Brom,19,26,38,0.6842
+Premier League,England,2020-21,Sheffield United,20,23,38,0.6053
+Premier League,England,2021-22,Man City,1,93,38,2.4474
+Premier League,England,2021-22,Liverpool,2,92,38,2.4211
+Premier League,England,2021-22,Chelsea,3,74,38,1.9474
+Premier League,England,2021-22,Tottenham,4,71,38,1.8684
+Premier League,England,2021-22,Arsenal,5,69,38,1.8158
+Premier League,England,2021-22,Man United,6,58,38,1.5263
+Premier League,England,2021-22,West Ham,7,56,38,1.4737
+Premier League,England,2021-22,Leicester,8,52,38,1.3684
+Premier League,England,2021-22,Brighton,9,51,38,1.3421
+Premier League,England,2021-22,Wolves,10,51,38,1.3421
+Premier League,England,2021-22,Newcastle,11,49,38,1.2895
+Premier League,England,2021-22,Crystal Palace,12,48,38,1.2632
+Premier League,England,2021-22,Brentford,13,46,38,1.2105
+Premier League,England,2021-22,Aston Villa,14,45,38,1.1842
+Premier League,England,2021-22,Southampton,15,40,38,1.0526
+Premier League,England,2021-22,Everton,16,39,38,1.0263
+Premier League,England,2021-22,Leeds,17,38,38,1.0
+Premier League,England,2021-22,Burnley,18,35,38,0.9211
+Premier League,England,2021-22,Watford,19,23,38,0.6053
+Premier League,England,2021-22,Norwich,20,22,38,0.5789
+Premier League,England,2022-23,Man City,1,89,38,2.3421
+Premier League,England,2022-23,Arsenal,2,84,38,2.2105
+Premier League,England,2022-23,Man United,3,75,38,1.9737
+Premier League,England,2022-23,Newcastle,4,71,38,1.8684
+Premier League,England,2022-23,Liverpool,5,67,38,1.7632
+Premier League,England,2022-23,Brighton,6,62,38,1.6316
+Premier League,England,2022-23,Aston Villa,7,61,38,1.6053
+Premier League,England,2022-23,Tottenham,8,60,38,1.5789
+Premier League,England,2022-23,Brentford,9,59,38,1.5526
+Premier League,England,2022-23,Fulham,10,52,38,1.3684
+Premier League,England,2022-23,Crystal Palace,11,45,38,1.1842
+Premier League,England,2022-23,Chelsea,12,44,38,1.1579
+Premier League,England,2022-23,Wolves,13,41,38,1.0789
+Premier League,England,2022-23,West Ham,14,40,38,1.0526
+Premier League,England,2022-23,Bournemouth,15,39,38,1.0263
+Premier League,England,2022-23,Nott'm Forest,16,38,38,1.0
+Premier League,England,2022-23,Everton,17,36,38,0.9474
+Premier League,England,2022-23,Leicester,18,34,38,0.8947
+Premier League,England,2022-23,Leeds,19,31,38,0.8158
+Premier League,England,2022-23,Southampton,20,25,38,0.6579
+Premier League,England,2023-24,Man City,1,91,38,2.3947
+Premier League,England,2023-24,Arsenal,2,89,38,2.3421
+Premier League,England,2023-24,Liverpool,3,82,38,2.1579
+Premier League,England,2023-24,Aston Villa,4,68,38,1.7895
+Premier League,England,2023-24,Tottenham,5,66,38,1.7368
+Premier League,England,2023-24,Chelsea,6,63,38,1.6579
+Premier League,England,2023-24,Newcastle,7,60,38,1.5789
+Premier League,England,2023-24,Man United,8,60,38,1.5789
+Premier League,England,2023-24,West Ham,9,52,38,1.3684
+Premier League,England,2023-24,Crystal Palace,10,49,38,1.2895
+Premier League,England,2023-24,Brighton,11,48,38,1.2632
+Premier League,England,2023-24,Everton,12,48,38,1.2632
+Premier League,England,2023-24,Bournemouth,13,48,38,1.2632
+Premier League,England,2023-24,Fulham,14,47,38,1.2368
+Premier League,England,2023-24,Wolves,15,46,38,1.2105
+Premier League,England,2023-24,Brentford,16,39,38,1.0263
+Premier League,England,2023-24,Nott'm Forest,17,36,38,0.9474
+Premier League,England,2023-24,Luton,18,26,38,0.6842
+Premier League,England,2023-24,Burnley,19,24,38,0.6316
+Premier League,England,2023-24,Sheffield United,20,16,38,0.4211
+Premier League,England,2024-25,Liverpool,1,84,38,2.2105
+Premier League,England,2024-25,Arsenal,2,74,38,1.9474
+Premier League,England,2024-25,Man City,3,71,38,1.8684
+Premier League,England,2024-25,Chelsea,4,69,38,1.8158
+Premier League,England,2024-25,Newcastle,5,66,38,1.7368
+Premier League,England,2024-25,Aston Villa,6,66,38,1.7368
+Premier League,England,2024-25,Nott'm Forest,7,65,38,1.7105
+Premier League,England,2024-25,Brighton,8,61,38,1.6053
+Premier League,England,2024-25,Bournemouth,9,56,38,1.4737
+Premier League,England,2024-25,Brentford,10,56,38,1.4737
+Premier League,England,2024-25,Fulham,11,54,38,1.4211
+Premier League,England,2024-25,Crystal Palace,12,53,38,1.3947
+Premier League,England,2024-25,Everton,13,48,38,1.2632
+Premier League,England,2024-25,West Ham,14,43,38,1.1316
+Premier League,England,2024-25,Man United,15,42,38,1.1053
+Premier League,England,2024-25,Wolves,16,42,38,1.1053
+Premier League,England,2024-25,Tottenham,17,38,38,1.0
+Premier League,England,2024-25,Leicester,18,25,38,0.6579
+Premier League,England,2024-25,Ipswich,19,22,38,0.5789
+Premier League,England,2024-25,Southampton,20,12,38,0.3158
+Primeira Liga,Portugal,2015-16,Benfica,1,88,34,2.5882
+Primeira Liga,Portugal,2015-16,Sp Lisbon,2,86,34,2.5294
+Primeira Liga,Portugal,2015-16,Porto,3,73,34,2.1471
+Primeira Liga,Portugal,2015-16,Sp Braga,4,58,34,1.7059
+Primeira Liga,Portugal,2015-16,Arouca,5,54,34,1.5882
+Primeira Liga,Portugal,2015-16,Rio Ave,6,50,34,1.4706
+Primeira Liga,Portugal,2015-16,Pacos Ferreira,7,49,34,1.4412
+Primeira Liga,Portugal,2015-16,Estoril,8,47,34,1.3824
+Primeira Liga,Portugal,2015-16,Belenenses,9,41,34,1.2059
+Primeira Liga,Portugal,2015-16,Guimaraes,10,40,34,1.1765
+Primeira Liga,Portugal,2015-16,Nacional,11,38,34,1.1176
+Primeira Liga,Portugal,2015-16,Moreirense,12,36,34,1.0588
+Primeira Liga,Portugal,2015-16,Maritimo,13,35,34,1.0294
+Primeira Liga,Portugal,2015-16,Boavista,14,33,34,0.9706
+Primeira Liga,Portugal,2015-16,Tondela,15,30,34,0.8824
+Primeira Liga,Portugal,2015-16,Setubal,16,30,34,0.8824
+Primeira Liga,Portugal,2015-16,Uniao Madeira,17,29,34,0.8529
+Primeira Liga,Portugal,2015-16,Academica,18,25,34,0.7353
+Primeira Liga,Portugal,2016-17,Benfica,1,82,34,2.4118
+Primeira Liga,Portugal,2016-17,Porto,2,76,34,2.2353
+Primeira Liga,Portugal,2016-17,Sp Lisbon,3,70,34,2.0588
+Primeira Liga,Portugal,2016-17,Guimaraes,4,62,34,1.8235
+Primeira Liga,Portugal,2016-17,Sp Braga,5,54,34,1.5882
+Primeira Liga,Portugal,2016-17,Maritimo,6,50,34,1.4706
+Primeira Liga,Portugal,2016-17,Rio Ave,7,49,34,1.4412
+Primeira Liga,Portugal,2016-17,Feirense,8,48,34,1.4118
+Primeira Liga,Portugal,2016-17,Boavista,9,43,34,1.2647
+Primeira Liga,Portugal,2016-17,Estoril,10,38,34,1.1176
+Primeira Liga,Portugal,2016-17,Chaves,11,38,34,1.1176
+Primeira Liga,Portugal,2016-17,Setubal,12,38,34,1.1176
+Primeira Liga,Portugal,2016-17,Pacos Ferreira,13,36,34,1.0588
+Primeira Liga,Portugal,2016-17,Belenenses,14,36,34,1.0588
+Primeira Liga,Portugal,2016-17,Moreirense,15,33,34,0.9706
+Primeira Liga,Portugal,2016-17,Tondela,16,32,34,0.9412
+Primeira Liga,Portugal,2016-17,Arouca,17,32,34,0.9412
+Primeira Liga,Portugal,2016-17,Nacional,18,21,34,0.6176
+Primeira Liga,Portugal,2017-18,Porto,1,88,34,2.5882
+Primeira Liga,Portugal,2017-18,Benfica,2,81,34,2.3824
+Primeira Liga,Portugal,2017-18,Sp Lisbon,3,78,34,2.2941
+Primeira Liga,Portugal,2017-18,Sp Braga,4,75,34,2.2059
+Primeira Liga,Portugal,2017-18,Rio Ave,5,51,34,1.5
+Primeira Liga,Portugal,2017-18,Chaves,6,47,34,1.3824
+Primeira Liga,Portugal,2017-18,Maritimo,7,47,34,1.3824
+Primeira Liga,Portugal,2017-18,Boavista,8,45,34,1.3235
+Primeira Liga,Portugal,2017-18,Guimaraes,9,43,34,1.2647
+Primeira Liga,Portugal,2017-18,Portimonense,10,38,34,1.1176
+Primeira Liga,Portugal,2017-18,Tondela,11,38,34,1.1176
+Primeira Liga,Portugal,2017-18,Belenenses,12,37,34,1.0882
+Primeira Liga,Portugal,2017-18,Aves,13,34,34,1.0
+Primeira Liga,Portugal,2017-18,Moreirense,14,32,34,0.9412
+Primeira Liga,Portugal,2017-18,Setubal,15,32,34,0.9412
+Primeira Liga,Portugal,2017-18,Feirense,16,31,34,0.9118
+Primeira Liga,Portugal,2017-18,Pacos Ferreira,17,30,34,0.8824
+Primeira Liga,Portugal,2017-18,Estoril,18,30,34,0.8824
+Primeira Liga,Portugal,2018-19,Benfica,1,87,34,2.5588
+Primeira Liga,Portugal,2018-19,Porto,2,85,34,2.5
+Primeira Liga,Portugal,2018-19,Sp Lisbon,3,74,34,2.1765
+Primeira Liga,Portugal,2018-19,Sp Braga,4,67,34,1.9706
+Primeira Liga,Portugal,2018-19,Guimaraes,5,52,34,1.5294
+Primeira Liga,Portugal,2018-19,Moreirense,6,52,34,1.5294
+Primeira Liga,Portugal,2018-19,Rio Ave,7,45,34,1.3235
+Primeira Liga,Portugal,2018-19,Boavista,8,44,34,1.2941
+Primeira Liga,Portugal,2018-19,Belenenses,9,43,34,1.2647
+Primeira Liga,Portugal,2018-19,Santa Clara,10,42,34,1.2353
+Primeira Liga,Portugal,2018-19,Portimonense,11,39,34,1.1471
+Primeira Liga,Portugal,2018-19,Maritimo,12,39,34,1.1471
+Primeira Liga,Portugal,2018-19,Setubal,13,36,34,1.0588
+Primeira Liga,Portugal,2018-19,Aves,14,36,34,1.0588
+Primeira Liga,Portugal,2018-19,Tondela,15,35,34,1.0294
+Primeira Liga,Portugal,2018-19,Chaves,16,32,34,0.9412
+Primeira Liga,Portugal,2018-19,Nacional,17,28,34,0.8235
+Primeira Liga,Portugal,2018-19,Feirense,18,20,34,0.5882
+Primeira Liga,Portugal,2019-20,Porto,1,82,34,2.4118
+Primeira Liga,Portugal,2019-20,Benfica,2,77,34,2.2647
+Primeira Liga,Portugal,2019-20,Sp Braga,3,60,34,1.7647
+Primeira Liga,Portugal,2019-20,Sp Lisbon,4,60,34,1.7647
+Primeira Liga,Portugal,2019-20,Rio Ave,5,55,34,1.6176
+Primeira Liga,Portugal,2019-20,Famalicao,6,54,34,1.5882
+Primeira Liga,Portugal,2019-20,Guimaraes,7,50,34,1.4706
+Primeira Liga,Portugal,2019-20,Moreirense,8,43,34,1.2647
+Primeira Liga,Portugal,2019-20,Gil Vicente,9,43,34,1.2647
+Primeira Liga,Portugal,2019-20,Santa Clara,10,43,34,1.2647
+Primeira Liga,Portugal,2019-20,Maritimo,11,39,34,1.1471
+Primeira Liga,Portugal,2019-20,Boavista,12,39,34,1.1471
+Primeira Liga,Portugal,2019-20,Pacos Ferreira,13,39,34,1.1471
+Primeira Liga,Portugal,2019-20,Tondela,14,36,34,1.0588
+Primeira Liga,Portugal,2019-20,Belenenses,15,35,34,1.0294
+Primeira Liga,Portugal,2019-20,Setubal,16,34,34,1.0
+Primeira Liga,Portugal,2019-20,Portimonense,17,33,34,0.9706
+Primeira Liga,Portugal,2019-20,Aves,18,17,34,0.5
+Primeira Liga,Portugal,2020-21,Sp Lisbon,1,85,34,2.5
+Primeira Liga,Portugal,2020-21,Porto,2,80,34,2.3529
+Primeira Liga,Portugal,2020-21,Benfica,3,76,34,2.2353
+Primeira Liga,Portugal,2020-21,Sp Braga,4,64,34,1.8824
+Primeira Liga,Portugal,2020-21,Pacos Ferreira,5,53,34,1.5588
+Primeira Liga,Portugal,2020-21,Santa Clara,6,46,34,1.3529
+Primeira Liga,Portugal,2020-21,Moreirense,7,43,34,1.2647
+Primeira Liga,Portugal,2020-21,Guimaraes,8,43,34,1.2647
+Primeira Liga,Portugal,2020-21,Famalicao,9,40,34,1.1765
+Primeira Liga,Portugal,2020-21,Belenenses,10,40,34,1.1765
+Primeira Liga,Portugal,2020-21,Gil Vicente,11,39,34,1.1471
+Primeira Liga,Portugal,2020-21,Boavista,12,36,34,1.0588
+Primeira Liga,Portugal,2020-21,Tondela,13,36,34,1.0588
+Primeira Liga,Portugal,2020-21,Portimonense,14,35,34,1.0294
+Primeira Liga,Portugal,2020-21,Maritimo,15,35,34,1.0294
+Primeira Liga,Portugal,2020-21,Rio Ave,16,34,34,1.0
+Primeira Liga,Portugal,2020-21,Farense,17,31,34,0.9118
+Primeira Liga,Portugal,2020-21,Nacional,18,25,34,0.7353
+Primeira Liga,Portugal,2021-22,Porto,1,91,34,2.6765
+Primeira Liga,Portugal,2021-22,Sp Lisbon,2,85,34,2.5
+Primeira Liga,Portugal,2021-22,Benfica,3,74,34,2.1765
+Primeira Liga,Portugal,2021-22,Sp Braga,4,65,34,1.9118
+Primeira Liga,Portugal,2021-22,Gil Vicente,5,51,34,1.5
+Primeira Liga,Portugal,2021-22,Guimaraes,6,48,34,1.4118
+Primeira Liga,Portugal,2021-22,Santa Clara,7,40,34,1.1765
+Primeira Liga,Portugal,2021-22,Famalicao,8,39,34,1.1471
+Primeira Liga,Portugal,2021-22,Estoril,9,39,34,1.1471
+Primeira Liga,Portugal,2021-22,Maritimo,10,38,34,1.1176
+Primeira Liga,Portugal,2021-22,Boavista,11,38,34,1.1176
+Primeira Liga,Portugal,2021-22,Portimonense,12,38,34,1.1176
+Primeira Liga,Portugal,2021-22,Pacos Ferreira,13,38,34,1.1176
+Primeira Liga,Portugal,2021-22,Vizela,14,33,34,0.9706
+Primeira Liga,Portugal,2021-22,Arouca,15,31,34,0.9118
+Primeira Liga,Portugal,2021-22,Moreirense,16,29,34,0.8529
+Primeira Liga,Portugal,2021-22,Tondela,17,28,34,0.8235
+Primeira Liga,Portugal,2021-22,Belenenses,18,26,34,0.7647
+Primeira Liga,Portugal,2022-23,Benfica,1,87,34,2.5588
+Primeira Liga,Portugal,2022-23,Porto,2,85,34,2.5
+Primeira Liga,Portugal,2022-23,Sp Braga,3,78,34,2.2941
+Primeira Liga,Portugal,2022-23,Sp Lisbon,4,74,34,2.1765
+Primeira Liga,Portugal,2022-23,Arouca,5,54,34,1.5882
+Primeira Liga,Portugal,2022-23,Guimaraes,6,53,34,1.5588
+Primeira Liga,Portugal,2022-23,Chaves,7,46,34,1.3529
+Primeira Liga,Portugal,2022-23,Famalicao,8,44,34,1.2941
+Primeira Liga,Portugal,2022-23,Boavista,9,44,34,1.2941
+Primeira Liga,Portugal,2022-23,Casa Pia,10,41,34,1.2059
+Primeira Liga,Portugal,2022-23,Vizela,11,40,34,1.1765
+Primeira Liga,Portugal,2022-23,Rio Ave,12,40,34,1.1765
+Primeira Liga,Portugal,2022-23,Gil Vicente,13,37,34,1.0882
+Primeira Liga,Portugal,2022-23,Estoril,14,35,34,1.0294
+Primeira Liga,Portugal,2022-23,Portimonense,15,34,34,1.0
+Primeira Liga,Portugal,2022-23,Maritimo,16,26,34,0.7647
+Primeira Liga,Portugal,2022-23,Pacos Ferreira,17,23,34,0.6765
+Primeira Liga,Portugal,2022-23,Santa Clara,18,22,34,0.6471
+Primeira Liga,Portugal,2023-24,Sp Lisbon,1,90,34,2.6471
+Primeira Liga,Portugal,2023-24,Benfica,2,80,34,2.3529
+Primeira Liga,Portugal,2023-24,Porto,3,72,34,2.1176
+Primeira Liga,Portugal,2023-24,Sp Braga,4,68,34,2.0
+Primeira Liga,Portugal,2023-24,Guimaraes,5,63,34,1.8529
+Primeira Liga,Portugal,2023-24,Moreirense,6,55,34,1.6176
+Primeira Liga,Portugal,2023-24,Arouca,7,46,34,1.3529
+Primeira Liga,Portugal,2023-24,Famalicao,8,42,34,1.2353
+Primeira Liga,Portugal,2023-24,Casa Pia,9,38,34,1.1176
+Primeira Liga,Portugal,2023-24,Farense,10,37,34,1.0882
+Primeira Liga,Portugal,2023-24,Rio Ave,11,37,34,1.0882
+Primeira Liga,Portugal,2023-24,Gil Vicente,12,36,34,1.0588
+Primeira Liga,Portugal,2023-24,Estoril,13,33,34,0.9706
+Primeira Liga,Portugal,2023-24,Estrela,14,33,34,0.9706
+Primeira Liga,Portugal,2023-24,Boavista,15,32,34,0.9412
+Primeira Liga,Portugal,2023-24,Portimonense,16,32,34,0.9412
+Primeira Liga,Portugal,2023-24,Vizela,17,26,34,0.7647
+Primeira Liga,Portugal,2023-24,Chaves,18,23,34,0.6765
+Primeira Liga,Portugal,2024-25,Sp Lisbon,1,82,34,2.4118
+Primeira Liga,Portugal,2024-25,Benfica,2,80,34,2.3529
+Primeira Liga,Portugal,2024-25,Porto,3,71,34,2.0882
+Primeira Liga,Portugal,2024-25,Sp Braga,4,66,34,1.9412
+Primeira Liga,Portugal,2024-25,Santa Clara,5,57,34,1.6765
+Primeira Liga,Portugal,2024-25,Guimaraes,6,54,34,1.5882
+Primeira Liga,Portugal,2024-25,Famalicao,7,47,34,1.3824
+Primeira Liga,Portugal,2024-25,Estoril,8,46,34,1.3529
+Primeira Liga,Portugal,2024-25,Casa Pia,9,45,34,1.3235
+Primeira Liga,Portugal,2024-25,Moreirense,10,40,34,1.1765
+Primeira Liga,Portugal,2024-25,Arouca,11,38,34,1.1176
+Primeira Liga,Portugal,2024-25,Rio Ave,12,38,34,1.1176
+Primeira Liga,Portugal,2024-25,Gil Vicente,13,34,34,1.0
+Primeira Liga,Portugal,2024-25,Nacional,14,34,34,1.0
+Primeira Liga,Portugal,2024-25,Estrela,15,29,34,0.8529
+Primeira Liga,Portugal,2024-25,Farense,16,27,34,0.7941
+Primeira Liga,Portugal,2024-25,AVS,17,27,34,0.7941
+Primeira Liga,Portugal,2024-25,Boavista,18,24,34,0.7059
+Serie A,Italy,2015-16,Juventus,1,91,38,2.3947
+Serie A,Italy,2015-16,Napoli,2,82,38,2.1579
+Serie A,Italy,2015-16,Roma,3,80,38,2.1053
+Serie A,Italy,2015-16,Inter,4,67,38,1.7632
+Serie A,Italy,2015-16,Fiorentina,5,64,38,1.6842
+Serie A,Italy,2015-16,Sassuolo,6,61,38,1.6053
+Serie A,Italy,2015-16,Milan,7,57,38,1.5
+Serie A,Italy,2015-16,Lazio,8,54,38,1.4211
+Serie A,Italy,2015-16,Chievo,9,50,38,1.3158
+Serie A,Italy,2015-16,Genoa,10,46,38,1.2105
+Serie A,Italy,2015-16,Empoli,11,46,38,1.2105
+Serie A,Italy,2015-16,Torino,12,45,38,1.1842
+Serie A,Italy,2015-16,Atalanta,13,45,38,1.1842
+Serie A,Italy,2015-16,Bologna,14,42,38,1.1053
+Serie A,Italy,2015-16,Sampdoria,15,40,38,1.0526
+Serie A,Italy,2015-16,Udinese,16,39,38,1.0263
+Serie A,Italy,2015-16,Palermo,17,39,38,1.0263
+Serie A,Italy,2015-16,Carpi,18,38,38,1.0
+Serie A,Italy,2015-16,Frosinone,19,31,38,0.8158
+Serie A,Italy,2015-16,Verona,20,28,38,0.7368
+Serie A,Italy,2016-17,Juventus,1,91,38,2.3947
+Serie A,Italy,2016-17,Roma,2,87,38,2.2895
+Serie A,Italy,2016-17,Napoli,3,86,38,2.2632
+Serie A,Italy,2016-17,Atalanta,4,72,38,1.8947
+Serie A,Italy,2016-17,Lazio,5,70,38,1.8421
+Serie A,Italy,2016-17,Milan,6,63,38,1.6579
+Serie A,Italy,2016-17,Inter,7,62,38,1.6316
+Serie A,Italy,2016-17,Fiorentina,8,60,38,1.5789
+Serie A,Italy,2016-17,Torino,9,53,38,1.3947
+Serie A,Italy,2016-17,Sampdoria,10,48,38,1.2632
+Serie A,Italy,2016-17,Cagliari,11,47,38,1.2368
+Serie A,Italy,2016-17,Sassuolo,12,46,38,1.2105
+Serie A,Italy,2016-17,Udinese,13,45,38,1.1842
+Serie A,Italy,2016-17,Chievo,14,43,38,1.1316
+Serie A,Italy,2016-17,Bologna,15,41,38,1.0789
+Serie A,Italy,2016-17,Genoa,16,36,38,0.9474
+Serie A,Italy,2016-17,Crotone,17,34,38,0.8947
+Serie A,Italy,2016-17,Empoli,18,32,38,0.8421
+Serie A,Italy,2016-17,Palermo,19,26,38,0.6842
+Serie A,Italy,2016-17,Pescara,20,18,38,0.4737
+Serie A,Italy,2017-18,Juventus,1,95,38,2.5
+Serie A,Italy,2017-18,Napoli,2,91,38,2.3947
+Serie A,Italy,2017-18,Roma,3,77,38,2.0263
+Serie A,Italy,2017-18,Lazio,4,72,38,1.8947
+Serie A,Italy,2017-18,Inter,5,72,38,1.8947
+Serie A,Italy,2017-18,Milan,6,64,38,1.6842
+Serie A,Italy,2017-18,Atalanta,7,60,38,1.5789
+Serie A,Italy,2017-18,Fiorentina,8,57,38,1.5
+Serie A,Italy,2017-18,Torino,9,54,38,1.4211
+Serie A,Italy,2017-18,Sampdoria,10,54,38,1.4211
+Serie A,Italy,2017-18,Sassuolo,11,43,38,1.1316
+Serie A,Italy,2017-18,Genoa,12,41,38,1.0789
+Serie A,Italy,2017-18,Udinese,13,40,38,1.0526
+Serie A,Italy,2017-18,Chievo,14,40,38,1.0526
+Serie A,Italy,2017-18,Bologna,15,39,38,1.0263
+Serie A,Italy,2017-18,Cagliari,16,39,38,1.0263
+Serie A,Italy,2017-18,Spal,17,38,38,1.0
+Serie A,Italy,2017-18,Crotone,18,35,38,0.9211
+Serie A,Italy,2017-18,Verona,19,25,38,0.6579
+Serie A,Italy,2017-18,Benevento,20,21,38,0.5526
+Serie A,Italy,2018-19,Juventus,1,90,38,2.3684
+Serie A,Italy,2018-19,Napoli,2,79,38,2.0789
+Serie A,Italy,2018-19,Atalanta,3,69,38,1.8158
+Serie A,Italy,2018-19,Inter,4,69,38,1.8158
+Serie A,Italy,2018-19,Milan,5,68,38,1.7895
+Serie A,Italy,2018-19,Roma,6,66,38,1.7368
+Serie A,Italy,2018-19,Torino,7,63,38,1.6579
+Serie A,Italy,2018-19,Lazio,8,59,38,1.5526
+Serie A,Italy,2018-19,Sampdoria,9,53,38,1.3947
+Serie A,Italy,2018-19,Bologna,10,44,38,1.1579
+Serie A,Italy,2018-19,Sassuolo,11,43,38,1.1316
+Serie A,Italy,2018-19,Udinese,12,43,38,1.1316
+Serie A,Italy,2018-19,Spal,13,42,38,1.1053
+Serie A,Italy,2018-19,Fiorentina,14,41,38,1.0789
+Serie A,Italy,2018-19,Cagliari,15,41,38,1.0789
+Serie A,Italy,2018-19,Parma,16,41,38,1.0789
+Serie A,Italy,2018-19,Genoa,17,38,38,1.0
+Serie A,Italy,2018-19,Empoli,18,38,38,1.0
+Serie A,Italy,2018-19,Frosinone,19,25,38,0.6579
+Serie A,Italy,2018-19,Chievo,20,20,38,0.5263
+Serie A,Italy,2019-20,Juventus,1,83,38,2.1842
+Serie A,Italy,2019-20,Inter,2,82,38,2.1579
+Serie A,Italy,2019-20,Atalanta,3,78,38,2.0526
+Serie A,Italy,2019-20,Lazio,4,78,38,2.0526
+Serie A,Italy,2019-20,Roma,5,70,38,1.8421
+Serie A,Italy,2019-20,Milan,6,66,38,1.7368
+Serie A,Italy,2019-20,Napoli,7,62,38,1.6316
+Serie A,Italy,2019-20,Sassuolo,8,51,38,1.3421
+Serie A,Italy,2019-20,Fiorentina,9,49,38,1.2895
+Serie A,Italy,2019-20,Parma,10,49,38,1.2895
+Serie A,Italy,2019-20,Verona,11,49,38,1.2895
+Serie A,Italy,2019-20,Bologna,12,47,38,1.2368
+Serie A,Italy,2019-20,Cagliari,13,45,38,1.1842
+Serie A,Italy,2019-20,Udinese,14,45,38,1.1842
+Serie A,Italy,2019-20,Sampdoria,15,42,38,1.1053
+Serie A,Italy,2019-20,Torino,16,40,38,1.0526
+Serie A,Italy,2019-20,Genoa,17,39,38,1.0263
+Serie A,Italy,2019-20,Lecce,18,35,38,0.9211
+Serie A,Italy,2019-20,Brescia,19,25,38,0.6579
+Serie A,Italy,2019-20,Spal,20,20,38,0.5263
+Serie A,Italy,2020-21,Inter,1,91,38,2.3947
+Serie A,Italy,2020-21,Milan,2,79,38,2.0789
+Serie A,Italy,2020-21,Atalanta,3,78,38,2.0526
+Serie A,Italy,2020-21,Juventus,4,78,38,2.0526
+Serie A,Italy,2020-21,Napoli,5,77,38,2.0263
+Serie A,Italy,2020-21,Lazio,6,68,38,1.7895
+Serie A,Italy,2020-21,Roma,7,63,38,1.6579
+Serie A,Italy,2020-21,Sassuolo,8,62,38,1.6316
+Serie A,Italy,2020-21,Sampdoria,9,52,38,1.3684
+Serie A,Italy,2020-21,Verona,10,43,38,1.1316
+Serie A,Italy,2020-21,Genoa,11,42,38,1.1053
+Serie A,Italy,2020-21,Bologna,12,41,38,1.0789
+Serie A,Italy,2020-21,Fiorentina,13,40,38,1.0526
+Serie A,Italy,2020-21,Udinese,14,40,38,1.0526
+Serie A,Italy,2020-21,Spezia,15,39,38,1.0263
+Serie A,Italy,2020-21,Cagliari,16,37,38,0.9737
+Serie A,Italy,2020-21,Torino,17,37,38,0.9737
+Serie A,Italy,2020-21,Benevento,18,33,38,0.8684
+Serie A,Italy,2020-21,Crotone,19,23,38,0.6053
+Serie A,Italy,2020-21,Parma,20,20,38,0.5263
+Serie A,Italy,2021-22,Milan,1,86,38,2.2632
+Serie A,Italy,2021-22,Inter,2,84,38,2.2105
+Serie A,Italy,2021-22,Napoli,3,79,38,2.0789
+Serie A,Italy,2021-22,Juventus,4,70,38,1.8421
+Serie A,Italy,2021-22,Lazio,5,64,38,1.6842
+Serie A,Italy,2021-22,Roma,6,63,38,1.6579
+Serie A,Italy,2021-22,Fiorentina,7,62,38,1.6316
+Serie A,Italy,2021-22,Atalanta,8,59,38,1.5526
+Serie A,Italy,2021-22,Verona,9,53,38,1.3947
+Serie A,Italy,2021-22,Torino,10,50,38,1.3158
+Serie A,Italy,2021-22,Sassuolo,11,50,38,1.3158
+Serie A,Italy,2021-22,Udinese,12,47,38,1.2368
+Serie A,Italy,2021-22,Bologna,13,46,38,1.2105
+Serie A,Italy,2021-22,Empoli,14,41,38,1.0789
+Serie A,Italy,2021-22,Sampdoria,15,36,38,0.9474
+Serie A,Italy,2021-22,Spezia,16,36,38,0.9474
+Serie A,Italy,2021-22,Salernitana,17,31,38,0.8158
+Serie A,Italy,2021-22,Cagliari,18,30,38,0.7895
+Serie A,Italy,2021-22,Genoa,19,28,38,0.7368
+Serie A,Italy,2021-22,Venezia,20,27,38,0.7105
+Serie A,Italy,2022-23,Napoli,1,90,38,2.3684
+Serie A,Italy,2022-23,Lazio,2,74,38,1.9474
+Serie A,Italy,2022-23,Inter,3,72,38,1.8947
+Serie A,Italy,2022-23,Juventus,4,72,38,1.8947
+Serie A,Italy,2022-23,Milan,5,70,38,1.8421
+Serie A,Italy,2022-23,Atalanta,6,64,38,1.6842
+Serie A,Italy,2022-23,Roma,7,63,38,1.6579
+Serie A,Italy,2022-23,Fiorentina,8,56,38,1.4737
+Serie A,Italy,2022-23,Bologna,9,54,38,1.4211
+Serie A,Italy,2022-23,Torino,10,53,38,1.3947
+Serie A,Italy,2022-23,Monza,11,52,38,1.3684
+Serie A,Italy,2022-23,Udinese,12,46,38,1.2105
+Serie A,Italy,2022-23,Sassuolo,13,45,38,1.1842
+Serie A,Italy,2022-23,Empoli,14,43,38,1.1316
+Serie A,Italy,2022-23,Salernitana,15,42,38,1.1053
+Serie A,Italy,2022-23,Lecce,16,36,38,0.9474
+Serie A,Italy,2022-23,Verona,17,31,38,0.8158
+Serie A,Italy,2022-23,Spezia,18,31,38,0.8158
+Serie A,Italy,2022-23,Cremonese,19,27,38,0.7105
+Serie A,Italy,2022-23,Sampdoria,20,19,38,0.5
+Serie A,Italy,2023-24,Inter,1,94,38,2.4737
+Serie A,Italy,2023-24,Milan,2,75,38,1.9737
+Serie A,Italy,2023-24,Juventus,3,71,38,1.8684
+Serie A,Italy,2023-24,Atalanta,4,69,38,1.8158
+Serie A,Italy,2023-24,Bologna,5,68,38,1.7895
+Serie A,Italy,2023-24,Roma,6,63,38,1.6579
+Serie A,Italy,2023-24,Lazio,7,61,38,1.6053
+Serie A,Italy,2023-24,Fiorentina,8,60,38,1.5789
+Serie A,Italy,2023-24,Napoli,9,53,38,1.3947
+Serie A,Italy,2023-24,Torino,10,53,38,1.3947
+Serie A,Italy,2023-24,Genoa,11,49,38,1.2895
+Serie A,Italy,2023-24,Monza,12,45,38,1.1842
+Serie A,Italy,2023-24,Verona,13,38,38,1.0
+Serie A,Italy,2023-24,Lecce,14,38,38,1.0
+Serie A,Italy,2023-24,Udinese,15,37,38,0.9737
+Serie A,Italy,2023-24,Empoli,16,36,38,0.9474
+Serie A,Italy,2023-24,Cagliari,17,36,38,0.9474
+Serie A,Italy,2023-24,Frosinone,18,35,38,0.9211
+Serie A,Italy,2023-24,Sassuolo,19,30,38,0.7895
+Serie A,Italy,2023-24,Salernitana,20,17,38,0.4474
+Serie A,Italy,2024-25,Napoli,1,82,38,2.1579
+Serie A,Italy,2024-25,Inter,2,81,38,2.1316
+Serie A,Italy,2024-25,Atalanta,3,74,38,1.9474
+Serie A,Italy,2024-25,Juventus,4,70,38,1.8421
+Serie A,Italy,2024-25,Roma,5,69,38,1.8158
+Serie A,Italy,2024-25,Fiorentina,6,65,38,1.7105
+Serie A,Italy,2024-25,Lazio,7,65,38,1.7105
+Serie A,Italy,2024-25,Milan,8,63,38,1.6579
+Serie A,Italy,2024-25,Bologna,9,62,38,1.6316
+Serie A,Italy,2024-25,Como,10,49,38,1.2895
+Serie A,Italy,2024-25,Torino,11,44,38,1.1579
+Serie A,Italy,2024-25,Udinese,12,44,38,1.1579
+Serie A,Italy,2024-25,Genoa,13,43,38,1.1316
+Serie A,Italy,2024-25,Verona,14,37,38,0.9737
+Serie A,Italy,2024-25,Parma,15,36,38,0.9474
+Serie A,Italy,2024-25,Cagliari,16,36,38,0.9474
+Serie A,Italy,2024-25,Lecce,17,34,38,0.8947
+Serie A,Italy,2024-25,Empoli,18,31,38,0.8158
+Serie A,Italy,2024-25,Venezia,19,29,38,0.7632
+Serie A,Italy,2024-25,Monza,20,18,38,0.4737

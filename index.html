@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>European League Parity</title>
+  <meta name="description" content="A narrative comparison of parity across seven major European top-flight leagues using ten seasons of points-per-game data.">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero">
+      <p class="eyebrow">European League Parity</p>
+      <h1>Some leagues are not just stronger. They are structurally less even.</h1>
+      <p class="hero-thesis">Across seven major European top flights and ten seasons, points-per-game patterns suggest clear differences in how steep, compressed, or stratified league tables tend to be.</p>
+      <p class="hero-copy">This site keeps the scope narrow: top-flight leagues only, one comparable metric, and a small set of views built from the existing analysis bundle. The goal is not to over-model competition. It is to show, clearly, how league table shapes differ.</p>
+      <div class="hero-meta">
+        <div>
+          <span class="meta-label">Leagues</span>
+          <strong>7</strong>
+        </div>
+        <div>
+          <span class="meta-label">Seasons</span>
+          <strong>2015/16 to 2024/25</strong>
+        </div>
+        <div>
+          <span class="meta-label">Metric</span>
+          <strong>Points per game</strong>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Scope</p>
+          <h2>What is being measured</h2>
+        </div>
+        <div class="panel measure-grid">
+          <div class="measure-card">
+            <h3>Top-flight only</h3>
+            <p>Each row comes from the highest domestic league, not lower divisions or cup play.</p>
+          </div>
+          <div class="measure-card">
+            <h3>Seven leagues</h3>
+            <p>Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie, and Primeira Liga.</p>
+          </div>
+          <div class="measure-card">
+            <h3>Ten seasons</h3>
+            <p>The window runs from 2015/16 through 2024/25 to keep the comparison recent but stable.</p>
+          </div>
+          <div class="measure-card">
+            <h3>PPG for comparability</h3>
+            <p>Points per game makes leagues with different match counts easier to compare on the same scale.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Main View</p>
+          <h2>The shape of parity</h2>
+          <p class="section-intro">Start with the full table curve, then switch to where separation opens up. Flatter curves and smaller gaps point to more parity; steeper drops and wider gaps point to less.</p>
+        </div>
+
+        <div class="panel chart-panel">
+          <div class="control-row" aria-label="Chart controls">
+            <div class="mode-toggle" role="tablist" aria-label="Chart mode">
+              <button class="mode-button is-active" type="button" data-mode="avg_ppg">Average PPG by rank</button>
+              <button class="mode-button" type="button" data-mode="gap_top">Top-end gap comparison</button>
+              <button class="mode-button" type="button" data-mode="gap_mid">Mid-table gap comparison</button>
+            </div>
+            <div class="filter-group">
+              <div class="filter-head">
+                <span class="filter-label">Leagues</span>
+                <div class="filter-actions">
+                  <button class="mini-action" id="leagues-select-all" type="button">Select all</button>
+                  <button class="mini-action" id="leagues-clear-all" type="button">Clear all</button>
+                </div>
+              </div>
+              <div class="league-filters" id="league-filters" aria-label="League filters"></div>
+            </div>
+            <div class="filter-group">
+              <div class="filter-head">
+                <span class="filter-label">Seasons</span>
+                <div class="filter-actions">
+                  <button class="mini-action" id="seasons-select-all" type="button">Select all</button>
+                  <button class="mini-action" id="seasons-clear-all" type="button">Clear all</button>
+                </div>
+              </div>
+              <div class="season-slider-panel" id="season-slider-panel" aria-label="Season range">
+                <div class="season-slider-readout">
+                  <strong id="season-range-label">2015/16 to 2024/25</strong>
+                  <span id="season-range-count">10 seasons selected</span>
+                </div>
+                <div class="season-slider">
+                  <input id="season-start" type="range" min="0" max="9" step="1" value="0" aria-label="Season range start">
+                  <input id="season-end" type="range" min="0" max="9" step="1" value="9" aria-label="Season range end">
+                </div>
+                <div class="season-scale" id="season-scale"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="selection-summary" class="selection-summary"></div>
+
+          <div class="chart-copy">
+            <p id="chart-kicker" class="chart-kicker">Average PPG by rank across the full table.</p>
+            <p id="chart-explainer" class="chart-explainer">A flatter line means teams remain closer together from top to bottom. A steeper line suggests the table separates more sharply.</p>
+          </div>
+
+          <div class="chart-wrap">
+            <canvas id="parity-chart" aria-label="League parity chart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Supporting Views</p>
+          <h2>Where the separation shows up</h2>
+        </div>
+
+        <div class="support-grid">
+          <article class="panel support-card">
+            <img src="images/chart_gap_1_4.png" alt="Static chart comparing average gap from first to fourth place across leagues">
+            <h3>Top-end separation</h3>
+            <p>The gap from first to fourth place shows how quickly a league stretches near the top. In this bundle, Bundesliga and Primeira Liga stand out as the loosest title-to-Champions-League race groupings.</p>
+          </article>
+
+          <article class="panel support-card">
+            <img src="images/chart_gap_4_10.png" alt="Static chart comparing average gap from fourth to tenth place across leagues">
+            <h3>Mid-table compression</h3>
+            <p>This is where league texture becomes clearer. Ligue 1 stays relatively compressed beyond the European places, while Primeira Liga opens up more sharply in the middle band.</p>
+          </article>
+
+          <article class="panel support-card">
+            <img src="images/chart_parity_score.png" alt="Static chart showing a simple parity score summary across leagues">
+            <h3>Summary score, used carefully</h3>
+            <p>The simple parity score is useful as a compact ranking, but it is not the whole argument. The table curves and gap views matter more than any single composite number.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">League Headlines</p>
+          <h2>Quick reads by league</h2>
+        </div>
+        <div id="headline-cards" class="headline-grid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Method</p>
+          <h2>Method and caveats</h2>
+        </div>
+        <div class="panel method-panel">
+          <p>The analysis uses existing processed league-table outputs from the repo bundle. It compares seven top-flight leagues over ten seasons and standardizes results with points per game.</p>
+          <p>Parity here does not mean the same thing for every fan or analyst. A league can look tight at the top, loose in mid-table, or compressed at the bottom. The site keeps that distinction visible instead of forcing everything into one number.</p>
+          <p>The score summary is a simplification, and rare tie-break edge cases may differ slightly from official table ordering. That does not change the broader shapes shown here.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
