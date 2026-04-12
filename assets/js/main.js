@@ -8,23 +8,25 @@ const LEAGUE_COLORS = {
   "Primeira Liga": "#1f7a4c"
 };
 
+const BIG_FIVE = ["Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1"];
+
 const MODE_META = {
   avg_ppg: {
     label: "Average PPG by rank",
-    kicker: "Average PPG by rank across the full table.",
+    kicker: "Average PPG by rank across the selected league tables.",
     explainer: "A flatter line means teams remain closer together from top to bottom. A steeper line suggests the table separates more sharply.",
     yTitle: "Average PPG"
   },
   gap_top: {
     label: "Top-end gap comparison",
     kicker: "Average gap from 1st to 4th place.",
-    explainer: "This isolates separation near the top of the league. Larger values imply a looser top-end race.",
+    explainer: "This isolates how quickly the top end opens up. Larger values imply a looser title-to-Champions-League band.",
     yTitle: "Average PPG gap"
   },
   gap_mid: {
     label: "Mid-table gap comparison",
     kicker: "Average gap from 4th to 10th place.",
-    explainer: "This shows whether the league stays crowded beyond the European places or starts to spread out.",
+    explainer: "This shows whether the middle of the table stays crowded or starts to stratify quickly.",
     yTitle: "Average PPG gap"
   }
 };
@@ -33,11 +35,16 @@ const state = {
   mode: "avg_ppg",
   selectedLeagues: [],
   selectedSeasons: [],
-  masterRows: [],
-  seasonGapRows: [],
+  highlightLeague: "",
   allLeagues: [],
   allSeasons: [],
-  chart: null
+  masterRows: [],
+  seasonGapRows: [],
+  charts: {
+    main: null,
+    topGap: null,
+    bottomGap: null
+  }
 };
 
 document.addEventListener("DOMContentLoaded", init);
@@ -57,27 +64,27 @@ async function init() {
       ...row,
       season: normalizeSeason(row.season)
     }));
+
     state.allLeagues = uniqueValues(state.masterRows, "league");
     state.allSeasons = uniqueValues(state.masterRows, "season");
     state.selectedLeagues = [...state.allLeagues];
     state.selectedSeasons = [...state.allSeasons];
 
-    renderLeagueFilters();
-    initControls();
-    renderSeasonControls();
-    syncSelectionState();
+    renderStaticControls();
+    bindControls();
+    refreshView();
   } catch (error) {
     console.error(error);
-    document.getElementById("chart-kicker").textContent = "Data could not be loaded.";
-    document.getElementById("chart-explainer").textContent = "Use a local web server or GitHub Pages so the CSV files can be fetched correctly.";
+    document.getElementById("selection-summary").textContent = "The data files could not be loaded. Use GitHub Pages or a local web server rather than opening the HTML file directly.";
   }
 }
 
 async function loadCsv(path) {
   const response = await fetch(path);
-  if (!response.ok) throw new Error(`Could not load ${path}`);
-  const text = await response.text();
-  return parseCsv(text);
+  if (!response.ok) {
+    throw new Error(`Could not load ${path}`);
+  }
+  return parseCsv(await response.text());
 }
 
 function parseCsv(text) {
@@ -99,71 +106,117 @@ function cleanValue(value) {
   return Number.isNaN(asNumber) || trimmed === "" ? trimmed : asNumber;
 }
 
-function initControls() {
+function renderStaticControls() {
+  renderLeagueButtons();
+  renderSeasonScale();
+  renderHighlightOptions();
+}
+
+function bindControls() {
   document.querySelectorAll(".mode-button").forEach((button) => {
     button.addEventListener("click", () => {
       state.mode = button.dataset.mode;
       document.querySelectorAll(".mode-button").forEach((item) => {
         item.classList.toggle("is-active", item === button);
       });
-      syncSelectionState();
+      refreshView();
+    });
+  });
+
+  document.querySelectorAll("[data-league-preset]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const preset = button.dataset.leaguePreset;
+      if (preset === "all") {
+        state.selectedLeagues = [...state.allLeagues];
+      } else if (preset === "big5") {
+        state.selectedLeagues = state.allLeagues.filter((league) => BIG_FIVE.includes(league));
+      } else {
+        state.selectedLeagues = state.allLeagues.filter((league) => !BIG_FIVE.includes(league));
+      }
+      refreshView();
+    });
+  });
+
+  document.querySelectorAll("[data-season-preset]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const preset = button.dataset.seasonPreset;
+      state.selectedSeasons = preset === "recent"
+        ? state.allSeasons.slice(-4)
+        : [...state.allSeasons];
+      syncSeasonSliderToSelection();
+      refreshView();
     });
   });
 
   document.getElementById("leagues-select-all").addEventListener("click", () => {
     state.selectedLeagues = [...state.allLeagues];
-    syncSelectionState();
+    refreshView();
   });
 
   document.getElementById("leagues-clear-all").addEventListener("click", () => {
     state.selectedLeagues = [];
-    syncSelectionState();
+    refreshView();
   });
 
   document.getElementById("seasons-select-all").addEventListener("click", () => {
     state.selectedSeasons = [...state.allSeasons];
-    updateSeasonSliderFromSelection();
-    syncSelectionState();
+    syncSeasonSliderToSelection();
+    refreshView();
   });
 
   document.getElementById("seasons-clear-all").addEventListener("click", () => {
     state.selectedSeasons = [];
-    syncSelectionState();
+    refreshView();
   });
+
+  document.getElementById("highlight-league").addEventListener("change", (event) => {
+    state.highlightLeague = event.target.value;
+    refreshView();
+  });
+
+  bindSeasonSlider();
 }
 
-function renderLeagueFilters() {
+function renderLeagueButtons() {
   const container = document.getElementById("league-filters");
-
-  container.innerHTML = state.allLeagues.map((league) => {
-    return `<button class="league-pill is-active" type="button" data-league="${league}">${league}</button>`;
-  }).join("");
+  container.innerHTML = state.allLeagues
+    .map((league) => `<button class="league-pill is-active" type="button" data-league="${league}">${league}</button>`)
+    .join("");
 
   container.querySelectorAll(".league-pill").forEach((button) => {
     button.addEventListener("click", () => {
       const league = button.dataset.league;
-      const isSelected = state.selectedLeagues.includes(league);
-      state.selectedLeagues = isSelected
-        ? state.selectedLeagues.filter((item) => item !== league)
-        : [...state.selectedLeagues, league];
-      syncSelectionState();
+      if (state.selectedLeagues.includes(league)) {
+        state.selectedLeagues = state.selectedLeagues.filter((item) => item !== league);
+      } else {
+        state.selectedLeagues = [...state.selectedLeagues, league].sort();
+      }
+      refreshView();
     });
   });
 }
 
-function renderSeasonControls() {
+function renderSeasonScale() {
+  document.getElementById("season-scale").innerHTML = state.allSeasons
+    .map((season) => `<span>${season.replace("/", " / ")}</span>`)
+    .join("");
+}
+
+function renderHighlightOptions() {
+  const select = document.getElementById("highlight-league");
+  select.innerHTML = [
+    `<option value="">No highlight</option>`,
+    ...state.allLeagues.map((league) => `<option value="${league}">${league}</option>`)
+  ].join("");
+}
+
+function bindSeasonSlider() {
   const startInput = document.getElementById("season-start");
   const endInput = document.getElementById("season-end");
   const maxIndex = state.allSeasons.length - 1;
 
   startInput.max = String(maxIndex);
   endInput.max = String(maxIndex);
-  startInput.value = "0";
-  endInput.value = String(maxIndex);
-
-  document.getElementById("season-scale").innerHTML = state.allSeasons
-    .map((season) => `<span>${season.replace("/", " / ")}</span>`)
-    .join("");
 
   const updateFromSlider = () => {
     let start = Number(startInput.value);
@@ -176,19 +229,485 @@ function renderSeasonControls() {
     }
 
     state.selectedSeasons = state.allSeasons.slice(start, end + 1);
-    syncSelectionState();
+    refreshView();
   };
 
   startInput.addEventListener("input", updateFromSlider);
   endInput.addEventListener("input", updateFromSlider);
+
+  syncSeasonSliderToSelection();
 }
 
-function syncSelectionState() {
+function refreshView() {
+  const derived = deriveSelection();
+
   syncLeagueButtons();
-  updateSeasonSliderFromSelection();
-  updateSelectionSummary();
-  renderHeadlineCards();
-  renderChart();
+  syncSeasonSliderToSelection();
+  syncHighlightSelect();
+  updateSelectionSummary(derived);
+  updateChartCopy(derived);
+  renderQuickFindings(derived.metrics);
+  renderMainChart(derived);
+  renderSupportCharts(derived.metrics);
+  renderInsightBox(derived);
+  renderRankingPanel(derived.metrics);
+  renderHeadlineCards(derived.metrics);
+}
+
+// Build one deterministic selection snapshot so every panel on the page
+// reads from the same filtered data rather than each widget inventing its own logic.
+function deriveSelection() {
+  const filteredMasterRows = state.masterRows.filter((row) =>
+    state.selectedLeagues.includes(row.league) && state.selectedSeasons.includes(row.season)
+  );
+
+  const filteredGapRows = state.seasonGapRows.filter((row) =>
+    state.selectedLeagues.includes(row.league) && state.selectedSeasons.includes(row.season)
+  );
+
+  const rankCurves = buildRankCurves(filteredMasterRows);
+  const metrics = buildLeagueMetrics(filteredMasterRows, filteredGapRows, rankCurves);
+
+  return {
+    filteredMasterRows,
+    filteredGapRows,
+    rankCurves,
+    metrics
+  };
+}
+
+function buildRankCurves(rows) {
+  const grouped = {};
+
+  rows.forEach((row) => {
+    const key = `${row.league}::${row.rank}`;
+    if (!grouped[key]) {
+      grouped[key] = {
+        league: row.league,
+        rank: Number(row.rank),
+        values: []
+      };
+    }
+    grouped[key].values.push(Number(row.ppg));
+  });
+
+  return Object.values(grouped).reduce((acc, item) => {
+    if (!acc[item.league]) {
+      acc[item.league] = [];
+    }
+    acc[item.league].push({
+      rank: item.rank,
+      avg_ppg: average(item.values)
+    });
+    acc[item.league].sort((a, b) => a.rank - b.rank);
+    return acc;
+  }, {});
+}
+
+function buildLeagueMetrics(masterRows, gapRows, rankCurves) {
+  const visibleLeagues = [...new Set(masterRows.map((row) => row.league))];
+  const groupedGaps = gapRows.reduce((acc, row) => {
+    if (!acc[row.league]) {
+      acc[row.league] = [];
+    }
+    acc[row.league].push(row);
+    return acc;
+  }, {});
+
+  const rows = visibleLeagues.map((league) => {
+    const leagueGapRows = groupedGaps[league] || [];
+    const leagueSeasonRows = masterRows.filter((row) => row.league === league);
+    const groupedBySeason = leagueSeasonRows.reduce((acc, row) => {
+      if (!acc[row.season]) {
+        acc[row.season] = [];
+      }
+      acc[row.season].push(Number(row.ppg));
+      return acc;
+    }, {});
+
+    const avgPpgSd = average(Object.values(groupedBySeason).map(sampleStandardDeviation));
+    const curveRows = rankCurves[league] || [];
+    const curveDrop = curveRows.length ? curveRows[0].avg_ppg - curveRows[curveRows.length - 1].avg_ppg : 0;
+    const metrics = {
+      league,
+      avg_gap_1_2: average(leagueGapRows.map((row) => row.gap_1_2)),
+      avg_gap_1_4: average(leagueGapRows.map((row) => row.gap_1_4)),
+      avg_gap_4_10: average(leagueGapRows.map((row) => row.gap_4_10)),
+      avg_gap_10_last: average(leagueGapRows.map((row) => row.gap_10_last)),
+      curve_drop: curveDrop,
+      avg_ppg_sd: avgPpgSd
+    };
+
+    return {
+      ...metrics,
+      parity_score_simple: -(
+        metrics.avg_gap_1_2 +
+        metrics.avg_gap_1_4 +
+        metrics.avg_gap_4_10 +
+        metrics.avg_gap_10_last +
+        metrics.avg_ppg_sd
+      )
+    };
+  });
+
+  if (!rows.length) {
+    return [];
+  }
+
+  const min = Math.min(...rows.map((row) => row.parity_score_simple));
+  const max = Math.max(...rows.map((row) => row.parity_score_simple));
+
+  return rows
+    .map((row) => ({
+      ...row,
+      parity_score_0_100: max === min ? 100 : ((row.parity_score_simple - min) / (max - min)) * 100,
+      summary: buildHeadlineSummary(row)
+    }))
+    .sort((a, b) => b.parity_score_0_100 - a.parity_score_0_100);
+}
+
+function updateSelectionSummary(derived) {
+  const summary = document.getElementById("selection-summary");
+  const leagueText = !state.selectedLeagues.length
+    ? "No leagues selected"
+    : state.selectedLeagues.length === state.allLeagues.length
+      ? "All 7 leagues selected"
+      : `${state.selectedLeagues.length} leagues: ${state.selectedLeagues.join(", ")}`;
+  const seasonText = !state.selectedSeasons.length
+    ? "No seasons selected"
+    : state.selectedSeasons.length === state.allSeasons.length
+      ? "All 10 seasons selected"
+      : state.selectedSeasons.length === 1
+        ? `Season: ${state.selectedSeasons[0]}`
+        : `Seasons: ${state.selectedSeasons[0]} to ${state.selectedSeasons[state.selectedSeasons.length - 1]}`;
+  const highlightText = state.highlightLeague ? `Focus league: ${state.highlightLeague}.` : "No league is highlighted against baselines.";
+
+  summary.textContent = `${leagueText}. ${seasonText}. ${highlightText} ${derived.metrics.length ? `${derived.metrics.length} league profiles are active in this view.` : "Adjust the filters to populate the charts."}`;
+}
+
+function updateChartCopy(derived) {
+  const meta = MODE_META[state.mode];
+  const seasonLabel = state.selectedSeasons.length === state.allSeasons.length
+    ? "Average across all 10 seasons."
+    : !state.selectedSeasons.length
+      ? "No seasons are currently selected."
+      : `${state.selectedSeasons.length} selected season${state.selectedSeasons.length === 1 ? "" : "s"}.`;
+  const highlightText = state.highlightLeague && derived.metrics.some((row) => row.league === state.highlightLeague)
+    ? ` ${state.highlightLeague} is highlighted against muted baselines.`
+    : "";
+
+  document.getElementById("chart-kicker").textContent = meta.kicker;
+  document.getElementById("chart-explainer").textContent = `${meta.explainer} ${seasonLabel}${highlightText}`;
+}
+
+function renderQuickFindings(metrics) {
+  const container = document.getElementById("quick-findings");
+  if (!metrics.length) {
+    container.innerHTML = `<article class="quick-finding"><span class="quick-finding-label">No active selection</span><strong>Choose at least one league and one season</strong><span>The quick findings row updates from the live filters.</span></article>`;
+    return;
+  }
+
+  const mostEven = metrics[0];
+  const steepestCurve = [...metrics].sort((a, b) => b.curve_drop - a.curve_drop)[0];
+  const widestTopGap = [...metrics].sort((a, b) => b.avg_gap_1_4 - a.avg_gap_1_4)[0];
+  const tightestMid = [...metrics].sort((a, b) => a.avg_gap_4_10 - b.avg_gap_4_10)[0];
+
+  container.innerHTML = [
+    quickFindingCard("Most even in this cut", mostEven.league, `Parity score ${mostEven.parity_score_0_100.toFixed(1)}`),
+    quickFindingCard("Steepest full-table drop", steepestCurve.league, `Curve drop ${steepestCurve.curve_drop.toFixed(3)} PPG`),
+    quickFindingCard("Widest top-end gap", widestTopGap.league, `1st to 4th gap ${widestTopGap.avg_gap_1_4.toFixed(3)} PPG`),
+    quickFindingCard("Tightest mid-table", tightestMid.league, `4th to 10th gap ${tightestMid.avg_gap_4_10.toFixed(3)} PPG`)
+  ].join("");
+}
+
+function quickFindingCard(label, title, detail) {
+  return `
+    <article class="quick-finding">
+      <span class="quick-finding-label">${label}</span>
+      <strong>${title}</strong>
+      <span>${detail}</span>
+    </article>
+  `;
+}
+
+function renderMainChart(derived) {
+  const canvas = document.getElementById("parity-chart");
+  if (state.charts.main) {
+    state.charts.main.destroy();
+  }
+
+  state.charts.main = new Chart(canvas, {
+    type: state.mode === "avg_ppg" ? "line" : "bar",
+    data: buildMainChartData(derived),
+    options: buildMainChartOptions()
+  });
+}
+
+function buildMainChartData(derived) {
+  if (state.mode === "avg_ppg") {
+    const datasets = Object.entries(derived.rankCurves)
+      .sort(([a], [b]) => {
+        if (a === state.highlightLeague) return 1;
+        if (b === state.highlightLeague) return -1;
+        return a.localeCompare(b);
+      })
+      .map(([league, rows]) => {
+        const isHighlighted = !!state.highlightLeague && league === state.highlightLeague;
+        const useMuted = !!state.highlightLeague && !isHighlighted;
+        return {
+          label: league,
+          data: rows.map((row) => ({ x: row.rank, y: row.avg_ppg })),
+          borderColor: useMuted ? "rgba(102, 93, 82, 0.35)" : LEAGUE_COLORS[league],
+          backgroundColor: useMuted ? "rgba(102, 93, 82, 0.35)" : LEAGUE_COLORS[league],
+          borderWidth: isHighlighted ? 4 : 3,
+          pointRadius: 0,
+          pointHoverRadius: isHighlighted ? 5 : 3,
+          tension: 0.28
+        };
+      });
+    return { datasets };
+  }
+
+  const metricKey = state.mode === "gap_top" ? "avg_gap_1_4" : "avg_gap_4_10";
+  return {
+    labels: derived.metrics.map((row) => row.league),
+    datasets: [{
+      label: MODE_META[state.mode].label,
+      data: derived.metrics.map((row) => row[metricKey]),
+      backgroundColor: derived.metrics.map((row) => colorForLeague(row.league)),
+      borderRadius: 10,
+      borderSkipped: false
+    }]
+  };
+}
+
+function buildMainChartOptions() {
+  const meta = MODE_META[state.mode];
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+      mode: "nearest",
+      intersect: false
+    },
+    plugins: {
+      legend: {
+        display: state.mode === "avg_ppg",
+        position: "bottom",
+        labels: {
+          usePointStyle: true,
+          color: "#1d1915",
+          boxWidth: 10,
+          padding: 18
+        }
+      },
+      tooltip: {
+        backgroundColor: "rgba(29, 25, 21, 0.93)",
+        titleColor: "#fffaf3",
+        bodyColor: "#fffaf3",
+        padding: 12,
+        displayColors: state.mode === "avg_ppg",
+        callbacks: {
+          title(items) {
+            return state.mode === "avg_ppg" ? `Rank ${items[0].raw.x}` : items[0].label;
+          },
+          label(context) {
+            const value = Number(context.raw.y ?? context.raw).toFixed(3);
+            return state.mode === "avg_ppg"
+              ? `${context.dataset.label}: ${value} PPG`
+              : `${value} PPG gap`;
+          }
+        }
+      }
+    },
+    scales: state.mode === "avg_ppg"
+      ? {
+          x: {
+            type: "linear",
+            title: { display: true, text: "League rank", color: "#665d52" },
+            ticks: { stepSize: 1, color: "#665d52" },
+            grid: { color: "rgba(29, 25, 21, 0.08)" }
+          },
+          y: {
+            title: { display: true, text: meta.yTitle, color: "#665d52" },
+            ticks: {
+              color: "#665d52",
+              callback(value) {
+                return value.toFixed(1);
+              }
+            },
+            grid: { color: "rgba(29, 25, 21, 0.08)" }
+          }
+        }
+      : {
+          x: {
+            ticks: { color: "#665d52" },
+            grid: { display: false }
+          },
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: meta.yTitle, color: "#665d52" },
+            ticks: {
+              color: "#665d52",
+              callback(value) {
+                return value.toFixed(2);
+              }
+            },
+            grid: { color: "rgba(29, 25, 21, 0.08)" }
+          }
+        }
+  };
+}
+
+function renderSupportCharts(metrics) {
+  renderSupportChart("topGap", "support-top-gap-chart", metrics, "avg_gap_1_4");
+  renderSupportChart("bottomGap", "support-bottom-gap-chart", metrics, "avg_gap_10_last");
+}
+
+function renderSupportChart(chartKey, canvasId, metrics, metricKey) {
+  const canvas = document.getElementById(canvasId);
+  if (state.charts[chartKey]) {
+    state.charts[chartKey].destroy();
+  }
+
+  state.charts[chartKey] = new Chart(canvas, {
+    type: "bar",
+    data: {
+      labels: metrics.map((row) => row.league),
+      datasets: [{
+        data: metrics.map((row) => row[metricKey]),
+        backgroundColor: metrics.map((row) => colorForLeague(row.league)),
+        borderRadius: 8,
+        borderSkipped: false
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: "rgba(29, 25, 21, 0.93)",
+          titleColor: "#fffaf3",
+          bodyColor: "#fffaf3",
+          padding: 10,
+          callbacks: {
+            label(context) {
+              return `${Number(context.raw).toFixed(3)} PPG gap`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: "#665d52" },
+          grid: { display: false }
+        },
+        y: {
+          beginAtZero: true,
+          ticks: {
+            color: "#665d52",
+            callback(value) {
+              return value.toFixed(2);
+            }
+          },
+          grid: { color: "rgba(29, 25, 21, 0.08)" }
+        }
+      }
+    }
+  });
+}
+
+// The insight box is intentionally deterministic: it only states claims that can be
+// read directly from the current filtered metrics, not a generated narrative guess.
+function renderInsightBox(derived) {
+  const container = document.getElementById("insight-box");
+  if (!derived.metrics.length) {
+    container.innerHTML = "<p>Select at least one league and one season to generate deterministic takeaways.</p>";
+    return;
+  }
+
+  if (derived.metrics.length === 1) {
+    const league = derived.metrics[0];
+    container.innerHTML = `
+      <ul>
+        <li>${league.league} is the only active league, so the current view reads as a profile rather than a comparison.</li>
+        <li>Its full-table curve drops by ${league.curve_drop.toFixed(3)} PPG from first to last, which is the clearest single summary of how steep this selection looks.</li>
+        <li>The strongest separation sits ${dominantGapLabel(league)}, so that is where this league currently looks least even.</li>
+      </ul>
+    `;
+    return;
+  }
+
+  const mostEven = derived.metrics[0];
+  const leastEven = [...derived.metrics].sort((a, b) => a.parity_score_0_100 - b.parity_score_0_100)[0];
+  const flattest = [...derived.metrics].sort((a, b) => a.curve_drop - b.curve_drop)[0];
+  const lowestTableSplit = [...derived.metrics].sort((a, b) => b.avg_gap_10_last - a.avg_gap_10_last)[0];
+  const averageMidGap = average(derived.metrics.map((row) => row.avg_gap_4_10));
+
+  container.innerHTML = `
+    <ul>
+      <li>${mostEven.league} comes out as the most even selection here, while ${leastEven.league} sits at the other end of the current ranking.</li>
+      <li>${flattest.league} has the flattest first-to-last curve at ${flattest.curve_drop.toFixed(3)} PPG, which is a cleaner parity signal than a single composite score by itself.</li>
+      <li>${lowestTableSplit.league} shows the strongest lower-table separation, with an average 10th-to-last gap of ${lowestTableSplit.avg_gap_10_last.toFixed(3)} PPG.</li>
+      <li>Across the active selection, the average 4th-to-10th gap is ${averageMidGap.toFixed(3)} PPG, so the middle of the table is ${averageMidGap < 0.55 ? "relatively compressed" : "meaningfully stratified"} rather than flat.</li>
+    </ul>
+  `;
+}
+
+function renderRankingPanel(metrics) {
+  const container = document.getElementById("ranking-panel");
+  if (!metrics.length) {
+    container.innerHTML = "<h3>Selected ranking</h3><p>No ranking is available until at least one league and one season are active.</p>";
+    return;
+  }
+
+  container.innerHTML = `
+    <h3>Selected ranking</h3>
+    <p>A compact summary score built from the active curve and gap measures. Higher means the current selection looks more even.</p>
+    <div class="ranking-list">
+      ${metrics.map((row, index) => `
+        <div class="ranking-row">
+          <div class="ranking-row-top">
+            <strong>#${index + 1} ${row.league}</strong>
+            <small>${row.parity_score_0_100.toFixed(1)}</small>
+          </div>
+          <div class="ranking-bar"><span style="width: ${row.parity_score_0_100.toFixed(1)}%"></span></div>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderHeadlineCards(metrics) {
+  const container = document.getElementById("headline-cards");
+  if (!metrics.length) {
+    container.innerHTML = `<article class="headline-card"><h3>No league headlines available</h3><p>Select at least one league and one season to populate this section.</p></article>`;
+    return;
+  }
+
+  container.innerHTML = metrics.map((row, index) => `
+    <article class="headline-card">
+      <div class="headline-top">
+        <h3>${row.league}</h3>
+        <span class="headline-rank">#${index + 1}</span>
+      </div>
+      <div class="headline-score">${row.parity_score_0_100.toFixed(1)}</div>
+      <p>${row.summary}</p>
+      <div class="headline-metric">
+        <span>Curve drop</span>
+        <strong>${row.curve_drop.toFixed(3)}</strong>
+      </div>
+      <div class="headline-metric">
+        <span>1st to 4th gap</span>
+        <strong>${row.avg_gap_1_4.toFixed(3)}</strong>
+      </div>
+      <div class="headline-metric">
+        <span>10th to last gap</span>
+        <strong>${row.avg_gap_10_last.toFixed(3)}</strong>
+      </div>
+    </article>
+  `).join("");
 }
 
 function syncLeagueButtons() {
@@ -197,7 +716,7 @@ function syncLeagueButtons() {
   });
 }
 
-function updateSeasonSliderFromSelection() {
+function syncSeasonSliderToSelection() {
   const startInput = document.getElementById("season-start");
   const endInput = document.getElementById("season-end");
   const label = document.getElementById("season-range-label");
@@ -218,242 +737,55 @@ function updateSeasonSliderFromSelection() {
   count.textContent = `${state.selectedSeasons.length} season${state.selectedSeasons.length === 1 ? "" : "s"} selected`;
 }
 
-function updateSelectionSummary() {
-  const summary = document.getElementById("selection-summary");
-  const leagueText = !state.selectedLeagues.length
-    ? "No leagues selected"
-    : state.selectedLeagues.length === state.allLeagues.length
-      ? "All 7 leagues selected"
-      : `${state.selectedLeagues.length} league${state.selectedLeagues.length === 1 ? "" : "s"}: ${state.selectedLeagues.join(", ")}`;
-  const seasonText = !state.selectedSeasons.length
-    ? "No seasons selected"
-    : state.selectedSeasons.length === state.allSeasons.length
-      ? "All 10 seasons selected"
-      : state.selectedSeasons.length === 1
-        ? `Season: ${state.selectedSeasons[0]}`
-        : `Seasons: ${state.selectedSeasons[0]} to ${state.selectedSeasons[state.selectedSeasons.length - 1]}`;
-
-  summary.textContent = `${leagueText}. ${seasonText}.`;
-}
-
-function renderChart() {
-  const canvas = document.getElementById("parity-chart");
-  const meta = MODE_META[state.mode];
-  const seasonLabel = state.selectedSeasons.length === state.allSeasons.length
-    ? "Average across all 10 seasons."
-    : !state.selectedSeasons.length
-      ? "No seasons are currently selected."
-    : `${state.selectedSeasons.length} season${state.selectedSeasons.length === 1 ? "" : "s"} selected: ${state.selectedSeasons.join(", ")}.`;
-
-  document.getElementById("chart-kicker").textContent = meta.kicker;
-  document.getElementById("chart-explainer").textContent = `${meta.explainer} ${seasonLabel}`;
-
-  if (state.chart) {
-    state.chart.destroy();
+function syncHighlightSelect() {
+  const select = document.getElementById("highlight-league");
+  if (state.highlightLeague && !state.selectedLeagues.includes(state.highlightLeague)) {
+    state.highlightLeague = "";
   }
-
-  state.chart = new Chart(canvas, {
-    type: state.mode === "avg_ppg" ? "line" : "bar",
-    data: buildChartData(),
-    options: buildChartOptions(meta)
-  });
+  select.value = state.highlightLeague;
 }
 
-function buildChartData() {
-  const selectedGapRows = state.seasonGapRows.filter((row) =>
-    state.selectedLeagues.includes(row.league) && state.selectedSeasons.includes(row.season)
-  );
-
-  if (state.mode === "avg_ppg") {
-    const grouped = groupRankCurveRows();
-    const datasets = Object.entries(grouped).map(([league, rows]) => ({
-      label: league,
-      data: rows.map((row) => ({ x: row.rank, y: row.avg_ppg })),
-      borderColor: LEAGUE_COLORS[league],
-      backgroundColor: LEAGUE_COLORS[league],
-      pointRadius: 0,
-      pointHoverRadius: 4,
-      borderWidth: 3,
-      tension: 0.28
-    }));
-    return { datasets };
+function colorForLeague(league) {
+  if (state.highlightLeague) {
+    return league === state.highlightLeague ? LEAGUE_COLORS[league] : "rgba(102, 93, 82, 0.35)";
   }
-
-  const aggregatedRows = aggregateGapRows(selectedGapRows);
-  const sortedRows = [...aggregatedRows].sort((a, b) => a.league.localeCompare(b.league));
-  const metric = state.mode === "gap_top" ? "avg_gap_1_4" : "avg_gap_4_10";
-
-  return {
-    labels: sortedRows.map((row) => row.league),
-    datasets: [{
-      label: MODE_META[state.mode].label,
-      data: sortedRows.map((row) => row[metric]),
-      backgroundColor: sortedRows.map((row) => LEAGUE_COLORS[row.league]),
-      borderRadius: 8,
-      borderSkipped: false
-    }]
-  };
+  return LEAGUE_COLORS[league];
 }
 
-function buildChartOptions(meta) {
-  return {
-    responsive: true,
-    maintainAspectRatio: false,
-    interaction: {
-      mode: "nearest",
-      intersect: false
-    },
-    plugins: {
-      legend: {
-        display: state.mode === "avg_ppg",
-        position: "bottom",
-        labels: {
-          usePointStyle: true,
-          boxWidth: 10,
-          color: "#1b1a17",
-          padding: 18
-        }
-      },
-      tooltip: {
-        backgroundColor: "rgba(27, 26, 23, 0.92)",
-        titleColor: "#fffaf3",
-        bodyColor: "#fffaf3",
-        padding: 12,
-        displayColors: state.mode === "avg_ppg",
-        callbacks: {
-          title(items) {
-            if (state.mode === "avg_ppg") return `Rank ${items[0].raw.x}`;
-            return items[0].label;
-          },
-          label(context) {
-            const value = Number(context.raw.y ?? context.raw).toFixed(3);
-            return state.mode === "avg_ppg"
-              ? `${context.dataset.label}: ${value} PPG`
-              : `${value} PPG gap`;
-          },
-          afterLabel() {
-            return `${state.selectedSeasons.length} selected season${state.selectedSeasons.length === 1 ? "" : "s"}`;
-          }
-        }
-      }
-    },
-    scales: state.mode === "avg_ppg"
-      ? {
-          x: {
-            type: "linear",
-            title: { display: true, text: "League rank", color: "#60584d" },
-            ticks: { stepSize: 1, color: "#60584d" },
-            grid: { color: "rgba(27, 26, 23, 0.08)" }
-          },
-          y: {
-            title: { display: true, text: meta.yTitle, color: "#60584d" },
-            ticks: {
-              color: "#60584d",
-              callback(value) {
-                return value.toFixed(1);
-              }
-            },
-            grid: { color: "rgba(27, 26, 23, 0.08)" }
-          }
-        }
-      : {
-          x: {
-            ticks: { color: "#60584d" },
-            grid: { display: false }
-          },
-          y: {
-            beginAtZero: true,
-            title: { display: true, text: meta.yTitle, color: "#60584d" },
-            ticks: {
-              color: "#60584d",
-              callback(value) {
-                return value.toFixed(2);
-              }
-            },
-            grid: { color: "rgba(27, 26, 23, 0.08)" }
-          }
-        }
-  };
+function dominantGapLabel(row) {
+  const entries = [
+    ["near the top of the table", row.avg_gap_1_4],
+    ["through the middle of the table", row.avg_gap_4_10],
+    ["lower down the table", row.avg_gap_10_last]
+  ];
+  return entries.sort((a, b) => b[1] - a[1])[0][0];
 }
 
-function renderHeadlineCards() {
-  const container = document.getElementById("headline-cards");
-
-  const rows = buildHeadlineRows();
-  if (!rows.length) {
-    container.innerHTML = `<article class="headline-card"><h3>No league headlines available</h3><p>Select at least one league and one season to populate this section.</p></article>`;
-    return;
+function buildHeadlineSummary(row) {
+  const dominant = dominantGapLabel(row);
+  if (dominant === "near the top of the table") {
+    return "In the current filter, this league separates most clearly near the top rather than across the rest of the table.";
   }
-
-  container.innerHTML = rows.map((row, index) => `
-    <article class="headline-card">
-      <div class="headline-top">
-        <h3>${row.league}</h3>
-        <span class="headline-rank">#${index + 1}</span>
-      </div>
-      <div class="headline-score">${Number(row.parity_score_0_100).toFixed(1)}</div>
-      <p>${row.summary}</p>
-      <div class="headline-metric">
-        <span>Curve drop</span>
-        <strong>${Number(row.curve_drop).toFixed(3)}</strong>
-      </div>
-      <div class="headline-metric">
-        <span>1st to 4th gap</span>
-        <strong>${Number(row.avg_gap_1_4).toFixed(3)}</strong>
-      </div>
-      <div class="headline-metric">
-        <span>4th to 10th gap</span>
-        <strong>${Number(row.avg_gap_4_10).toFixed(3)}</strong>
-      </div>
-    </article>
-  `).join("");
-}
-
-function groupRankCurveRows() {
-  const filteredRows = state.masterRows.filter((row) =>
-    state.selectedLeagues.includes(row.league) && state.selectedSeasons.includes(row.season)
-  );
-
-  const grouped = {};
-
-  filteredRows.forEach((row) => {
-    const key = `${row.league}::${row.rank}`;
-    if (!grouped[key]) {
-      grouped[key] = { league: row.league, rank: row.rank, values: [] };
-    }
-    grouped[key].values.push(row.ppg);
-  });
-
-  return Object.values(grouped).reduce((acc, item) => {
-    if (!acc[item.league]) acc[item.league] = [];
-    acc[item.league].push({
-      rank: item.rank,
-      avg_ppg: average(item.values)
-    });
-    acc[item.league].sort((a, b) => a.rank - b.rank);
-    return acc;
-  }, {});
-}
-
-function aggregateGapRows(rows) {
-  const grouped = rows.reduce((acc, row) => {
-    if (!acc[row.league]) acc[row.league] = [];
-    acc[row.league].push(row);
-    return acc;
-  }, {});
-
-  return Object.entries(grouped).map(([league, leagueRows]) => ({
-    league,
-    avg_gap_1_2: average(leagueRows.map((row) => row.gap_1_2)),
-    avg_gap_1_4: average(leagueRows.map((row) => row.gap_1_4)),
-    avg_gap_4_10: average(leagueRows.map((row) => row.gap_4_10)),
-    avg_gap_10_last: average(leagueRows.map((row) => row.gap_10_last))
-  }));
+  if (dominant === "through the middle of the table") {
+    return "In the current filter, the middle band is where this league opens up most, pointing to a more layered table below the Champions League places.";
+  }
+  return "In the current filter, the sharper split appears lower down the table, suggesting a clearer break between mid-table and the bottom.";
 }
 
 function average(values) {
-  if (!values.length) return 0;
+  if (!values.length) {
+    return 0;
+  }
   return values.reduce((sum, value) => sum + Number(value), 0) / values.length;
+}
+
+function sampleStandardDeviation(values) {
+  if (values.length <= 1) {
+    return 0;
+  }
+  const mean = average(values);
+  const variance = values.reduce((sum, value) => sum + ((value - mean) ** 2), 0) / values.length;
+  return Math.sqrt(variance);
 }
 
 function uniqueValues(rows, key) {
@@ -466,84 +798,4 @@ function normalizeSeason(season) {
 
 function compareSeasons(a, b) {
   return Number(a.slice(0, 4)) - Number(b.slice(0, 4));
-}
-
-function buildHeadlineRows() {
-  const visibleLeagues = state.selectedLeagues.filter((league) =>
-    state.masterRows.some((row) => row.league === league && state.selectedSeasons.includes(row.season))
-  );
-
-  const gapRows = aggregateGapRows(
-    state.seasonGapRows.filter((row) =>
-      visibleLeagues.includes(row.league) && state.selectedSeasons.includes(row.season)
-    )
-  );
-
-  const rankGroups = groupRankCurveRows();
-
-  const rows = visibleLeagues.map((league) => {
-    const seasonRows = state.masterRows.filter((row) =>
-      row.league === league && state.selectedSeasons.includes(row.season)
-    );
-    const groupedBySeason = seasonRows.reduce((acc, row) => {
-      if (!acc[row.season]) acc[row.season] = [];
-      acc[row.season].push(Number(row.ppg));
-      return acc;
-    }, {});
-    const avgPpgSd = average(Object.values(groupedBySeason).map(sampleStandardDeviation));
-    const gapRow = gapRows.find((row) => row.league === league) || {
-      avg_gap_1_2: 0,
-      avg_gap_1_4: 0,
-      avg_gap_4_10: 0,
-      avg_gap_10_last: 0
-    };
-    const curveRows = rankGroups[league] || [];
-    const curveDrop = curveRows.length ? Number(curveRows[0].avg_ppg) - Number(curveRows[curveRows.length - 1].avg_ppg) : 0;
-    const parityScoreSimple = -(
-      Number(gapRow.avg_gap_1_2) +
-      Number(gapRow.avg_gap_1_4) +
-      Number(gapRow.avg_gap_4_10) +
-      Number(gapRow.avg_gap_10_last) +
-      avgPpgSd
-    );
-
-    return {
-      league,
-      ...gapRow,
-      avg_ppg_sd: avgPpgSd,
-      curve_drop: curveDrop,
-      parity_score_simple: parityScoreSimple
-    };
-  });
-
-  if (!rows.length) return [];
-
-  const min = Math.min(...rows.map((row) => row.parity_score_simple));
-  const max = Math.max(...rows.map((row) => row.parity_score_simple));
-
-  return rows
-    .map((row) => ({
-      ...row,
-      parity_score_0_100: max === min ? 100 : ((row.parity_score_simple - min) / (max - min)) * 100,
-      summary: buildHeadlineSummary(row)
-    }))
-    .sort((a, b) => b.parity_score_0_100 - a.parity_score_0_100);
-}
-
-function sampleStandardDeviation(values) {
-  if (values.length <= 1) return 0;
-  const mean = average(values);
-  const variance = values.reduce((sum, value) => sum + ((value - mean) ** 2), 0) / values.length;
-  return Math.sqrt(variance);
-}
-
-function buildHeadlineSummary(row) {
-  const highestGap = Math.max(row.avg_gap_1_4, row.avg_gap_4_10, row.avg_gap_10_last);
-  if (highestGap === row.avg_gap_10_last) {
-    return "The biggest separation in this selection sits lower in the table, suggesting a stronger split between mid-table and the bottom.";
-  }
-  if (highestGap === row.avg_gap_4_10) {
-    return "This selection looks most stratified in the middle band, with more room opening up beyond the European places.";
-  }
-  return "This selection opens up more sharply near the top, with the title-to-Champions-League band less compressed than the rest.";
 }

@@ -11,9 +11,9 @@ Live site:
 
 - `index.html` - main one-page site for GitHub Pages
 - `assets/css/styles.css` - site styling
-- `assets/js/main.js` - lightweight CSV loading and Chart.js interactivity
+- `assets/js/main.js` - lightweight CSV loading, presets, live support views, and deterministic insight logic
 - `data/` - processed CSVs and source bundle files
-- `images/` - existing exported chart PNGs used as supporting visuals
+- `images/` - legacy exported chart PNGs kept in the repo bundle
 
 ## Project scope
 
@@ -26,11 +26,19 @@ This repo keeps the original analysis scope intact:
 
 ## Interactive chart
 
-The main chart is powered by Chart.js and reads directly from the processed CSV files in `data/`:
+The page stays fully static but includes several lightweight interactive pieces:
 
-- `data/league_rank_curve.csv` for average PPG by rank
-- `data/league_summary.csv` for top-end and mid-table gap comparisons
-- `data/league_headlines.csv` for league headline cards
+- main Chart.js view with league filters, season range, and mode switching
+- presets for `All leagues`, `Big 5`, `Non-Big-5`, `Full 10 seasons`, and `Recent seasons`
+- optional focus-league highlighting against muted baselines
+- live quick findings, support charts, ranking panel, and deterministic insight box
+
+The page reads directly from the processed CSV files in `data/`:
+
+- `data/league_team_season_master_7leagues_10seasons.csv` for season-level rank curves
+- `data/league_season_gaps.csv` for top-end, mid-table, and lower-table gap comparisons
+
+No build step or package manager is used.
 
 ## Local preview
 
@@ -55,10 +63,11 @@ No build step is required.
 
 - Update copy directly in `index.html`.
 - Adjust colors, spacing, or layout in `assets/css/styles.css`.
-- Tweak chart behavior or labels in `assets/js/main.js`.
+- Tweak presets, chart behavior, or text logic in `assets/js/main.js`.
 - Replace or extend processed data in `data/` without changing the site structure.
 
 ## Notes
 
 - The site intentionally stays lightweight and editorial rather than becoming a full dashboard.
-- The parity score is presented as a summary view, not a definitive single-number ranking.
+- The support sections are now driven by live CSV data rather than the older static image exports.
+- The parity score is presented as a compact summary view, not a definitive single-number ranking.
