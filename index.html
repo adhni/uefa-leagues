@@ -21,10 +21,10 @@
         <p class="eyebrow">European League Parity</p>
         <h1>Some leagues stay tighter from top to bottom. Others break apart much earlier.</h1>
         <p class="hero-thesis">Across seven major European top flights and ten seasons, points-per-game patterns show meaningful differences in how compressed, steep, or stratified league tables tend to be.</p>
-        <p class="hero-copy">This project keeps the lens narrow on purpose: top-flight leagues only, points per game for comparability, and a small set of views that use the existing processed outputs rather than rebuilding the analysis. The point is not to model everything. It is to make the table shape legible.</p>
+        <p class="hero-copy">Compare the gap at the top, the spread through the middle, and the distance to the bottom. Choose leagues and seasons to see where their tables are closest and where they pull apart.</p>
         <div class="hero-actions">
           <a class="jump-link" href="#main-view">Explore the chart</a>
-          <span class="hero-note">Static site • GitHub Pages ready • built from existing CSV outputs</span>
+          <span class="hero-note">Seven leagues. Ten seasons. Three ways to compare.</span>
         </div>
       </div>
 
@@ -74,7 +74,7 @@
           </div>
           <div>
             <span class="scope-label">Interpretation</span>
-            <strong>Flatter curves and smaller gaps imply more parity</strong>
+            <strong>Smaller PPG gaps mean closer tables; league size also matters</strong>
           </div>
         </div>
       </section>
@@ -112,10 +112,10 @@
           </div>
 
           <div class="control-row" aria-label="Chart controls">
-            <div class="mode-toggle" role="tablist" aria-label="Chart mode">
-              <button class="mode-button is-active" type="button" data-mode="avg_ppg">Average PPG by rank</button>
-              <button class="mode-button" type="button" data-mode="gap_top">Top-end gap comparison</button>
-              <button class="mode-button" type="button" data-mode="gap_mid">Mid-table gap comparison</button>
+            <div class="mode-toggle" role="group" aria-label="Chart mode">
+              <button class="mode-button is-active" type="button" aria-pressed="true" data-mode="avg_ppg">Average PPG by rank</button>
+              <button class="mode-button" type="button" aria-pressed="false" data-mode="gap_top">Top-end gap comparison</button>
+              <button class="mode-button" type="button" aria-pressed="false" data-mode="gap_mid">Mid-table gap comparison</button>
             </div>
 
             <div class="filter-group">
@@ -161,7 +161,7 @@
 
           <div class="chart-copy">
             <p id="chart-kicker" class="chart-kicker">Average PPG by rank across the full table.</p>
-            <p id="chart-explainer" class="chart-explainer">A flatter line means teams remain closer together from top to bottom. A steeper line suggests the table separates more sharply.</p>
+            <p id="chart-explainer" class="chart-explainer">Each point averages PPG at that rank. League size and the number of seasons available at each rank affect the comparison.</p>
           </div>
 
           <div class="chart-wrap">
@@ -182,7 +182,7 @@
         </div>
         <div class="insight-layout">
           <article class="panel insight-panel">
-            <h3>Deterministic insight box</h3>
+            <h3>What this selection shows</h3>
             <div id="insight-box" class="insight-box"></div>
           </article>
 
@@ -199,7 +199,7 @@
           <article class="panel support-card">
             <div class="support-head">
               <h3>Lower-table split</h3>
-              <p>Average gap from 10th to last place, showing how sharply the bottom end separates.</p>
+              <p>Average total gap from 10th to last place. This spans eight rank steps in an 18-team league and ten in a 20-team league.</p>
             </div>
             <div class="support-chart-wrap">
               <canvas id="support-bottom-gap-chart" aria-label="Lower-table gap chart"></canvas>
@@ -219,15 +219,17 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="method">
         <div class="section-heading">
           <p class="eyebrow">Method</p>
           <h2>Method and caveats</h2>
         </div>
         <div class="panel method-panel">
-          <p>The site uses the processed league-table outputs already in the repo and standardizes them with points per game so leagues with different match counts sit on the same scale.</p>
-          <p>Parity is not a single thing. Some leagues separate at the top, some in the middle, and some more strongly near the bottom. That is why the main line view sits alongside narrower gap comparisons and a ranked summary.</p>
-          <p>The score shown here is a compact summary, not a definitive truth. It is useful because it stays close to the observed table shape, not because it claims to settle the argument on its own.</p>
+          <p><strong>Data:</strong> 1,336 team-season rows covering seven leagues from 2015/16 to 2024/25. Download the <a href="data/league_team_season_master_7leagues_10seasons.csv">team tables</a> and <a href="data/league_season_gaps.csv">season gaps</a>. The repository contains processed tables, but does not identify their original provider or collection method. Their internal consistency is checked; the original records have not been independently verified.</p>
+          <p><strong>Averaging:</strong> PPG is recorded points divided by matches played, rounded to four decimals in the source tables. Each season has equal weight in a league’s average gaps and dispersion. First-to-last gaps use each season’s actual last team. The rank chart averages each rank separately, so Ligue 1 ranks 19–20 include only its 20-team seasons; its 2023/24 and 2024/25 tables have 18 teams.</p>
+          <p><strong>Relative parity score:</strong> For each league, add the mean 1st–2nd, 1st–4th, 4th–10th and 10th–last PPG gaps, plus the mean within-season sample standard deviation of team PPG. Call this total D. The score is 100 × (Dmax − D) / (Dmax − Dmin), using all seven leagues over the selected seasons. If all totals are equal, every score is 50. Hiding leagues leaves scores unchanged. Changing seasons resets the scale, so scores cannot measure improvement across different season windows.</p>
+          <p><strong>Interpretation:</strong> 100 means the most even of these seven leagues under this formula; 0 means the least. Neither is an absolute measure of parity. The 1st–2nd gap overlaps the 1st–4th gap, giving extra weight to the title race. To describe where a table separates fastest, we divide each season’s band gaps by their rank steps (3, 6, and the team count minus 10), then average. The gap charts themselves show total gaps.</p>
+          <p><strong>Limits:</strong> PPG adjusts for match counts, but does not remove differences in league size, schedules, incomplete seasons or points deductions. Tables follow the supplied ranks. These measures describe within-season table spread, not team strength across leagues or how often different clubs win titles. See the <a href="https://github.com/adhni/uefa-leagues#data-and-methodology">reproduction instructions</a>.</p>
         </div>
       </section>
     </main>

@@ -4,13 +4,13 @@ const MODE_META = {
   avg_ppg: {
     label: "Average PPG by rank",
     kicker: "Average PPG by rank across the selected league tables.",
-    explainer: "A flatter line means teams remain closer together from top to bottom. A steeper line suggests the table separates more sharply.",
+    explainer: "Each point averages PPG at that rank over the selected seasons. Leagues have 18 or 20 teams, so endpoints differ; ranks 19–20 in Ligue 1 cover only its 20-team seasons. Hover for the season count.",
     yTitle: "Average PPG"
   },
   gap_top: {
     label: "Top-end gap comparison",
     kicker: "Average gap from 1st to 4th place.",
-    explainer: "This isolates how quickly the top end opens up. Larger values imply a looser title-to-Champions-League band.",
+    explainer: "This measures the total PPG gap between first and fourth place. Larger values mean a wider top-four band.",
     yTitle: "Average PPG gap"
   },
   gap_mid: {
@@ -110,9 +110,6 @@ function bindControls() {
   document.querySelectorAll(".mode-button").forEach((button) => {
     button.addEventListener("click", () => {
       state.mode = button.dataset.mode;
-      document.querySelectorAll(".mode-button").forEach((item) => {
-        item.classList.toggle("is-active", item === button);
-      });
       refreshView();
     });
   });
@@ -170,7 +167,7 @@ function bindControls() {
 function renderLeagueButtons() {
   const container = document.getElementById("league-filters");
   container.innerHTML = state.allLeagues
-    .map((league) => `<button class="league-pill is-active" type="button" data-league="${league}">${league}</button>`)
+    .map((league) => `<button class="league-pill is-active" type="button" aria-pressed="true" data-league="${league}">${league}</button>`)
     .join("");
 
   container.querySelectorAll(".league-pill").forEach((button) => {
@@ -232,6 +229,7 @@ function refreshView() {
   const derived = getDerivedSelection();
 
   syncLeagueButtons();
+  syncModeButtons();
   syncSeasonControls();
   syncHighlightSelect();
   updateSelectionSummary(derived);
@@ -252,15 +250,16 @@ function getDerivedSelection() {
     return state.cache.derived;
   }
 
-  const filteredMasterRows = state.masterRows.filter((row) =>
-    state.selectedLeagues.includes(row.league) && state.selectedSeasons.includes(row.season)
-  );
-  const filteredGapRows = state.seasonGapRows.filter((row) =>
-    state.selectedLeagues.includes(row.league) && state.selectedSeasons.includes(row.season)
-  );
+  const seasonMasterRows = state.masterRows.filter((row) => state.selectedSeasons.includes(row.season));
+  const seasonGapRows = state.seasonGapRows.filter((row) => state.selectedSeasons.includes(row.season));
+  const filteredMasterRows = seasonMasterRows.filter((row) => state.selectedLeagues.includes(row.league));
+  const filteredGapRows = seasonGapRows.filter((row) => state.selectedLeagues.includes(row.league));
 
   const rankCurves = buildRankCurves(filteredMasterRows);
-  const metrics = buildLeagueMetrics(filteredMasterRows, filteredGapRows, rankCurves);
+  // Keep the score baseline across all leagues for this season window, even when
+  // a league is hidden. League filters affect visibility, not the score itself.
+  const metrics = buildLeagueMetrics(seasonMasterRows, seasonGapRows)
+    .filter((row) => state.selectedLeagues.includes(row.league));
   const derived = { filteredMasterRows, filteredGapRows, rankCurves, metrics };
 
   state.cache.key = key;
@@ -285,14 +284,15 @@ function buildRankCurves(rows) {
     }
     acc[item.league].push({
       rank: item.rank,
-      avg_ppg: average(item.values)
+      avg_ppg: average(item.values),
+      season_count: item.values.length
     });
     acc[item.league].sort((a, b) => a.rank - b.rank);
     return acc;
   }, {});
 }
 
-function buildLeagueMetrics(masterRows, gapRows, rankCurves) {
+function buildLeagueMetrics(masterRows, gapRows) {
   const visibleLeagues = [...new Set(masterRows.map((row) => row.league))];
   const groupedGapRows = gapRows.reduce((acc, row) => {
     if (!acc[row.league]) {
@@ -305,14 +305,27 @@ function buildLeagueMetrics(masterRows, gapRows, rankCurves) {
   const rows = visibleLeagues.map((league) => {
     const leagueGapRows = groupedGapRows[league] || [];
     const leagueSeasonRows = masterRows.filter((row) => row.league === league);
-    const perSeasonPpg = leagueSeasonRows.reduce((acc, row) => {
+    const perSeasonRows = leagueSeasonRows.reduce((acc, row) => {
       if (!acc[row.season]) {
         acc[row.season] = [];
       }
-      acc[row.season].push(Number(row.ppg));
+      acc[row.season].push(row);
       return acc;
     }, {});
-    const curveRows = rankCurves[league] || [];
+    const seasonMetrics = Object.values(perSeasonRows).map((seasonRows) => {
+      const ranked = [...seasonRows].sort((a, b) => a.rank - b.rank);
+      const first = Number(ranked[0].ppg);
+      const fourth = Number(ranked[3].ppg);
+      const tenth = Number(ranked[9].ppg);
+      const last = Number(ranked[ranked.length - 1].ppg);
+      return {
+        firstLastGap: first - last,
+        topStep: (first - fourth) / 3,
+        midStep: (fourth - tenth) / 6,
+        bottomStep: (tenth - last) / (ranked.length - 10),
+        sd: sampleStandardDeviation(ranked.map((row) => Number(row.ppg)))
+      };
+    });
 
     const metrics = {
       league,
@@ -320,8 +333,12 @@ function buildLeagueMetrics(masterRows, gapRows, rankCurves) {
       avg_gap_1_4: average(leagueGapRows.map((row) => row.gap_1_4)),
       avg_gap_4_10: average(leagueGapRows.map((row) => row.gap_4_10)),
       avg_gap_10_last: average(leagueGapRows.map((row) => row.gap_10_last)),
-      avg_ppg_sd: average(Object.values(perSeasonPpg).map(sampleStandardDeviation)),
-      curve_drop: curveRows.length ? curveRows[0].avg_ppg - curveRows[curveRows.length - 1].avg_ppg : 0
+      avg_ppg_sd: average(seasonMetrics.map((row) => row.sd)),
+      // Average season endpoints, not endpoints of a curve with mixed samples.
+      curve_drop: average(seasonMetrics.map((row) => row.firstLastGap)),
+      avg_step_top: average(seasonMetrics.map((row) => row.topStep)),
+      avg_step_mid: average(seasonMetrics.map((row) => row.midStep)),
+      avg_step_bottom: average(seasonMetrics.map((row) => row.bottomStep))
     };
 
     return {
@@ -346,7 +363,7 @@ function buildLeagueMetrics(masterRows, gapRows, rankCurves) {
   return rows
     .map((row) => ({
       ...row,
-      parity_score_0_100: max === min ? 100 : ((row.parity_score_simple - min) / (max - min)) * 100,
+      parity_score_0_100: max === min ? 50 : ((row.parity_score_simple - min) / (max - min)) * 100,
       summary: buildHeadlineSummary(row)
     }))
     .sort((a, b) => b.parity_score_0_100 - a.parity_score_0_100);
@@ -399,8 +416,8 @@ function renderQuickFindings(metrics) {
   const tightestMid = [...metrics].sort((a, b) => a.avg_gap_4_10 - b.avg_gap_4_10)[0];
 
   container.innerHTML = [
-    quickFindingCard("Most even in this cut", mostEven.league, `Parity score ${mostEven.parity_score_0_100.toFixed(1)}`),
-    quickFindingCard("Steepest full-table drop", steepestCurve.league, `Curve drop ${steepestCurve.curve_drop.toFixed(3)} PPG`),
+    quickFindingCard("Highest score shown", mostEven.league, `Relative parity score ${mostEven.parity_score_0_100.toFixed(1)} / 100`),
+    quickFindingCard("Largest first-to-last gap", steepestCurve.league, `Average gap ${steepestCurve.curve_drop.toFixed(3)} PPG`),
     quickFindingCard("Widest top-end gap", widestTopGap.league, `1st to 4th gap ${widestTopGap.avg_gap_1_4.toFixed(3)} PPG`),
     quickFindingCard("Tightest mid-table", tightestMid.league, `4th to 10th gap ${tightestMid.avg_gap_4_10.toFixed(3)} PPG`)
   ].join("");
@@ -439,7 +456,7 @@ function buildMainChartData(derived) {
         const useMuted = !!state.highlightLeague && !isHighlighted;
         return {
           label: league,
-          data: rows.map((row) => ({ x: row.rank, y: row.avg_ppg })),
+          data: rows.map((row) => ({ x: row.rank, y: row.avg_ppg, seasonCount: row.season_count })),
           borderColor: useMuted ? "rgba(102, 93, 82, 0.35)" : colorForLeague(league, false),
           backgroundColor: useMuted ? "rgba(102, 93, 82, 0.35)" : colorForLeague(league, false),
           borderWidth: isHighlighted ? 4 : 3,
@@ -488,7 +505,9 @@ function buildMainChartOptions() {
           },
           label(context) {
             const value = Number(context.raw.y ?? context.raw).toFixed(3);
-            return state.mode === "avg_ppg" ? `${context.dataset.label}: ${value} PPG` : `${value} PPG gap`;
+            return state.mode === "avg_ppg"
+              ? `${context.dataset.label}: ${value} PPG (${context.raw.seasonCount} season${context.raw.seasonCount === 1 ? "" : "s"})`
+              : `${value} PPG gap`;
           }
         }
       }
@@ -532,10 +551,10 @@ function renderChartDataTable(data) {
   if (state.mode === "avg_ppg") {
     table.innerHTML = `
       <caption>Main chart data table: average PPG by rank</caption>
-      <thead><tr><th scope="col">League</th><th scope="col">Rank</th><th scope="col">Average PPG</th></tr></thead>
+      <thead><tr><th scope="col">League</th><th scope="col">Rank</th><th scope="col">Average PPG</th><th scope="col">Seasons</th></tr></thead>
       <tbody>
         ${data.datasets.flatMap((dataset) =>
-          dataset.data.map((point) => `<tr><td>${dataset.label}</td><td>${point.x}</td><td>${point.y.toFixed(3)}</td></tr>`)
+          dataset.data.map((point) => `<tr><td>${dataset.label}</td><td>${point.x}</td><td>${point.y.toFixed(3)}</td><td>${point.seasonCount}</td></tr>`)
         ).join("")}
       </tbody>
     `;
@@ -610,7 +629,7 @@ function renderSupportChart(chartKey, canvasId, metrics, metricKey) {
 function renderInsightBox(derived) {
   const container = document.getElementById("insight-box");
   if (!derived.metrics.length) {
-    container.innerHTML = "<p>Select at least one league and one season to generate deterministic takeaways.</p>";
+    container.innerHTML = "<p>Select at least one league and one season to see the findings.</p>";
     return;
   }
 
@@ -618,8 +637,8 @@ function renderInsightBox(derived) {
     const league = derived.metrics[0];
     container.innerHTML = `<ul>
       <li>${league.league} is the only active league, so the current view reads as a profile rather than a comparison.</li>
-      <li>Its full-table curve drops by ${league.curve_drop.toFixed(3)} PPG from first to last, which is the clearest single summary of how steep this selection looks.</li>
-      <li>The strongest separation sits ${dominantGapLabel(league)}, so that is where this league currently looks least even.</li>
+      <li>Its average first-to-last gap is ${league.curve_drop.toFixed(3)} PPG, calculated within each season before averaging.</li>
+      <li>The largest average gap per rank step is ${dominantGapLabel(league)}. This adjusts for the different numbers of positions in each band.</li>
     </ul>`;
     return;
   }
@@ -632,9 +651,9 @@ function renderInsightBox(derived) {
 
   container.innerHTML = `<ul>
     <li>${mostEven.league} comes out as the most even selection here, while ${leastEven.league} sits at the other end of the current ranking.</li>
-    <li>${flattest.league} has the flattest first-to-last curve at ${flattest.curve_drop.toFixed(3)} PPG, which is a cleaner parity signal than a single composite score by itself.</li>
-    <li>${lowestTableSplit.league} shows the strongest lower-table separation, with an average 10th-to-last gap of ${lowestTableSplit.avg_gap_10_last.toFixed(3)} PPG.</li>
-    <li>Across the active selection, the average 4th-to-10th gap is ${averageMidGap.toFixed(3)} PPG, so the middle of the table is ${averageMidGap < 0.55 ? "relatively compressed" : "meaningfully stratified"} rather than flat.</li>
+    <li>${flattest.league} has the smallest average first-to-last gap at ${flattest.curve_drop.toFixed(3)} PPG, calculated within each season before averaging.</li>
+    <li>${lowestTableSplit.league} has the largest total lower-table gap, averaging ${lowestTableSplit.avg_gap_10_last.toFixed(3)} PPG from 10th to last. This band spans eight or ten rank steps depending on league size.</li>
+    <li>Across the active leagues, the average 4th-to-10th gap is ${averageMidGap.toFixed(3)} PPG.</li>
   </ul>`;
 }
 
@@ -646,7 +665,7 @@ function renderRankingPanel(metrics) {
   }
 
   container.innerHTML = `<h3>Selected ranking</h3>
-    <p>A compact summary score built from the active curve and gap measures. Higher means the current selection looks more even.</p>
+    <p>Relative parity score out of 100, compared with all seven leagues over the selected seasons. Higher means more even by this formula. Hiding leagues does not change scores; changing seasons resets the comparison. <a href="#method">See the formula and limits.</a></p>
     <div class="ranking-list">
       ${metrics.map((row, index) => `
         <div class="ranking-row">
@@ -676,7 +695,7 @@ function renderHeadlineCards(metrics) {
       <div class="headline-score">${row.parity_score_0_100.toFixed(1)}</div>
       <p>${row.summary}</p>
       <div class="headline-metric">
-        <span>Curve drop</span>
+        <span>1st to last gap</span>
         <strong>${row.curve_drop.toFixed(3)}</strong>
       </div>
       <div class="headline-metric">
@@ -693,7 +712,17 @@ function renderHeadlineCards(metrics) {
 
 function syncLeagueButtons() {
   document.querySelectorAll(".league-pill").forEach((button) => {
-    button.classList.toggle("is-active", state.selectedLeagues.includes(button.dataset.league));
+    const selected = state.selectedLeagues.includes(button.dataset.league);
+    button.classList.toggle("is-active", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+}
+
+function syncModeButtons() {
+  document.querySelectorAll(".mode-button").forEach((button) => {
+    const selected = button.dataset.mode === state.mode;
+    button.classList.toggle("is-active", selected);
+    button.setAttribute("aria-pressed", String(selected));
   });
 }
 
@@ -739,21 +768,14 @@ function colorForLeague(league, allowMuted) {
 
 function dominantGapLabel(row) {
   return [
-    ["near the top of the table", row.avg_gap_1_4],
-    ["through the middle of the table", row.avg_gap_4_10],
-    ["lower down the table", row.avg_gap_10_last]
+    ["near the top of the table", row.avg_step_top],
+    ["through the middle of the table", row.avg_step_mid],
+    ["lower down the table", row.avg_step_bottom]
   ].sort((a, b) => b[1] - a[1])[0][0];
 }
 
 function buildHeadlineSummary(row) {
-  const dominant = dominantGapLabel(row);
-  if (dominant === "near the top of the table") {
-    return "In the current filter, this league separates most clearly near the top rather than across the rest of the table.";
-  }
-  if (dominant === "through the middle of the table") {
-    return "In the current filter, the middle band is where this league opens up most, pointing to a more layered table below the Champions League places.";
-  }
-  return "In the current filter, the sharper split appears lower down the table, suggesting a clearer break between mid-table and the bottom.";
+  return `The largest average PPG gap per rank step is ${dominantGapLabel(row)}, after adjusting each band for the number of positions it spans.`;
 }
 
 function average(values) {

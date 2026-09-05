@@ -22,7 +22,7 @@ This repo keeps the original analysis scope intact:
 - 7 top-flight leagues
 - 10 seasons from `2015/16` to `2024/25`
 - points per game as the common comparison metric
-- existing processed outputs reused rather than rebuilt
+- supplied team tables as the input, with reproducible derived CSVs
 
 ## Interactive chart
 
@@ -32,7 +32,7 @@ The page stays fully static but includes several lightweight interactive pieces:
 - stable season start/end selectors instead of a dual-range slider
 - presets for `All leagues`, `Big 5`, `Non-Big-5`, `Full 10 seasons`, and `Recent seasons`
 - optional focus-league highlighting against muted baselines
-- live quick findings, support charts, ranking panel, and deterministic insight box
+- live quick findings, support charts, ranking panel, and selection insights
 - a screen-reader-only data table that mirrors the main chart values
 - a clean fallback error state if the CSV files cannot be fetched
 
@@ -45,7 +45,7 @@ No build step or package manager is used.
 
 ## Local preview
 
-Because this is a plain static site, you can open `index.html` directly in a browser. If your browser blocks local CSV fetches, run a tiny local server instead:
+Run a local server so the browser can fetch the CSV files:
 
 ```bash
 python3 -m http.server 8000
@@ -68,7 +68,37 @@ No build step is required.
 - Adjust colors, spacing, or layout in `assets/css/styles.css`.
 - Tweak presets, chart behavior, or text logic in `assets/js/main.js`.
 - Update league colors through CSS custom properties in `assets/css/styles.css`.
-- Replace or extend processed data in `data/` without changing the site structure.
+- After editing the master CSV, regenerate derived data and run the checks below. If the league or season coverage changes, also update the scope copy and presets.
+
+## Data and methodology
+
+The canonical input is `data/league_team_season_master_7leagues_10seasons.csv`: 1,336 team-season records for seven leagues over ten seasons. The original provider, source URLs, retrieval dates and collection procedure are not recorded in the supplied repository or workbook metadata. This project can reproduce calculations from those records; it cannot currently reproduce or independently verify their original collection. Do not infer provider attribution from the filenames.
+
+The other master CSV, workbooks, image exports and findings brief are historical inputs or snapshots. The website uses the canonical master and `league_season_gaps.csv`; it does not read the workbooks or PNGs. `scripts/build_data.py` validates the canonical master and reproduces the gap, rank-curve, summary and headline CSVs. It does not scrape football records or rewrite historical workbooks/images.
+
+- PPG uses recorded points divided by matches played, rounded to four decimals. Calculations use those supplied PPG values and ranks, including any effects of points deductions or incomplete seasons.
+- Season gaps are calculated within each league-season, then averaged with equal season weights. `curve_drop` in the headline CSV now means the mean season-level first-to-last gap, not the difference between endpoints of the averaged rank curve.
+- The line chart groups by absolute rank. Ligue 1 ranks 19–20 have eight seasons in the full window, while ranks 1–18 have ten. Tooltips and the accessible table show sample counts. Rank is not normalized across 18- and 20-team leagues.
+- Band insights compare the average PPG gap per rank step: divide each season’s 1st–4th gap by 3, 4th–10th by 6, and 10th–last by that season’s team count minus 10, then average. The charts display total band gaps.
+- For each league, let `D = mean(gap_1_2) + mean(gap_1_4) + mean(gap_4_10) + mean(gap_10_last) + mean(sample_sd_of_team_ppg)`. The legacy `parity_score_simple` field is `-D`. Sample SD uses `n - 1` in its denominator.
+- The displayed score is `100 * (Dmax - D) / (Dmax - Dmin)`, where the bounds always use all seven leagues for the selected season window. Equal bounds produce 50 for every league. League visibility cannot change scores. Season selection changes the baseline, so scores are not comparable across different windows.
+- The score is relative, not an absolute percentage of competitiveness. The overlapping 1st–2nd and 1st–4th gaps give the title race extra weight. PPG does not remove league-size or schedule differences, and table spread does not measure cross-league strength or turnover of champions.
+
+Regenerate the four derived CSVs with Python 3 (standard library only):
+
+```bash
+python3 scripts/build_data.py
+```
+
+Run data consistency checks and JavaScript regression tests (Node.js 18+):
+
+```bash
+python3 scripts/build_data.py --check
+node --check assets/js/main.js
+node --test tests/parity.test.cjs
+```
+
+The checks cover duplicate team-season records, contiguous ranks, PPG arithmetic, derived outputs, changing league sizes, score stability across every contiguous season window, band normalization, empty selections and accessible button state. They verify internal consistency, not the accuracy of the original football records.
 
 ## Notes
 

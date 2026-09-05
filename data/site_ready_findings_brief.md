@@ -1,5 +1,7 @@
 # European League Parity — site-ready findings brief
 
+> Historical planning snapshot. The live site now averages first-to-last gaps within each season, uses all seven leagues as the score baseline for the selected seasons, and normalizes band insights by rank steps. Use the README methodology and regenerated CSVs for current definitions. The original rank-curve endpoint figures below are not the current first-to-last metric when league size changes.
+
 ## What this draft does
 This note converts the current CSV outputs into a tighter website narrative.
 It is not the final copy. It is the bridge between analysis and web build.
