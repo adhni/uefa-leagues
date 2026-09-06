@@ -11,7 +11,7 @@ Live site:
 
 - `index.html` - main one-page site for GitHub Pages
 - `assets/css/styles.css` - site styling
-- `assets/js/main.js` - lightweight CSV loading, cached derived-state logic, presets, live support views, accessibility helpers, and deterministic insight logic
+- `assets/js/main.js` - CSV loading, cached metrics, chart controls, mobile filter dialog, sortable comparison table and contextual takeaways
 - `data/` - processed CSVs and source bundle files
 - `images/` - legacy exported chart PNGs kept in the repo bundle
 
@@ -28,12 +28,13 @@ This repo keeps the original analysis scope intact:
 
 The page stays fully static but includes several lightweight interactive pieces:
 
-- main Chart.js view with league filters, season range, and mode switching
-- stable season start/end selectors instead of a dual-range slider
-- presets for `All leagues`, `Big 5`, `Non-Big-5`, `Full 10 seasons`, and `Recent seasons`
-- optional focus-league highlighting against muted baselines
-- live quick findings, support charts, ranking panel, and selection insights
-- a screen-reader-only data table that mirrors the main chart values
+- chart-first layout with `Table shape`, `Top gap` and `Mid-table gap` views
+- compact league chips and season selectors on desktop; a modal filter panel on mobile
+- presets and focus selection under `More options`, plus a reset action
+- league highlighting from the chart legend or comparison table, with muted baselines
+- one takeaway that follows the selected chart mode
+- sortable comparison table for relative score, top, middle and bottom gaps
+- expandable chart values and methodology, accessible button states and keyboard navigation
 - a clean fallback error state if the CSV files cannot be fetched
 
 The page reads directly from the processed CSV files in `data/`:
@@ -98,10 +99,10 @@ node --check assets/js/main.js
 node --test tests/parity.test.cjs
 ```
 
-The checks cover duplicate team-season records, contiguous ranks, PPG arithmetic, derived outputs, changing league sizes, score stability across every contiguous season window, band normalization, empty selections and accessible button state. They verify internal consistency, not the accuracy of the original football records.
+The checks cover duplicate team-season records, contiguous ranks, PPG arithmetic, derived outputs, changing league sizes, score stability across every contiguous season window, band normalization, empty selections, accessible button state, table sorting and chart-specific takeaways. They verify internal consistency, not the accuracy of the original football records.
 
 ## Notes
 
 - The site intentionally stays lightweight and editorial rather than becoming a full dashboard.
-- The support sections are now driven by live CSV data rather than the older static image exports.
+- The chart, takeaway and comparison table share the same league and season selection. Table sorting changes only row order; clicking a league highlights it without hiding other leagues.
 - The parity score is presented as a compact summary view, not a definitive single-number ranking.

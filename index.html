@@ -3,238 +3,109 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>European League Parity</title>
-  <meta name="description" content="A narrative comparison of parity across seven major European top-flight leagues using ten seasons of points-per-game data.">
+  <title>European League Parity — Compare the leagues</title>
+  <meta name="description" content="Explore ten seasons of European football. Compare league table shapes, points-per-game gaps and relative parity across seven leagues.">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <a class="github-corner" href="https://github.com/adhni/uefa-leagues" aria-label="View source on GitHub" target="_blank" rel="noreferrer">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.91c.58.11.79-.25.79-.56v-2.17c-3.2.69-3.88-1.36-3.88-1.36-.52-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.52-2.56-.29-5.26-1.28-5.26-5.71 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.45.11-3.03 0 0 .97-.31 3.17 1.18a11.06 11.06 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.74.11 3.03.74.8 1.18 1.82 1.18 3.08 0 4.44-2.7 5.41-5.27 5.69.41.36.78 1.07.78 2.15v3.19c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
-    </svg>
-  </a>
-
+  <a class="skip-link" href="#main-view">Skip to the chart</a>
   <div class="site-shell">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="wordmark" href="#"><span class="brand-mark" aria-hidden="true">≋</span> European League Parity</a>
+      <div class="nav-links"><a href="#method">The method</a><a href="https://github.com/adhni/uefa-leagues" target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a></div>
+    </nav>
     <header class="hero">
-      <div class="hero-copy-block">
-        <p class="eyebrow">European League Parity</p>
-        <h1>Some leagues stay tighter from top to bottom. Others break apart much earlier.</h1>
-        <p class="hero-thesis">Across seven major European top flights and ten seasons, points-per-game patterns show meaningful differences in how compressed, steep, or stratified league tables tend to be.</p>
-        <p class="hero-copy">Compare the gap at the top, the spread through the middle, and the distance to the bottom. Choose leagues and seasons to see where their tables are closest and where they pull apart.</p>
-        <div class="hero-actions">
-          <a class="jump-link" href="#main-view">Explore the chart</a>
-          <span class="hero-note">Seven leagues. Ten seasons. Three ways to compare.</span>
-        </div>
-      </div>
-
-      <div class="hero-meta">
-        <div>
-          <span class="meta-label">Leagues</span>
-          <strong>7 top flights</strong>
-        </div>
-        <div>
-          <span class="meta-label">Window</span>
-          <strong>2015/16 to 2024/25</strong>
-        </div>
-        <div>
-          <span class="meta-label">Shared metric</span>
-          <strong>Points per game</strong>
-        </div>
-      </div>
+      <p class="eyebrow">A closer look at the table</p>
+      <h1>Which European leagues are closest?</h1>
+      <p class="hero-copy">Explore where teams stay together, and where the gaps open up.</p>
+      <p class="hero-meta">7 leagues <span>·</span> 10 seasons, 2015–2025 <span>·</span> Points per game</p>
     </header>
-
     <main>
-      <div id="data-error" class="panel error-panel is-hidden" role="status" aria-live="polite">
-        <h2>Interactive data unavailable</h2>
-        <p>The CSV files could not be loaded, so the live charts and filter controls are hidden for now. Open the site through GitHub Pages or a local web server to restore the interactive views.</p>
+      <div id="data-error" class="error-panel is-hidden" role="status">
+        <h2>The charts couldn’t load</h2>
+        <p>Check your connection and reload. For a local preview, open this page through a web server so the data can load.</p>
       </div>
-
-      <section class="section" data-interactive>
-        <div class="section-heading compact-heading">
-          <p class="eyebrow">Quick Read</p>
-          <h2>What jumps out fastest</h2>
+      <noscript><p class="error-panel">Enable JavaScript to explore the charts. You can still read the method and download the data below.</p></noscript>
+      <section class="chart-panel" id="main-view" aria-label="Explore league parity" data-interactive>
+        <div class="chart-toolbar">
+          <div class="mode-toggle" role="group" aria-label="Chart mode">
+            <button class="mode-button is-active" type="button" aria-pressed="true" data-mode="avg_ppg">Table shape</button>
+            <button class="mode-button" type="button" aria-pressed="false" data-mode="gap_top">Top gap</button>
+            <button class="mode-button" type="button" aria-pressed="false" data-mode="gap_mid">Mid-table gap</button>
+          </div>
+          <button class="text-button reset-button" type="button" data-reset>Reset view <span aria-hidden="true">↺</span></button>
         </div>
-        <div id="quick-findings" class="quick-findings-grid"></div>
-      </section>
-
-      <section class="section">
-        <div class="panel scope-strip">
-          <div>
-            <span class="scope-label">Scope</span>
-            <strong>7 top-flight leagues</strong>
-          </div>
-          <div>
-            <span class="scope-label">Period</span>
-            <strong>10 seasons</strong>
-          </div>
-          <div>
-            <span class="scope-label">Comparable unit</span>
-            <strong>PPG by rank</strong>
-          </div>
-          <div>
-            <span class="scope-label">Interpretation</span>
-            <strong>Smaller PPG gaps mean closer tables; league size also matters</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="main-view" data-interactive>
-        <div class="section-heading">
-          <p class="eyebrow">Main View</p>
-          <h2>The shape of league parity</h2>
-          <p class="section-intro">Use the presets for quick cuts, then refine by league and season. The line view shows full-table shape. The gap views isolate where separation opens up.</p>
-        </div>
-
-        <div class="panel chart-panel">
-          <div class="preset-row">
-            <div class="preset-group">
-              <span class="filter-label">League presets</span>
-              <div class="preset-buttons">
-                <button class="preset-button" type="button" data-league-preset="all">All leagues</button>
-                <button class="preset-button" type="button" data-league-preset="big5">Big 5</button>
-                <button class="preset-button" type="button" data-league-preset="nonbig5">Non-Big-5</button>
-              </div>
+        <button class="mobile-filter-button" id="open-filters" type="button" aria-haspopup="dialog" aria-controls="filter-dialog">Filters <span id="mobile-filter-summary">7 leagues · 10 seasons</span><span aria-hidden="true">☷</span></button>
+        <div id="desktop-filters">
+          <div class="filters-panel" id="filters-panel">
+            <div class="league-control">
+              <div class="filter-head"><span class="filter-label">Leagues</span><div class="filter-actions"><button class="text-button" id="leagues-select-all" type="button">All</button><button class="text-button" id="leagues-clear-all" type="button">Clear</button></div></div>
+              <div class="league-filters" id="league-filters" role="group" aria-label="Leagues shown in the chart"></div>
             </div>
-            <div class="preset-group">
-              <span class="filter-label">Season presets</span>
-              <div class="preset-buttons">
-                <button class="preset-button" type="button" data-season-preset="full">Full 10 seasons</button>
-                <button class="preset-button" type="button" data-season-preset="recent">Recent seasons</button>
-              </div>
-            </div>
-            <div class="preset-group preset-group--select">
-              <label class="filter-label" for="highlight-league">Focus league</label>
-              <select id="highlight-league" class="focus-select">
-                <option value="">No highlight</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="control-row" aria-label="Chart controls">
-            <div class="mode-toggle" role="group" aria-label="Chart mode">
-              <button class="mode-button is-active" type="button" aria-pressed="true" data-mode="avg_ppg">Average PPG by rank</button>
-              <button class="mode-button" type="button" aria-pressed="false" data-mode="gap_top">Top-end gap comparison</button>
-              <button class="mode-button" type="button" aria-pressed="false" data-mode="gap_mid">Mid-table gap comparison</button>
-            </div>
-
-            <div class="filter-group">
-              <div class="filter-head">
-                <span class="filter-label">Leagues</span>
-                <div class="filter-actions">
-                  <button class="mini-action" id="leagues-select-all" type="button">Select all</button>
-                  <button class="mini-action" id="leagues-clear-all" type="button">Clear all</button>
-                </div>
-              </div>
-              <div class="league-filters" id="league-filters" aria-label="League filters"></div>
-            </div>
-
-            <div class="filter-group">
-              <div class="filter-head">
-                <span class="filter-label">Season range</span>
-                <div class="filter-actions">
-                  <button class="mini-action" id="seasons-select-all" type="button">Select all</button>
-                  <button class="mini-action" id="seasons-clear-all" type="button">Clear all</button>
-                </div>
-              </div>
-              <div class="season-select-panel" aria-label="Season range">
-                <div class="season-slider-readout">
-                  <strong id="season-range-label">2015/16 to 2024/25</strong>
-                  <span id="season-range-count">10 seasons selected</span>
-                </div>
+            <div class="secondary-controls">
+              <div class="season-control"><span class="filter-label">Seasons</span>
                 <div class="season-select-row">
-                  <label class="season-select-field">
-                    <span>From</span>
-                    <select id="season-start-select" aria-label="Season range start"></select>
-                  </label>
-                  <label class="season-select-field">
-                    <span>To</span>
-                    <select id="season-end-select" aria-label="Season range end"></select>
-                  </label>
+                  <label><span class="sr-only">Season range start</span><select id="season-start-select"></select></label><span class="range-dash" aria-hidden="true">—</span>
+                  <label><span class="sr-only">Season range end</span><select id="season-end-select"></select></label>
                 </div>
-                <div class="season-scale" id="season-scale"></div>
+                <span id="season-range-count" class="season-count">10 seasons</span>
               </div>
+              <details class="more-options" id="more-options"><summary>More options</summary>
+                <div class="options-content">
+                  <div><span class="filter-label">League presets</span><div class="preset-buttons"><button type="button" data-league-preset="all">All leagues</button><button type="button" data-league-preset="big5">Big 5</button><button type="button" data-league-preset="nonbig5">Non-Big-5</button></div></div>
+                  <div><span class="filter-label">Season presets</span><div class="preset-buttons"><button type="button" data-season-preset="full">Full 10 seasons</button><button type="button" data-season-preset="recent">Recent 4 seasons</button></div></div>
+                  <label class="focus-field" for="highlight-league"><span class="filter-label">Focus league</span><select id="highlight-league"><option value="">No highlight</option></select></label>
+                </div>
+              </details>
             </div>
           </div>
-
-          <div id="selection-summary" class="selection-summary"></div>
-
-          <div class="chart-copy">
-            <p id="chart-kicker" class="chart-kicker">Average PPG by rank across the full table.</p>
-            <p id="chart-explainer" class="chart-explainer">Each point averages PPG at that rank. League size and the number of seasons available at each rank affect the comparison.</p>
-          </div>
-
-          <div class="chart-wrap">
-            <canvas id="parity-chart" aria-label="League parity chart"></canvas>
-          </div>
-          <div class="sr-only" aria-live="polite">
-            <table id="chart-data-table">
-              <caption>Main chart data table</caption>
-            </table>
-          </div>
         </div>
+        <div class="chart-heading"><h2 id="chart-kicker">Points per game, from first to last</h2><span id="selection-summary" class="selection-summary"></span></div>
+        <div class="chart-wrap">
+          <canvas id="parity-chart" role="img" aria-label="League parity chart" aria-describedby="chart-explainer"></canvas>
+          <div id="chart-empty" class="chart-empty is-hidden"><strong>No leagues selected</strong><p>Choose a league to bring the comparison back.</p><button type="button" class="primary-button" data-reset>Reset view</button></div>
+        </div>
+        <div class="chart-legend" id="chart-legend" role="group" aria-label="Highlight a league"></div>
+        <p id="chart-explainer" class="chart-explainer"></p>
+        <div class="takeaway" aria-live="polite"><span class="eyebrow">The takeaway</span><p id="takeaway-text">Loading the comparison…</p></div>
+        <details class="chart-data"><summary>View chart data</summary><div class="data-scroll" tabindex="0" role="region" aria-label="Chart values"><table id="chart-data-table"><caption>Main chart values</caption></table></div></details>
       </section>
-
-      <section class="section" data-interactive>
-        <div class="section-heading">
-          <p class="eyebrow">Interpretation</p>
-          <h2>What the current filter is actually saying</h2>
+      <section class="comparison-section" aria-labelledby="comparison-heading" data-interactive>
+        <div class="section-heading"><div><p class="eyebrow">Side by side</p><h2 id="comparison-heading">Compare the numbers</h2></div><a href="#method">How to read these <span aria-hidden="true">↗</span></a></div>
+        <p class="table-intro">Select a league to highlight it in the chart. Sort any column to compare.</p>
+        <p class="mobile-table-hint">Swipe the table to see every gap →</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="League comparison, scroll horizontally for all columns">
+          <table id="comparison-table">
+            <caption class="sr-only">Selected leagues. Relative score out of 100; total gaps in points per game.</caption>
+            <thead><tr>
+              <th scope="col" aria-sort="none"><button type="button" data-sort="league">League <span class="sort-icon" aria-hidden="true">↕</span></button></th>
+              <th scope="col" aria-sort="descending"><button type="button" data-sort="parity_score_0_100">Relative score <span class="sort-icon" aria-hidden="true">↓</span><small>out of 100 · higher is closer</small></button></th>
+              <th scope="col" aria-sort="none"><button type="button" data-sort="avg_gap_1_4">Top gap <span class="sort-icon" aria-hidden="true">↕</span><small>1st–4th</small></button></th>
+              <th scope="col" aria-sort="none"><button type="button" data-sort="avg_gap_4_10">Mid-table gap <span class="sort-icon" aria-hidden="true">↕</span><small>4th–10th</small></button></th>
+              <th scope="col" aria-sort="none"><button type="button" data-sort="avg_gap_10_last">Bottom gap <span class="sort-icon" aria-hidden="true">↕</span><small>10th–last</small></button></th>
+            </tr></thead><tbody id="comparison-body"></tbody>
+          </table>
         </div>
-        <div class="insight-layout">
-          <article class="panel insight-panel">
-            <h3>What this selection shows</h3>
-            <div id="insight-box" class="insight-box"></div>
-          </article>
-
-          <article class="panel support-card">
-            <div class="support-head">
-              <h3>Top-end gaps</h3>
-              <p>Average gap from 1st to 4th place for the current selection.</p>
-            </div>
-            <div class="support-chart-wrap">
-              <canvas id="support-top-gap-chart" aria-label="Top-end gap chart"></canvas>
-            </div>
-          </article>
-
-          <article class="panel support-card">
-            <div class="support-head">
-              <h3>Lower-table split</h3>
-              <p>Average total gap from 10th to last place. This spans eight rank steps in an 18-team league and ten in a 20-team league.</p>
-            </div>
-            <div class="support-chart-wrap">
-              <canvas id="support-bottom-gap-chart" aria-label="Lower-table gap chart"></canvas>
-            </div>
-          </article>
-        </div>
+        <p class="table-note">Scores compare all seven leagues over your selected seasons. Gaps are in PPG; smaller means closer. Bottom gaps span different numbers of places in 18- and 20-team leagues.</p>
+        <p id="table-sort-status" class="sr-only" aria-live="polite"></p>
       </section>
-
-      <section class="section" data-interactive>
-        <div class="section-heading">
-          <p class="eyebrow">League Headlines</p>
-          <h2>Selected ranking and league notes</h2>
-        </div>
-        <div class="headline-layout">
-          <div id="ranking-panel" class="panel ranking-panel"></div>
-          <div id="headline-cards" class="headline-grid"></div>
-        </div>
-      </section>
-
-      <section class="section" id="method">
-        <div class="section-heading">
-          <p class="eyebrow">Method</p>
-          <h2>Method and caveats</h2>
-        </div>
-        <div class="panel method-panel">
-          <p><strong>Data:</strong> 1,336 team-season rows covering seven leagues from 2015/16 to 2024/25. Download the <a href="data/league_team_season_master_7leagues_10seasons.csv">team tables</a> and <a href="data/league_season_gaps.csv">season gaps</a>. The repository contains processed tables, but does not identify their original provider or collection method. Their internal consistency is checked; the original records have not been independently verified.</p>
-          <p><strong>Averaging:</strong> PPG is recorded points divided by matches played, rounded to four decimals in the source tables. Each season has equal weight in a league’s average gaps and dispersion. First-to-last gaps use each season’s actual last team. The rank chart averages each rank separately, so Ligue 1 ranks 19–20 include only its 20-team seasons; its 2023/24 and 2024/25 tables have 18 teams.</p>
-          <p><strong>Relative parity score:</strong> For each league, add the mean 1st–2nd, 1st–4th, 4th–10th and 10th–last PPG gaps, plus the mean within-season sample standard deviation of team PPG. Call this total D. The score is 100 × (Dmax − D) / (Dmax − Dmin), using all seven leagues over the selected seasons. If all totals are equal, every score is 50. Hiding leagues leaves scores unchanged. Changing seasons resets the scale, so scores cannot measure improvement across different season windows.</p>
-          <p><strong>Interpretation:</strong> 100 means the most even of these seven leagues under this formula; 0 means the least. Neither is an absolute measure of parity. The 1st–2nd gap overlaps the 1st–4th gap, giving extra weight to the title race. To describe where a table separates fastest, we divide each season’s band gaps by their rank steps (3, 6, and the team count minus 10), then average. The gap charts themselves show total gaps.</p>
-          <p><strong>Limits:</strong> PPG adjusts for match counts, but does not remove differences in league size, schedules, incomplete seasons or points deductions. Tables follow the supplied ranks. These measures describe within-season table spread, not team strength across leagues or how often different clubs win titles. See the <a href="https://github.com/adhni/uefa-leagues#data-and-methodology">reproduction instructions</a>.</p>
-        </div>
+      <section class="method-section" id="method" aria-labelledby="method-heading">
+        <div class="section-heading"><div><p class="eyebrow">Behind the numbers</p><h2 id="method-heading">Method &amp; context</h2></div><a href="data/league_team_season_master_7leagues_10seasons.csv" download>Download data <span aria-hidden="true">↓</span></a></div>
+        <details class="method-item"><summary>Data</summary><p>1,336 team-season rows covering seven leagues from 2015/16 to 2024/25. Download the <a href="data/league_team_season_master_7leagues_10seasons.csv">team tables</a> and <a href="data/league_season_gaps.csv">season gaps</a>. The repository contains processed tables, but does not identify their original provider or collection method. Their internal consistency is checked; the original records have not been independently verified.</p></details>
+<details class="method-item"><summary>Averaging</summary><p>PPG is recorded points divided by matches played, rounded to four decimals in the source tables. Each season has equal weight in a league’s average gaps and dispersion. First-to-last gaps use each season’s actual last team. The rank chart averages each rank separately, so Ligue 1 ranks 19–20 include only its 20-team seasons; its 2023/24 and 2024/25 tables have 18 teams.</p></details>
+<details class="method-item"><summary>Relative parity score</summary><p>For each league, add the mean 1st–2nd, 1st–4th, 4th–10th and 10th–last PPG gaps, plus the mean within-season sample standard deviation of team PPG. Call this total D. The score is 100 × (Dmax − D) / (Dmax − Dmin), using all seven leagues over the selected seasons. If all totals are equal, every score is 50. Hiding leagues leaves scores unchanged. Changing seasons resets the scale, so scores cannot measure improvement across different season windows.</p></details>
+<details class="method-item"><summary>Interpretation</summary><p>100 means the most even of these seven leagues under this formula; 0 means the least. Neither is an absolute measure of parity. The 1st–2nd gap overlaps the 1st–4th gap, giving extra weight to the title race. To describe where a table separates fastest, we divide each season’s band gaps by their rank steps (3, 6, and the team count minus 10), then average. The gap charts themselves show total gaps.</p></details>
+<details class="method-item"><summary>Limits</summary><p>PPG adjusts for match counts, but does not remove differences in league size, schedules, incomplete seasons or points deductions. Tables follow the supplied ranks. These measures describe within-season table spread, not team strength across leagues or how often different clubs win titles. See the <a href="https://github.com/adhni/uefa-leagues#data-and-methodology">reproduction instructions</a>.</p></details>
       </section>
     </main>
+    <footer><span>European League Parity</span><span>Tables tell a story. This is one way to read it.</span></footer>
   </div>
-
+  <dialog id="filter-dialog" aria-labelledby="filter-dialog-title">
+    <div class="dialog-heading"><h2 id="filter-dialog-title">Your comparison</h2><button id="close-filters" type="button" class="text-button" aria-label="Close filters">Close ×</button></div>
+    <div id="mobile-filters"></div>
+    <div class="dialog-footer"><button class="text-button" type="button" data-reset>Reset view</button><button id="apply-filters" class="primary-button" type="button">Show comparison</button></div>
+  </dialog>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>

@@ -98,3 +98,27 @@ test("league and mode buttons expose their selected states after updates", () =>
   assert.deepEqual(leagues.map(b => b.attributes["aria-pressed"]), ["false", "true"]);
   assert.deepEqual(modes.map(b => b.attributes["aria-pressed"]), ["true", "false"]);
 });
+
+test("table sorting is numeric, reversible and does not change the score ranking", () => {
+  const run = app();
+  const ranking = run("getDerivedSelection().metrics");
+  const namesBefore = ranking.map(row => row.league).join(",");
+  const ascending = run('getSortedMetrics(getDerivedSelection().metrics, {key:"avg_gap_1_4", direction:"asc"})');
+  const descending = run('getSortedMetrics(getDerivedSelection().metrics, {key:"avg_gap_1_4", direction:"desc"})');
+  assert.equal(ascending[0].league, "Serie A");
+  assert.equal(descending[0].league, "Bundesliga");
+  assert.equal(ascending.map(row => row.league).reverse().join(","), descending.map(row => row.league).join(","));
+  assert.equal(run('getDerivedSelection().metrics.map(row => row.league).join(",")'), namesBefore);
+  const alphabetical = run('getSortedMetrics(getDerivedSelection().metrics, {key:"league", direction:"asc"})');
+  assert.equal(alphabetical[0].league, "Bundesliga");
+});
+
+test("the takeaway follows the chart mode and handles single or empty selections", () => {
+  const run = app();
+  assert.match(run('buildTakeaway(getDerivedSelection().metrics, "avg_ppg")'), /<strong>La Liga<\/strong>.*first-to-last/);
+  assert.match(run('buildTakeaway(getDerivedSelection().metrics, "gap_top")'), /<strong>Serie A<\/strong>.*1st-to-4th/);
+  assert.match(run('buildTakeaway(getDerivedSelection().metrics, "gap_mid")'), /<strong>Ligue 1<\/strong>.*4th-to-10th/);
+  run('state.selectedLeagues = ["Premier League"];');
+  assert.match(run('buildTakeaway(getDerivedSelection().metrics, "gap_top")'), /Add another league/);
+  assert.match(run('buildTakeaway([], "avg_ppg")'), /Choose at least one league/);
+});
