@@ -3,20 +3,20 @@ const BIG_FIVE = ["Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1
 const MODE_META = {
   avg_ppg: {
     label: "Average PPG by rank",
-    kicker: "Average PPG by rank across the selected league tables.",
-    explainer: "Each point averages PPG at that rank over the selected seasons. Leagues have 18 or 20 teams, so endpoints differ; ranks 19–20 in Ligue 1 cover only its 20-team seasons. Hover for the season count.",
+    kicker: "Points per game, from first to last",
+    explainer: "Each point is an average at that rank. Leagues have 18 or 20 teams; Ligue 1 ranks 19–20 cover fewer seasons. Select a legend label to focus a league.",
     yTitle: "Average PPG"
   },
   gap_top: {
     label: "Top-end gap comparison",
-    kicker: "Average gap from 1st to 4th place.",
-    explainer: "This measures the total PPG gap between first and fourth place. Larger values mean a wider top-four band.",
+    kicker: "The distance between first and fourth",
+    explainer: "Average total PPG gap from 1st to 4th. A shorter bar means the top four are closer together.",
     yTitle: "Average PPG gap"
   },
   gap_mid: {
     label: "Mid-table gap comparison",
-    kicker: "Average gap from 4th to 10th place.",
-    explainer: "This shows whether the middle of the table stays crowded or starts to stratify quickly.",
+    kicker: "How far the middle of the table spreads",
+    explainer: "Average total PPG gap from 4th to 10th. A shorter bar means a more closely grouped middle of the table.",
     yTitle: "Average PPG gap"
   }
 };
@@ -26,14 +26,13 @@ const state = {
   selectedLeagues: [],
   selectedSeasons: [],
   highlightLeague: "",
+  tableSort: { key: "parity_score_0_100", direction: "desc" },
   allLeagues: [],
   allSeasons: [],
   masterRows: [],
   seasonGapRows: [],
   charts: {
-    main: null,
-    topGap: null,
-    bottomGap: null
+    main: null
   },
   cache: {
     key: "",
@@ -102,7 +101,6 @@ function cleanValue(value) {
 function renderStaticControls() {
   renderLeagueButtons();
   renderSeasonSelects();
-  renderSeasonScale();
   renderHighlightOptions();
 }
 
@@ -146,28 +144,20 @@ function bindControls() {
     refreshView();
   });
 
-  document.getElementById("seasons-select-all").addEventListener("click", () => {
-    state.selectedSeasons = [...state.allSeasons];
-    refreshView();
-  });
-
-  document.getElementById("seasons-clear-all").addEventListener("click", () => {
-    state.selectedSeasons = [];
-    refreshView();
-  });
-
   document.getElementById("highlight-league").addEventListener("change", (event) => {
     state.highlightLeague = event.target.value;
     refreshView();
   });
 
   bindSeasonSelects();
+  bindComparisonControls();
+  bindFilterDialog();
 }
 
 function renderLeagueButtons() {
   const container = document.getElementById("league-filters");
   container.innerHTML = state.allLeagues
-    .map((league) => `<button class="league-pill is-active" type="button" aria-pressed="true" data-league="${league}">${league}</button>`)
+    .map((league) => `<button class="league-pill is-active" type="button" aria-pressed="true" data-league="${league}" style="--league-color: ${colorForLeague(league, false)}"><span class="league-dot" aria-hidden="true"></span>${league}</button>`)
     .join("");
 
   container.querySelectorAll(".league-pill").forEach((button) => {
@@ -211,12 +201,6 @@ function bindSeasonSelects() {
   endSelect.addEventListener("change", updateFromSelects);
 }
 
-function renderSeasonScale() {
-  document.getElementById("season-scale").innerHTML = state.allSeasons
-    .map((season) => `<span>${season.replace("/", " / ")}</span>`)
-    .join("");
-}
-
 function renderHighlightOptions() {
   const select = document.getElementById("highlight-league");
   select.innerHTML = [
@@ -227,23 +211,18 @@ function renderHighlightOptions() {
 
 function refreshView() {
   const derived = getDerivedSelection();
-
   syncLeagueButtons();
   syncModeButtons();
   syncSeasonControls();
   syncHighlightSelect();
-  updateSelectionSummary(derived);
-  updateChartCopy(derived);
-  renderQuickFindings(derived.metrics);
+  updateSelectionSummary();
+  updateChartCopy();
   renderMainChart(derived);
-  renderSupportCharts(derived.metrics);
-  renderInsightBox(derived);
-  renderRankingPanel(derived.metrics);
-  renderHeadlineCards(derived.metrics);
+  renderChartLegend(derived.metrics);
+  renderTakeaway(derived.metrics);
+  renderComparisonTable(derived.metrics);
 }
 
-// The derived selection is the expensive part of the page. Cache it against the
-// active league and season filters so mode/highlight changes can reuse the same data.
 function getDerivedSelection() {
   const key = `${[...state.selectedLeagues].sort().join("|")}::${[...state.selectedSeasons].join("|")}`;
   if (state.cache.key === key && state.cache.derived) {
@@ -369,77 +348,37 @@ function buildLeagueMetrics(masterRows, gapRows) {
     .sort((a, b) => b.parity_score_0_100 - a.parity_score_0_100);
 }
 
-function updateSelectionSummary(derived) {
-  const summary = document.getElementById("selection-summary");
-  const leagueText = !state.selectedLeagues.length
-    ? "No leagues selected"
-    : state.selectedLeagues.length === state.allLeagues.length
-      ? "All 7 leagues selected"
-      : `${state.selectedLeagues.length} leagues: ${state.selectedLeagues.join(", ")}`;
-  const seasonText = !state.selectedSeasons.length
-    ? "No seasons selected"
-    : state.selectedSeasons.length === state.allSeasons.length
-      ? "All 10 seasons selected"
-      : state.selectedSeasons.length === 1
-        ? `Season: ${state.selectedSeasons[0]}`
-        : `Seasons: ${state.selectedSeasons[0]} to ${state.selectedSeasons[state.selectedSeasons.length - 1]}`;
-  const highlightText = state.highlightLeague ? `Focus league: ${state.highlightLeague}.` : "No league is highlighted against baselines.";
-
-  summary.textContent = `${leagueText}. ${seasonText}. ${highlightText} ${derived.metrics.length ? `${derived.metrics.length} league profiles are active in this view.` : "Adjust the filters to populate the charts."}`;
+function updateSelectionSummary() {
+  const seasons = state.selectedSeasons;
+  const period = seasons.length === 1 ? seasons[0] : seasons.length ? `${seasons[0]}–${seasons[seasons.length - 1]}` : "No seasons";
+  document.getElementById("selection-summary").textContent = `${period}${state.highlightLeague ? ` · Focus: ${state.highlightLeague}` : ""}`;
+  document.getElementById("mobile-filter-summary").textContent = `${state.selectedLeagues.length} league${state.selectedLeagues.length === 1 ? "" : "s"} · ${seasons.length} season${seasons.length === 1 ? "" : "s"}`;
 }
 
-function updateChartCopy(derived) {
+function updateChartCopy() {
   const meta = MODE_META[state.mode];
-  const seasonLabel = state.selectedSeasons.length === state.allSeasons.length
-    ? "Average across all 10 seasons."
-    : !state.selectedSeasons.length
-      ? "No seasons are currently selected."
-      : `${state.selectedSeasons.length} selected season${state.selectedSeasons.length === 1 ? "" : "s"}.`;
-  const highlightText = state.highlightLeague && derived.metrics.some((row) => row.league === state.highlightLeague)
-    ? ` ${state.highlightLeague} is highlighted against muted baselines.`
-    : "";
-
   document.getElementById("chart-kicker").textContent = meta.kicker;
-  document.getElementById("chart-explainer").textContent = `${meta.explainer} ${seasonLabel}${highlightText}`;
-}
-
-function renderQuickFindings(metrics) {
-  const container = document.getElementById("quick-findings");
-  if (!metrics.length) {
-    container.innerHTML = `<article class="quick-finding"><span class="quick-finding-label">No active selection</span><strong>Choose at least one league and one season</strong><span>The quick findings row updates from the live filters.</span></article>`;
-    return;
-  }
-
-  const mostEven = metrics[0];
-  const steepestCurve = [...metrics].sort((a, b) => b.curve_drop - a.curve_drop)[0];
-  const widestTopGap = [...metrics].sort((a, b) => b.avg_gap_1_4 - a.avg_gap_1_4)[0];
-  const tightestMid = [...metrics].sort((a, b) => a.avg_gap_4_10 - b.avg_gap_4_10)[0];
-
-  container.innerHTML = [
-    quickFindingCard("Highest score shown", mostEven.league, `Relative parity score ${mostEven.parity_score_0_100.toFixed(1)} / 100`),
-    quickFindingCard("Largest first-to-last gap", steepestCurve.league, `Average gap ${steepestCurve.curve_drop.toFixed(3)} PPG`),
-    quickFindingCard("Widest top-end gap", widestTopGap.league, `1st to 4th gap ${widestTopGap.avg_gap_1_4.toFixed(3)} PPG`),
-    quickFindingCard("Tightest mid-table", tightestMid.league, `4th to 10th gap ${tightestMid.avg_gap_4_10.toFixed(3)} PPG`)
-  ].join("");
-}
-
-function quickFindingCard(label, title, detail) {
-  return `<article class="quick-finding"><span class="quick-finding-label">${label}</span><strong>${title}</strong><span>${detail}</span></article>`;
+  document.getElementById("chart-explainer").textContent = meta.explainer;
+  document.getElementById("parity-chart").setAttribute("aria-label", `${meta.label}. ${state.selectedLeagues.length} leagues, ${state.selectedSeasons.length} seasons. Values are available in View chart data below.`);
 }
 
 function renderMainChart(derived) {
   const canvas = document.getElementById("parity-chart");
-  if (state.charts.main) {
-    state.charts.main.destroy();
-  }
-
+  const type = state.mode === "avg_ppg" ? "line" : "bar";
   const data = buildMainChartData(derived);
-  state.charts.main = new Chart(canvas, {
-    type: state.mode === "avg_ppg" ? "line" : "bar",
-    data,
-    options: buildMainChartOptions()
-  });
-
+  const empty = !derived.metrics.length;
+  document.getElementById("chart-empty").classList.toggle("is-hidden", !empty);
+  document.getElementById("chart-empty").querySelector("strong").textContent = state.selectedLeagues.length ? "No seasons selected" : "No leagues selected";
+  document.getElementById("chart-empty").querySelector("p").textContent = state.selectedLeagues.length ? "Reset the view to bring the comparison back." : "Choose a league in Filters, or reset the view.";
+  canvas.setAttribute("aria-hidden", String(empty));
+  if (state.charts.main && state.charts.main.config.type === type) {
+    state.charts.main.data = data;
+    state.charts.main.options = buildMainChartOptions();
+    state.charts.main.update("none");
+  } else {
+    if (state.charts.main) state.charts.main.destroy();
+    state.charts.main = new Chart(canvas, { type, data, options: buildMainChartOptions() });
+  }
   renderChartDataTable(data);
 }
 
@@ -456,10 +395,11 @@ function buildMainChartData(derived) {
         const useMuted = !!state.highlightLeague && !isHighlighted;
         return {
           label: league,
+          order: isHighlighted ? -1 : 0,
           data: rows.map((row) => ({ x: row.rank, y: row.avg_ppg, seasonCount: row.season_count })),
           borderColor: useMuted ? "rgba(102, 93, 82, 0.35)" : colorForLeague(league, false),
           backgroundColor: useMuted ? "rgba(102, 93, 82, 0.35)" : colorForLeague(league, false),
-          borderWidth: isHighlighted ? 4 : 3,
+          borderWidth: isHighlighted ? 3.5 : 2,
           pointRadius: 0,
           pointHoverRadius: isHighlighted ? 5 : 3,
           tension: 0.28
@@ -469,79 +409,50 @@ function buildMainChartData(derived) {
   }
 
   const metricKey = state.mode === "gap_top" ? "avg_gap_1_4" : "avg_gap_4_10";
+  const rows = [...derived.metrics].sort((a, b) => a[metricKey] - b[metricKey]);
   return {
-    labels: derived.metrics.map((row) => row.league),
+    labels: rows.map((row) => row.league),
     datasets: [{
       label: MODE_META[state.mode].label,
-      data: derived.metrics.map((row) => row[metricKey]),
-      backgroundColor: derived.metrics.map((row) => colorForLeague(row.league, true)),
-      borderRadius: 10,
+      data: rows.map((row) => row[metricKey]),
+      backgroundColor: rows.map((row) => colorForLeague(row.league, true)),
+      borderRadius: 3,
+      maxBarThickness: 26,
       borderSkipped: false
     }]
   };
 }
 
 function buildMainChartOptions() {
-  const meta = MODE_META[state.mode];
+  const isLine = state.mode === "avg_ppg";
+  const tickStyle = { color: "#706e63", font: { size: 10 } };
+  const gridStyle = { color: "#eeece5", drawTicks: false };
   return {
     responsive: true,
     maintainAspectRatio: false,
+    animation: false,
+    indexAxis: isLine ? "x" : "y",
     interaction: { mode: "nearest", intersect: false },
     plugins: {
-      legend: {
-        display: state.mode === "avg_ppg",
-        position: "bottom",
-        labels: { usePointStyle: true, color: "#1d1915", boxWidth: 10, padding: 18 }
-      },
+      legend: { display: false },
       tooltip: {
-        backgroundColor: "rgba(29, 25, 21, 0.93)",
-        titleColor: "#fffaf3",
-        bodyColor: "#fffaf3",
-        padding: 12,
-        displayColors: state.mode === "avg_ppg",
+        backgroundColor: "#292923", titleColor: "#fffdf8", bodyColor: "#fffdf8",
+        padding: 12, displayColors: isLine,
         callbacks: {
-          title(items) {
-            return state.mode === "avg_ppg" ? `Rank ${items[0].raw.x}` : items[0].label;
-          },
+          title(items) { return isLine ? `Rank ${items[0].raw.x}` : items[0].label; },
           label(context) {
             const value = Number(context.raw.y ?? context.raw).toFixed(3);
-            return state.mode === "avg_ppg"
-              ? `${context.dataset.label}: ${value} PPG (${context.raw.seasonCount} season${context.raw.seasonCount === 1 ? "" : "s"})`
-              : `${value} PPG gap`;
+            return isLine ? `${context.dataset.label}: ${value} PPG (${context.raw.seasonCount} season${context.raw.seasonCount === 1 ? "" : "s"})` : `${value} PPG gap`;
           }
         }
       }
     },
-    scales: state.mode === "avg_ppg" ? {
-      x: {
-        type: "linear",
-        title: { display: true, text: "League rank", color: "#665d52" },
-        ticks: { stepSize: 1, color: "#665d52" },
-        grid: { color: "rgba(29, 25, 21, 0.08)" }
-      },
-      y: {
-        title: { display: true, text: meta.yTitle, color: "#665d52" },
-        ticks: {
-          color: "#665d52",
-          callback(value) {
-            return value.toFixed(1);
-          }
-        },
-        grid: { color: "rgba(29, 25, 21, 0.08)" }
-      }
+    scales: isLine ? {
+      x: { type: "linear", min: 1, title: { display: true, text: "League rank", color: "#706e63", font: { size: 10 } }, ticks: { ...tickStyle, stepSize: 1, maxTicksLimit: 10 }, grid: { display: false }, border: { display: false } },
+      y: { title: { display: false }, ticks: { ...tickStyle, callback: value => value.toFixed(1) }, grid: gridStyle, border: { display: false } }
     } : {
-      x: { ticks: { color: "#665d52" }, grid: { display: false } },
-      y: {
-        beginAtZero: true,
-        title: { display: true, text: meta.yTitle, color: "#665d52" },
-        ticks: {
-          color: "#665d52",
-          callback(value) {
-            return value.toFixed(2);
-          }
-        },
-        grid: { color: "rgba(29, 25, 21, 0.08)" }
-      }
+      x: { beginAtZero: true, title: { display: true, text: "PPG gap", color: "#706e63", font: { size: 10 } }, ticks: { ...tickStyle, maxTicksLimit: 5 }, grid: gridStyle, border: { display: false } },
+      y: { ticks: tickStyle, grid: { display: false }, border: { display: false } }
     }
   };
 }
@@ -570,146 +481,6 @@ function renderChartDataTable(data) {
   `;
 }
 
-function renderSupportCharts(metrics) {
-  renderSupportChart("topGap", "support-top-gap-chart", metrics, "avg_gap_1_4");
-  renderSupportChart("bottomGap", "support-bottom-gap-chart", metrics, "avg_gap_10_last");
-}
-
-function renderSupportChart(chartKey, canvasId, metrics, metricKey) {
-  const canvas = document.getElementById(canvasId);
-  if (state.charts[chartKey]) {
-    state.charts[chartKey].destroy();
-  }
-
-  state.charts[chartKey] = new Chart(canvas, {
-    type: "bar",
-    data: {
-      labels: metrics.map((row) => row.league),
-      datasets: [{
-        data: metrics.map((row) => row[metricKey]),
-        backgroundColor: metrics.map((row) => colorForLeague(row.league, true)),
-        borderRadius: 8,
-        borderSkipped: false
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: "rgba(29, 25, 21, 0.93)",
-          titleColor: "#fffaf3",
-          bodyColor: "#fffaf3",
-          padding: 10,
-          callbacks: {
-            label(context) {
-              return `${Number(context.raw).toFixed(3)} PPG gap`;
-            }
-          }
-        }
-      },
-      scales: {
-        x: { ticks: { color: "#665d52" }, grid: { display: false } },
-        y: {
-          beginAtZero: true,
-          ticks: {
-            color: "#665d52",
-            callback(value) {
-              return value.toFixed(2);
-            }
-          },
-          grid: { color: "rgba(29, 25, 21, 0.08)" }
-        }
-      }
-    }
-  });
-}
-
-function renderInsightBox(derived) {
-  const container = document.getElementById("insight-box");
-  if (!derived.metrics.length) {
-    container.innerHTML = "<p>Select at least one league and one season to see the findings.</p>";
-    return;
-  }
-
-  if (derived.metrics.length === 1) {
-    const league = derived.metrics[0];
-    container.innerHTML = `<ul>
-      <li>${league.league} is the only active league, so the current view reads as a profile rather than a comparison.</li>
-      <li>Its average first-to-last gap is ${league.curve_drop.toFixed(3)} PPG, calculated within each season before averaging.</li>
-      <li>The largest average gap per rank step is ${dominantGapLabel(league)}. This adjusts for the different numbers of positions in each band.</li>
-    </ul>`;
-    return;
-  }
-
-  const mostEven = derived.metrics[0];
-  const leastEven = [...derived.metrics].sort((a, b) => a.parity_score_0_100 - b.parity_score_0_100)[0];
-  const flattest = [...derived.metrics].sort((a, b) => a.curve_drop - b.curve_drop)[0];
-  const lowestTableSplit = [...derived.metrics].sort((a, b) => b.avg_gap_10_last - a.avg_gap_10_last)[0];
-  const averageMidGap = average(derived.metrics.map((row) => row.avg_gap_4_10));
-
-  container.innerHTML = `<ul>
-    <li>${mostEven.league} comes out as the most even selection here, while ${leastEven.league} sits at the other end of the current ranking.</li>
-    <li>${flattest.league} has the smallest average first-to-last gap at ${flattest.curve_drop.toFixed(3)} PPG, calculated within each season before averaging.</li>
-    <li>${lowestTableSplit.league} has the largest total lower-table gap, averaging ${lowestTableSplit.avg_gap_10_last.toFixed(3)} PPG from 10th to last. This band spans eight or ten rank steps depending on league size.</li>
-    <li>Across the active leagues, the average 4th-to-10th gap is ${averageMidGap.toFixed(3)} PPG.</li>
-  </ul>`;
-}
-
-function renderRankingPanel(metrics) {
-  const container = document.getElementById("ranking-panel");
-  if (!metrics.length) {
-    container.innerHTML = "<h3>Selected ranking</h3><p>No ranking is available until at least one league and one season are active.</p>";
-    return;
-  }
-
-  container.innerHTML = `<h3>Selected ranking</h3>
-    <p>Relative parity score out of 100, compared with all seven leagues over the selected seasons. Higher means more even by this formula. Hiding leagues does not change scores; changing seasons resets the comparison. <a href="#method">See the formula and limits.</a></p>
-    <div class="ranking-list">
-      ${metrics.map((row, index) => `
-        <div class="ranking-row">
-          <div class="ranking-row-top">
-            <strong>#${index + 1} ${row.league}</strong>
-            <small>${row.parity_score_0_100.toFixed(1)}</small>
-          </div>
-          <div class="ranking-bar"><span style="width: ${row.parity_score_0_100.toFixed(1)}%"></span></div>
-        </div>
-      `).join("")}
-    </div>`;
-}
-
-function renderHeadlineCards(metrics) {
-  const container = document.getElementById("headline-cards");
-  if (!metrics.length) {
-    container.innerHTML = `<article class="headline-card"><h3>No league headlines available</h3><p>Select at least one league and one season to populate this section.</p></article>`;
-    return;
-  }
-
-  container.innerHTML = metrics.map((row, index) => `
-    <article class="headline-card">
-      <div class="headline-top">
-        <h3>${row.league}</h3>
-        <span class="headline-rank">#${index + 1}</span>
-      </div>
-      <div class="headline-score">${row.parity_score_0_100.toFixed(1)}</div>
-      <p>${row.summary}</p>
-      <div class="headline-metric">
-        <span>1st to last gap</span>
-        <strong>${row.curve_drop.toFixed(3)}</strong>
-      </div>
-      <div class="headline-metric">
-        <span>1st to 4th gap</span>
-        <strong>${row.avg_gap_1_4.toFixed(3)}</strong>
-      </div>
-      <div class="headline-metric">
-        <span>10th to last gap</span>
-        <strong>${row.avg_gap_10_last.toFixed(3)}</strong>
-      </div>
-    </article>
-  `).join("");
-}
-
 function syncLeagueButtons() {
   document.querySelectorAll(".league-pill").forEach((button) => {
     const selected = state.selectedLeagues.includes(button.dataset.league);
@@ -726,24 +497,135 @@ function syncModeButtons() {
   });
 }
 
+function bindComparisonControls() {
+  document.querySelectorAll("[data-reset]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.selectedLeagues = [...state.allLeagues];
+      state.selectedSeasons = [...state.allSeasons];
+      state.highlightLeague = "";
+      state.mode = "avg_ppg";
+      state.tableSort = { key: "parity_score_0_100", direction: "desc" };
+      document.getElementById("more-options").open = false;
+      refreshView();
+    });
+  });
+
+  document.querySelectorAll("[data-sort]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const key = button.dataset.sort;
+      state.tableSort = {
+        key,
+        direction: state.tableSort.key === key
+          ? (state.tableSort.direction === "asc" ? "desc" : "asc")
+          : (key === "parity_score_0_100" ? "desc" : "asc")
+      };
+      renderComparisonTable(getDerivedSelection().metrics);
+      document.getElementById("table-sort-status").textContent = `Table sorted by ${button.firstChild.textContent.trim()}, ${state.tableSort.direction === "asc" ? "ascending" : "descending"}.`;
+    });
+  });
+
+  ["comparison-body", "chart-legend"].forEach((id) => {
+    document.getElementById(id).addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-focus]");
+      if (!button) return;
+      const league = button.dataset.focus;
+      state.highlightLeague = state.highlightLeague === league ? "" : league;
+      refreshView();
+      // The row/legend buttons are redrawn; retain keyboard focus on the action.
+      [...document.getElementById(id).querySelectorAll("[data-focus]")]
+        .find((item) => item.dataset.focus === league)?.focus({ preventScroll: true });
+    });
+  });
+}
+
+function bindFilterDialog() {
+  const dialog = document.getElementById("filter-dialog");
+  const panel = document.getElementById("filters-panel");
+  const mobile = window.matchMedia("(max-width: 720px)");
+  const placeControls = () => {
+    if (!mobile.matches && dialog.open) dialog.close();
+    document.getElementById(mobile.matches ? "mobile-filters" : "desktop-filters").append(panel);
+  };
+  placeControls();
+  mobile.addEventListener("change", placeControls);
+  document.getElementById("open-filters").addEventListener("click", () => dialog.showModal());
+  ["close-filters", "apply-filters"].forEach((id) => {
+    document.getElementById(id).addEventListener("click", () => dialog.close());
+  });
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+    const controls = [...dialog.querySelectorAll("button, select, summary, a[href], [tabindex]")]
+      .filter((element) => !element.disabled && element.tabIndex >= 0 && element.checkVisibility());
+    const first = controls[0];
+    const last = controls[controls.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  dialog.addEventListener("click", (event) => {
+    if (event.target !== dialog) return;
+    const rect = dialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+  });
+}
+
+function renderChartLegend(metrics) {
+  const container = document.getElementById("chart-legend");
+  container.classList.toggle("is-hidden", state.mode !== "avg_ppg" || !metrics.length);
+  container.innerHTML = [...metrics].sort((a, b) => a.league.localeCompare(b.league)).map((row) => `
+    <button class="legend-button" type="button" data-focus="${row.league}" aria-label="Highlight ${row.league}" aria-pressed="${state.highlightLeague === row.league}" style="--league-color: ${colorForLeague(row.league, true)}"><span class="league-dot" aria-hidden="true"></span>${row.league}</button>
+  `).join("");
+}
+
+function buildTakeaway(metrics, mode) {
+  if (!metrics.length) return "Choose at least one league and one season to explore the comparison.";
+  const key = mode === "avg_ppg" ? "curve_drop" : mode === "gap_top" ? "avg_gap_1_4" : "avg_gap_4_10";
+  const band = mode === "avg_ppg" ? "first-to-last" : mode === "gap_top" ? "1st-to-4th" : "4th-to-10th";
+  const rows = [...metrics].sort((a, b) => a[key] - b[key]);
+  const first = rows[0];
+  const last = rows[rows.length - 1];
+  if (rows.length === 1) return `<strong>${first.league}</strong> has an average ${band} gap of <strong>${first[key].toFixed(3)} PPG</strong> over the selected seasons. Add another league to compare.`;
+  if (last[key].toFixed(3) === first[key].toFixed(3)) return `The selected leagues have the same average ${band} gap to three decimals: <strong>${first[key].toFixed(3)} PPG</strong>.`;
+  return `<strong>${first.league}</strong> has the smallest average ${band} gap among the selected leagues: <strong>${first[key].toFixed(3)} PPG</strong>, compared with <strong>${last[key].toFixed(3)}</strong> in ${last.league}.`;
+}
+
+function renderTakeaway(metrics) {
+  document.getElementById("takeaway-text").innerHTML = buildTakeaway(metrics, state.mode);
+}
+
+function getSortedMetrics(metrics, sort = state.tableSort) {
+  return [...metrics].sort((a, b) => {
+    const difference = sort.key === "league" ? a.league.localeCompare(b.league) : a[sort.key] - b[sort.key];
+    return (sort.direction === "asc" ? difference : -difference) || a.league.localeCompare(b.league);
+  });
+}
+
+function renderComparisonTable(metrics) {
+  document.querySelectorAll("[data-sort]").forEach((button) => {
+    const active = button.dataset.sort === state.tableSort.key;
+    button.closest("th").setAttribute("aria-sort", active ? (state.tableSort.direction === "asc" ? "ascending" : "descending") : "none");
+    button.querySelector(".sort-icon").textContent = active ? (state.tableSort.direction === "asc" ? "↑" : "↓") : "↕";
+  });
+  document.getElementById("comparison-body").innerHTML = metrics.length ? getSortedMetrics(metrics).map((row) => `
+    <tr class="${state.highlightLeague === row.league ? "is-focused" : ""}" style="--league-color: ${colorForLeague(row.league, false)}">
+      <td><button class="table-league" type="button" data-focus="${row.league}" aria-label="Highlight ${row.league} in the chart" aria-pressed="${state.highlightLeague === row.league}"><span class="league-dot" aria-hidden="true"></span>${row.league}</button></td>
+      <td><div class="score-cell"><span class="score-track" aria-hidden="true"><span style="width: ${row.parity_score_0_100.toFixed(1)}%"></span></span><span class="score-value">${row.parity_score_0_100.toFixed(1)}</span></div></td>
+      <td>${row.avg_gap_1_4.toFixed(3)}</td><td>${row.avg_gap_4_10.toFixed(3)}</td><td>${row.avg_gap_10_last.toFixed(3)}</td>
+    </tr>
+  `).join("") : '<tr><td colspan="5">No data selected. Reset the view or choose a league and season.</td></tr>';
+}
+
 function syncSeasonControls() {
   const startSelect = document.getElementById("season-start-select");
   const endSelect = document.getElementById("season-end-select");
-  const label = document.getElementById("season-range-label");
   const count = document.getElementById("season-range-count");
-
-  if (!state.selectedSeasons.length) {
-    label.textContent = "No seasons selected";
-    count.textContent = "0 seasons selected";
-    return;
-  }
-
-  startSelect.value = state.selectedSeasons[0];
-  endSelect.value = state.selectedSeasons[state.selectedSeasons.length - 1];
-  label.textContent = state.selectedSeasons.length === 1
-    ? state.selectedSeasons[0]
-    : `${state.selectedSeasons[0]} to ${state.selectedSeasons[state.selectedSeasons.length - 1]}`;
-  count.textContent = `${state.selectedSeasons.length} season${state.selectedSeasons.length === 1 ? "" : "s"} selected`;
+  startSelect.value = state.selectedSeasons[0] || "";
+  endSelect.value = state.selectedSeasons[state.selectedSeasons.length - 1] || "";
+  count.textContent = `${state.selectedSeasons.length} season${state.selectedSeasons.length === 1 ? "" : "s"}`;
 }
 
 function syncHighlightSelect() {
@@ -751,6 +633,9 @@ function syncHighlightSelect() {
   if (state.highlightLeague && !state.selectedLeagues.includes(state.highlightLeague)) {
     state.highlightLeague = "";
   }
+  [...select.options].forEach((option) => {
+    option.disabled = !!option.value && !state.selectedLeagues.includes(option.value);
+  });
   select.value = state.highlightLeague;
 }
 
