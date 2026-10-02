@@ -1,0 +1,1337 @@
+league,season,team,reference_team,rank,points,matches_played,wins,draws,losses,goals_for,goals_against,goal_difference
+Bundesliga,2015/16,Bayern Munich,FC Bayern München,1,88,34,28,4,2,80,17,63
+Bundesliga,2015/16,Dortmund,Borussia Dortmund,2,78,34,24,6,4,82,34,48
+Bundesliga,2015/16,Leverkusen,Bayer 04 Leverkusen,3,60,34,18,6,10,56,40,16
+Bundesliga,2015/16,M'gladbach,Borussia Mönchengladbach,4,55,34,17,4,13,67,50,17
+Bundesliga,2015/16,Schalke 04,FC Schalke 04 Gelsenkirchen,5,52,34,15,7,12,51,49,2
+Bundesliga,2015/16,Mainz,1.FSV Mainz 05,6,50,34,14,8,12,46,42,4
+Bundesliga,2015/16,Hertha,Hertha BSC Berlin,7,50,34,14,8,12,42,42,0
+Bundesliga,2015/16,Wolfsburg,VfL Wolfsburg,8,45,34,12,9,13,47,49,-2
+Bundesliga,2015/16,FC Koln,1.FC Köln,9,43,34,10,13,11,38,42,-4
+Bundesliga,2015/16,Hamburg,Hamburger SV,10,41,34,11,8,15,40,46,-6
+Bundesliga,2015/16,Ingolstadt,FC Ingolstadt 04,11,40,34,10,10,14,33,42,-9
+Bundesliga,2015/16,Augsburg,FC Augsburg,12,38,34,9,11,14,42,52,-10
+Bundesliga,2015/16,Werder Bremen,SV Werder Bremen,13,38,34,10,8,16,50,65,-15
+Bundesliga,2015/16,Darmstadt,SV Darmstadt 98,14,38,34,9,11,14,38,53,-15
+Bundesliga,2015/16,Hoffenheim,TSG 1899 Hoffenheim,15,37,34,9,10,15,39,54,-15
+Bundesliga,2015/16,Ein Frankfurt,Eintracht Frankfurt,16,36,34,9,9,16,34,52,-18
+Bundesliga,2015/16,Stuttgart,VfB Stuttgart,17,33,34,9,6,19,50,75,-25
+Bundesliga,2015/16,Hannover,Hannover 96,18,25,34,7,4,23,31,62,-31
+Bundesliga,2016/17,Bayern Munich,FC Bayern München,1,82,34,25,7,2,89,22,67
+Bundesliga,2016/17,RB Leipzig,RB Leipzig,2,67,34,20,7,7,66,39,27
+Bundesliga,2016/17,Dortmund,Borussia Dortmund,3,64,34,18,10,6,72,40,32
+Bundesliga,2016/17,Hoffenheim,TSG 1899 Hoffenheim,4,62,34,16,14,4,64,37,27
+Bundesliga,2016/17,FC Koln,1.FC Köln,5,49,34,12,13,9,51,42,9
+Bundesliga,2016/17,Hertha,Hertha BSC Berlin,6,49,34,15,4,15,43,47,-4
+Bundesliga,2016/17,Freiburg,SC Freiburg,7,48,34,14,6,14,42,60,-18
+Bundesliga,2016/17,Werder Bremen,SV Werder Bremen,8,45,34,13,6,15,61,64,-3
+Bundesliga,2016/17,M'gladbach,Borussia Mönchengladbach,9,45,34,12,9,13,45,49,-4
+Bundesliga,2016/17,Schalke 04,FC Schalke 04 Gelsenkirchen,10,43,34,11,10,13,45,40,5
+Bundesliga,2016/17,Ein Frankfurt,Eintracht Frankfurt,11,42,34,11,9,14,36,43,-7
+Bundesliga,2016/17,Leverkusen,Bayer 04 Leverkusen,12,41,34,11,8,15,53,55,-2
+Bundesliga,2016/17,Augsburg,FC Augsburg,13,38,34,9,11,14,35,51,-16
+Bundesliga,2016/17,Hamburg,Hamburger SV,14,38,34,10,8,16,33,61,-28
+Bundesliga,2016/17,Mainz,1.FSV Mainz 05,15,37,34,10,7,17,44,55,-11
+Bundesliga,2016/17,Wolfsburg,VfL Wolfsburg,16,37,34,10,7,17,34,52,-18
+Bundesliga,2016/17,Ingolstadt,FC Ingolstadt 04,17,32,34,8,8,18,36,57,-21
+Bundesliga,2016/17,Darmstadt,SV Darmstadt 98,18,25,34,7,4,23,28,63,-35
+Bundesliga,2017/18,Bayern Munich,FC Bayern München,1,84,34,27,3,4,92,28,64
+Bundesliga,2017/18,Schalke 04,FC Schalke 04 Gelsenkirchen,2,63,34,18,9,7,53,37,16
+Bundesliga,2017/18,Hoffenheim,TSG 1899 Hoffenheim,3,55,34,15,10,9,66,48,18
+Bundesliga,2017/18,Dortmund,Borussia Dortmund,4,55,34,15,10,9,64,47,17
+Bundesliga,2017/18,Leverkusen,Bayer 04 Leverkusen,5,55,34,15,10,9,58,44,14
+Bundesliga,2017/18,RB Leipzig,RB Leipzig,6,53,34,15,8,11,57,53,4
+Bundesliga,2017/18,Stuttgart,VfB Stuttgart,7,51,34,15,6,13,36,36,0
+Bundesliga,2017/18,Ein Frankfurt,Eintracht Frankfurt,8,49,34,14,7,13,45,45,0
+Bundesliga,2017/18,M'gladbach,Borussia Mönchengladbach,9,47,34,13,8,13,47,52,-5
+Bundesliga,2017/18,Hertha,Hertha BSC Berlin,10,43,34,10,13,11,43,46,-3
+Bundesliga,2017/18,Werder Bremen,SV Werder Bremen,11,42,34,10,12,12,37,40,-3
+Bundesliga,2017/18,Augsburg,FC Augsburg,12,41,34,10,11,13,43,46,-3
+Bundesliga,2017/18,Hannover,Hannover 96,13,39,34,10,9,15,44,54,-10
+Bundesliga,2017/18,Mainz,1.FSV Mainz 05,14,36,34,9,9,16,38,52,-14
+Bundesliga,2017/18,Freiburg,SC Freiburg,15,36,34,8,12,14,32,56,-24
+Bundesliga,2017/18,Wolfsburg,VfL Wolfsburg,16,33,34,6,15,13,36,48,-12
+Bundesliga,2017/18,Hamburg,Hamburger SV,17,31,34,8,7,19,29,53,-24
+Bundesliga,2017/18,FC Koln,1.FC Köln,18,22,34,5,7,22,35,70,-35
+Bundesliga,2018/19,Bayern Munich,FC Bayern München,1,78,34,24,6,4,88,32,56
+Bundesliga,2018/19,Dortmund,Borussia Dortmund,2,76,34,23,7,4,81,44,37
+Bundesliga,2018/19,RB Leipzig,RB Leipzig,3,66,34,19,9,6,63,29,34
+Bundesliga,2018/19,Leverkusen,Bayer 04 Leverkusen,4,58,34,18,4,12,69,52,17
+Bundesliga,2018/19,M'gladbach,Borussia Mönchengladbach,5,55,34,16,7,11,55,42,13
+Bundesliga,2018/19,Wolfsburg,VfL Wolfsburg,6,55,34,16,7,11,62,50,12
+Bundesliga,2018/19,Ein Frankfurt,Eintracht Frankfurt,7,54,34,15,9,10,60,48,12
+Bundesliga,2018/19,Werder Bremen,SV Werder Bremen,8,53,34,14,11,9,58,49,9
+Bundesliga,2018/19,Hoffenheim,TSG 1899 Hoffenheim,9,51,34,13,12,9,70,52,18
+Bundesliga,2018/19,Fortuna Dusseldorf,Fortuna Düsseldorf,10,44,34,13,5,16,49,65,-16
+Bundesliga,2018/19,Hertha,Hertha BSC Berlin,11,43,34,11,10,13,49,57,-8
+Bundesliga,2018/19,Mainz,1.FSV Mainz 05,12,43,34,12,7,15,46,57,-11
+Bundesliga,2018/19,Freiburg,SC Freiburg,13,36,34,8,12,14,46,61,-15
+Bundesliga,2018/19,Schalke 04,FC Schalke 04 Gelsenkirchen,14,33,34,8,9,17,37,55,-18
+Bundesliga,2018/19,Augsburg,FC Augsburg,15,32,34,8,8,18,51,71,-20
+Bundesliga,2018/19,Stuttgart,VfB Stuttgart,16,28,34,7,7,20,32,70,-38
+Bundesliga,2018/19,Hannover,Hannover 96,17,21,34,5,6,23,31,71,-40
+Bundesliga,2018/19,Nurnberg,1.FC Nürnberg,18,19,34,3,10,21,26,68,-42
+Bundesliga,2019/20,Bayern Munich,FC Bayern München,1,82,34,26,4,4,100,32,68
+Bundesliga,2019/20,Dortmund,Borussia Dortmund,2,69,34,21,6,7,84,41,43
+Bundesliga,2019/20,RB Leipzig,RB Leipzig,3,66,34,18,12,4,81,37,44
+Bundesliga,2019/20,M'gladbach,Borussia Mönchengladbach,4,65,34,20,5,9,66,40,26
+Bundesliga,2019/20,Leverkusen,Bayer 04 Leverkusen,5,63,34,19,6,9,61,44,17
+Bundesliga,2019/20,Hoffenheim,TSG 1899 Hoffenheim,6,52,34,15,7,12,53,53,0
+Bundesliga,2019/20,Wolfsburg,VfL Wolfsburg,7,49,34,13,10,11,48,46,2
+Bundesliga,2019/20,Freiburg,SC Freiburg,8,48,34,13,9,12,48,47,1
+Bundesliga,2019/20,Ein Frankfurt,Eintracht Frankfurt,9,45,34,13,6,15,59,60,-1
+Bundesliga,2019/20,Hertha,Hertha BSC Berlin,10,41,34,11,8,15,48,59,-11
+Bundesliga,2019/20,Union Berlin,1.FC Union Berlin,11,41,34,12,5,17,41,58,-17
+Bundesliga,2019/20,Schalke 04,FC Schalke 04 Gelsenkirchen,12,39,34,9,12,13,38,58,-20
+Bundesliga,2019/20,Mainz,1.FSV Mainz 05,13,37,34,11,4,19,44,65,-21
+Bundesliga,2019/20,FC Koln,1.FC Köln,14,36,34,10,6,18,51,69,-18
+Bundesliga,2019/20,Augsburg,FC Augsburg,15,36,34,9,9,16,45,63,-18
+Bundesliga,2019/20,Werder Bremen,SV Werder Bremen,16,31,34,8,7,19,42,69,-27
+Bundesliga,2019/20,Fortuna Dusseldorf,Fortuna Düsseldorf,17,30,34,6,12,16,36,67,-31
+Bundesliga,2019/20,Paderborn,SC Paderborn 07,18,20,34,4,8,22,37,74,-37
+Bundesliga,2020/21,Bayern Munich,FC Bayern München,1,78,34,24,6,4,99,44,55
+Bundesliga,2020/21,RB Leipzig,RB Leipzig,2,65,34,19,8,7,60,32,28
+Bundesliga,2020/21,Dortmund,Borussia Dortmund,3,64,34,20,4,10,75,46,29
+Bundesliga,2020/21,Wolfsburg,VfL Wolfsburg,4,61,34,17,10,7,61,37,24
+Bundesliga,2020/21,Ein Frankfurt,Eintracht Frankfurt,5,60,34,16,12,6,69,53,16
+Bundesliga,2020/21,Leverkusen,Bayer 04 Leverkusen,6,52,34,14,10,10,53,39,14
+Bundesliga,2020/21,Union Berlin,1.FC Union Berlin,7,50,34,12,14,8,50,43,7
+Bundesliga,2020/21,M'gladbach,Borussia Mönchengladbach,8,49,34,13,10,11,64,56,8
+Bundesliga,2020/21,Stuttgart,VfB Stuttgart,9,45,34,12,9,13,56,55,1
+Bundesliga,2020/21,Freiburg,SC Freiburg,10,45,34,12,9,13,52,52,0
+Bundesliga,2020/21,Hoffenheim,TSG 1899 Hoffenheim,11,43,34,11,10,13,52,54,-2
+Bundesliga,2020/21,Mainz,1.FSV Mainz 05,12,39,34,10,9,15,39,56,-17
+Bundesliga,2020/21,Augsburg,FC Augsburg,13,36,34,10,6,18,36,54,-18
+Bundesliga,2020/21,Hertha,Hertha BSC Berlin,14,35,34,8,11,15,41,52,-11
+Bundesliga,2020/21,Bielefeld,DSC Arminia Bielefeld,15,35,34,9,8,17,26,52,-26
+Bundesliga,2020/21,FC Koln,1.FC Köln,16,33,34,8,9,17,34,60,-26
+Bundesliga,2020/21,Werder Bremen,SV Werder Bremen,17,31,34,7,10,17,36,57,-21
+Bundesliga,2020/21,Schalke 04,FC Schalke 04 Gelsenkirchen,18,16,34,3,7,24,25,86,-61
+Bundesliga,2021/22,Bayern Munich,FC Bayern München,1,77,34,24,5,5,97,37,60
+Bundesliga,2021/22,Dortmund,Borussia Dortmund,2,69,34,22,3,9,85,52,33
+Bundesliga,2021/22,Leverkusen,Bayer 04 Leverkusen,3,64,34,19,7,8,80,47,33
+Bundesliga,2021/22,RB Leipzig,RB Leipzig,4,58,34,17,7,10,72,37,35
+Bundesliga,2021/22,Union Berlin,1.FC Union Berlin,5,57,34,16,9,9,50,44,6
+Bundesliga,2021/22,Freiburg,SC Freiburg,6,55,34,15,10,9,58,46,12
+Bundesliga,2021/22,FC Koln,1.FC Köln,7,52,34,14,10,10,52,49,3
+Bundesliga,2021/22,Mainz,1.FSV Mainz 05,8,46,34,13,7,14,50,45,5
+Bundesliga,2021/22,Hoffenheim,TSG 1899 Hoffenheim,9,46,34,13,7,14,58,60,-2
+Bundesliga,2021/22,M'gladbach,Borussia Mönchengladbach,10,45,34,12,9,13,54,61,-7
+Bundesliga,2021/22,Ein Frankfurt,Eintracht Frankfurt,11,42,34,10,12,12,45,49,-4
+Bundesliga,2021/22,Wolfsburg,VfL Wolfsburg,12,42,34,12,6,16,43,54,-11
+Bundesliga,2021/22,Bochum,VfL Bochum,13,42,34,12,6,16,38,52,-14
+Bundesliga,2021/22,Augsburg,FC Augsburg,14,38,34,10,8,16,39,56,-17
+Bundesliga,2021/22,Stuttgart,VfB Stuttgart,15,33,34,7,12,15,41,59,-18
+Bundesliga,2021/22,Hertha,Hertha BSC Berlin,16,33,34,9,6,19,37,71,-34
+Bundesliga,2021/22,Bielefeld,DSC Arminia Bielefeld,17,28,34,5,13,16,27,53,-26
+Bundesliga,2021/22,Greuther Furth,SpVgg Greuther Fürth,18,18,34,3,9,22,28,82,-54
+Bundesliga,2022/23,Bayern Munich,FC Bayern München,1,71,34,21,8,5,92,38,54
+Bundesliga,2022/23,Dortmund,Borussia Dortmund,2,71,34,22,5,7,83,44,39
+Bundesliga,2022/23,RB Leipzig,RB Leipzig,3,66,34,20,6,8,64,41,23
+Bundesliga,2022/23,Union Berlin,1.FC Union Berlin,4,62,34,18,8,8,51,38,13
+Bundesliga,2022/23,Freiburg,SC Freiburg,5,59,34,17,8,9,51,44,7
+Bundesliga,2022/23,Leverkusen,Bayer 04 Leverkusen,6,50,34,14,8,12,57,49,8
+Bundesliga,2022/23,Ein Frankfurt,Eintracht Frankfurt,7,50,34,13,11,10,58,52,6
+Bundesliga,2022/23,Wolfsburg,VfL Wolfsburg,8,49,34,13,10,11,57,48,9
+Bundesliga,2022/23,Mainz,1.FSV Mainz 05,9,46,34,12,10,12,54,55,-1
+Bundesliga,2022/23,M'gladbach,Borussia Mönchengladbach,10,43,34,11,10,13,52,55,-3
+Bundesliga,2022/23,FC Koln,1.FC Köln,11,42,34,10,12,12,49,54,-5
+Bundesliga,2022/23,Hoffenheim,TSG 1899 Hoffenheim,12,36,34,10,6,18,48,57,-9
+Bundesliga,2022/23,Werder Bremen,SV Werder Bremen,13,36,34,10,6,18,51,64,-13
+Bundesliga,2022/23,Bochum,VfL Bochum,14,35,34,10,5,19,40,72,-32
+Bundesliga,2022/23,Augsburg,FC Augsburg,15,34,34,9,7,18,42,63,-21
+Bundesliga,2022/23,Stuttgart,VfB Stuttgart,16,33,34,7,12,15,45,57,-12
+Bundesliga,2022/23,Schalke 04,FC Schalke 04 Gelsenkirchen,17,31,34,7,10,17,35,71,-36
+Bundesliga,2022/23,Hertha,Hertha BSC Berlin,18,29,34,7,8,19,42,69,-27
+Bundesliga,2023/24,Leverkusen,Bayer 04 Leverkusen,1,90,34,28,6,0,89,24,65
+Bundesliga,2023/24,Stuttgart,VfB Stuttgart,2,73,34,23,4,7,78,39,39
+Bundesliga,2023/24,Bayern Munich,FC Bayern München,3,72,34,23,3,8,94,45,49
+Bundesliga,2023/24,RB Leipzig,RB Leipzig,4,65,34,19,8,7,77,39,38
+Bundesliga,2023/24,Dortmund,Borussia Dortmund,5,63,34,18,9,7,68,43,25
+Bundesliga,2023/24,Ein Frankfurt,Eintracht Frankfurt,6,47,34,11,14,9,51,50,1
+Bundesliga,2023/24,Hoffenheim,TSG 1899 Hoffenheim,7,46,34,13,7,14,66,66,0
+Bundesliga,2023/24,Heidenheim,1.FC Heidenheim,8,42,34,10,12,12,50,55,-5
+Bundesliga,2023/24,Werder Bremen,SV Werder Bremen,9,42,34,11,9,14,48,54,-6
+Bundesliga,2023/24,Freiburg,SC Freiburg,10,42,34,11,9,14,45,58,-13
+Bundesliga,2023/24,Augsburg,FC Augsburg,11,39,34,10,9,15,50,60,-10
+Bundesliga,2023/24,Wolfsburg,VfL Wolfsburg,12,37,34,10,7,17,41,56,-15
+Bundesliga,2023/24,Mainz,1.FSV Mainz 05,13,35,34,7,14,13,39,51,-12
+Bundesliga,2023/24,M'gladbach,Borussia Mönchengladbach,14,34,34,7,13,14,56,67,-11
+Bundesliga,2023/24,Union Berlin,1.FC Union Berlin,15,33,34,9,6,19,33,58,-25
+Bundesliga,2023/24,Bochum,VfL Bochum,16,33,34,7,12,15,42,74,-32
+Bundesliga,2023/24,FC Koln,1.FC Köln,17,27,34,5,12,17,28,60,-32
+Bundesliga,2023/24,Darmstadt,SV Darmstadt 98,18,17,34,3,8,23,30,86,-56
+Bundesliga,2024/25,Bayern Munich,FC Bayern München,1,82,34,25,7,2,99,32,67
+Bundesliga,2024/25,Leverkusen,Bayer 04 Leverkusen,2,69,34,19,12,3,72,43,29
+Bundesliga,2024/25,Ein Frankfurt,Eintracht Frankfurt,3,60,34,17,9,8,68,46,22
+Bundesliga,2024/25,Dortmund,Borussia Dortmund,4,57,34,17,6,11,71,51,20
+Bundesliga,2024/25,Freiburg,SC Freiburg,5,55,34,16,7,11,49,53,-4
+Bundesliga,2024/25,Mainz,1.FSV Mainz 05,6,52,34,14,10,10,55,43,12
+Bundesliga,2024/25,RB Leipzig,RB Leipzig,7,51,34,13,12,9,53,48,5
+Bundesliga,2024/25,Werder Bremen,SV Werder Bremen,8,51,34,14,9,11,54,57,-3
+Bundesliga,2024/25,Stuttgart,VfB Stuttgart,9,50,34,14,8,12,64,53,11
+Bundesliga,2024/25,M'gladbach,Borussia Mönchengladbach,10,45,34,13,6,15,55,57,-2
+Bundesliga,2024/25,Wolfsburg,VfL Wolfsburg,11,43,34,11,10,13,56,54,2
+Bundesliga,2024/25,Augsburg,FC Augsburg,12,43,34,11,10,13,35,51,-16
+Bundesliga,2024/25,Union Berlin,1.FC Union Berlin,13,40,34,10,10,14,35,51,-16
+Bundesliga,2024/25,St Pauli,FC Sankt Pauli,14,32,34,8,8,18,28,41,-13
+Bundesliga,2024/25,Hoffenheim,TSG 1899 Hoffenheim,15,32,34,7,11,16,46,68,-22
+Bundesliga,2024/25,Heidenheim,1.FC Heidenheim,16,29,34,8,5,21,37,64,-27
+Bundesliga,2024/25,Holstein Kiel,Holstein Kiel,17,25,34,6,7,21,49,80,-31
+Bundesliga,2024/25,Bochum,VfL Bochum,18,25,34,6,7,21,33,67,-34
+Eredivisie,2015/16,PSV Eindhoven,PSV (Eindhoven),1,84,34,26,6,2,88,32,56
+Eredivisie,2015/16,Ajax,Ajax (Amsterdam),2,82,34,25,7,2,81,21,60
+Eredivisie,2015/16,Feyenoord,Feyenoord (Rotterdam),3,63,34,19,6,9,62,40,22
+Eredivisie,2015/16,AZ Alkmaar,AZ (Alkmaar),4,59,34,18,5,11,70,53,17
+Eredivisie,2015/16,Utrecht,FC Utrecht,5,53,34,15,8,11,57,48,9
+Eredivisie,2015/16,Heracles,Heracles Almelo,6,51,34,14,9,11,47,49,-2
+Eredivisie,2015/16,Groningen,FC Groningen,7,50,34,14,8,12,41,48,-7
+Eredivisie,2015/16,Zwolle,PEC Zwolle,8,48,34,14,6,14,56,54,2
+Eredivisie,2015/16,Vitesse,Vitesse (Arnhem),9,46,34,12,10,12,55,38,17
+Eredivisie,2015/16,Nijmegen,NEC (Nĳmegen),10,46,34,13,7,14,37,42,-5
+Eredivisie,2015/16,Den Haag,ADO Den Haag,11,43,34,10,13,11,48,49,-1
+Eredivisie,2015/16,Heerenveen,SC Heerenveen,12,42,34,11,9,14,46,61,-15
+Eredivisie,2015/16,Twente,FC Twente (Enschede),13,40,34,12,7,15,49,64,-15
+Eredivisie,2015/16,Roda,Roda JC Kerkrade,14,34,34,8,10,16,34,55,-21
+Eredivisie,2015/16,Excelsior,Excelsior (Rotterdam),15,30,34,7,9,18,34,60,-26
+Eredivisie,2015/16,Willem II,Willem II (Tilburg),16,29,34,6,11,17,35,53,-18
+Eredivisie,2015/16,Graafschap,De Graafschap (Doetinchem),17,23,34,5,8,21,39,66,-27
+Eredivisie,2015/16,Cambuur,SC Cambuur (Leeuwarden),18,18,34,3,9,22,33,79,-46
+Eredivisie,2016/17,Feyenoord,Feyenoord (Rotterdam),1,82,34,26,4,4,86,25,61
+Eredivisie,2016/17,Ajax,Ajax (Amsterdam),2,81,34,25,6,3,79,23,56
+Eredivisie,2016/17,PSV Eindhoven,PSV (Eindhoven),3,76,34,22,10,2,68,23,45
+Eredivisie,2016/17,Utrecht,FC Utrecht,4,62,34,18,8,8,54,38,16
+Eredivisie,2016/17,Vitesse,Vitesse (Arnhem),5,51,34,15,6,13,51,40,11
+Eredivisie,2016/17,AZ Alkmaar,AZ (Alkmaar),6,49,34,12,13,9,56,52,4
+Eredivisie,2016/17,Twente,FC Twente (Enschede),7,45,34,12,9,13,48,50,-2
+Eredivisie,2016/17,Groningen,FC Groningen,8,43,34,10,13,11,55,51,4
+Eredivisie,2016/17,Heerenveen,SC Heerenveen,9,43,34,12,7,15,54,53,1
+Eredivisie,2016/17,Heracles,Heracles Almelo,10,43,34,12,7,15,53,55,-2
+Eredivisie,2016/17,Den Haag,ADO Den Haag,11,38,34,11,5,18,37,59,-22
+Eredivisie,2016/17,Excelsior,Excelsior (Rotterdam),12,37,34,9,10,15,43,60,-17
+Eredivisie,2016/17,Willem II,Willem II (Tilburg),13,36,34,9,9,16,29,44,-15
+Eredivisie,2016/17,Zwolle,PEC Zwolle,14,35,34,9,8,17,39,67,-28
+Eredivisie,2016/17,Sparta Rotterdam,Sparta Rotterdam,15,34,34,9,7,18,42,61,-19
+Eredivisie,2016/17,Nijmegen,NEC (Nĳmegen),16,34,34,9,7,18,32,59,-27
+Eredivisie,2016/17,Roda,Roda JC Kerkrade,17,33,34,7,12,15,26,51,-25
+Eredivisie,2016/17,Go Ahead Eagles,Go Ahead Eagles (Deventer),18,23,34,6,5,23,32,73,-41
+Eredivisie,2017/18,PSV Eindhoven,PSV (Eindhoven),1,83,34,26,5,3,87,39,48
+Eredivisie,2017/18,Ajax,Ajax (Amsterdam),2,79,34,25,4,5,89,33,56
+Eredivisie,2017/18,AZ Alkmaar,AZ (Alkmaar),3,71,34,22,5,7,72,38,34
+Eredivisie,2017/18,Feyenoord,Feyenoord (Rotterdam),4,66,34,20,6,8,76,39,37
+Eredivisie,2017/18,Utrecht,FC Utrecht,5,54,34,14,12,8,58,53,5
+Eredivisie,2017/18,Vitesse,Vitesse (Arnhem),6,49,34,13,10,11,63,47,16
+Eredivisie,2017/18,Den Haag,ADO Den Haag,7,47,34,13,8,13,45,53,-8
+Eredivisie,2017/18,Heerenveen,SC Heerenveen,8,46,34,12,10,12,48,53,-5
+Eredivisie,2017/18,Zwolle,PEC Zwolle,9,44,34,12,8,14,42,54,-12
+Eredivisie,2017/18,Heracles,Heracles Almelo,10,42,34,11,9,14,50,64,-14
+Eredivisie,2017/18,Excelsior,Excelsior (Rotterdam),11,40,34,11,7,16,41,56,-15
+Eredivisie,2017/18,Groningen,FC Groningen,12,38,34,8,14,12,50,50,0
+Eredivisie,2017/18,Willem II,Willem II (Tilburg),13,37,34,10,7,17,50,63,-13
+Eredivisie,2017/18,NAC Breda,NAC Breda,14,34,34,9,7,18,41,57,-16
+Eredivisie,2017/18,VVV Venlo,VVV-Venlo,15,34,34,7,13,14,35,54,-19
+Eredivisie,2017/18,Roda,Roda JC Kerkrade,16,30,34,8,6,20,42,69,-27
+Eredivisie,2017/18,Sparta Rotterdam,Sparta Rotterdam,17,27,34,7,6,21,34,75,-41
+Eredivisie,2017/18,Twente,FC Twente (Enschede),18,24,34,5,9,20,37,63,-26
+Eredivisie,2018/19,Ajax,Ajax (Amsterdam),1,86,34,28,2,4,119,32,87
+Eredivisie,2018/19,PSV Eindhoven,PSV (Eindhoven),2,83,34,26,5,3,98,26,72
+Eredivisie,2018/19,Feyenoord,Feyenoord (Rotterdam),3,65,34,20,5,9,75,41,34
+Eredivisie,2018/19,AZ Alkmaar,AZ (Alkmaar),4,58,34,17,7,10,64,43,21
+Eredivisie,2018/19,Vitesse,Vitesse (Arnhem),5,53,34,14,11,9,70,51,19
+Eredivisie,2018/19,Utrecht,FC Utrecht,6,53,34,15,8,11,60,51,9
+Eredivisie,2018/19,Heracles,Heracles Almelo,7,48,34,15,3,16,61,68,-7
+Eredivisie,2018/19,Groningen,FC Groningen,8,45,34,13,6,15,39,41,-2
+Eredivisie,2018/19,Den Haag,ADO Den Haag,9,45,34,12,9,13,58,63,-5
+Eredivisie,2018/19,Willem II,Willem II (Tilburg),10,44,34,13,5,16,58,72,-14
+Eredivisie,2018/19,Heerenveen,SC Heerenveen,11,41,34,10,11,13,64,73,-9
+Eredivisie,2018/19,VVV Venlo,VVV-Venlo,12,41,34,11,8,15,47,63,-16
+Eredivisie,2018/19,Zwolle,PEC Zwolle,13,39,34,11,6,17,44,57,-13
+Eredivisie,2018/19,FC Emmen,FC Emmen,14,38,34,10,8,16,41,72,-31
+Eredivisie,2018/19,For Sittard,Fortuna Sittard,15,34,34,9,7,18,50,80,-30
+Eredivisie,2018/19,Excelsior,Excelsior (Rotterdam),16,33,34,9,6,19,46,79,-33
+Eredivisie,2018/19,Graafschap,De Graafschap (Doetinchem),17,29,34,8,5,21,38,75,-37
+Eredivisie,2018/19,NAC Breda,NAC Breda,18,23,34,5,8,21,29,74,-45
+Eredivisie,2019/20,Ajax,Ajax (Amsterdam),1,56,25,18,2,5,68,23,45
+Eredivisie,2019/20,AZ Alkmaar,AZ (Alkmaar),2,56,25,18,2,5,54,17,37
+Eredivisie,2019/20,Feyenoord,Feyenoord (Rotterdam),3,50,25,14,8,3,50,35,15
+Eredivisie,2019/20,PSV Eindhoven,PSV (Eindhoven),4,49,26,14,7,5,54,28,26
+Eredivisie,2019/20,Willem II,Willem II (Tilburg),5,44,26,13,5,8,37,34,3
+Eredivisie,2019/20,Utrecht,FC Utrecht,6,41,25,12,5,8,50,34,16
+Eredivisie,2019/20,Vitesse,Vitesse (Arnhem),7,41,26,12,5,9,45,35,10
+Eredivisie,2019/20,Heracles,Heracles Almelo,8,36,26,10,6,10,40,34,6
+Eredivisie,2019/20,Groningen,FC Groningen,9,35,26,10,5,11,27,26,1
+Eredivisie,2019/20,Heerenveen,SC Heerenveen,10,33,26,8,9,9,41,41,0
+Eredivisie,2019/20,Sparta Rotterdam,Sparta Rotterdam,11,33,26,9,6,11,41,45,-4
+Eredivisie,2019/20,FC Emmen,FC Emmen,12,32,26,9,5,12,32,45,-13
+Eredivisie,2019/20,VVV Venlo,VVV-Venlo,13,28,26,8,4,14,24,51,-27
+Eredivisie,2019/20,Twente,FC Twente (Enschede),14,27,26,7,6,13,34,46,-12
+Eredivisie,2019/20,Zwolle,PEC Zwolle,15,26,26,7,5,14,37,55,-18
+Eredivisie,2019/20,For Sittard,Fortuna Sittard,16,26,26,6,8,12,29,52,-23
+Eredivisie,2019/20,Den Haag,ADO Den Haag,17,19,26,4,7,15,25,54,-29
+Eredivisie,2019/20,Waalwijk,RKC Waalwĳk,18,15,26,4,3,19,27,60,-33
+Eredivisie,2020/21,Ajax,Ajax (Amsterdam),1,88,34,28,4,2,102,23,79
+Eredivisie,2020/21,PSV Eindhoven,PSV (Eindhoven),2,72,34,21,9,4,74,35,39
+Eredivisie,2020/21,AZ Alkmaar,AZ (Alkmaar),3,71,34,21,8,5,75,41,34
+Eredivisie,2020/21,Vitesse,Vitesse (Arnhem),4,61,34,18,7,9,52,38,14
+Eredivisie,2020/21,Feyenoord,Feyenoord (Rotterdam),5,59,34,16,11,7,64,36,28
+Eredivisie,2020/21,Utrecht,FC Utrecht,6,53,34,13,14,7,52,41,11
+Eredivisie,2020/21,Groningen,FC Groningen,7,50,34,14,8,12,40,37,3
+Eredivisie,2020/21,Sparta Rotterdam,Sparta Rotterdam,8,47,34,13,8,13,49,48,1
+Eredivisie,2020/21,Heracles,Heracles Almelo,9,44,34,12,8,14,42,53,-11
+Eredivisie,2020/21,Twente,FC Twente (Enschede),10,41,34,10,11,13,48,50,-2
+Eredivisie,2020/21,For Sittard,Fortuna Sittard,11,41,34,12,5,17,50,58,-8
+Eredivisie,2020/21,Heerenveen,SC Heerenveen,12,39,34,9,12,13,43,49,-6
+Eredivisie,2020/21,Zwolle,PEC Zwolle,13,38,34,9,11,14,44,53,-9
+Eredivisie,2020/21,Willem II,Willem II (Tilburg),14,31,34,8,7,19,40,68,-28
+Eredivisie,2020/21,Waalwijk,RKC Waalwĳk,15,30,34,7,9,18,33,55,-22
+Eredivisie,2020/21,FC Emmen,FC Emmen,16,30,34,7,9,18,40,68,-28
+Eredivisie,2020/21,VVV Venlo,VVV-Venlo,17,23,34,6,5,23,43,91,-48
+Eredivisie,2020/21,Den Haag,ADO Den Haag,18,22,34,4,10,20,29,76,-47
+Eredivisie,2021/22,Ajax,Ajax (Amsterdam),1,83,34,26,5,3,98,19,79
+Eredivisie,2021/22,PSV Eindhoven,PSV (Eindhoven),2,81,34,26,3,5,86,42,44
+Eredivisie,2021/22,Feyenoord,Feyenoord (Rotterdam),3,71,34,22,5,7,76,34,42
+Eredivisie,2021/22,Twente,FC Twente (Enschede),4,68,34,20,8,6,55,37,18
+Eredivisie,2021/22,AZ Alkmaar,AZ (Alkmaar),5,61,34,18,7,9,64,44,20
+Eredivisie,2021/22,Vitesse,Vitesse (Arnhem),6,51,34,15,6,13,42,51,-9
+Eredivisie,2021/22,Utrecht,FC Utrecht,7,47,34,12,11,11,51,46,5
+Eredivisie,2021/22,Heerenveen,SC Heerenveen,8,41,34,11,8,15,37,50,-13
+Eredivisie,2021/22,Cambuur,SC Cambuur (Leeuwarden),9,39,34,11,6,17,53,70,-17
+Eredivisie,2021/22,Waalwijk,RKC Waalwĳk,10,38,34,9,11,14,40,51,-11
+Eredivisie,2021/22,Nijmegen,NEC (Nĳmegen),11,38,34,10,8,16,38,52,-14
+Eredivisie,2021/22,Groningen,FC Groningen,12,36,34,9,9,16,41,55,-14
+Eredivisie,2021/22,Go Ahead Eagles,Go Ahead Eagles (Deventer),13,36,34,10,6,18,37,51,-14
+Eredivisie,2021/22,Sparta Rotterdam,Sparta Rotterdam,14,35,34,8,11,15,30,48,-18
+Eredivisie,2021/22,For Sittard,Fortuna Sittard,15,35,34,10,5,19,36,67,-31
+Eredivisie,2021/22,Heracles,Heracles Almelo,16,34,34,9,7,18,33,49,-16
+Eredivisie,2021/22,Willem II,Willem II (Tilburg),17,33,34,9,6,19,32,57,-25
+Eredivisie,2021/22,Zwolle,PEC Zwolle,18,27,34,7,6,21,26,52,-26
+Eredivisie,2022/23,Feyenoord,Feyenoord (Rotterdam),1,82,34,25,7,2,81,30,51
+Eredivisie,2022/23,PSV Eindhoven,PSV (Eindhoven),2,75,34,23,6,5,89,40,49
+Eredivisie,2022/23,Ajax,Ajax (Amsterdam),3,69,34,20,9,5,86,38,48
+Eredivisie,2022/23,AZ Alkmaar,AZ (Alkmaar),4,67,34,20,7,7,68,35,33
+Eredivisie,2022/23,Twente,FC Twente (Enschede),5,64,34,18,10,6,66,27,39
+Eredivisie,2022/23,Sparta Rotterdam,Sparta Rotterdam,6,59,34,17,8,9,60,37,23
+Eredivisie,2022/23,Utrecht,FC Utrecht,7,54,34,15,9,10,55,50,5
+Eredivisie,2022/23,Heerenveen,SC Heerenveen,8,46,34,12,10,12,44,50,-6
+Eredivisie,2022/23,Waalwijk,RKC Waalwĳk,9,41,34,11,8,15,50,64,-14
+Eredivisie,2022/23,Vitesse,Vitesse (Arnhem),10,40,34,10,10,14,45,50,-5
+Eredivisie,2022/23,Go Ahead Eagles,Go Ahead Eagles (Deventer),11,40,34,10,10,14,46,56,-10
+Eredivisie,2022/23,Nijmegen,NEC (Nĳmegen),12,39,34,8,15,11,42,45,-3
+Eredivisie,2022/23,For Sittard,Fortuna Sittard,13,36,34,10,6,18,39,62,-23
+Eredivisie,2022/23,Volendam,FC Volendam,14,36,34,10,6,18,42,71,-29
+Eredivisie,2022/23,Excelsior,Excelsior (Rotterdam),15,32,34,9,5,20,32,71,-39
+Eredivisie,2022/23,FC Emmen,FC Emmen,16,28,34,6,10,18,33,65,-32
+Eredivisie,2022/23,Cambuur,SC Cambuur (Leeuwarden),17,19,34,5,4,25,26,69,-43
+Eredivisie,2022/23,Groningen,FC Groningen,18,18,34,4,6,24,31,75,-44
+Eredivisie,2023/24,PSV Eindhoven,PSV (Eindhoven),1,91,34,29,4,1,111,21,90
+Eredivisie,2023/24,Feyenoord,Feyenoord (Rotterdam),2,84,34,26,6,2,92,26,66
+Eredivisie,2023/24,Twente,FC Twente (Enschede),3,69,34,21,6,7,69,36,33
+Eredivisie,2023/24,AZ Alkmaar,AZ (Alkmaar),4,65,34,19,8,7,70,39,31
+Eredivisie,2023/24,Ajax,Ajax (Amsterdam),5,56,34,15,11,8,74,61,13
+Eredivisie,2023/24,Nijmegen,NEC (Nĳmegen),6,53,34,14,11,9,68,51,17
+Eredivisie,2023/24,Utrecht,FC Utrecht,7,50,34,13,11,10,49,47,2
+Eredivisie,2023/24,Sparta Rotterdam,Sparta Rotterdam,8,49,34,14,7,13,51,48,3
+Eredivisie,2023/24,Go Ahead Eagles,Go Ahead Eagles (Deventer),9,46,34,12,10,12,47,46,1
+Eredivisie,2023/24,For Sittard,Fortuna Sittard,10,38,34,9,11,14,37,56,-19
+Eredivisie,2023/24,Heerenveen,SC Heerenveen,11,37,34,10,7,17,53,70,-17
+Eredivisie,2023/24,Zwolle,PEC Zwolle,12,36,34,9,9,16,45,67,-22
+Eredivisie,2023/24,Almere City,Almere City FC,13,34,34,7,13,14,33,59,-26
+Eredivisie,2023/24,Heracles,Heracles Almelo,14,33,34,9,6,19,41,74,-33
+Eredivisie,2023/24,Waalwijk,RKC Waalwĳk,15,29,34,7,8,19,38,56,-18
+Eredivisie,2023/24,Excelsior,Excelsior (Rotterdam),16,29,34,6,11,17,50,73,-23
+Eredivisie,2023/24,Volendam,FC Volendam,17,19,34,4,7,23,34,88,-54
+Eredivisie,2023/24,Vitesse,Vitesse (Arnhem),18,6,34,6,6,22,30,74,-44
+Eredivisie,2024/25,PSV Eindhoven,PSV (Eindhoven),1,79,34,25,4,5,103,39,64
+Eredivisie,2024/25,Ajax,Ajax (Amsterdam),2,78,34,24,6,4,67,32,35
+Eredivisie,2024/25,Feyenoord,Feyenoord (Rotterdam),3,68,34,20,8,6,76,38,38
+Eredivisie,2024/25,FC Utrecht,FC Utrecht,4,64,34,18,10,6,62,45,17
+Eredivisie,2024/25,AZ Alkmaar,AZ (Alkmaar),5,57,34,16,9,9,58,37,21
+Eredivisie,2024/25,FC Twente,FC Twente (Enschede),6,54,34,15,9,10,62,49,13
+Eredivisie,2024/25,Go Ahead Eagles,Go Ahead Eagles (Deventer),7,51,34,14,9,11,57,55,2
+Eredivisie,2024/25,NEC,NEC (Nĳmegen),8,43,34,12,7,15,51,46,5
+Eredivisie,2024/25,Heerenveen,SC Heerenveen,9,43,34,12,7,15,42,57,-15
+Eredivisie,2024/25,PEC Zwolle,PEC Zwolle,10,41,34,10,11,13,43,51,-8
+Eredivisie,2024/25,Fortuna Sittard,Fortuna Sittard,11,41,34,11,8,15,37,54,-17
+Eredivisie,2024/25,Sparta Rotterdam,Sparta Rotterdam,12,39,34,9,12,13,39,43,-4
+Eredivisie,2024/25,Groningen,FC Groningen,13,39,34,10,9,15,40,53,-13
+Eredivisie,2024/25,Heracles,Heracles Almelo,14,38,34,9,11,14,42,63,-21
+Eredivisie,2024/25,NAC Breda,NAC Breda,15,33,34,8,9,17,34,58,-24
+Eredivisie,2024/25,Willem II,Willem II (Tilburg),16,26,34,6,8,20,34,56,-22
+Eredivisie,2024/25,RKC Waalwijk,RKC Waalwĳk,17,25,34,6,7,21,44,74,-30
+Eredivisie,2024/25,Almere City,Almere City FC,18,22,34,4,10,20,23,64,-41
+La Liga,2015/16,Barcelona,FC Barcelona,1,91,38,29,4,5,112,29,83
+La Liga,2015/16,Real Madrid,Real Madrid CF,2,90,38,28,6,4,110,34,76
+La Liga,2015/16,Ath Madrid,Atlético de Madrid,3,88,38,28,4,6,63,18,45
+La Liga,2015/16,Villarreal,Villarreal CF,4,64,38,18,10,10,44,35,9
+La Liga,2015/16,Ath Bilbao,Athletic de Bilbao,5,62,38,18,8,12,58,45,13
+La Liga,2015/16,Celta,RC Celta (Vigo),6,60,38,17,9,12,51,59,-8
+La Liga,2015/16,Sevilla,Sevilla FC,7,52,38,14,10,14,51,50,1
+La Liga,2015/16,Malaga,Málaga CF,8,48,38,12,12,14,38,35,3
+La Liga,2015/16,Sociedad,Real Sociedad (San Sebastián),9,48,38,13,9,16,45,48,-3
+La Liga,2015/16,Betis,Real Betis Balompié (Sevilla),10,45,38,11,12,15,34,52,-18
+La Liga,2015/16,Las Palmas,UD Las Palmas,11,44,38,12,8,18,45,53,-8
+La Liga,2015/16,Valencia,Valencia CF,12,44,38,11,11,16,46,48,-2
+La Liga,2015/16,Espanol,RCD Espanyol (Barcelona),13,43,38,12,7,19,40,74,-34
+La Liga,2015/16,Eibar,SD Eibar,14,43,38,11,10,17,49,61,-12
+La Liga,2015/16,La Coruna,RC Deportivo (La Coruńa),15,42,38,8,18,12,45,61,-16
+La Liga,2015/16,Granada,Granada CF,16,39,38,10,9,19,46,69,-23
+La Liga,2015/16,Sp Gijon,Sporting de Gijón,17,39,38,10,9,19,40,62,-22
+La Liga,2015/16,Vallecano,Rayo Vallecano,18,38,38,9,11,18,52,73,-21
+La Liga,2015/16,Getafe,Getafe CF,19,36,38,9,9,20,37,67,-30
+La Liga,2015/16,Levante,Levante UD (Valencia),20,32,38,8,8,22,37,70,-33
+La Liga,2016/17,Real Madrid,Real Madrid CF,1,93,38,29,6,3,106,41,65
+La Liga,2016/17,Barcelona,FC Barcelona,2,90,38,28,6,4,116,37,79
+La Liga,2016/17,Ath Madrid,Atlético de Madrid,3,78,38,23,9,6,70,27,43
+La Liga,2016/17,Sevilla,Sevilla FC,4,72,38,21,9,8,69,49,20
+La Liga,2016/17,Villarreal,Villarreal CF,5,67,38,19,10,9,56,33,23
+La Liga,2016/17,Sociedad,Real Sociedad (San Sebastián),6,64,38,19,7,12,59,53,6
+La Liga,2016/17,Ath Bilbao,Athletic de Bilbao,7,63,38,19,6,13,53,43,10
+La Liga,2016/17,Espanol,RCD Espanyol (Barcelona),8,56,38,15,11,12,49,50,-1
+La Liga,2016/17,Alaves,Deportivo Alavés (Vitoria),9,55,38,14,13,11,41,43,-2
+La Liga,2016/17,Eibar,SD Eibar,10,54,38,15,9,14,56,51,5
+La Liga,2016/17,Malaga,Málaga CF,11,46,38,12,10,16,49,55,-6
+La Liga,2016/17,Valencia,Valencia CF,12,46,38,13,7,18,56,65,-9
+La Liga,2016/17,Celta,RC Celta (Vigo),13,45,38,13,6,19,53,69,-16
+La Liga,2016/17,Las Palmas,UD Las Palmas,14,39,38,10,9,19,53,74,-21
+La Liga,2016/17,Betis,Real Betis Balompié (Sevilla),15,39,38,10,9,19,41,64,-23
+La Liga,2016/17,La Coruna,RC Deportivo (La Coruńa),16,36,38,8,12,18,43,61,-18
+La Liga,2016/17,Leganes,CD Leganés,17,35,38,8,11,19,36,55,-19
+La Liga,2016/17,Sp Gijon,Sporting de Gijón,18,31,38,7,10,21,42,72,-30
+La Liga,2016/17,Osasuna,CA Osasuna (Pamplona),19,22,38,4,10,24,40,94,-54
+La Liga,2016/17,Granada,Granada CF,20,20,38,4,8,26,30,82,-52
+La Liga,2017/18,Barcelona,FC Barcelona,1,93,38,28,9,1,99,29,70
+La Liga,2017/18,Ath Madrid,Atlético de Madrid,2,79,38,23,10,5,58,22,36
+La Liga,2017/18,Real Madrid,Real Madrid CF,3,76,38,22,10,6,94,44,50
+La Liga,2017/18,Valencia,Valencia CF,4,73,38,22,7,9,65,38,27
+La Liga,2017/18,Villarreal,Villarreal CF,5,61,38,18,7,13,57,50,7
+La Liga,2017/18,Betis,Real Betis Balompié (Sevilla),6,60,38,18,6,14,60,61,-1
+La Liga,2017/18,Sevilla,Sevilla FC,7,58,38,17,7,14,49,58,-9
+La Liga,2017/18,Getafe,Getafe CF,8,55,38,15,10,13,42,33,9
+La Liga,2017/18,Eibar,SD Eibar,9,51,38,14,9,15,44,50,-6
+La Liga,2017/18,Girona,Girona FC,10,51,38,14,9,15,50,59,-9
+La Liga,2017/18,Espanol,RCD Espanyol (Barcelona),11,49,38,12,13,13,36,42,-6
+La Liga,2017/18,Sociedad,Real Sociedad (San Sebastián),12,49,38,14,7,17,66,59,7
+La Liga,2017/18,Celta,RC Celta (Vigo),13,49,38,13,10,15,59,60,-1
+La Liga,2017/18,Alaves,Deportivo Alavés (Vitoria),14,47,38,15,2,21,40,50,-10
+La Liga,2017/18,Levante,Levante UD (Valencia),15,46,38,11,13,14,44,58,-14
+La Liga,2017/18,Ath Bilbao,Athletic de Bilbao,16,43,38,10,13,15,41,49,-8
+La Liga,2017/18,Leganes,CD Leganés,17,43,38,12,7,19,34,51,-17
+La Liga,2017/18,La Coruna,RC Deportivo (La Coruńa),18,29,38,6,11,21,38,76,-38
+La Liga,2017/18,Las Palmas,UD Las Palmas,19,22,38,5,7,26,24,74,-50
+La Liga,2017/18,Malaga,Málaga CF,20,20,38,5,5,28,24,61,-37
+La Liga,2018/19,Barcelona,FC Barcelona,1,87,38,26,9,3,90,36,54
+La Liga,2018/19,Ath Madrid,Atlťtico de Madrid,2,76,38,22,10,6,55,29,26
+La Liga,2018/19,Real Madrid,Real Madrid CF,3,68,38,21,5,12,63,46,17
+La Liga,2018/19,Valencia,Valencia CF,4,61,38,15,16,7,51,35,16
+La Liga,2018/19,Getafe,Getafe CF,5,59,38,15,14,9,48,35,13
+La Liga,2018/19,Sevilla,Sevilla FC,6,59,38,17,8,13,62,47,15
+La Liga,2018/19,Espanol,RCD Espanyol (Barcelona),7,53,38,14,11,13,48,50,-2
+La Liga,2018/19,Ath Bilbao,Athletic de Bilbao,8,53,38,13,14,11,41,45,-4
+La Liga,2018/19,Sociedad,Real Sociedad (San SebastiŠn),9,50,38,13,11,14,45,46,-1
+La Liga,2018/19,Betis,Real Betis Balompiť (Sevilla),10,50,38,14,8,16,44,52,-8
+La Liga,2018/19,Alaves,Deportivo Alavťs (Vitoria),11,50,38,13,11,14,39,50,-11
+La Liga,2018/19,Eibar,SD Eibar,12,47,38,11,14,13,46,50,-4
+La Liga,2018/19,Leganes,CD Leganťs,13,45,38,11,12,15,37,43,-6
+La Liga,2018/19,Villarreal,Villarreal CF,14,44,38,10,14,14,49,52,-3
+La Liga,2018/19,Levante,Levante UD (Valencia),15,44,38,11,11,16,59,66,-7
+La Liga,2018/19,Valladolid,Real Valladolid,16,41,38,10,11,17,32,51,-19
+La Liga,2018/19,Celta,RC Celta (Vigo),17,41,38,10,11,17,53,62,-9
+La Liga,2018/19,Girona,Girona FC,18,37,38,9,10,19,37,53,-16
+La Liga,2018/19,Huesca,SD Huesca,19,33,38,7,12,19,43,65,-22
+La Liga,2018/19,Vallecano,Rayo Vallecano,20,32,38,8,8,22,41,70,-29
+La Liga,2019/20,Real Madrid,Real Madrid CF,1,87,38,26,9,3,70,25,45
+La Liga,2019/20,Barcelona,FC Barcelona,2,82,38,25,7,6,86,38,48
+La Liga,2019/20,Ath Madrid,AtlÈtico de Madrid,3,70,38,18,16,4,51,27,24
+La Liga,2019/20,Sevilla,Sevilla FC,4,70,38,19,13,6,54,34,20
+La Liga,2019/20,Villarreal,Villarreal CF,5,60,38,18,6,14,63,49,14
+La Liga,2019/20,Sociedad,Real Sociedad (San Sebasti·n),6,56,38,16,8,14,56,48,8
+La Liga,2019/20,Granada,Granada CF,7,56,38,16,8,14,52,45,7
+La Liga,2019/20,Getafe,Getafe CF,8,54,38,14,12,12,43,37,6
+La Liga,2019/20,Valencia,Valencia CF,9,53,38,14,11,13,46,53,-7
+La Liga,2019/20,Osasuna,CA Osasuna (Pamplona),10,52,38,13,13,12,46,54,-8
+La Liga,2019/20,Ath Bilbao,Athletic de Bilbao,11,51,38,13,12,13,41,38,3
+La Liga,2019/20,Levante,Levante UD (Valencia),12,49,38,14,7,17,47,53,-6
+La Liga,2019/20,Valladolid,Real Valladolid,13,42,38,9,15,14,32,43,-11
+La Liga,2019/20,Eibar,SD Eibar,14,42,38,11,9,18,39,56,-17
+La Liga,2019/20,Betis,Real Betis BalompiÈ (Sevilla),15,41,38,10,11,17,48,60,-12
+La Liga,2019/20,Alaves,Deportivo AlavÈs (Vitoria),16,39,38,10,9,19,34,59,-25
+La Liga,2019/20,Celta,RC Celta (Vigo),17,37,38,7,16,15,37,49,-12
+La Liga,2019/20,Leganes,CD LeganÈs,18,36,38,8,12,18,30,51,-21
+La Liga,2019/20,Mallorca,RCD Mallorca (Palma de M.),19,33,38,9,6,23,40,65,-25
+La Liga,2019/20,Espanol,RCD Espanyol (Barcelona),20,25,38,5,10,23,27,58,-31
+La Liga,2020/21,Ath Madrid,Atlético de Madrid,1,86,38,26,8,4,67,25,42
+La Liga,2020/21,Real Madrid,Real Madrid CF,2,84,38,25,9,4,67,28,39
+La Liga,2020/21,Barcelona,FC Barcelona,3,79,38,24,7,7,85,38,47
+La Liga,2020/21,Sevilla,Sevilla FC,4,77,38,24,5,9,53,33,20
+La Liga,2020/21,Sociedad,Real Sociedad (San Sebastián),5,62,38,17,11,10,59,38,21
+La Liga,2020/21,Betis,Real Betis Balompié (Sevilla),6,61,38,17,10,11,50,50,0
+La Liga,2020/21,Villarreal,Villarreal CF,7,58,38,15,13,10,60,44,16
+La Liga,2020/21,Celta,RC Celta (Vigo),8,53,38,14,11,13,55,57,-2
+La Liga,2020/21,Granada,Granada CF,9,46,38,13,7,18,47,65,-18
+La Liga,2020/21,Ath Bilbao,Athletic de Bilbao,10,46,38,11,13,14,46,42,4
+La Liga,2020/21,Osasuna,CA Osasuna (Pamplona),11,44,38,11,11,16,37,48,-11
+La Liga,2020/21,Cadiz,Cádiz CF,12,44,38,11,11,16,36,58,-22
+La Liga,2020/21,Valencia,Valencia CF,13,43,38,10,13,15,50,53,-3
+La Liga,2020/21,Levante,Levante UD (Valencia),14,41,38,9,14,15,46,57,-11
+La Liga,2020/21,Getafe,Getafe CF,15,38,38,9,11,18,28,43,-15
+La Liga,2020/21,Alaves,Deportivo Alavés (Vitoria),16,38,38,9,11,18,36,57,-21
+La Liga,2020/21,Elche,Elche CF,17,36,38,8,12,18,34,55,-21
+La Liga,2020/21,Huesca,SD Huesca,18,34,38,7,13,18,34,53,-19
+La Liga,2020/21,Valladolid,Real Valladolid,19,31,38,5,16,17,34,57,-23
+La Liga,2020/21,Eibar,SD Eibar,20,30,38,6,12,20,29,52,-23
+La Liga,2021/22,Real Madrid,Real Madrid CF,1,86,38,26,8,4,80,31,49
+La Liga,2021/22,Barcelona,FC Barcelona,2,73,38,21,10,7,68,38,30
+La Liga,2021/22,Ath Madrid,AtlÚtico de Madrid,3,71,38,21,8,9,65,43,22
+La Liga,2021/22,Sevilla,Sevilla FC,4,70,38,18,16,4,53,30,23
+La Liga,2021/22,Betis,Real Betis BalompiÚ (Sevilla),5,65,38,19,8,11,62,40,22
+La Liga,2021/22,Sociedad,Real Sociedad (San Sebastißn),6,62,38,17,11,10,40,37,3
+La Liga,2021/22,Villarreal,Villarreal CF,7,59,38,16,11,11,63,37,26
+La Liga,2021/22,Ath Bilbao,Athletic de Bilbao,8,55,38,14,13,11,43,36,7
+La Liga,2021/22,Valencia,Valencia CF,9,48,38,11,15,12,48,53,-5
+La Liga,2021/22,Osasuna,CA Osasuna (Pamplona),10,47,38,12,11,15,37,51,-14
+La Liga,2021/22,Celta,RC Celta (Vigo),11,46,38,12,10,16,43,43,0
+La Liga,2021/22,Vallecano,Rayo Vallecano,12,42,38,11,9,18,39,50,-11
+La Liga,2021/22,Elche,Elche CF,13,42,38,11,9,18,40,52,-12
+La Liga,2021/22,Espanol,RCD Espanyol (Barcelona),14,42,38,10,12,16,40,53,-13
+La Liga,2021/22,Getafe,Getafe CF,15,39,38,8,15,15,33,41,-8
+La Liga,2021/22,Mallorca,RCD Mallorca (Palma de M.),16,39,38,10,9,19,36,63,-27
+La Liga,2021/22,Cadiz,Cßdiz CF,17,39,38,8,15,15,35,51,-16
+La Liga,2021/22,Granada,Granada CF,18,38,38,8,14,16,44,61,-17
+La Liga,2021/22,Levante,Levante UD (Valencia),19,35,38,8,11,19,51,76,-25
+La Liga,2021/22,Alaves,Deportivo AlavÚs (Vitoria),20,31,38,8,7,23,31,65,-34
+La Liga,2022/23,Barcelona,FC Barcelona,1,88,38,28,4,6,70,20,50
+La Liga,2022/23,Real Madrid,Real Madrid CF,2,78,38,24,6,8,75,36,39
+La Liga,2022/23,Ath Madrid,AtlÕtico de Madrid,3,77,38,23,8,7,70,33,37
+La Liga,2022/23,Sociedad,Real Sociedad (San SebastiÃn),4,71,38,21,8,9,51,35,16
+La Liga,2022/23,Villarreal,Villarreal CF,5,64,38,19,7,12,59,40,19
+La Liga,2022/23,Betis,Real Betis BalompiÕ (Sevilla),6,60,38,17,9,12,46,41,5
+La Liga,2022/23,Osasuna,CA Osasuna (Pamplona),7,53,38,15,8,15,37,42,-5
+La Liga,2022/23,Ath Bilbao,Athletic de Bilbao,8,51,38,14,9,15,47,43,4
+La Liga,2022/23,Mallorca,RCD Mallorca (Palma de M.),9,50,38,14,8,16,37,43,-6
+La Liga,2022/23,Girona,Girona FC,10,49,38,13,10,15,58,55,3
+La Liga,2022/23,Vallecano,Rayo Vallecano,11,49,38,13,10,15,45,53,-8
+La Liga,2022/23,Sevilla,Sevilla FC,12,49,38,13,10,15,47,54,-7
+La Liga,2022/23,Celta,RC Celta (Vigo),13,43,38,11,10,17,43,53,-10
+La Liga,2022/23,Cadiz,CÃdiz CF,14,42,38,10,12,16,30,53,-23
+La Liga,2022/23,Getafe,Getafe CF,15,42,38,10,12,16,34,45,-11
+La Liga,2022/23,Valencia,Valencia CF,16,42,38,11,9,18,42,45,-3
+La Liga,2022/23,Almeria,UD AlmerÚa,17,41,38,11,8,19,49,65,-16
+La Liga,2022/23,Valladolid,Real Valladolid,18,40,38,11,7,20,33,63,-30
+La Liga,2022/23,Espanol,RCD Espanyol (Barcelona),19,37,38,8,13,17,52,69,-17
+La Liga,2022/23,Elche,Elche CF,20,25,38,5,10,23,30,67,-37
+La Liga,2023/24,Real Madrid,Real Madrid CF,1,95,38,29,8,1,87,26,61
+La Liga,2023/24,Barcelona,FC Barcelona,2,85,38,26,7,5,79,44,35
+La Liga,2023/24,Girona,Girona FC,3,81,38,25,6,7,85,46,39
+La Liga,2023/24,Ath Madrid,Atlético de Madrid,4,76,38,24,4,10,70,43,27
+La Liga,2023/24,Ath Bilbao,Athletic de Bilbao,5,68,38,19,11,8,61,37,24
+La Liga,2023/24,Sociedad,Real Sociedad (San Sebastián),6,60,38,16,12,10,51,39,12
+La Liga,2023/24,Betis,Real Betis Balompié (Sevilla),7,57,38,14,15,9,48,45,3
+La Liga,2023/24,Villarreal,Villarreal CF,8,53,38,14,11,13,65,65,0
+La Liga,2023/24,Valencia,Valencia CF,9,49,38,13,10,15,40,45,-5
+La Liga,2023/24,Alaves,Deportivo Alavés (Vitoria),10,46,38,12,10,16,36,46,-10
+La Liga,2023/24,Osasuna,CA Osasuna (Pamplona),11,45,38,12,9,17,45,56,-11
+La Liga,2023/24,Getafe,Getafe CF,12,43,38,10,13,15,42,54,-12
+La Liga,2023/24,Celta,RC Celta (Vigo),13,41,38,10,11,17,46,57,-11
+La Liga,2023/24,Sevilla,Sevilla FC,14,41,38,10,11,17,48,54,-6
+La Liga,2023/24,Mallorca,RCD Mallorca (Palma de M.),15,40,38,8,16,14,33,44,-11
+La Liga,2023/24,Las Palmas,UD Las Palmas,16,40,38,10,10,18,33,47,-14
+La Liga,2023/24,Vallecano,Rayo Vallecano,17,38,38,8,14,16,29,48,-19
+La Liga,2023/24,Cadiz,Cádiz CF,18,33,38,6,15,17,26,55,-29
+La Liga,2023/24,Almeria,UD Almería,19,21,38,3,12,23,43,75,-32
+La Liga,2023/24,Granada,Granada CF,20,21,38,4,9,25,38,79,-41
+La Liga,2024/25,Barcelona,FC Barcelona,1,88,38,28,4,6,102,39,63
+La Liga,2024/25,Real Madrid,Real Madrid CF,2,84,38,26,6,6,78,38,40
+La Liga,2024/25,Ath Madrid,Atlético de Madrid,3,76,38,22,10,6,68,30,38
+La Liga,2024/25,Ath Bilbao,Athletic de Bilbao,4,70,38,19,13,6,54,29,25
+La Liga,2024/25,Villarreal,Villarreal CF,5,70,38,20,10,8,71,51,20
+La Liga,2024/25,Betis,Real Betis Balompié (Sevilla),6,60,38,16,12,10,57,50,7
+La Liga,2024/25,Celta,RC Celta (Vigo),7,55,38,16,7,15,59,57,2
+La Liga,2024/25,Vallecano,Rayo Vallecano,8,52,38,13,13,12,41,45,-4
+La Liga,2024/25,Osasuna,CA Osasuna (Pamplona),9,52,38,12,16,10,48,52,-4
+La Liga,2024/25,Mallorca,RCD Mallorca (Palma de M.),10,48,38,13,9,16,35,44,-9
+La Liga,2024/25,Sociedad,Real Sociedad (San Sebastián),11,46,38,13,7,18,35,46,-11
+La Liga,2024/25,Valencia,Valencia CF,12,46,38,11,13,14,44,54,-10
+La Liga,2024/25,Getafe,Getafe CF,13,42,38,11,9,18,34,39,-5
+La Liga,2024/25,Espanol,RCD Espanyol (Barcelona),14,42,38,11,9,18,40,51,-11
+La Liga,2024/25,Alaves,Deportivo Alavés (Vitoria),15,42,38,10,12,16,38,48,-10
+La Liga,2024/25,Girona,Girona FC,16,41,38,11,8,19,44,60,-16
+La Liga,2024/25,Sevilla,Sevilla FC,17,41,38,10,11,17,42,55,-13
+La Liga,2024/25,Leganes,CD Leganés,18,40,38,9,13,16,39,56,-17
+La Liga,2024/25,Las Palmas,UD Las Palmas,19,32,38,8,8,22,40,61,-21
+La Liga,2024/25,Valladolid,Real Valladolid,20,16,38,4,4,30,26,90,-64
+Ligue 1,2015/16,Paris SG,Paris-Saint-Germain FC,1,96,38,30,6,2,102,19,83
+Ligue 1,2015/16,Lyon,Olympique Lyonnais,2,65,38,19,8,11,67,43,24
+Ligue 1,2015/16,Monaco,AS Monaco,3,65,38,17,14,7,57,50,7
+Ligue 1,2015/16,Nice,OGC Nice,4,63,38,18,9,11,58,41,17
+Ligue 1,2015/16,Lille,Lille OSC,5,60,38,15,15,8,39,27,12
+Ligue 1,2015/16,St Etienne,AS Saint-Etienne,6,58,38,17,7,14,42,37,5
+Ligue 1,2015/16,Caen,SM Caen,7,54,38,16,6,16,39,52,-13
+Ligue 1,2015/16,Rennes,Stade Rennais FC,8,52,38,13,13,12,52,54,-2
+Ligue 1,2015/16,Angers,Angers SCO,9,50,38,13,11,14,40,38,2
+Ligue 1,2015/16,Bastia,SC Bastia,10,50,38,14,8,16,36,42,-6
+Ligue 1,2015/16,Bordeaux,FC Girondins Bordeaux,11,50,38,12,14,12,50,57,-7
+Ligue 1,2015/16,Montpellier,Montpellier-Hérault,12,49,38,14,7,17,49,47,2
+Ligue 1,2015/16,Marseille,Olympique de Marseille,13,48,38,10,18,10,48,42,6
+Ligue 1,2015/16,Nantes,FC Nantes,14,48,38,12,12,14,33,44,-11
+Ligue 1,2015/16,Lorient,FC Lorient,15,46,38,11,13,14,47,58,-11
+Ligue 1,2015/16,Guingamp,En Avant Guingamp,16,44,38,11,11,16,47,56,-9
+Ligue 1,2015/16,Toulouse,Toulouse FC,17,40,38,9,13,16,45,55,-10
+Ligue 1,2015/16,Reims,Stade de Reims,18,39,38,10,9,19,44,57,-13
+Ligue 1,2015/16,Ajaccio GFCO,Gazélec Ajaccio FCO,19,37,38,8,13,17,37,58,-21
+Ligue 1,2015/16,Troyes,ES Troyes AC,20,18,38,3,9,26,28,83,-55
+Ligue 1,2016/17,Monaco,AS Monaco,1,95,38,30,5,3,107,31,76
+Ligue 1,2016/17,Paris SG,Paris-Saint-Germain FC,2,87,38,27,6,5,83,27,56
+Ligue 1,2016/17,Nice,OGC Nice,3,78,38,22,12,4,63,36,27
+Ligue 1,2016/17,Lyon,Olympique Lyonnais,4,67,38,21,4,13,77,48,29
+Ligue 1,2016/17,Marseille,Olympique de Marseille,5,62,38,17,11,10,57,41,16
+Ligue 1,2016/17,Bordeaux,FC Girondins Bordeaux,6,59,38,15,14,9,53,43,10
+Ligue 1,2016/17,Nantes,FC Nantes,7,51,38,14,9,15,40,54,-14
+Ligue 1,2016/17,St Etienne,AS Saint-Etienne,8,50,38,12,14,12,41,42,-1
+Ligue 1,2016/17,Rennes,Stade Rennais FC,9,50,38,12,14,12,36,42,-6
+Ligue 1,2016/17,Guingamp,En Avant Guingamp,10,50,38,14,8,16,46,53,-7
+Ligue 1,2016/17,Lille,Lille OSC,11,46,38,13,7,18,40,47,-7
+Ligue 1,2016/17,Angers,Angers SCO,12,46,38,13,7,18,40,49,-9
+Ligue 1,2016/17,Toulouse,Toulouse FC,13,44,38,10,14,14,37,41,-4
+Ligue 1,2016/17,Metz,FC Metz,14,43,38,11,10,17,39,72,-33
+Ligue 1,2016/17,Montpellier,Montpellier-Hérault,15,39,38,10,9,19,48,66,-18
+Ligue 1,2016/17,Dijon,Dijon FCO,16,37,38,8,13,17,46,58,-12
+Ligue 1,2016/17,Caen,SM Caen,17,37,38,10,7,21,36,65,-29
+Ligue 1,2016/17,Lorient,FC Lorient,18,36,38,10,6,22,44,70,-26
+Ligue 1,2016/17,Nancy,AS Nancy Lorraine,19,35,38,9,8,21,29,52,-23
+Ligue 1,2016/17,Bastia,SC Bastia,20,34,38,8,10,20,29,54,-25
+Ligue 1,2017/18,Paris SG,Paris-Saint-Germain FC,1,93,38,29,6,3,108,29,79
+Ligue 1,2017/18,Monaco,AS Monaco,2,80,38,24,8,6,85,45,40
+Ligue 1,2017/18,Lyon,Olympique Lyonnais,3,78,38,23,9,6,87,43,44
+Ligue 1,2017/18,Marseille,Olympique de Marseille,4,77,38,22,11,5,80,47,33
+Ligue 1,2017/18,Rennes,Stade Rennais FC,5,58,38,16,10,12,50,44,6
+Ligue 1,2017/18,Bordeaux,FC Girondins Bordeaux,6,55,38,16,7,15,53,48,5
+Ligue 1,2017/18,St Etienne,AS Saint-Etienne,7,55,38,15,10,13,47,50,-3
+Ligue 1,2017/18,Nice,OGC Nice,8,54,38,15,9,14,53,52,1
+Ligue 1,2017/18,Nantes,FC Nantes,9,52,38,14,10,14,36,41,-5
+Ligue 1,2017/18,Montpellier,Montpellier-Hérault SC,10,51,38,11,18,9,36,33,3
+Ligue 1,2017/18,Dijon,Dijon FCO,11,48,38,13,9,16,55,73,-18
+Ligue 1,2017/18,Guingamp,En Avant Guingamp,12,47,38,12,11,15,48,59,-11
+Ligue 1,2017/18,Amiens,Amiens SC,13,45,38,12,9,17,37,42,-5
+Ligue 1,2017/18,Angers,Angers SCO,14,41,38,9,14,15,42,52,-10
+Ligue 1,2017/18,Strasbourg,RC Strasbourg Alsace,15,38,38,9,11,18,44,67,-23
+Ligue 1,2017/18,Caen,SM Caen,16,38,38,10,8,20,27,52,-25
+Ligue 1,2017/18,Lille,Lille OSC,17,38,38,10,8,20,41,67,-26
+Ligue 1,2017/18,Toulouse,Toulouse FC,18,37,38,9,10,19,38,54,-16
+Ligue 1,2017/18,Troyes,ES Troyes AC,19,33,38,9,6,23,32,59,-27
+Ligue 1,2017/18,Metz,FC Metz,20,26,38,6,8,24,34,76,-42
+Ligue 1,2018/19,Paris SG,Paris-Saint-Germain FC,1,91,38,29,4,5,105,35,70
+Ligue 1,2018/19,Lille,Lille OSC,2,75,38,22,9,7,68,33,35
+Ligue 1,2018/19,Lyon,Olympique Lyonnais,3,72,38,21,9,8,70,47,23
+Ligue 1,2018/19,St Etienne,AS Saint-Etienne,4,66,38,19,9,10,59,41,18
+Ligue 1,2018/19,Marseille,Olympique de Marseille,5,61,38,18,7,13,60,52,8
+Ligue 1,2018/19,Montpellier,Montpellier-Hérault SC,6,59,38,15,14,9,53,42,11
+Ligue 1,2018/19,Nice,OGC Nice,7,56,38,15,11,12,30,35,-5
+Ligue 1,2018/19,Reims,Stade de Reims,8,55,38,13,16,9,39,42,-3
+Ligue 1,2018/19,Nimes,Nîmes Olympique,9,53,38,15,8,15,57,58,-1
+Ligue 1,2018/19,Rennes,Stade Rennais FC,10,52,38,13,13,12,55,52,3
+Ligue 1,2018/19,Strasbourg,RC Strasbourg Alsace,11,49,38,11,16,11,58,48,10
+Ligue 1,2018/19,Nantes,FC Nantes,12,48,38,13,9,16,48,48,0
+Ligue 1,2018/19,Angers,Angers SCO,13,46,38,10,16,12,44,49,-5
+Ligue 1,2018/19,Bordeaux,FC Girondins Bordeaux,14,41,38,10,11,17,34,42,-8
+Ligue 1,2018/19,Amiens,Amiens SC,15,38,38,9,11,18,31,52,-21
+Ligue 1,2018/19,Toulouse,Toulouse FC,16,38,38,8,14,16,35,57,-22
+Ligue 1,2018/19,Monaco,AS Monaco,17,36,38,8,12,18,38,57,-19
+Ligue 1,2018/19,Dijon,Dijon FCO,18,34,38,9,7,22,31,60,-29
+Ligue 1,2018/19,Caen,SM Caen,19,33,38,7,12,19,29,54,-25
+Ligue 1,2018/19,Guingamp,En Avant Guingamp,20,27,38,5,12,21,28,68,-40
+Ligue 1,2019/20,Paris SG,Paris-Saint-Germain FC,1,68,27,22,2,3,75,24,51
+Ligue 1,2019/20,Marseille,Olympique de Marseille,2,56,28,16,8,4,41,29,12
+Ligue 1,2019/20,Rennes,Stade Rennais FC,3,50,28,15,5,8,38,24,14
+Ligue 1,2019/20,Lille,Lille OSC,4,49,28,15,4,9,35,27,8
+Ligue 1,2019/20,Nice,OGC Nice,5,41,28,11,8,9,41,38,3
+Ligue 1,2019/20,Reims,Stade de Reims,6,41,28,10,11,7,26,21,5
+Ligue 1,2019/20,Lyon,Olympique Lyonnais,7,40,28,11,7,10,42,27,15
+Ligue 1,2019/20,Montpellier,Montpellier-Hérault SC,8,40,28,11,7,10,35,34,1
+Ligue 1,2019/20,Monaco,AS Monaco,9,40,28,11,7,10,44,44,0
+Ligue 1,2019/20,Strasbourg,RC Strasbourg Alsace,10,38,27,11,5,11,32,32,0
+Ligue 1,2019/20,Angers,Angers SCO,11,39,28,11,6,11,28,33,-5
+Ligue 1,2019/20,Bordeaux,FC Girondins Bordeaux,12,37,28,9,10,9,40,34,6
+Ligue 1,2019/20,Nantes,FC Nantes,13,37,28,11,4,13,28,31,-3
+Ligue 1,2019/20,Brest,Stade Brestois,14,34,28,8,10,10,34,37,-3
+Ligue 1,2019/20,Metz,FC Metz,15,34,28,8,10,10,27,35,-8
+Ligue 1,2019/20,Dijon,Dijon FCO,16,30,28,7,9,12,27,37,-10
+Ligue 1,2019/20,St Etienne,AS Saint-Etienne,17,30,28,8,6,14,29,45,-16
+Ligue 1,2019/20,Nimes,Nîmes Olympique,18,27,28,7,6,15,29,44,-15
+Ligue 1,2019/20,Amiens,Amiens SC,19,23,28,4,11,13,31,50,-19
+Ligue 1,2019/20,Toulouse,Toulouse FC,20,13,28,3,4,21,22,58,-36
+Ligue 1,2020/21,Lille,Lille OSC,1,83,38,24,11,3,64,23,41
+Ligue 1,2020/21,Paris SG,Paris-Saint-Germain FC,2,82,38,26,4,8,86,28,58
+Ligue 1,2020/21,Monaco,AS Monaco,3,78,38,24,6,8,76,42,34
+Ligue 1,2020/21,Lyon,Olympique Lyonnais,4,76,38,22,10,6,81,43,38
+Ligue 1,2020/21,Marseille,Olympique de Marseille,5,60,38,16,12,10,54,47,7
+Ligue 1,2020/21,Rennes,Stade Rennais FC,6,58,38,16,10,12,52,40,12
+Ligue 1,2020/21,Lens,RC Lens,7,57,38,15,12,11,55,54,1
+Ligue 1,2020/21,Montpellier,Montpellier-Hérault SC,8,54,38,14,12,12,60,62,-2
+Ligue 1,2020/21,Nice,OGC Nice,9,52,38,15,7,16,50,53,-3
+Ligue 1,2020/21,Metz,FC Metz,10,47,38,12,11,15,44,48,-4
+Ligue 1,2020/21,St Etienne,AS Saint-Etienne,11,46,38,12,10,16,42,54,-12
+Ligue 1,2020/21,Bordeaux,FC Girondins Bordeaux,12,45,38,13,6,19,42,56,-14
+Ligue 1,2020/21,Angers,Angers SCO,13,44,38,12,8,18,40,58,-18
+Ligue 1,2020/21,Reims,Stade de Reims,14,42,38,9,15,14,42,50,-8
+Ligue 1,2020/21,Strasbourg,RC Strasbourg Alsace,15,42,38,11,9,18,49,58,-9
+Ligue 1,2020/21,Lorient,FC Lorient,16,42,38,11,9,18,50,68,-18
+Ligue 1,2020/21,Brest,Stade Brestois,17,41,38,11,8,19,50,66,-16
+Ligue 1,2020/21,Nantes,FC Nantes,18,40,38,9,13,16,47,55,-8
+Ligue 1,2020/21,Nimes,Nîmes Olympique,19,35,38,9,8,21,40,71,-31
+Ligue 1,2020/21,Dijon,Dijon FCO,20,21,38,4,9,25,25,73,-48
+Ligue 1,2021/22,Paris SG,Paris-Saint-Germain FC,1,86,38,26,8,4,90,36,54
+Ligue 1,2021/22,Marseille,Olympique de Marseille,2,71,38,21,8,9,63,38,25
+Ligue 1,2021/22,Monaco,AS Monaco,3,69,38,20,9,9,65,40,25
+Ligue 1,2021/22,Rennes,Stade Rennais FC,4,66,38,20,6,12,82,40,42
+Ligue 1,2021/22,Nice,OGC Nice,5,66,38,20,7,11,52,36,16
+Ligue 1,2021/22,Strasbourg,RC Strasbourg Alsace,6,63,38,17,12,9,60,43,17
+Ligue 1,2021/22,Lens,RC Lens,7,62,38,17,11,10,62,48,14
+Ligue 1,2021/22,Lyon,Olympique Lyonnais,8,61,38,17,11,10,66,51,15
+Ligue 1,2021/22,Nantes,FC Nantes,9,55,38,15,10,13,55,48,7
+Ligue 1,2021/22,Lille,Lille OSC,10,55,38,14,13,11,48,48,0
+Ligue 1,2021/22,Brest,Stade Brestois,11,48,38,13,9,16,49,57,-8
+Ligue 1,2021/22,Reims,Stade de Reims,12,46,38,11,13,14,43,44,-1
+Ligue 1,2021/22,Montpellier,Montpellier-Hérault SC,13,43,38,12,7,19,49,61,-12
+Ligue 1,2021/22,Angers,Angers SCO,14,41,38,10,11,17,44,55,-11
+Ligue 1,2021/22,Troyes,ES Troyes AC,15,38,38,9,11,18,37,53,-16
+Ligue 1,2021/22,Lorient,FC Lorient,16,36,38,8,12,18,35,63,-28
+Ligue 1,2021/22,Clermont,Clermont Foot Auvergne 63,17,36,38,9,9,20,38,69,-31
+Ligue 1,2021/22,St Etienne,AS Saint-Etienne,18,32,38,7,11,20,42,77,-35
+Ligue 1,2021/22,Metz,FC Metz,19,31,38,6,13,19,35,69,-34
+Ligue 1,2021/22,Bordeaux,FC Girondins Bordeaux,20,31,38,6,13,19,52,91,-39
+Ligue 1,2022/23,Paris SG,Paris-Saint-Germain FC,1,85,38,27,4,7,89,40,49
+Ligue 1,2022/23,Lens,RC Lens,2,84,38,25,9,4,68,29,39
+Ligue 1,2022/23,Marseille,Olympique de Marseille,3,73,38,22,7,9,67,40,27
+Ligue 1,2022/23,Rennes,Stade Rennais FC,4,68,38,21,5,12,69,39,30
+Ligue 1,2022/23,Lille,Lille OSC,5,67,38,19,10,9,65,44,21
+Ligue 1,2022/23,Monaco,AS Monaco,6,65,38,19,8,11,70,58,12
+Ligue 1,2022/23,Lyon,Olympique Lyonnais,7,62,38,18,8,12,65,47,18
+Ligue 1,2022/23,Clermont,Clermont Foot Auvergne 63,8,59,38,17,8,13,45,49,-4
+Ligue 1,2022/23,Nice,OGC Nice,9,58,38,15,13,10,48,37,11
+Ligue 1,2022/23,Lorient,FC Lorient,10,55,38,15,10,13,52,53,-1
+Ligue 1,2022/23,Reims,Stade de Reims,11,51,38,12,15,11,45,45,0
+Ligue 1,2022/23,Montpellier,Montpellier-Hérault SC,12,50,38,15,5,18,65,62,3
+Ligue 1,2022/23,Toulouse,Toulouse FC,13,48,38,13,9,16,51,57,-6
+Ligue 1,2022/23,Brest,Stade Brestois,14,44,38,11,11,16,44,54,-10
+Ligue 1,2022/23,Strasbourg,RC Strasbourg Alsace,15,40,38,9,13,16,51,59,-8
+Ligue 1,2022/23,Nantes,FC Nantes,16,36,38,7,15,16,37,55,-18
+Ligue 1,2022/23,Auxerre,AJ Auxerre,17,35,38,8,11,19,35,63,-28
+Ligue 1,2022/23,Ajaccio,AC Ajaccio,18,26,38,7,5,26,23,74,-51
+Ligue 1,2022/23,Troyes,ES Troyes AC,19,24,38,4,12,22,45,81,-36
+Ligue 1,2022/23,Angers,Angers SCO,20,18,38,4,6,28,33,81,-48
+Ligue 1,2023/24,Paris SG,Paris-Saint-Germain FC,1,76,34,22,10,2,81,33,48
+Ligue 1,2023/24,Monaco,AS Monaco,2,67,34,20,7,7,68,42,26
+Ligue 1,2023/24,Brest,Stade Brestois,3,61,34,17,10,7,53,34,19
+Ligue 1,2023/24,Lille,Lille OSC,4,59,34,16,11,7,52,34,18
+Ligue 1,2023/24,Nice,OGC Nice,5,55,34,15,10,9,40,29,11
+Ligue 1,2023/24,Lyon,Olympique Lyonnais,6,53,34,16,5,13,49,55,-6
+Ligue 1,2023/24,Lens,RC Lens,7,51,34,14,9,11,45,37,8
+Ligue 1,2023/24,Marseille,Olympique de Marseille,8,50,34,13,11,10,52,41,11
+Ligue 1,2023/24,Reims,Stade de Reims,9,47,34,13,8,13,42,47,-5
+Ligue 1,2023/24,Rennes,Stade Rennais FC,10,46,34,12,10,12,53,46,7
+Ligue 1,2023/24,Toulouse,Toulouse FC,11,43,34,11,10,13,42,46,-4
+Ligue 1,2023/24,Montpellier,Montpellier-Hérault SC,12,41,34,10,12,12,43,48,-5
+Ligue 1,2023/24,Strasbourg,RC Strasbourg Alsace,13,39,34,10,9,15,38,50,-12
+Ligue 1,2023/24,Nantes,FC Nantes,14,33,34,9,6,19,30,55,-25
+Ligue 1,2023/24,Le Havre,Le Havre AC,15,32,34,7,11,16,34,45,-11
+Ligue 1,2023/24,Metz,FC Metz,16,29,34,8,5,21,35,58,-23
+Ligue 1,2023/24,Lorient,FC Lorient,17,29,34,7,8,19,43,66,-23
+Ligue 1,2023/24,Clermont,Clermont Foot Auvergne 63,18,25,34,5,10,19,26,60,-34
+Ligue 1,2024/25,Paris SG,Paris-Saint-Germain FC,1,84,34,26,6,2,92,35,57
+Ligue 1,2024/25,Marseille,Olympique de Marseille,2,65,34,20,5,9,74,47,27
+Ligue 1,2024/25,Monaco,AS Monaco,3,61,34,18,7,9,63,41,22
+Ligue 1,2024/25,Nice,OGC Nice,4,60,34,17,9,8,66,41,25
+Ligue 1,2024/25,Lille,Lille OSC,5,60,34,17,9,8,52,36,16
+Ligue 1,2024/25,Lyon,Olympique Lyonnais,6,57,34,17,6,11,65,46,19
+Ligue 1,2024/25,Strasbourg,RC Strasbourg Alsace,7,57,34,16,9,9,56,44,12
+Ligue 1,2024/25,Lens,RC Lens,8,52,34,15,7,12,42,39,3
+Ligue 1,2024/25,Brest,Stade Brestois,9,50,34,15,5,14,52,59,-7
+Ligue 1,2024/25,Toulouse,Toulouse FC,10,42,34,11,9,14,44,43,1
+Ligue 1,2024/25,Auxerre,AJ Auxerre,11,42,34,11,9,14,48,51,-3
+Ligue 1,2024/25,Rennes,Stade Rennais FC,12,41,34,13,2,19,51,50,1
+Ligue 1,2024/25,Nantes,FC Nantes,13,36,34,8,12,14,39,52,-13
+Ligue 1,2024/25,Angers,Angers SCO,14,36,34,10,6,18,32,53,-21
+Ligue 1,2024/25,Le Havre,Le Havre AC,15,34,34,10,4,20,40,71,-31
+Ligue 1,2024/25,Reims,Stade de Reims,16,33,34,8,9,17,33,47,-14
+Ligue 1,2024/25,St Etienne,AS Saint-Etienne,17,30,34,8,6,20,39,77,-38
+Ligue 1,2024/25,Montpellier,Montpellier-Hérault SC,18,16,34,4,4,26,23,79,-56
+Premier League,2015/16,Leicester,Leicester City,1,81,38,23,12,3,68,36,32
+Premier League,2015/16,Arsenal,Arsenal,2,71,38,20,11,7,65,36,29
+Premier League,2015/16,Tottenham,Tottenham Hotspur,3,70,38,19,13,6,69,35,34
+Premier League,2015/16,Man City,Manchester City,4,66,38,19,9,10,71,41,30
+Premier League,2015/16,Man United,Manchester United,5,66,38,19,9,10,49,35,14
+Premier League,2015/16,Southampton,Southampton,6,63,38,18,9,11,59,41,18
+Premier League,2015/16,West Ham,West Ham United,7,62,38,16,14,8,65,51,14
+Premier League,2015/16,Liverpool,Liverpool,8,60,38,16,12,10,63,50,13
+Premier League,2015/16,Stoke,Stoke City,9,51,38,14,9,15,41,55,-14
+Premier League,2015/16,Chelsea,Chelsea,10,50,38,12,14,12,59,53,6
+Premier League,2015/16,Everton,Everton,11,47,38,11,14,13,59,55,4
+Premier League,2015/16,Swansea,Swansea City,12,47,38,12,11,15,42,52,-10
+Premier League,2015/16,Watford,Watford,13,45,38,12,9,17,40,50,-10
+Premier League,2015/16,West Brom,West Bromwich Albion,14,43,38,10,13,15,34,48,-14
+Premier League,2015/16,Crystal Palace,Crystal Palace,15,42,38,11,9,18,39,51,-12
+Premier League,2015/16,Bournemouth,AFC Bournemouth,16,42,38,11,9,18,45,67,-22
+Premier League,2015/16,Sunderland,Sunderland,17,39,38,9,12,17,48,62,-14
+Premier League,2015/16,Newcastle,Newcastle United,18,37,38,9,10,19,44,65,-21
+Premier League,2015/16,Norwich,Norwich City,19,34,38,9,7,22,39,67,-28
+Premier League,2015/16,Aston Villa,Aston Villa,20,17,38,3,8,27,27,76,-49
+Premier League,2016/17,Chelsea,Chelsea,1,93,38,30,3,5,85,33,52
+Premier League,2016/17,Tottenham,Tottenham Hotspur,2,86,38,26,8,4,86,26,60
+Premier League,2016/17,Man City,Manchester City,3,78,38,23,9,6,80,39,41
+Premier League,2016/17,Liverpool,Liverpool,4,76,38,22,10,6,78,42,36
+Premier League,2016/17,Arsenal,Arsenal,5,75,38,23,6,9,77,44,33
+Premier League,2016/17,Man United,Manchester United,6,69,38,18,15,5,54,29,25
+Premier League,2016/17,Everton,Everton,7,61,38,17,10,11,62,44,18
+Premier League,2016/17,Southampton,Southampton,8,46,38,12,10,16,41,48,-7
+Premier League,2016/17,Bournemouth,AFC Bournemouth,9,46,38,12,10,16,55,67,-12
+Premier League,2016/17,West Brom,West Bromwich Albion,10,45,38,12,9,17,43,51,-8
+Premier League,2016/17,West Ham,West Ham United,11,45,38,12,9,17,47,64,-17
+Premier League,2016/17,Leicester,Leicester City,12,44,38,12,8,18,48,63,-15
+Premier League,2016/17,Stoke,Stoke City,13,44,38,11,11,16,41,56,-15
+Premier League,2016/17,Crystal Palace,Crystal Palace,14,41,38,12,5,21,50,63,-13
+Premier League,2016/17,Swansea,Swansea City,15,41,38,12,5,21,45,70,-25
+Premier League,2016/17,Burnley,Burnley,16,40,38,11,7,20,39,55,-16
+Premier League,2016/17,Watford,Watford,17,40,38,11,7,20,40,68,-28
+Premier League,2016/17,Hull,Hull City,18,34,38,9,7,22,37,80,-43
+Premier League,2016/17,Middlesbrough,Middlesbrough,19,28,38,5,13,20,27,53,-26
+Premier League,2016/17,Sunderland,Sunderland,20,24,38,6,6,26,29,69,-40
+Premier League,2017/18,Man City,Manchester City,1,100,38,32,4,2,106,27,79
+Premier League,2017/18,Man United,Manchester United,2,81,38,25,6,7,68,28,40
+Premier League,2017/18,Tottenham,Tottenham Hotspur,3,77,38,23,8,7,74,36,38
+Premier League,2017/18,Liverpool,Liverpool,4,75,38,21,12,5,84,38,46
+Premier League,2017/18,Chelsea,Chelsea,5,70,38,21,7,10,62,38,24
+Premier League,2017/18,Arsenal,Arsenal,6,63,38,19,6,13,74,51,23
+Premier League,2017/18,Burnley,Burnley,7,54,38,14,12,12,36,39,-3
+Premier League,2017/18,Everton,Everton,8,49,38,13,10,15,44,58,-14
+Premier League,2017/18,Leicester,Leicester City,9,47,38,12,11,15,56,60,-4
+Premier League,2017/18,Newcastle,Newcastle United,10,44,38,12,8,18,39,47,-8
+Premier League,2017/18,Crystal Palace,Crystal Palace,11,44,38,11,11,16,45,55,-10
+Premier League,2017/18,Bournemouth,AFC Bournemouth,12,44,38,11,11,16,45,61,-16
+Premier League,2017/18,West Ham,West Ham United,13,42,38,10,12,16,48,68,-20
+Premier League,2017/18,Watford,Watford,14,41,38,11,8,19,44,64,-20
+Premier League,2017/18,Brighton,Brighton & Hove Albion,15,40,38,9,13,16,34,54,-20
+Premier League,2017/18,Huddersfield,Huddersfield Town,16,37,38,9,10,19,28,58,-30
+Premier League,2017/18,Southampton,Southampton,17,36,38,7,15,16,37,56,-19
+Premier League,2017/18,Swansea,Swansea City,18,33,38,8,9,21,28,56,-28
+Premier League,2017/18,Stoke,Stoke City,19,33,38,7,12,19,35,68,-33
+Premier League,2017/18,West Brom,West Bromwich Albion,20,31,38,6,13,19,31,56,-25
+Premier League,2018/19,Man City,Manchester City,1,98,38,32,2,4,95,23,72
+Premier League,2018/19,Liverpool,Liverpool,2,97,38,30,7,1,89,22,67
+Premier League,2018/19,Chelsea,Chelsea,3,72,38,21,9,8,63,39,24
+Premier League,2018/19,Tottenham,Tottenham Hotspur,4,71,38,23,2,13,67,39,28
+Premier League,2018/19,Arsenal,Arsenal,5,70,38,21,7,10,73,51,22
+Premier League,2018/19,Man United,Manchester United,6,66,38,19,9,10,65,54,11
+Premier League,2018/19,Wolves,Wolverhampton Wanderers,7,57,38,16,9,13,47,46,1
+Premier League,2018/19,Everton,Everton,8,54,38,15,9,14,54,46,8
+Premier League,2018/19,Leicester,Leicester City,9,52,38,15,7,16,51,48,3
+Premier League,2018/19,West Ham,West Ham United,10,52,38,15,7,16,52,55,-3
+Premier League,2018/19,Watford,Watford,11,50,38,14,8,16,52,59,-7
+Premier League,2018/19,Crystal Palace,Crystal Palace,12,49,38,14,7,17,51,53,-2
+Premier League,2018/19,Newcastle,Newcastle United,13,45,38,12,9,17,42,48,-6
+Premier League,2018/19,Bournemouth,AFC Bournemouth,14,45,38,13,6,19,56,70,-14
+Premier League,2018/19,Burnley,Burnley,15,40,38,11,7,20,45,68,-23
+Premier League,2018/19,Southampton,Southampton,16,39,38,9,12,17,45,65,-20
+Premier League,2018/19,Brighton,Brighton & Hove Albion,17,36,38,9,9,20,35,60,-25
+Premier League,2018/19,Cardiff,Cardiff City,18,34,38,10,4,24,34,69,-35
+Premier League,2018/19,Fulham,Fulham,19,26,38,7,5,26,34,81,-47
+Premier League,2018/19,Huddersfield,Huddersfield Town,20,16,38,3,7,28,22,76,-54
+Premier League,2019/20,Liverpool,Liverpool,1,99,38,32,3,3,85,33,52
+Premier League,2019/20,Man City,Manchester City,2,81,38,26,3,9,102,35,67
+Premier League,2019/20,Man United,Manchester United,3,66,38,18,12,8,66,36,30
+Premier League,2019/20,Chelsea,Chelsea,4,66,38,20,6,12,69,54,15
+Premier League,2019/20,Leicester,Leicester City,5,62,38,18,8,12,67,41,26
+Premier League,2019/20,Tottenham,Tottenham Hotspur,6,59,38,16,11,11,61,47,14
+Premier League,2019/20,Wolves,Wolverhampton Wanderers,7,59,38,15,14,9,51,40,11
+Premier League,2019/20,Arsenal,Arsenal,8,56,38,14,14,10,56,48,8
+Premier League,2019/20,Sheffield United,Sheffield United,9,54,38,14,12,12,39,39,0
+Premier League,2019/20,Burnley,Burnley,10,54,38,15,9,14,43,50,-7
+Premier League,2019/20,Southampton,Southampton,11,52,38,15,7,16,51,60,-9
+Premier League,2019/20,Everton,Everton,12,49,38,13,10,15,44,56,-12
+Premier League,2019/20,Newcastle,Newcastle United,13,44,38,11,11,16,38,58,-20
+Premier League,2019/20,Crystal Palace,Crystal Palace,14,43,38,11,10,17,31,50,-19
+Premier League,2019/20,Brighton,Brighton & Hove Albion,15,41,38,9,14,15,39,54,-15
+Premier League,2019/20,West Ham,West Ham United,16,39,38,10,9,19,49,62,-13
+Premier League,2019/20,Aston Villa,Aston Villa,17,35,38,9,8,21,41,67,-26
+Premier League,2019/20,Bournemouth,AFC Bournemouth,18,34,38,9,7,22,40,65,-25
+Premier League,2019/20,Watford,Watford,19,34,38,8,10,20,36,64,-28
+Premier League,2019/20,Norwich,Norwich City,20,21,38,5,6,27,26,75,-49
+Premier League,2020/21,Man City,Manchester City,1,86,38,27,5,6,83,32,51
+Premier League,2020/21,Man United,Manchester United,2,74,38,21,11,6,73,44,29
+Premier League,2020/21,Liverpool,Liverpool,3,69,38,20,9,9,68,42,26
+Premier League,2020/21,Chelsea,Chelsea,4,67,38,19,10,9,58,36,22
+Premier League,2020/21,Leicester,Leicester City,5,66,38,20,6,12,68,50,18
+Premier League,2020/21,West Ham,West Ham United,6,65,38,19,8,11,62,47,15
+Premier League,2020/21,Tottenham,Tottenham Hotspur,7,62,38,18,8,12,68,45,23
+Premier League,2020/21,Arsenal,Arsenal,8,61,38,18,7,13,55,39,16
+Premier League,2020/21,Leeds,Leeds United,9,59,38,18,5,15,62,54,8
+Premier League,2020/21,Everton,Everton,10,59,38,17,8,13,47,48,-1
+Premier League,2020/21,Aston Villa,Aston Villa,11,55,38,16,7,15,55,46,9
+Premier League,2020/21,Newcastle,Newcastle United,12,45,38,12,9,17,46,62,-16
+Premier League,2020/21,Wolves,Wolverhampton Wanderers,13,45,38,12,9,17,36,52,-16
+Premier League,2020/21,Crystal Palace,Crystal Palace,14,44,38,12,8,18,41,66,-25
+Premier League,2020/21,Southampton,Southampton,15,43,38,12,7,19,47,68,-21
+Premier League,2020/21,Brighton,Brighton & Hove Albion,16,41,38,9,14,15,40,46,-6
+Premier League,2020/21,Burnley,Burnley,17,39,38,10,9,19,33,55,-22
+Premier League,2020/21,Fulham,Fulham,18,28,38,5,13,20,27,53,-26
+Premier League,2020/21,West Brom,West Bromwich Albion,19,26,38,5,11,22,35,76,-41
+Premier League,2020/21,Sheffield United,Sheffield United,20,23,38,7,2,29,20,63,-43
+Premier League,2021/22,Man City,Manchester City,1,93,38,29,6,3,99,26,73
+Premier League,2021/22,Liverpool,Liverpool,2,92,38,28,8,2,94,26,68
+Premier League,2021/22,Chelsea,Chelsea,3,74,38,21,11,6,76,33,43
+Premier League,2021/22,Tottenham,Tottenham Hotspur,4,71,38,22,5,11,69,40,29
+Premier League,2021/22,Arsenal,Arsenal,5,69,38,22,3,13,61,48,13
+Premier League,2021/22,Man United,Manchester United,6,58,38,16,10,12,57,57,0
+Premier League,2021/22,West Ham,West Ham United,7,56,38,16,8,14,60,51,9
+Premier League,2021/22,Leicester,Leicester City,8,52,38,14,10,14,62,59,3
+Premier League,2021/22,Brighton,Brighton & Hove Albion,9,51,38,12,15,11,42,44,-2
+Premier League,2021/22,Wolves,Wolverhampton Wanderers,10,51,38,15,6,17,38,43,-5
+Premier League,2021/22,Newcastle,Newcastle United,11,49,38,13,10,15,44,62,-18
+Premier League,2021/22,Crystal Palace,Crystal Palace,12,48,38,11,15,12,50,46,4
+Premier League,2021/22,Brentford,Brentford,13,46,38,13,7,18,48,56,-8
+Premier League,2021/22,Aston Villa,Aston Villa,14,45,38,13,6,19,52,54,-2
+Premier League,2021/22,Southampton,Southampton,15,40,38,9,13,16,43,67,-24
+Premier League,2021/22,Everton,Everton,16,39,38,11,6,21,43,66,-23
+Premier League,2021/22,Leeds,Leeds United,17,38,38,9,11,18,42,79,-37
+Premier League,2021/22,Burnley,Burnley,18,35,38,7,14,17,34,53,-19
+Premier League,2021/22,Watford,Watford,19,23,38,6,5,27,34,77,-43
+Premier League,2021/22,Norwich,Norwich City,20,22,38,5,7,26,23,84,-61
+Premier League,2022/23,Man City,Manchester City,1,89,38,28,5,5,94,33,61
+Premier League,2022/23,Arsenal,Arsenal,2,84,38,26,6,6,88,43,45
+Premier League,2022/23,Man United,Manchester United,3,75,38,23,6,9,58,43,15
+Premier League,2022/23,Newcastle,Newcastle United,4,71,38,19,14,5,68,33,35
+Premier League,2022/23,Liverpool,Liverpool,5,67,38,19,10,9,75,47,28
+Premier League,2022/23,Brighton,Brighton & Hove Albion,6,62,38,18,8,12,72,53,19
+Premier League,2022/23,Aston Villa,Aston Villa,7,61,38,18,7,13,51,46,5
+Premier League,2022/23,Tottenham,Tottenham Hotspur,8,60,38,18,6,14,70,63,7
+Premier League,2022/23,Brentford,Brentford,9,59,38,15,14,9,58,46,12
+Premier League,2022/23,Fulham,Fulham,10,52,38,15,7,16,55,53,2
+Premier League,2022/23,Crystal Palace,Crystal Palace,11,45,38,11,12,15,40,49,-9
+Premier League,2022/23,Chelsea,Chelsea,12,44,38,11,11,16,38,47,-9
+Premier League,2022/23,Wolves,Wolverhampton Wanderers,13,41,38,11,8,19,31,58,-27
+Premier League,2022/23,West Ham,West Ham United,14,40,38,11,7,20,42,55,-13
+Premier League,2022/23,Bournemouth,AFC Bournemouth,15,39,38,11,6,21,37,71,-34
+Premier League,2022/23,Nott'm Forest,Nottingham Forest,16,38,38,9,11,18,38,68,-30
+Premier League,2022/23,Everton,Everton,17,36,38,8,12,18,34,57,-23
+Premier League,2022/23,Leicester,Leicester City,18,34,38,9,7,22,51,68,-17
+Premier League,2022/23,Leeds,Leeds United,19,31,38,7,10,21,48,78,-30
+Premier League,2022/23,Southampton,Southampton,20,25,38,6,7,25,36,73,-37
+Premier League,2023/24,Man City,Manchester City,1,91,38,28,7,3,96,34,62
+Premier League,2023/24,Arsenal,Arsenal,2,89,38,28,5,5,91,29,62
+Premier League,2023/24,Liverpool,Liverpool,3,82,38,24,10,4,86,41,45
+Premier League,2023/24,Aston Villa,Aston Villa,4,68,38,20,8,10,76,61,15
+Premier League,2023/24,Tottenham,Tottenham Hotspur,5,66,38,20,6,12,74,61,13
+Premier League,2023/24,Chelsea,Chelsea,6,63,38,18,9,11,77,63,14
+Premier League,2023/24,Newcastle,Newcastle United,7,60,38,18,6,14,85,62,23
+Premier League,2023/24,Man United,Manchester United,8,60,38,18,6,14,57,58,-1
+Premier League,2023/24,West Ham,West Ham United,9,52,38,14,10,14,60,74,-14
+Premier League,2023/24,Crystal Palace,Crystal Palace,10,49,38,13,10,15,57,58,-1
+Premier League,2023/24,Brighton,Brighton & Hove Albion,11,48,38,12,12,14,55,62,-7
+Premier League,2023/24,Bournemouth,AFC Bournemouth,12,48,38,13,9,16,54,67,-13
+Premier League,2023/24,Fulham,Fulham,13,47,38,13,8,17,55,61,-6
+Premier League,2023/24,Wolves,Wolverhampton Wanderers,14,46,38,13,7,18,50,65,-15
+Premier League,2023/24,Everton,Everton,15,40,38,13,9,16,40,51,-11
+Premier League,2023/24,Brentford,Brentford,16,39,38,10,9,19,56,65,-9
+Premier League,2023/24,Nott'm Forest,Nottingham Forest,17,32,38,9,9,20,49,67,-18
+Premier League,2023/24,Luton,Luton Town,18,26,38,6,8,24,52,85,-33
+Premier League,2023/24,Burnley,Burnley,19,24,38,5,9,24,41,78,-37
+Premier League,2023/24,Sheffield United,Sheffield United,20,16,38,3,7,28,35,104,-69
+Premier League,2024/25,Liverpool,Liverpool,1,84,38,25,9,4,86,41,45
+Premier League,2024/25,Arsenal,Arsenal,2,74,38,20,14,4,69,34,35
+Premier League,2024/25,Man City,Manchester City,3,71,38,21,8,9,72,44,28
+Premier League,2024/25,Chelsea,Chelsea,4,69,38,20,9,9,64,43,21
+Premier League,2024/25,Newcastle,Newcastle United,5,66,38,20,6,12,68,47,21
+Premier League,2024/25,Aston Villa,Aston Villa,6,66,38,19,9,10,58,51,7
+Premier League,2024/25,Nott'm Forest,Nottingham Forest,7,65,38,19,8,11,58,46,12
+Premier League,2024/25,Brighton,Brighton & Hove Albion,8,61,38,16,13,9,66,59,7
+Premier League,2024/25,Bournemouth,AFC Bournemouth,9,56,38,15,11,12,58,46,12
+Premier League,2024/25,Brentford,Brentford,10,56,38,16,8,14,66,57,9
+Premier League,2024/25,Fulham,Fulham,11,54,38,15,9,14,54,54,0
+Premier League,2024/25,Crystal Palace,Crystal Palace,12,53,38,13,14,11,51,51,0
+Premier League,2024/25,Everton,Everton,13,48,38,11,15,12,42,44,-2
+Premier League,2024/25,West Ham,West Ham United,14,43,38,11,10,17,46,62,-16
+Premier League,2024/25,Man United,Manchester United,15,42,38,11,9,18,44,54,-10
+Premier League,2024/25,Wolves,Wolverhampton Wanderers,16,42,38,12,6,20,54,69,-15
+Premier League,2024/25,Tottenham,Tottenham Hotspur,17,38,38,11,5,22,64,65,-1
+Premier League,2024/25,Leicester,Leicester City,18,25,38,6,7,25,33,80,-47
+Premier League,2024/25,Ipswich,Ipswich Town,19,22,38,4,10,24,36,82,-46
+Premier League,2024/25,Southampton,Southampton,20,12,38,2,6,30,26,86,-60
+Primeira Liga,2015/16,Benfica,SL Benfica,1,88,34,29,1,4,88,22,66
+Primeira Liga,2015/16,Sp Lisbon,Sporting CP,2,86,34,27,5,2,79,21,58
+Primeira Liga,2015/16,Porto,FC do Porto,3,73,34,23,4,7,67,30,37
+Primeira Liga,2015/16,Sp Braga,Sporting de Braga,4,58,34,16,10,8,54,35,19
+Primeira Liga,2015/16,Arouca,FC Arouca,5,54,34,13,15,6,47,38,9
+Primeira Liga,2015/16,Rio Ave,Rio Ave FC,6,50,34,14,8,12,44,44,0
+Primeira Liga,2015/16,Pacos Ferreira,FC Paços de Ferreira,7,49,34,13,10,11,43,42,1
+Primeira Liga,2015/16,Estoril,GD Estoril Praia,8,47,34,13,8,13,40,41,-1
+Primeira Liga,2015/16,Belenenses,"CF ""Os Belenenses""",9,41,34,10,11,13,44,66,-22
+Primeira Liga,2015/16,Guimaraes,Vitória SC (Guimarăes),10,40,34,9,13,12,45,53,-8
+Primeira Liga,2015/16,Nacional,CD Nacional,11,38,34,10,8,16,40,56,-16
+Primeira Liga,2015/16,Moreirense,Moreirense FC,12,36,34,9,9,16,38,54,-16
+Primeira Liga,2015/16,Maritimo,CS Marítimo,13,35,34,10,5,19,45,63,-18
+Primeira Liga,2015/16,Boavista,Boavista FC,14,33,34,8,9,17,24,41,-17
+Primeira Liga,2015/16,Setubal,Vitória FC (Setúbal),15,30,34,6,12,16,40,61,-21
+Primeira Liga,2015/16,Tondela,CD Tondela,16,30,34,8,6,20,34,54,-20
+Primeira Liga,2015/16,Uniao Madeira,CF Uniăo da Madeira,17,29,34,7,8,19,27,50,-23
+Primeira Liga,2015/16,Academica,Académica de Coimbra,18,25,34,5,10,19,32,60,-28
+Primeira Liga,2016/17,Benfica,SL Benfica,1,82,34,25,7,2,72,18,54
+Primeira Liga,2016/17,Porto,FC do Porto,2,76,34,22,10,2,71,19,52
+Primeira Liga,2016/17,Sp Lisbon,Sporting CP,3,70,34,21,7,6,68,36,32
+Primeira Liga,2016/17,Guimaraes,Vitória SC (Guimarăes),4,62,34,18,8,8,50,39,11
+Primeira Liga,2016/17,Sp Braga,Sporting de Braga,5,54,34,15,9,10,51,36,15
+Primeira Liga,2016/17,Maritimo,CS Marítimo,6,50,34,13,11,10,34,32,2
+Primeira Liga,2016/17,Rio Ave,Rio Ave FC,7,49,34,14,7,13,41,39,2
+Primeira Liga,2016/17,Feirense,CD Feirense,8,48,34,14,6,14,31,45,-14
+Primeira Liga,2016/17,Boavista,Boavista FC,9,43,34,10,13,11,33,36,-3
+Primeira Liga,2016/17,Estoril,GD Estoril Praia,10,38,34,10,8,16,36,42,-6
+Primeira Liga,2016/17,Chaves,GD Chaves,11,38,34,8,14,12,35,42,-7
+Primeira Liga,2016/17,Setubal,Vitória FC (Setúbal),12,38,34,10,8,16,30,39,-9
+Primeira Liga,2016/17,Pacos Ferreira,FC Paços de Ferreira,13,36,34,8,12,14,32,45,-13
+Primeira Liga,2016/17,Belenenses,"CF ""Os Belenenses""",14,36,34,9,9,16,27,45,-18
+Primeira Liga,2016/17,Moreirense,Moreirense FC,15,33,34,8,9,17,33,48,-15
+Primeira Liga,2016/17,Tondela,CD Tondela,16,32,34,8,8,18,29,52,-23
+Primeira Liga,2016/17,Arouca,FC Arouca,17,32,34,9,5,20,33,57,-24
+Primeira Liga,2016/17,Nacional,CD Nacional,18,21,34,4,9,21,22,58,-36
+Primeira Liga,2017/18,Porto,FC do Porto,1,88,34,28,4,2,82,18,64
+Primeira Liga,2017/18,Benfica,SL Benfica,2,81,34,25,6,3,80,22,58
+Primeira Liga,2017/18,Sp Lisbon,Sporting CP,3,78,34,24,6,4,63,24,39
+Primeira Liga,2017/18,Sp Braga,Sporting de Braga,4,75,34,24,3,7,74,29,45
+Primeira Liga,2017/18,Rio Ave,Rio Ave FC,5,51,34,15,6,13,40,42,-2
+Primeira Liga,2017/18,Chaves,GD Chaves,6,47,34,13,8,13,47,55,-8
+Primeira Liga,2017/18,Maritimo,CS MarŪtimo,7,47,34,13,8,13,36,49,-13
+Primeira Liga,2017/18,Boavista,Boavista FC,8,45,34,13,6,15,35,44,-9
+Primeira Liga,2017/18,Guimaraes,Vitůria SC (Guimar„es),9,43,34,13,4,17,45,56,-11
+Primeira Liga,2017/18,Portimonense,Portimonense SC,10,38,34,10,8,16,52,60,-8
+Primeira Liga,2017/18,Tondela,CD Tondela,11,38,34,10,8,16,41,50,-9
+Primeira Liga,2017/18,Belenenses,"CF ""Os Belenenses""",12,37,34,9,10,15,33,46,-13
+Primeira Liga,2017/18,Aves,Desportivo Aves,13,34,34,9,7,18,36,51,-15
+Primeira Liga,2017/18,Setubal,Vitůria FC (Setķbal),14,32,34,7,11,16,39,62,-23
+Primeira Liga,2017/18,Moreirense,Moreirense FC,15,32,34,8,8,18,29,50,-21
+Primeira Liga,2017/18,Feirense,CD Feirense,16,31,34,9,4,21,32,48,-16
+Primeira Liga,2017/18,Pacos Ferreira,FC PaÁos de Ferreira,17,30,34,7,9,18,33,59,-26
+Primeira Liga,2017/18,Estoril,GD Estoril Praia,18,30,34,8,6,20,29,61,-32
+Primeira Liga,2018/19,Benfica,SL Benfica,1,87,34,28,3,3,103,31,72
+Primeira Liga,2018/19,Porto,FC do Porto,2,85,34,27,4,3,74,20,54
+Primeira Liga,2018/19,Sp Lisbon,Sporting CP,3,74,34,23,5,6,72,33,39
+Primeira Liga,2018/19,Sp Braga,Sporting de Braga,4,67,34,21,4,9,56,37,19
+Primeira Liga,2018/19,Guimaraes,Vitória SC (Guimarăes),5,52,34,15,7,12,46,34,12
+Primeira Liga,2018/19,Moreirense,Moreirense FC,6,52,34,16,4,14,39,44,-5
+Primeira Liga,2018/19,Rio Ave,Rio Ave FC,7,45,34,12,9,13,50,52,-2
+Primeira Liga,2018/19,Boavista,Boavista FC,8,44,34,13,5,16,34,40,-6
+Primeira Liga,2018/19,Belenenses,"CF ""Os Belenenses""",9,43,34,10,13,11,42,51,-9
+Primeira Liga,2018/19,Santa Clara,CD Santa Clara Açores,10,42,34,11,9,14,43,45,-2
+Primeira Liga,2018/19,Maritimo,CS Marítimo,11,39,34,12,3,19,26,44,-18
+Primeira Liga,2018/19,Portimonense,Portimonense SC,12,39,34,11,6,17,44,59,-15
+Primeira Liga,2018/19,Setubal,Vitória FC (Setúbal),13,36,34,8,12,14,28,39,-11
+Primeira Liga,2018/19,Aves,Desportivo Aves,14,36,34,10,6,18,35,49,-14
+Primeira Liga,2018/19,Tondela,CD Tondela,15,35,34,9,8,17,40,54,-14
+Primeira Liga,2018/19,Chaves,GD Chaves,16,32,34,8,8,18,34,57,-23
+Primeira Liga,2018/19,Nacional,CD Nacional,17,28,34,7,7,20,33,73,-40
+Primeira Liga,2018/19,Feirense,CD Feirense,18,20,34,3,11,20,27,64,-37
+Primeira Liga,2019/20,Porto,FC do Porto,1,82,34,26,4,4,74,22,52
+Primeira Liga,2019/20,Benfica,SL Benfica,2,77,34,24,5,5,71,26,45
+Primeira Liga,2019/20,Sp Braga,Sporting de Braga,3,60,34,18,6,10,61,40,21
+Primeira Liga,2019/20,Sp Lisbon,Sporting CP,4,60,34,18,6,10,49,34,15
+Primeira Liga,2019/20,Rio Ave,Rio Ave FC,5,55,34,15,10,9,48,36,12
+Primeira Liga,2019/20,Famalicao,FC Famalicão,6,54,34,14,12,8,53,51,2
+Primeira Liga,2019/20,Guimaraes,Vitória SC (Guimarães),7,50,34,13,11,10,53,38,15
+Primeira Liga,2019/20,Moreirense,Moreirense FC,8,43,34,10,13,11,42,44,-2
+Primeira Liga,2019/20,Santa Clara,CD Santa Clara Açores,9,43,34,11,10,13,36,41,-5
+Primeira Liga,2019/20,Gil Vicente,Gil Vicente FC,10,43,34,11,10,13,40,44,-4
+Primeira Liga,2019/20,Maritimo,CS Marítimo,11,39,34,9,12,13,34,42,-8
+Primeira Liga,2019/20,Boavista,Boavista FC,12,39,34,10,9,15,28,39,-11
+Primeira Liga,2019/20,Pacos Ferreira,FC Paços de Ferreira,13,39,34,11,6,17,36,52,-16
+Primeira Liga,2019/20,Tondela,CD Tondela,14,36,34,9,9,16,30,44,-14
+Primeira Liga,2019/20,Belenenses,"CF ""Os Belenenses""",15,35,34,9,8,17,27,54,-27
+Primeira Liga,2019/20,Setubal,Vitória FC (Setúbal),16,34,34,7,13,14,27,43,-16
+Primeira Liga,2019/20,Portimonense,Portimonense SC,17,33,34,7,12,15,30,45,-15
+Primeira Liga,2019/20,Aves,Desportivo Aves,18,17,34,5,2,27,24,68,-44
+Primeira Liga,2020/21,Sp Lisbon,Sporting CP,1,85,34,26,7,1,65,20,45
+Primeira Liga,2020/21,Porto,FC do Porto,2,80,34,24,8,2,74,29,45
+Primeira Liga,2020/21,Benfica,SL Benfica,3,76,34,23,7,4,69,27,42
+Primeira Liga,2020/21,Sp Braga,Sporting de Braga,4,64,34,19,7,8,53,33,20
+Primeira Liga,2020/21,Pacos Ferreira,FC PaÁos de Ferreira,5,53,34,15,8,11,40,41,-1
+Primeira Liga,2020/21,Santa Clara,CD Santa Clara AÁores,6,46,34,13,7,14,44,36,8
+Primeira Liga,2020/21,Guimaraes,Vitůria SC (Guimar„es),7,43,34,12,7,15,37,44,-7
+Primeira Liga,2020/21,Moreirense,Moreirense FC,8,43,34,10,13,11,37,43,-6
+Primeira Liga,2020/21,Famalicao,FC Famalic„o,9,40,34,10,10,14,40,48,-8
+Primeira Liga,2020/21,Belenenses,"CF ""Os Belenenses""",10,40,34,9,13,12,25,35,-10
+Primeira Liga,2020/21,Gil Vicente,Gil Vicente FC,11,39,34,11,6,17,33,42,-9
+Primeira Liga,2020/21,Tondela,CD Tondela,12,36,34,10,6,18,36,57,-21
+Primeira Liga,2020/21,Boavista,Boavista FC,13,36,34,8,12,14,39,49,-10
+Primeira Liga,2020/21,Portimonense,Portimonense SC,14,35,34,9,8,17,34,41,-7
+Primeira Liga,2020/21,Maritimo,CS MarŪtimo,15,35,34,10,5,19,27,47,-20
+Primeira Liga,2020/21,Rio Ave,Rio Ave FC,16,34,34,7,13,14,25,40,-15
+Primeira Liga,2020/21,Farense,SC Farense,17,31,34,7,10,17,31,48,-17
+Primeira Liga,2020/21,Nacional,CD Nacional,18,25,34,6,7,21,30,59,-29
+Primeira Liga,2021/22,Porto,FC do Porto,1,91,34,29,4,1,86,22,64
+Primeira Liga,2021/22,Sp Lisbon,Sporting CP,2,85,34,27,4,3,73,23,50
+Primeira Liga,2021/22,Benfica,SL Benfica,3,74,34,23,5,6,78,30,48
+Primeira Liga,2021/22,Sp Braga,Sporting de Braga,4,65,34,19,8,7,52,31,21
+Primeira Liga,2021/22,Gil Vicente,Gil Vicente FC,5,51,34,13,12,9,47,42,5
+Primeira Liga,2021/22,Guimaraes,Vitória SC (Guimarăes),6,48,34,13,9,12,50,41,9
+Primeira Liga,2021/22,Santa Clara,CD Santa Clara Açores,7,40,34,9,13,12,38,54,-16
+Primeira Liga,2021/22,Famalicao,FC Famalicăo,8,39,34,9,12,13,45,51,-6
+Primeira Liga,2021/22,Estoril,GD Estoril Praia,9,39,34,9,12,13,36,43,-7
+Primeira Liga,2021/22,Maritimo,CS Marítimo,10,38,34,9,11,14,39,44,-5
+Primeira Liga,2021/22,Pacos Ferreira,FC Paços de Ferreira,11,38,34,9,11,14,29,44,-15
+Primeira Liga,2021/22,Boavista,Boavista FC,12,38,34,7,17,10,39,52,-13
+Primeira Liga,2021/22,Portimonense,Portimonense SC,13,38,34,10,8,16,31,45,-14
+Primeira Liga,2021/22,Vizela,FC Vizela,14,33,34,7,12,15,37,58,-21
+Primeira Liga,2021/22,Arouca,FC Arouca,15,31,34,7,10,17,30,54,-24
+Primeira Liga,2021/22,Moreirense,Moreirense FC,16,29,34,7,8,19,33,51,-18
+Primeira Liga,2021/22,Tondela,CD Tondela,17,28,34,7,7,20,41,67,-26
+Primeira Liga,2021/22,Belenenses,"CF ""Os Belenenses""",18,26,34,5,11,18,23,55,-32
+Primeira Liga,2022/23,Benfica,SL Benfica,1,87,34,28,3,3,82,20,62
+Primeira Liga,2022/23,Porto,FC do Porto,2,85,34,27,4,3,73,22,51
+Primeira Liga,2022/23,Sp Braga,Sporting de Braga,3,78,34,25,3,6,75,30,45
+Primeira Liga,2022/23,Sp Lisbon,Sporting CP,4,74,34,23,5,6,71,32,39
+Primeira Liga,2022/23,Arouca,FC Arouca,5,54,34,15,9,10,36,37,-1
+Primeira Liga,2022/23,Guimaraes,Vitória SC (Guimarăes),6,53,34,16,5,13,34,39,-5
+Primeira Liga,2022/23,Chaves,GD Chaves,7,46,34,12,10,12,35,40,-5
+Primeira Liga,2022/23,Famalicao,FC Famalicăo,8,44,34,13,5,16,39,47,-8
+Primeira Liga,2022/23,Boavista,Boavista FC,9,44,34,12,8,14,43,54,-11
+Primeira Liga,2022/23,Casa Pia,Casa Pia AC,10,41,34,11,8,15,31,40,-9
+Primeira Liga,2022/23,Vizela,FC Vizela,11,40,34,11,7,16,34,38,-4
+Primeira Liga,2022/23,Rio Ave,Rio Ave FC,12,40,34,10,10,14,36,43,-7
+Primeira Liga,2022/23,Gil Vicente,Gil Vicente FC,13,37,34,10,7,17,32,41,-9
+Primeira Liga,2022/23,Estoril,GD Estoril Praia,14,35,34,10,5,19,33,49,-16
+Primeira Liga,2022/23,Portimonense,Portimonense SC,15,34,34,10,4,20,25,48,-23
+Primeira Liga,2022/23,Maritimo,CS Marítimo,16,26,34,7,5,22,32,63,-31
+Primeira Liga,2022/23,Pacos Ferreira,FC Paços de Ferreira,17,23,34,6,5,23,26,62,-36
+Primeira Liga,2022/23,Santa Clara,CD Santa Clara Açores,18,22,34,5,7,22,26,58,-32
+Primeira Liga,2023/24,Sp Lisbon,Sporting CP,1,90,34,29,3,2,96,29,67
+Primeira Liga,2023/24,Benfica,SL Benfica,2,80,34,25,5,4,77,28,49
+Primeira Liga,2023/24,Porto,FC do Porto,3,72,34,22,6,6,63,27,36
+Primeira Liga,2023/24,Sp Braga,Sporting de Braga,4,68,34,21,5,8,71,50,21
+Primeira Liga,2023/24,Guimaraes,Vitória SC (Guimarăes),5,63,34,19,6,9,52,38,14
+Primeira Liga,2023/24,Moreirense,Moreirense FC,6,55,34,16,7,11,36,35,1
+Primeira Liga,2023/24,Arouca,FC Arouca,7,46,34,13,7,14,54,50,4
+Primeira Liga,2023/24,Famalicao,FC Famalicăo,8,42,34,10,12,12,37,41,-4
+Primeira Liga,2023/24,Casa Pia,Casa Pia AC,9,38,34,10,8,16,38,50,-12
+Primeira Liga,2023/24,Farense,SC Farense,10,37,34,10,7,17,46,51,-5
+Primeira Liga,2023/24,Rio Ave,Rio Ave FC,11,37,34,6,19,9,38,43,-5
+Primeira Liga,2023/24,Gil Vicente,Gil Vicente FC,12,36,34,9,9,16,42,52,-10
+Primeira Liga,2023/24,Estoril,GD Estoril Praia,13,33,34,9,6,19,49,58,-9
+Primeira Liga,2023/24,Estrela,CF Estrela da Amadora,14,33,34,7,12,15,33,53,-20
+Primeira Liga,2023/24,Boavista,Boavista FC,15,32,34,7,11,16,39,62,-23
+Primeira Liga,2023/24,Portimonense,Portimonense SC,16,32,34,8,8,18,39,72,-33
+Primeira Liga,2023/24,Vizela,FC Vizela,17,26,34,5,11,18,36,66,-30
+Primeira Liga,2023/24,Chaves,GD Chaves,18,23,34,5,8,21,31,72,-41
+Primeira Liga,2024/25,Sporting Lisbon,Sporting CP,1,82,34,25,7,2,88,27,61
+Primeira Liga,2024/25,Benfica,SL Benfica,2,80,34,25,5,4,84,28,56
+Primeira Liga,2024/25,Porto,FC do Porto,3,71,34,22,5,7,65,30,35
+Primeira Liga,2024/25,Braga,Sporting de Braga,4,66,34,19,9,6,55,30,25
+Primeira Liga,2024/25,Santa Clara,CD Santa Clara AÁores,5,57,34,17,6,11,36,32,4
+Primeira Liga,2024/25,Vitoria de Guimaraes,VitÛria SC (Guimar„es),6,54,34,14,12,8,47,37,10
+Primeira Liga,2024/25,Famalicao,FC Famalic„o,7,47,34,12,11,11,44,39,5
+Primeira Liga,2024/25,Estoril Praia,GD Estoril Praia,8,46,34,12,10,12,48,53,-5
+Primeira Liga,2024/25,Casa Pia,Casa Pia AC,9,45,34,12,9,13,39,44,-5
+Primeira Liga,2024/25,Moreirense,Moreirense FC,10,40,34,10,10,14,42,50,-8
+Primeira Liga,2024/25,Rio Ave,Rio Ave FC,11,38,34,9,11,14,39,55,-16
+Primeira Liga,2024/25,Arouca,FC Arouca,12,38,34,9,11,14,35,49,-14
+Primeira Liga,2024/25,Gil Vicente,Gil Vicente FC,13,34,34,8,10,16,34,47,-13
+Primeira Liga,2024/25,Nacional,CD Nacional,14,34,34,9,7,18,32,50,-18
+Primeira Liga,2024/25,Estrela Amadora,CF Estrela da Amadora,15,29,34,7,8,19,24,50,-26
+Primeira Liga,2024/25,AVS,AVS Futebol,16,27,34,5,12,17,25,60,-35
+Primeira Liga,2024/25,SC Farense,SC Farense,17,27,34,6,9,19,25,46,-21
+Primeira Liga,2024/25,Boavista,Boavista FC,18,24,34,6,6,22,24,59,-35
+Serie A,2015/16,Juventus,Juventus FC,1,91,38,29,4,5,75,20,55
+Serie A,2015/16,Napoli,SSC Napoli,2,82,38,25,7,6,80,32,48
+Serie A,2015/16,Roma,AS Roma,3,80,38,23,11,4,83,41,42
+Serie A,2015/16,Inter,FC Internazionale,4,67,38,20,7,11,50,38,12
+Serie A,2015/16,Fiorentina,AC Fiorentina,5,64,38,18,10,10,60,42,18
+Serie A,2015/16,Sassuolo,US Sassuolo,6,61,38,16,13,9,49,40,9
+Serie A,2015/16,Milan,Milan AC,7,57,38,15,12,11,49,43,6
+Serie A,2015/16,Lazio,SS Lazio,8,54,38,15,9,14,52,52,0
+Serie A,2015/16,Chievo,AC Chievo Verona,9,50,38,13,11,14,43,45,-2
+Serie A,2015/16,Empoli,Empoli FC,10,46,38,12,10,16,40,49,-9
+Serie A,2015/16,Genoa,Genoa CFC,11,46,38,13,7,18,45,48,-3
+Serie A,2015/16,Torino,Torino FC,12,45,38,12,9,17,52,55,-3
+Serie A,2015/16,Atalanta,Atalanta BC,13,45,38,11,12,15,41,47,-6
+Serie A,2015/16,Bologna,Bologna FC,14,42,38,11,9,18,33,45,-12
+Serie A,2015/16,Sampdoria,UC Sampdoria,15,40,38,10,10,18,48,61,-13
+Serie A,2015/16,Palermo,US Cittŕ di Palermo,16,39,38,10,9,19,38,65,-27
+Serie A,2015/16,Udinese,Udinese Calcio,17,39,38,10,9,19,35,60,-25
+Serie A,2015/16,Carpi,Carpi FC,18,38,38,9,11,18,37,57,-20
+Serie A,2015/16,Frosinone,Frosinone Calcio,19,31,38,8,7,23,35,76,-41
+Serie A,2015/16,Verona,Hellas Verona FC,20,28,38,5,13,20,34,63,-29
+Serie A,2016/17,Juventus,Juventus FC,1,91,38,29,4,5,77,27,50
+Serie A,2016/17,Roma,AS Roma,2,87,38,28,3,7,90,38,52
+Serie A,2016/17,Napoli,SSC Napoli,3,86,38,26,8,4,94,39,55
+Serie A,2016/17,Atalanta,Atalanta BC,4,72,38,21,9,8,62,41,21
+Serie A,2016/17,Lazio,SS Lazio,5,70,38,21,7,10,74,51,23
+Serie A,2016/17,Milan,Milan AC,6,63,38,18,9,11,57,45,12
+Serie A,2016/17,Inter,FC Internazionale,7,62,38,19,5,14,72,49,23
+Serie A,2016/17,Fiorentina,AC Fiorentina,8,60,38,16,12,10,63,57,6
+Serie A,2016/17,Torino,Torino FC,9,53,38,13,14,11,71,66,5
+Serie A,2016/17,Sampdoria,UC Sampdoria,10,48,38,12,12,14,49,55,-6
+Serie A,2016/17,Cagliari,Cagliari Calcio,11,47,38,14,5,19,55,76,-21
+Serie A,2016/17,Sassuolo,US Sassuolo,12,46,38,13,7,18,58,63,-5
+Serie A,2016/17,Udinese,Udinese Calcio,13,45,38,12,9,17,47,56,-9
+Serie A,2016/17,Chievo,AC Chievo Verona,14,43,38,12,7,19,43,61,-18
+Serie A,2016/17,Bologna,Bologna FC,15,41,38,11,8,19,40,58,-18
+Serie A,2016/17,Genoa,Genoa CFC,16,36,38,9,9,20,38,64,-26
+Serie A,2016/17,Crotone,FC Crotone,17,34,38,9,7,22,34,58,-24
+Serie A,2016/17,Empoli,Empoli FC,18,32,38,8,8,22,29,61,-32
+Serie A,2016/17,Palermo,US Cittŕ di Palermo,19,26,38,6,8,24,33,77,-44
+Serie A,2016/17,Pescara,Delfino Pescara,20,18,38,3,9,26,37,81,-44
+Serie A,2017/18,Juventus,Juventus FC,1,95,38,30,5,3,86,24,62
+Serie A,2017/18,Napoli,SSC Napoli,2,91,38,28,7,3,77,29,48
+Serie A,2017/18,Roma,AS Roma,3,77,38,23,8,7,61,28,33
+Serie A,2017/18,Inter,FC Internazionale,4,72,38,20,12,6,66,30,36
+Serie A,2017/18,Lazio,SS Lazio,5,72,38,21,9,8,89,49,40
+Serie A,2017/18,Milan,Milan AC,6,64,38,18,10,10,56,42,14
+Serie A,2017/18,Atalanta,Atalanta BC,7,60,38,16,12,10,57,39,18
+Serie A,2017/18,Fiorentina,AC Fiorentina,8,57,38,16,9,13,54,46,8
+Serie A,2017/18,Torino,Torino FC,9,54,38,13,15,10,54,46,8
+Serie A,2017/18,Sampdoria,UC Sampdoria,10,54,38,16,6,16,56,60,-4
+Serie A,2017/18,Sassuolo,US Sassuolo,11,43,38,11,10,17,29,59,-30
+Serie A,2017/18,Genoa,Genoa CFC,12,41,38,11,8,19,33,43,-10
+Serie A,2017/18,Chievo,AC Chievo Verona,13,40,38,10,10,18,36,59,-23
+Serie A,2017/18,Udinese,Udinese Calcio,14,40,38,12,4,22,48,63,-15
+Serie A,2017/18,Bologna,Bologna FC,15,39,38,11,6,21,40,52,-12
+Serie A,2017/18,Cagliari,Cagliari Calcio,16,39,38,11,6,21,33,61,-28
+Serie A,2017/18,Spal,SPAL (Ferrara),17,38,38,8,14,16,39,59,-20
+Serie A,2017/18,Crotone,FC Crotone,18,35,38,9,8,21,40,66,-26
+Serie A,2017/18,Verona,Hellas Verona FC,19,25,38,7,4,27,30,78,-48
+Serie A,2017/18,Benevento,Benevento Calcio,20,21,38,6,3,29,33,84,-51
+Serie A,2018/19,Juventus,Juventus FC,1,90,38,28,6,4,70,30,40
+Serie A,2018/19,Napoli,SSC Napoli,2,79,38,24,7,7,74,36,38
+Serie A,2018/19,Atalanta,Atalanta BC,3,69,38,20,9,9,77,46,31
+Serie A,2018/19,Inter,FC Internazionale,4,69,38,20,9,9,57,33,24
+Serie A,2018/19,Milan,Milan AC,5,68,38,19,11,8,55,36,19
+Serie A,2018/19,Roma,AS Roma,6,66,38,18,12,8,66,48,18
+Serie A,2018/19,Torino,Torino FC,7,63,38,16,15,7,52,37,15
+Serie A,2018/19,Lazio,SS Lazio,8,59,38,17,8,13,56,46,10
+Serie A,2018/19,Sampdoria,UC Sampdoria,9,53,38,15,8,15,60,51,9
+Serie A,2018/19,Bologna,Bologna FC,10,44,38,11,11,16,48,56,-8
+Serie A,2018/19,Sassuolo,US Sassuolo,11,43,38,9,16,13,53,60,-7
+Serie A,2018/19,Udinese,Udinese Calcio,12,43,38,11,10,17,39,53,-14
+Serie A,2018/19,Spal,SPAL (Ferrara),13,42,38,11,9,18,44,56,-12
+Serie A,2018/19,Parma,Parma Calcio,14,41,38,10,11,17,41,61,-20
+Serie A,2018/19,Cagliari,Cagliari Calcio,15,41,38,10,11,17,36,54,-18
+Serie A,2018/19,Fiorentina,AC Fiorentina,16,41,38,8,17,13,47,45,2
+Serie A,2018/19,Genoa,Genoa CFC,17,38,38,8,14,16,39,57,-18
+Serie A,2018/19,Empoli,Empoli FC,18,38,38,10,8,20,51,70,-19
+Serie A,2018/19,Frosinone,Frosinone Calcio,19,25,38,5,10,23,29,69,-40
+Serie A,2018/19,Chievo,AC Chievo Verona,20,17,38,2,14,22,25,75,-50
+Serie A,2019/20,Juventus,Juventus FC,1,83,38,26,5,7,76,43,33
+Serie A,2019/20,Inter,FC Internazionale,2,82,38,24,10,4,81,36,45
+Serie A,2019/20,Atalanta,Atalanta BC,3,78,38,23,9,6,98,48,50
+Serie A,2019/20,Lazio,SS Lazio,4,78,38,24,6,8,79,42,37
+Serie A,2019/20,Roma,AS Roma,5,70,38,21,7,10,77,51,26
+Serie A,2019/20,Milan,Milan AC,6,66,38,19,9,10,63,46,17
+Serie A,2019/20,Napoli,SSC Napoli,7,62,38,18,8,12,61,50,11
+Serie A,2019/20,Sassuolo,US Sassuolo,8,51,38,14,9,15,69,63,6
+Serie A,2019/20,Verona,Hellas Verona FC,9,49,38,12,13,13,47,51,-4
+Serie A,2019/20,Fiorentina,AC Fiorentina,10,49,38,12,13,13,51,48,3
+Serie A,2019/20,Parma,Parma Calcio,11,49,38,14,7,17,56,57,-1
+Serie A,2019/20,Bologna,Bologna FC,12,47,38,12,11,15,52,65,-13
+Serie A,2019/20,Udinese,Udinese Calcio,13,45,38,12,9,17,37,51,-14
+Serie A,2019/20,Cagliari,Cagliari Calcio,14,45,38,11,12,15,52,56,-4
+Serie A,2019/20,Sampdoria,UC Sampdoria,15,42,38,12,6,20,48,65,-17
+Serie A,2019/20,Torino,Torino FC,16,40,38,11,7,20,46,68,-22
+Serie A,2019/20,Genoa,Genoa CFC,17,39,38,10,9,19,47,73,-26
+Serie A,2019/20,Lecce,US Lecce,18,35,38,9,8,21,52,85,-33
+Serie A,2019/20,Brescia,Brescia Calcio,19,25,38,6,7,25,35,79,-44
+Serie A,2019/20,Spal,SPAL (Ferrara),20,20,38,5,5,28,27,77,-50
+Serie A,2020/21,Inter,FC Internazionale,1,91,38,28,7,3,89,35,54
+Serie A,2020/21,Milan,Milan AC,2,79,38,24,7,7,74,41,33
+Serie A,2020/21,Atalanta,Atalanta BC,3,78,38,23,9,6,90,47,43
+Serie A,2020/21,Juventus,Juventus FC,4,78,38,23,9,6,77,38,39
+Serie A,2020/21,Napoli,SSC Napoli,5,77,38,24,5,9,86,41,45
+Serie A,2020/21,Lazio,SS Lazio,6,68,38,21,5,12,61,55,6
+Serie A,2020/21,Roma,AS Roma,7,62,38,18,8,12,68,58,10
+Serie A,2020/21,Sassuolo,US Sassuolo,8,62,38,17,11,10,64,56,8
+Serie A,2020/21,Sampdoria,UC Sampdoria,9,52,38,15,7,16,52,54,-2
+Serie A,2020/21,Verona,Hellas Verona FC,10,45,38,11,12,15,46,48,-2
+Serie A,2020/21,Genoa,Genoa CFC,11,42,38,10,12,16,47,58,-11
+Serie A,2020/21,Bologna,Bologna FC,12,41,38,10,11,17,51,65,-14
+Serie A,2020/21,Fiorentina,AC Fiorentina,13,40,38,9,13,16,47,59,-12
+Serie A,2020/21,Udinese,Udinese Calcio,14,40,38,10,10,18,42,58,-16
+Serie A,2020/21,Spezia,Spezia Calcio,15,39,38,9,12,17,52,72,-20
+Serie A,2020/21,Cagliari,Cagliari Calcio,16,37,38,9,10,19,43,59,-16
+Serie A,2020/21,Torino,Torino FC,17,37,38,7,16,15,50,69,-19
+Serie A,2020/21,Benevento,Benevento Calcio,18,33,38,7,12,19,40,75,-35
+Serie A,2020/21,Crotone,FC Crotone,19,23,38,6,5,27,45,92,-47
+Serie A,2020/21,Parma,Parma Calcio,20,20,38,3,11,24,39,83,-44
+Serie A,2021/22,Milan,Milan AC,1,86,38,26,8,4,69,31,38
+Serie A,2021/22,Inter,FC Internazionale,2,84,38,25,9,4,84,32,52
+Serie A,2021/22,Napoli,SSC Napoli,3,79,38,24,7,7,74,31,43
+Serie A,2021/22,Juventus,Juventus FC,4,70,38,20,10,8,57,37,20
+Serie A,2021/22,Lazio,SS Lazio,5,64,38,18,10,10,77,58,19
+Serie A,2021/22,Roma,AS Roma,6,63,38,18,9,11,59,43,16
+Serie A,2021/22,Fiorentina,AC Fiorentina,7,62,38,19,5,14,59,51,8
+Serie A,2021/22,Atalanta,Atalanta BC,8,59,38,16,11,11,65,48,17
+Serie A,2021/22,Verona,Hellas Verona FC,9,53,38,14,11,13,65,59,6
+Serie A,2021/22,Torino,Torino FC,10,50,38,13,11,14,46,41,5
+Serie A,2021/22,Sassuolo,US Sassuolo,11,50,38,13,11,14,64,66,-2
+Serie A,2021/22,Udinese,Udinese Calcio,12,47,38,11,14,13,61,58,3
+Serie A,2021/22,Bologna,Bologna FC,13,46,38,12,10,16,44,55,-11
+Serie A,2021/22,Empoli,Empoli FC,14,41,38,10,11,17,50,70,-20
+Serie A,2021/22,Sampdoria,UC Sampdoria,15,36,38,10,6,22,46,63,-17
+Serie A,2021/22,Spezia,Spezia Calcio,16,36,38,10,6,22,41,71,-30
+Serie A,2021/22,Salernitana,US Salernitana,17,31,38,7,10,21,33,78,-45
+Serie A,2021/22,Cagliari,Cagliari Calcio,18,30,38,6,12,20,34,68,-34
+Serie A,2021/22,Genoa,Genoa CFC,19,28,38,4,16,18,27,60,-33
+Serie A,2021/22,Venezia,Venezia FC,20,27,38,6,9,23,34,69,-35
+Serie A,2022/23,Napoli,SSC Napoli,1,90,38,28,6,4,77,28,49
+Serie A,2022/23,Lazio,SS Lazio,2,74,38,22,8,8,60,30,30
+Serie A,2022/23,Inter,FC Internazionale,3,72,38,23,3,12,71,42,29
+Serie A,2022/23,Milan,Milan AC,4,70,38,20,10,8,64,43,21
+Serie A,2022/23,Atalanta,Atalanta BC,5,64,38,19,7,12,66,48,18
+Serie A,2022/23,Roma,AS Roma,6,63,38,18,9,11,50,38,12
+Serie A,2022/23,Juventus,Juventus FC,7,62,38,22,6,10,56,33,23
+Serie A,2022/23,Fiorentina,AC Fiorentina,8,56,38,15,11,12,53,43,10
+Serie A,2022/23,Bologna,Bologna FC,9,54,38,14,12,12,53,49,4
+Serie A,2022/23,Torino,Torino FC,10,53,38,14,11,13,42,41,1
+Serie A,2022/23,Monza,AC Monza,11,52,38,14,10,14,48,52,-4
+Serie A,2022/23,Udinese,Udinese Calcio,12,46,38,11,13,14,47,48,-1
+Serie A,2022/23,Sassuolo,US Sassuolo,13,45,38,12,9,17,47,61,-14
+Serie A,2022/23,Empoli,Empoli FC,14,43,38,10,13,15,37,49,-12
+Serie A,2022/23,Salernitana,US Salernitana,15,42,38,9,15,14,48,62,-14
+Serie A,2022/23,Lecce,US Lecce,16,36,38,8,12,18,33,46,-13
+Serie A,2022/23,Spezia,Spezia Calcio,17,31,38,6,13,19,31,62,-31
+Serie A,2022/23,Verona,Hellas Verona FC,18,31,38,7,10,21,31,59,-28
+Serie A,2022/23,Cremonese,US Cremonese,19,27,38,5,12,21,36,69,-33
+Serie A,2022/23,Sampdoria,UC Sampdoria,20,19,38,3,10,25,24,71,-47
+Serie A,2023/24,Inter,FC Internazionale,1,94,38,29,7,2,89,22,67
+Serie A,2023/24,Milan,Milan AC,2,75,38,22,9,7,76,49,27
+Serie A,2023/24,Juventus,Juventus FC,3,71,38,19,14,5,54,31,23
+Serie A,2023/24,Atalanta,Atalanta BC,4,69,38,21,6,11,72,42,30
+Serie A,2023/24,Bologna,Bologna FC,5,68,38,18,14,6,54,32,22
+Serie A,2023/24,Roma,AS Roma,6,63,38,18,9,11,65,46,19
+Serie A,2023/24,Lazio,SS Lazio,7,61,38,18,7,13,49,39,10
+Serie A,2023/24,Fiorentina,AC Fiorentina,8,60,38,17,9,12,61,46,15
+Serie A,2023/24,Torino,Torino FC,9,53,38,13,14,11,36,36,0
+Serie A,2023/24,Napoli,SSC Napoli,10,53,38,13,14,11,55,48,7
+Serie A,2023/24,Genoa,Genoa CFC,11,49,38,12,13,13,45,45,0
+Serie A,2023/24,Monza,AC Monza,12,45,38,11,12,15,39,51,-12
+Serie A,2023/24,Verona,Hellas Verona FC,13,38,38,9,11,18,38,51,-13
+Serie A,2023/24,Lecce,US Lecce,14,38,38,8,14,16,32,54,-22
+Serie A,2023/24,Udinese,Udinese Calcio,15,37,38,6,19,13,37,53,-16
+Serie A,2023/24,Cagliari,Cagliari Calcio,16,36,38,8,12,18,42,68,-26
+Serie A,2023/24,Empoli,Empoli FC,17,36,38,9,9,20,29,54,-25
+Serie A,2023/24,Frosinone,Frosinone Calcio,18,35,38,8,11,19,44,69,-25
+Serie A,2023/24,Sassuolo,US Sassuolo,19,30,38,7,9,22,43,75,-32
+Serie A,2023/24,Salernitana,US Salernitana,20,17,38,2,11,25,32,81,-49
+Serie A,2024/25,Napoli,SSC Napoli,1,82,38,24,10,4,59,27,32
+Serie A,2024/25,Inter,FC Internazionale,2,81,38,24,9,5,79,35,44
+Serie A,2024/25,Atalanta,Atalanta BC,3,74,38,22,8,8,78,37,41
+Serie A,2024/25,Juventus,Juventus FC,4,70,38,18,16,4,58,35,23
+Serie A,2024/25,Roma,AS Roma,5,69,38,20,9,9,56,35,21
+Serie A,2024/25,Fiorentina,AC Fiorentina,6,65,38,19,8,11,60,41,19
+Serie A,2024/25,Lazio,SS Lazio,7,65,38,18,11,9,61,49,12
+Serie A,2024/25,Milan,Milan AC,8,63,38,18,9,11,61,43,18
+Serie A,2024/25,Bologna,Bologna FC,9,62,38,16,14,8,57,47,10
+Serie A,2024/25,Como,Como 1907,10,49,38,13,10,15,49,52,-3
+Serie A,2024/25,Torino,Torino FC,11,44,38,10,14,14,39,45,-6
+Serie A,2024/25,Udinese,Udinese Calcio,12,44,38,12,8,18,41,56,-15
+Serie A,2024/25,Genoa,Genoa CFC,13,43,38,10,13,15,37,49,-12
+Serie A,2024/25,Verona,Hellas Verona FC,14,37,38,10,7,21,34,66,-32
+Serie A,2024/25,Cagliari,Cagliari Calcio,15,36,38,9,9,20,40,56,-16
+Serie A,2024/25,Parma,Parma Calcio,16,36,38,7,15,16,44,58,-14
+Serie A,2024/25,Lecce,US Lecce,17,34,38,8,10,20,27,58,-31
+Serie A,2024/25,Empoli,Empoli FC,18,31,38,6,13,19,33,59,-26
+Serie A,2024/25,Venezia,Venezia FC,19,29,38,5,14,19,32,56,-24
+Serie A,2024/25,Monza,AC Monza,20,18,38,3,9,26,28,69,-41

@@ -1,0 +1,342 @@
+league,season,team,field,old_value,new_value,source_url
+Eredivisie,2015/16,Twente,rank,12,13,https://www.rsssf.org/tablesn/ned2016.html
+Eredivisie,2015/16,Twente,points,43,40,https://www.rsssf.org/tablesn/ned2016.html
+Eredivisie,2015/16,Twente,ppg,1.2647,1.1765,https://www.rsssf.org/tablesn/ned2016.html
+Eredivisie,2015/16,Heerenveen,rank,13,12,https://www.rsssf.org/tablesn/ned2016.html
+Eredivisie,2023/24,Vitesse,rank,17,18,https://www.rsssf.org/tablesn/ned2024.html
+Eredivisie,2023/24,Vitesse,points,24,6,https://www.rsssf.org/tablesn/ned2024.html
+Eredivisie,2023/24,Vitesse,ppg,0.7059,0.1765,https://www.rsssf.org/tablesn/ned2024.html
+Eredivisie,2023/24,Volendam,rank,18,17,https://www.rsssf.org/tablesn/ned2024.html
+Eredivisie,2024/25,PSV Eindhoven,wins,,25,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,PSV Eindhoven,draws,,4,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,PSV Eindhoven,losses,,5,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,PSV Eindhoven,goals_for,,103,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,PSV Eindhoven,goals_against,,39,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,PSV Eindhoven,goal_difference,,64,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Ajax,wins,,24,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Ajax,draws,,6,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Ajax,losses,,4,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Ajax,goals_for,,67,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Ajax,goals_against,,32,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Ajax,goal_difference,,35,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Feyenoord,wins,,20,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Feyenoord,draws,,8,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Feyenoord,losses,,6,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Feyenoord,goals_for,,76,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Feyenoord,goals_against,,38,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Feyenoord,goal_difference,,38,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Utrecht,wins,,18,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Utrecht,draws,,10,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Utrecht,losses,,6,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Utrecht,goals_for,,62,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Utrecht,goals_against,,45,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Utrecht,goal_difference,,17,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,AZ Alkmaar,wins,,16,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,AZ Alkmaar,draws,,9,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,AZ Alkmaar,losses,,9,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,AZ Alkmaar,goals_for,,58,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,AZ Alkmaar,goals_against,,37,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,AZ Alkmaar,goal_difference,,21,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Twente,wins,,15,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Twente,draws,,9,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Twente,losses,,10,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Twente,goals_for,,62,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Twente,goals_against,,49,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,FC Twente,goal_difference,,13,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Go Ahead Eagles,wins,,14,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Go Ahead Eagles,draws,,9,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Go Ahead Eagles,losses,,11,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Go Ahead Eagles,goals_for,,57,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Go Ahead Eagles,goals_against,,55,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Go Ahead Eagles,goal_difference,,2,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NEC,wins,,12,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NEC,draws,,7,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NEC,losses,,15,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NEC,goals_for,,51,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NEC,goals_against,,46,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NEC,goal_difference,,5,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heerenveen,wins,,12,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heerenveen,draws,,7,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heerenveen,losses,,15,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heerenveen,goals_for,,42,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heerenveen,goals_against,,57,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heerenveen,goal_difference,,-15,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,PEC Zwolle,wins,,10,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,PEC Zwolle,draws,,11,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,PEC Zwolle,losses,,13,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,PEC Zwolle,goals_for,,43,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,PEC Zwolle,goals_against,,51,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,PEC Zwolle,goal_difference,,-8,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Fortuna Sittard,wins,,11,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Fortuna Sittard,draws,,8,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Fortuna Sittard,losses,,15,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Fortuna Sittard,goals_for,,37,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Fortuna Sittard,goals_against,,54,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Fortuna Sittard,goal_difference,,-17,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Sparta Rotterdam,wins,,9,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Sparta Rotterdam,draws,,12,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Sparta Rotterdam,losses,,13,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Sparta Rotterdam,goals_for,,39,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Sparta Rotterdam,goals_against,,43,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Sparta Rotterdam,goal_difference,,-4,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Groningen,wins,,10,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Groningen,draws,,9,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Groningen,losses,,15,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Groningen,goals_for,,40,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Groningen,goals_against,,53,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Groningen,goal_difference,,-13,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heracles,wins,,9,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heracles,draws,,11,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heracles,losses,,14,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heracles,goals_for,,42,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heracles,goals_against,,63,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Heracles,goal_difference,,-21,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NAC Breda,wins,,8,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NAC Breda,draws,,9,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NAC Breda,losses,,17,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NAC Breda,goals_for,,34,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NAC Breda,goals_against,,58,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,NAC Breda,goal_difference,,-24,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Willem II,wins,,6,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Willem II,draws,,8,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Willem II,losses,,20,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Willem II,goals_for,,34,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Willem II,goals_against,,56,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Willem II,goal_difference,,-22,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,RKC Waalwijk,wins,,6,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,RKC Waalwijk,draws,,7,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,RKC Waalwijk,losses,,21,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,RKC Waalwijk,goals_for,,44,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,RKC Waalwijk,goals_against,,74,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,RKC Waalwijk,goal_difference,,-30,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Almere City,wins,,4,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Almere City,draws,,10,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Almere City,losses,,20,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Almere City,goals_for,,23,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Almere City,goals_against,,64,https://www.rsssf.org/tablesn/ned2025.html
+Eredivisie,2024/25,Almere City,goal_difference,,-41,https://www.rsssf.org/tablesn/ned2025.html
+La Liga,2015/16,Valencia,rank,11,12,https://www.rsssf.org/tabless/span2016.html
+La Liga,2015/16,Las Palmas,rank,12,11,https://www.rsssf.org/tabless/span2016.html
+La Liga,2015/16,Eibar,rank,13,14,https://www.rsssf.org/tabless/span2016.html
+La Liga,2015/16,Espanol,rank,14,13,https://www.rsssf.org/tabless/span2016.html
+La Liga,2015/16,Sp Gijon,rank,16,17,https://www.rsssf.org/tabless/span2016.html
+La Liga,2015/16,Granada,rank,17,16,https://www.rsssf.org/tabless/span2016.html
+La Liga,2017/18,Sociedad,rank,11,12,https://www.rsssf.org/tabless/span2018.html
+La Liga,2017/18,Celta,rank,12,13,https://www.rsssf.org/tabless/span2018.html
+La Liga,2017/18,Espanol,rank,13,11,https://www.rsssf.org/tabless/span2018.html
+La Liga,2018/19,Sevilla,rank,5,6,https://www.rsssf.org/tabless/span2019.html
+La Liga,2018/19,Getafe,rank,6,5,https://www.rsssf.org/tabless/span2019.html
+La Liga,2018/19,Celta,rank,16,17,https://www.rsssf.org/tabless/span2019.html
+La Liga,2018/19,Valladolid,rank,17,16,https://www.rsssf.org/tabless/span2019.html
+La Liga,2020/21,Ath Bilbao,rank,9,10,https://www.rsssf.org/tabless/span2021.html
+La Liga,2020/21,Granada,rank,10,9,https://www.rsssf.org/tabless/span2021.html
+La Liga,2021/22,Cadiz,rank,16,17,https://www.rsssf.org/tabless/span2022.html
+La Liga,2021/22,Mallorca,rank,17,16,https://www.rsssf.org/tabless/span2022.html
+La Liga,2022/23,Sevilla,rank,11,12,https://www.rsssf.org/tabless/span2023.html
+La Liga,2022/23,Vallecano,rank,12,11,https://www.rsssf.org/tabless/span2023.html
+La Liga,2022/23,Valencia,rank,14,16,https://www.rsssf.org/tabless/span2023.html
+La Liga,2022/23,Cadiz,rank,16,14,https://www.rsssf.org/tabless/span2023.html
+La Liga,2023/24,Sevilla,rank,13,14,https://www.rsssf.org/tabless/span2024.html
+La Liga,2023/24,Celta,rank,14,13,https://www.rsssf.org/tabless/span2024.html
+La Liga,2024/25,Osasuna,rank,8,9,https://www.rsssf.org/tabless/span2025.html
+La Liga,2024/25,Vallecano,rank,9,8,https://www.rsssf.org/tabless/span2025.html
+La Liga,2024/25,Valencia,rank,11,12,https://www.rsssf.org/tabless/span2025.html
+La Liga,2024/25,Sociedad,rank,12,11,https://www.rsssf.org/tabless/span2025.html
+La Liga,2024/25,Alaves,rank,14,15,https://www.rsssf.org/tabless/span2025.html
+La Liga,2024/25,Espanol,rank,15,14,https://www.rsssf.org/tabless/span2025.html
+La Liga,2024/25,Sevilla,rank,16,17,https://www.rsssf.org/tabless/span2025.html
+La Liga,2024/25,Girona,rank,17,16,https://www.rsssf.org/tabless/span2025.html
+Ligue 1,2019/20,Reims,rank,5,6,https://www.rsssf.org/tablesf/fran2020.html
+Ligue 1,2019/20,Nice,rank,6,5,https://www.rsssf.org/tablesf/fran2020.html
+Ligue 1,2019/20,Angers,rank,10,11,https://www.rsssf.org/tablesf/fran2020.html
+Ligue 1,2019/20,Strasbourg,rank,11,10,https://www.rsssf.org/tablesf/fran2020.html
+Ligue 1,2021/22,Nice,rank,4,5,https://www.rsssf.org/tablesf/fran2022.html
+Ligue 1,2021/22,Nice,points,67,66,https://www.rsssf.org/tablesf/fran2022.html
+Ligue 1,2021/22,Nice,ppg,1.7632,1.7368,https://www.rsssf.org/tablesf/fran2022.html
+Ligue 1,2021/22,Rennes,rank,5,4,https://www.rsssf.org/tablesf/fran2022.html
+Ligue 1,2021/22,Lyon,rank,7,8,https://www.rsssf.org/tablesf/fran2022.html
+Ligue 1,2021/22,Lyon,points,62,61,https://www.rsssf.org/tablesf/fran2022.html
+Ligue 1,2021/22,Lyon,ppg,1.6316,1.6053,https://www.rsssf.org/tablesf/fran2022.html
+Ligue 1,2021/22,Lens,rank,8,7,https://www.rsssf.org/tablesf/fran2022.html
+Ligue 1,2023/24,Montpellier,points,42,41,https://www.rsssf.org/tablesf/fran2024.html
+Ligue 1,2023/24,Montpellier,ppg,1.2353,1.2059,https://www.rsssf.org/tablesf/fran2024.html
+Ligue 1,2023/24,Lorient,rank,16,17,https://www.rsssf.org/tablesf/fran2024.html
+Ligue 1,2023/24,Metz,rank,17,16,https://www.rsssf.org/tablesf/fran2024.html
+Premier League,2023/24,Everton,rank,12,15,https://www.rsssf.org/tablese/eng2024.html
+Premier League,2023/24,Everton,points,48,40,https://www.rsssf.org/tablese/eng2024.html
+Premier League,2023/24,Everton,ppg,1.2632,1.0526,https://www.rsssf.org/tablese/eng2024.html
+Premier League,2023/24,Bournemouth,rank,13,12,https://www.rsssf.org/tablese/eng2024.html
+Premier League,2023/24,Fulham,rank,14,13,https://www.rsssf.org/tablese/eng2024.html
+Premier League,2023/24,Wolves,rank,15,14,https://www.rsssf.org/tablese/eng2024.html
+Premier League,2023/24,Nott'm Forest,points,36,32,https://www.rsssf.org/tablese/eng2024.html
+Premier League,2023/24,Nott'm Forest,ppg,0.9474,0.8421,https://www.rsssf.org/tablese/eng2024.html
+Primeira Liga,2015/16,Tondela,rank,15,16,https://www.rsssf.org/tablesp/port2016.html
+Primeira Liga,2015/16,Setubal,rank,16,15,https://www.rsssf.org/tablesp/port2016.html
+Primeira Liga,2017/18,Moreirense,rank,14,15,https://www.rsssf.org/tablesp/port2018.html
+Primeira Liga,2017/18,Setubal,rank,15,14,https://www.rsssf.org/tablesp/port2018.html
+Primeira Liga,2018/19,Portimonense,rank,11,12,https://www.rsssf.org/tablesp/port2019.html
+Primeira Liga,2018/19,Maritimo,rank,12,11,https://www.rsssf.org/tablesp/port2019.html
+Primeira Liga,2019/20,Gil Vicente,rank,9,10,https://www.rsssf.org/tablesp/port2020.html
+Primeira Liga,2019/20,Santa Clara,rank,10,9,https://www.rsssf.org/tablesp/port2020.html
+Primeira Liga,2020/21,Moreirense,rank,7,8,https://www.rsssf.org/tablesp/port2021.html
+Primeira Liga,2020/21,Guimaraes,rank,8,7,https://www.rsssf.org/tablesp/port2021.html
+Primeira Liga,2020/21,Boavista,rank,12,13,https://www.rsssf.org/tablesp/port2021.html
+Primeira Liga,2020/21,Tondela,rank,13,12,https://www.rsssf.org/tablesp/port2021.html
+Primeira Liga,2021/22,Boavista,rank,11,12,https://www.rsssf.org/tablesp/port2022.html
+Primeira Liga,2021/22,Portimonense,rank,12,13,https://www.rsssf.org/tablesp/port2022.html
+Primeira Liga,2021/22,Pacos Ferreira,rank,13,11,https://www.rsssf.org/tablesp/port2022.html
+Primeira Liga,2024/25,Sporting Lisbon,wins,,25,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Sporting Lisbon,draws,,7,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Sporting Lisbon,losses,,2,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Sporting Lisbon,goals_for,,88,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Sporting Lisbon,goals_against,,27,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Sporting Lisbon,goal_difference,,61,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Benfica,wins,,25,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Benfica,draws,,5,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Benfica,losses,,4,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Benfica,goals_for,,84,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Benfica,goals_against,,28,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Benfica,goal_difference,,56,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Porto,wins,,22,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Porto,draws,,5,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Porto,losses,,7,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Porto,goals_for,,65,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Porto,goals_against,,30,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Porto,goal_difference,,35,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Braga,wins,,19,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Braga,draws,,9,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Braga,losses,,6,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Braga,goals_for,,55,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Braga,goals_against,,30,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Braga,goal_difference,,25,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Santa Clara,wins,,17,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Santa Clara,draws,,6,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Santa Clara,losses,,11,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Santa Clara,goals_for,,36,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Santa Clara,goals_against,,32,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Santa Clara,goal_difference,,4,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Vitoria de Guimaraes,wins,,14,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Vitoria de Guimaraes,draws,,12,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Vitoria de Guimaraes,losses,,8,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Vitoria de Guimaraes,goals_for,,47,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Vitoria de Guimaraes,goals_against,,37,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Vitoria de Guimaraes,goal_difference,,10,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Famalicao,wins,,12,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Famalicao,draws,,11,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Famalicao,losses,,11,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Famalicao,goals_for,,44,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Famalicao,goals_against,,39,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Famalicao,goal_difference,,5,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estoril Praia,wins,,12,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estoril Praia,draws,,10,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estoril Praia,losses,,12,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estoril Praia,goals_for,,48,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estoril Praia,goals_against,,53,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estoril Praia,goal_difference,,-5,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Casa Pia,wins,,12,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Casa Pia,draws,,9,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Casa Pia,losses,,13,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Casa Pia,goals_for,,39,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Casa Pia,goals_against,,44,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Casa Pia,goal_difference,,-5,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Moreirense,wins,,10,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Moreirense,draws,,10,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Moreirense,losses,,14,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Moreirense,goals_for,,42,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Moreirense,goals_against,,50,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Moreirense,goal_difference,,-8,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Arouca,rank,11,12,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Arouca,wins,,9,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Arouca,draws,,11,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Arouca,losses,,14,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Arouca,goals_for,,35,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Arouca,goals_against,,49,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Arouca,goal_difference,,-14,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Rio Ave,rank,12,11,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Rio Ave,wins,,9,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Rio Ave,draws,,11,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Rio Ave,losses,,14,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Rio Ave,goals_for,,39,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Rio Ave,goals_against,,55,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Rio Ave,goal_difference,,-16,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Gil Vicente,wins,,8,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Gil Vicente,draws,,10,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Gil Vicente,losses,,16,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Gil Vicente,goals_for,,34,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Gil Vicente,goals_against,,47,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Gil Vicente,goal_difference,,-13,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Nacional,wins,,9,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Nacional,draws,,7,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Nacional,losses,,18,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Nacional,goals_for,,32,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Nacional,goals_against,,50,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Nacional,goal_difference,,-18,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estrela Amadora,wins,,7,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estrela Amadora,draws,,8,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estrela Amadora,losses,,19,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estrela Amadora,goals_for,,24,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estrela Amadora,goals_against,,50,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Estrela Amadora,goal_difference,,-26,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,SC Farense,rank,16,17,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,SC Farense,wins,,6,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,SC Farense,draws,,9,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,SC Farense,losses,,19,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,SC Farense,goals_for,,25,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,SC Farense,goals_against,,46,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,SC Farense,goal_difference,,-21,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,AVS,rank,17,16,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,AVS,wins,,5,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,AVS,draws,,12,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,AVS,losses,,17,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,AVS,goals_for,,25,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,AVS,goals_against,,60,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,AVS,goal_difference,,-35,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Boavista,wins,,6,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Boavista,draws,,6,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Boavista,losses,,22,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Boavista,goals_for,,24,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Boavista,goals_against,,59,https://www.rsssf.org/tablesp/port2025.html
+Primeira Liga,2024/25,Boavista,goal_difference,,-35,https://www.rsssf.org/tablesp/port2025.html
+Serie A,2015/16,Genoa,rank,10,11,https://www.rsssf.org/tablesi/ital2016.html
+Serie A,2015/16,Empoli,rank,11,10,https://www.rsssf.org/tablesi/ital2016.html
+Serie A,2015/16,Udinese,rank,16,17,https://www.rsssf.org/tablesi/ital2016.html
+Serie A,2015/16,Palermo,rank,17,16,https://www.rsssf.org/tablesi/ital2016.html
+Serie A,2017/18,Lazio,rank,4,5,https://www.rsssf.org/tablesi/ital2018.html
+Serie A,2017/18,Inter,rank,5,4,https://www.rsssf.org/tablesi/ital2018.html
+Serie A,2017/18,Udinese,rank,13,14,https://www.rsssf.org/tablesi/ital2018.html
+Serie A,2017/18,Chievo,rank,14,13,https://www.rsssf.org/tablesi/ital2018.html
+Serie A,2018/19,Fiorentina,rank,14,16,https://www.rsssf.org/tablesi/ital2019.html
+Serie A,2018/19,Parma,rank,16,14,https://www.rsssf.org/tablesi/ital2019.html
+Serie A,2018/19,Chievo,points,20,17,https://www.rsssf.org/tablesi/ital2019.html
+Serie A,2018/19,Chievo,ppg,0.5263,0.4474,https://www.rsssf.org/tablesi/ital2019.html
+Serie A,2019/20,Fiorentina,rank,9,10,https://www.rsssf.org/tablesi/ital2020.html
+Serie A,2019/20,Parma,rank,10,11,https://www.rsssf.org/tablesi/ital2020.html
+Serie A,2019/20,Verona,rank,11,9,https://www.rsssf.org/tablesi/ital2020.html
+Serie A,2019/20,Cagliari,rank,13,14,https://www.rsssf.org/tablesi/ital2020.html
+Serie A,2019/20,Udinese,rank,14,13,https://www.rsssf.org/tablesi/ital2020.html
+Serie A,2020/21,Roma,points,63,62,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2020/21,Roma,ppg,1.6579,1.6316,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2020/21,Roma,draws,9,8,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2020/21,Roma,losses,11,12,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2020/21,Roma,goals_against,55,58,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2020/21,Roma,goal_difference,13,10,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2020/21,Verona,points,43,45,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2020/21,Verona,ppg,1.1316,1.1842,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2020/21,Verona,wins,10,11,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2020/21,Verona,draws,13,12,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2020/21,Verona,goals_for,43,46,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2020/21,Verona,goal_difference,-5,-2,https://www.rsssf.org/tablesi/ital2021.html
+Serie A,2022/23,Juventus,rank,4,7,https://www.rsssf.org/tablesi/ital2023.html
+Serie A,2022/23,Juventus,points,72,62,https://www.rsssf.org/tablesi/ital2023.html
+Serie A,2022/23,Juventus,ppg,1.8947,1.6316,https://www.rsssf.org/tablesi/ital2023.html
+Serie A,2022/23,Milan,rank,5,4,https://www.rsssf.org/tablesi/ital2023.html
+Serie A,2022/23,Atalanta,rank,6,5,https://www.rsssf.org/tablesi/ital2023.html
+Serie A,2022/23,Roma,rank,7,6,https://www.rsssf.org/tablesi/ital2023.html
+Serie A,2022/23,Verona,rank,17,18,https://www.rsssf.org/tablesi/ital2023.html
+Serie A,2022/23,Spezia,rank,18,17,https://www.rsssf.org/tablesi/ital2023.html
+Serie A,2023/24,Napoli,rank,9,10,https://www.rsssf.org/tablesi/ital2024.html
+Serie A,2023/24,Torino,rank,10,9,https://www.rsssf.org/tablesi/ital2024.html
+Serie A,2023/24,Empoli,rank,16,17,https://www.rsssf.org/tablesi/ital2024.html
+Serie A,2023/24,Cagliari,rank,17,16,https://www.rsssf.org/tablesi/ital2024.html
+Serie A,2024/25,Parma,rank,15,16,https://www.rsssf.org/tablesi/ital2025.html
+Serie A,2024/25,Cagliari,rank,16,15,https://www.rsssf.org/tablesi/ital2025.html

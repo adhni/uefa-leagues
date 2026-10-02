@@ -8,38 +8,27 @@ import statistics
 from collections import defaultdict
 from pathlib import Path
 
+from data_validation import load_coverage, read_csv, validate_master, validate_reference
+
 
 DATA = Path(__file__).resolve().parents[1] / "data"
 MASTER = "league_team_season_master_7leagues_10seasons.csv"
 GAP_FIELDS = ("gap_1_2", "gap_1_4", "gap_4_10", "gap_10_last")
 
 
-def read_csv(path):
-    with path.open(newline="", encoding="utf-8") as handle:
-        return list(csv.DictReader(handle))
-
-
-def build():
-    master = read_csv(DATA / MASTER)
-    seasons, ranks = defaultdict(list), defaultdict(list)
-    seen = set()
+def build(master=None, coverage=None):
+    master = read_csv(DATA / MASTER) if master is None else master
+    coverage = load_coverage() if coverage is None else coverage
+    seasons = validate_master(master, coverage)
+    validate_reference(master, read_csv(DATA / "standings_reference.csv"))
+    ranks = defaultdict(list)
     for row in master:
-        key = (row["league"], row["season"], row["team"])
-        if key in seen:
-            raise ValueError(f"Duplicate team-season: {key}")
-        seen.add(key)
         ppg = float(row["ppg"])
-        matches = int(row["matches_played"])
-        if matches <= 0 or not math.isfinite(ppg) or abs(ppg - int(row["points"]) / matches) > 0.000051:
-            raise ValueError(f"Invalid PPG: {key}")
-        seasons[row["league"], row["season"]].append(row)
         ranks[row["league"], int(row["rank"])].append(ppg)
 
     gaps, dispersion, first_last = [], defaultdict(list), defaultdict(list)
     for (league, season), rows in sorted(seasons.items()):
         rows.sort(key=lambda row: int(row["rank"]))
-        if len(rows) <= 10 or [int(row["rank"]) for row in rows] != list(range(1, len(rows) + 1)):
-            raise ValueError(f"Incomplete or duplicated ranks: {league}, {season}")
         ppg = [float(row["ppg"]) for row in rows]
         first, second, fourth, tenth, last = (ppg[0], ppg[1], ppg[3], ppg[9], ppg[-1])
         gaps.append(dict(league=league, season=season, ppg_1=first, ppg_2=second,
@@ -77,7 +66,7 @@ def build():
 
 def check(path, expected):
     actual = read_csv(path)
-    if len(actual) != len(expected) or list(actual[0]) != list(expected[0]):
+    if not actual or not expected or len(actual) != len(expected) or list(actual[0]) != list(expected[0]):
         raise ValueError(f"{path.name}: row count or columns differ; run the builder without --check")
     for index, (saved, generated) in enumerate(zip(actual, expected), start=2):
         for field, value in generated.items():

@@ -1,0 +1,14 @@
+{
+  "name": "european-league-parity",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "python3 -m http.server 8000 --bind 127.0.0.1",
+    "test": "node --test tests/*.test.mjs",
+    "test:data": "python3 -m unittest discover -s tests -p 'test_*.py' && python3 scripts/reconcile_standings.py --check && python3 scripts/build_data.py --check",
+    "test:browser": "playwright test",
+    "check": "npm run test:data && node --check assets/js/main.js && npm test"
+  },
+  "devDependencies": { "@playwright/test": "1.63.0" }
+}
